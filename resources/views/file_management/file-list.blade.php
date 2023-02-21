@@ -138,7 +138,7 @@
 
                 </div>
                 <div class="modal fade" id="myModal">
-                    <div class="modal-dialog modal-xl">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
 
                             <!-- Modal Header -->
@@ -160,29 +160,27 @@
                                         <br>
 
                                         <div class="row">
-
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="username">Associative Handling</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="assoc_handling" id="cars">
-                                                            <option>Select</option>
-                                                            <option>Residensial</option>
-                                                            <option>Non Residensial</option>
-                                                        </select>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="assoc_handling"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Associative
+                                                        Handling</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="assoc_handling" id="" required>
+                                                        <option>Select</option>
+                                                        <option value="1">Residensial</option>
+                                                        <option value="2">Non Residensial</option>
+                                                    </select>
                                                 </div>
                                             </div>
-
-
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="username">Client</label>
-                                                    <select class="form-select" name="client"
-                                                        aria-label="Default select example">
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="client"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="client" id="" required>
                                                         @if(count($client_list))
                                                         @foreach($client_list as $list_category)
                                                         <option>{{$list_category->client_name}}</option>
@@ -191,248 +189,185 @@
                                                     </select>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="username">Email</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="email" class="form-control" name="email" id="age"
-                                                            value="">
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="email"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email</label>
+                                                    <input type="email" placeholder="Enter Email "
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="email" id="" value="" required>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="username">Telephone</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend"></div>
-                                                        <input type="text" class="form-control" name="phone" id="age"
-                                                            value="">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Age is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="phone"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone</label>
+                                                    <input type="email" placeholder="Enter Email "
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="phone" id="" value="" required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="username">Address</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend"></div>
-                                                        <input type="text" class="form-control" name="address" id="age"
-                                                            value="">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Age is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="address"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Address</label>
+                                                    <input type="text" placeholder="Enter Email "
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="address" id="" value="" required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="username">File No</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend"></div>
-                                                        <select name="file_name">
-                                                            <option>---select---</option>
-                                                            <option>file 1</option>
-                                                            <option>file 2</option>
-                                                            <option>file 3</option>
-
-                                                        </select>
-                                                        <!-- <input type="text" class="form-control" name="file_name" value=""
-                                                        id="confirm_password"> -->
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Password is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="file_name"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File
+                                                        No</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="file_name" id="" required>
+                                                        <option>---select---</option>
+                                                        <option>file 1</option>
+                                                        <option>file 2</option>
+                                                        <option>file 3</option>
+                                                    </select>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="username">Responsible Advocate</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend"></div>
-                                                        <select name="advocate" id="cars">
-                                                            <option>Select</option>
-                                                            <option>Advocate 1</option>
-                                                            <option>Advocate 2</option>
-                                                        </select>
-                                                        <!-- <input type="text" class="form-control" name="advocate" id="age"
-                                                        value="" min="0" max="99"> -->
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Age is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="advocate"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Responsible
+                                                        Advocate</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="advocate" id="" required>
+                                                        <option>Select</option>
+                                                        <option>Advocate 1</option>
+                                                        <option>Advocate 2</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="username">Most Recent Progress</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend"></div>
-                                                        <input type="text" class="form-control" name="recent_progress"
-                                                            id="age" value="" min="0" max="99">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Age is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="recent_progress"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Most
+                                                        Recent Progress</label>
+                                                    <input type="text" placeholder="Enter Email "
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="recent_progress" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="username">Work Flow</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend"></div>
-                                                        <input type="text" class="form-control" name="work_flow"
-                                                            id="age" value="" min="0" max="99">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Age is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="work_flow"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Work
+                                                        Flow</label>
+                                                    <input type="text" placeholder="Enter Email "
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="work_flow" id="" value="" required>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="">Practice Area</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                        </div>
-                                                        <select>
-                                                            <option value="select">---select---</option>
-                                                            <option value="Family Law">Family Law</option>
-                                                            <option value="Personal Injury">Personal Injury</option>
-                                                            <option value="General Practice">General Practice</option>
-                                                            <option value="Estate Planning">Estate Planning</option>
-                                                            <option value="Real Estate">Real Estate</option>
-                                                            <option value="Criminal Law">Criminal Law</option>
-                                                            <option value="Civil Litigation">Civil Litigation</option>
-                                                            <option value="Business Law">Business Law</option>
-                                                            <option value="Guardianship Law">Guardianship Law</option>
-                                                            <option value="Probate Law">Probate Law</option>
-                                                        </select>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for=""
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Practice
+                                                        Area</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="" id="" required>
+                                                        <option value="select">---select---</option>
+                                                        <option value="Family Law">Family Law</option>
+                                                        <option value="Personal Injury">Personal Injury</option>
+                                                        <option value="General Practice">General Practice</option>
+                                                        <option value="Estate Planning">Estate Planning</option>
+                                                        <option value="Real Estate">Real Estate</option>
+                                                        <option value="Criminal Law">Criminal Law</option>
+                                                        <option value="Civil Litigation">Civil Litigation</option>
+                                                        <option value="Business Law">Business Law</option>
+                                                        <option value="Guardianship Law">Guardianship Law</option>
+                                                        <option value="Probate Law">Probate Law</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="username">Opening Date</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="date" class="form-control" name="open_date"
-                                                            id="age" value="" min="0" max="99">
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="open_date"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Opening
+                                                        Date</label>
+                                                    <input type="date" placeholder="Enter Email "
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="open_date" id="" value="" required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-3">
-                                                    <label for="username">Closing Date </label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="date" class="form-control" name="close_date"
-                                                            id="age" value="" min="0" max="99">
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="close_date"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Closing
+                                                        Date</label>
+                                                    <input type="date" placeholder="Enter Email "
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="open_date" id="" value="" required>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Status</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend"></div>
-                                                        <select name="status">
-                                                            <option value="select">---select---</option>
-                                                            <option value="Opened">Opened</option>
-                                                            <option value="Pending">Pending</option>
-                                                            <option value="Closed">Closed</option>
-
-                                                        </select>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Password is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="status"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Status</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="status" id="" required>
+                                                        <option value="select">---select---</option>
+                                                        <option value="Opened">Opened</option>
+                                                        <option value="Pending">Pending</option>
+                                                        <option value="Closed">Closed</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-8">
-                                                <div class="mb-1">
-                                                    <label for="username">Comments</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend"></div>
-                                                        <textarea class="form-control" id="form7Example7" rows="2"
-                                                            name="comments"></textarea><br>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Password is required.
-                                                        </div>
-                                                    </div>
+                                            <div style="width:50%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="outer"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comments</label>
+                                                    <textarea class="outer" rows="4" style="width:100%;border-color: #1d1d50;width=45%;border-radius: 7px;" cols="41"
+                                                        placeholder="Physical Address" name="comments"
+                                                        form="addemployee"></textarea>
                                                 </div>
                                             </div>
                                         </div>
-
                                         <br>
                                         <hr>
                                         <br>
-
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Notification</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="email" class="form-control" name="notifi_email"
-                                                            placeholder="Enter your email" id="confirm_password"><br>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Password is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="close_date"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notification</label>
+                                                    <input type="email" placeholder="Enter Email "
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="email" id="" value="" required>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Telephone No.</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="phone"
-                                                            placeholder="Enter your telephone number"
-                                                            id="confirm_password"><br>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Password is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="phone"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone
+                                                        No.</label>
+                                                    <input type="text" placeholder="Enter Email "
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="phone" id="" value="" required>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Billing</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="amount"
-                                                            placeholder="Enter the amount" id="confirm_password"><br>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Password is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="amount"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Billing</label>
+                                                    <input type="text" placeholder="Enter Email "
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="amount" id="" value="" required>
                                                 </div>
                                             </div>
                                         </div>
