@@ -435,11 +435,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('update_lawyer',"ClientManagement@update_lawyer")->name('update_lawyer');
     Route::any('view_lawyer/{id}','ClientManagement@view_lawyer')->name('view_lawyer');
     Route::any('/delete_lawyer/{id}','ClientManagement@delete_lawyer')->name('delete_lawyer');
-
-
-
-
-    //Client-Documents
+        //Client-Documents
     Route::any('client-document/{id}', 'ClientManagement@document')->name('client-document');
     Route::any('create-document/{individual_id}', 'ClientManagement@createDocument')->name('create-document');
     Route::any('add-document', 'ClientManagement@addDocument')->name('add-document');
@@ -448,17 +444,13 @@ use App\Http\Controllers\issued_summary;
     Route::any('view_corporate_document/{id}', 'ClientManagement@showcorporatedocument')->name('view_corporate_document');
     Route::any('delete-document/{id}', 'ClientManagement@deleteDocument')->name('delete-document');
     Route::any('update-document', 'ClientManagement@updatedocument')->name('update-document');
-    //end Client-Documents
-
-    //Client-Pickup
+        //Client-Pickup
     Route::any('client-pickup', 'ClientManagement@clientPickup')->name('client-pickup');
     Route::any('add-pickup', 'ClientManagement@formPickup')->name('add-pickup');
     Route::any('store-pickup', 'ClientManagement@storePickup')->name('store-pickup');
     Route::any('/view-pickup/{id}', 'ClientManagement@viewPickups')->name('view-pickup');
     Route::any('/delete-pickup/{id}', 'ClientManagement@deletePickup')->name('delete-pickup');
-    //Client-Pickup
-
-    //complaint
+        //complaint
     Route::any('complaint-list', 'ClientManagement@complaintList')->name('complaint-list');
     Route::any('create-Complaint', 'ClientManagement@createComplaint')->name('create-Complaint');
     Route::any('add-Complaint', 'ClientManagement@addComplaint')->name('add-Complaint');
@@ -468,7 +460,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('delete-Complaint/{id}', 'ClientManagement@deleteComplaint')->name('delete-Complaint');
 
     Route::any('new_communication', 'ClientManagement@add_communication')->name('add_communication');
-    //end complaint
+    
 
     //Follow Up
     Route::any('follow-up', 'ClientManagement@followup')->name('follow-up');
