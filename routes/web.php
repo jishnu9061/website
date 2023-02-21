@@ -113,18 +113,6 @@ use App\Http\Controllers\issued_summary;
     //store controller
    
 
-    // Store Manufacturer
-
-    Route::any('/view_manufacturers', 'storecontroller@create_manufacturer')->name('view_manufacturers');
-    Route::any('/add_manufacturers', 'storecontroller@add_manufacturer')->name('add_manufacturers');
-    Route::any('/view_manufacturer_details{id}', 'storecontroller@show_details_manufacturer')->name('view_manufacturer_details');
-    Route::any('/edit_manufacturer', 'storecontroller@edit_manufacturer')->name('edit_manufacturer');
-    Route::any('/update_manufacturer', 'storecontroller@update_manufacturer')->name('update_manufacturer');
-    Route::any('/delete_manufacturer{id}', 'storecontroller@delete_manufacturer')->name('delete_manufacturer');
-    Route::any('/manufacturer_ledger_details{id}', 'storecontroller@manufacturer_ledger_details')->name('manufacturer_ledger_details');
-    Route::any('/add_installment{id}', 'storecontroller@add_installment')->name('add_installment');
-    Route::any('/manufacturer_paid_details{id}', 'storecontroller@manufacturer_paid_details')->name('manufacturer_paid_details');
-
     // Store Medicines
     Route::any('/view_medicine_category', 'storecontroller@create_category_details')->name('view_medicine_category');
     Route::any('/create_category', 'storecontroller@add_category')->name('create_category');
