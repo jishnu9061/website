@@ -259,22 +259,19 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit_tax_vat/{id}', 'SystemSetup@edittaxvat')->name('edit_tax_vat');
     Route::any('/update_tax_vat', 'SystemSetup@updatetaxvat')->name('update_tax_vat');
     Route::any('/delete_tax_vat/{id}', 'SystemSetup@deletetaxvat')->name('delete_tax_vat');
-    //end
-//tax_wht
+        //tax_wht
     Route::any('tax_wht', 'SystemSetup@taxwht')->name('tax_wht');
     Route::any('add_tax_wht', 'SystemSetup@addtaxwht')->name('add_tax_wht');
     Route::any('edit_tax_wht/{id}', 'SystemSetup@edittaxwht')->name('edit_tax_wht');
     Route::any('/update_tax_wht', 'SystemSetup@updatetaxwht')->name('update_tax_wht');
     Route::any('/delete_tax_wht/{id}', 'SystemSetup@deletetaxwht')->name('delete_tax_wht');
-    //end
-//tax_wht-vat
+        //tax_wht-vat
     Route::any('tax_wht-vat', 'SystemSetup@taxwhtvat')->name('tax_wht-vat');
     Route::any('add_tax_wht-vat', 'SystemSetup@addtaxwhtvat')->name('add_tax_wht-vat');
     Route::any('edit_tax_wht-vat/{id}', 'SystemSetup@edittaxwhtvat')->name('edit_tax_wht-vat');
     Route::any('/update_tax_wht_vat', 'SystemSetup@updatetaxwhtvat')->name('update_tax_wht_vat');
     Route::any('/delete_tax_wht-vat/{id}', 'SystemSetup@deletetaxwhtvat')->name('delete_tax_wht-vat');
-    //end
-//notifications
+        //notifications
     Route::any('notifications', 'SystemSetup@notifications')->name('notifications');
     //end
 //template category
