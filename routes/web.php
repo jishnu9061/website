@@ -113,23 +113,8 @@ use App\Http\Controllers\issued_summary;
     //store controller
    
 
-    // Medicine Brand Name
-    Route::any('/view_brand_name', 'storecontroller@create_brand_name')->name('view_brand_name');
-    Route::any('/create_brand', 'storecontroller@add_brand')->name('create_brand');
-    Route::any('/edit_brand', 'storecontroller@edit_brand')->name('edit_brand');
-    Route::any('/update_brand', 'storecontroller@update_brand')->name('update_brand');
-    Route::any('/delete_brand{id}', 'storecontroller@delete_brand')->name('delete_brand');
-
-    // Medicine Generic Name
-    Route::any('/view_generic_name', 'storecontroller@create_generic_name')->name('view_generic_name');
-    Route::any('/create_generic', 'storecontroller@add_generic')->name('create_generic');
-    Route::any('/edit_generic', 'storecontroller@edit_generic')->name('edit_generic');
-    Route::any('/update_generic', 'storecontroller@update_generic')->name('update_generic');
-    Route::any('/delete_generic{id}', 'storecontroller@delete_generic')->name('delete_generic');
-
-    // add Medicine
-// Route::any('/view_medicine_datas','storecontroller@view_medicine_details')->name('view_medicine_datas');
-
+  
+    
     Route::any('/show_items_details', 'store_oneController@show_new_item')->name('show_items_details');
     Route::any('/create_new_item', 'store_oneController@create_new_item')->name('create_new_item');
     Route::any('/view_new_items{id}', 'store_oneController@view_new_items')->name('view_new_items');
