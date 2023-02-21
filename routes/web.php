@@ -419,26 +419,25 @@ use App\Http\Controllers\issued_summary;
         //coporate
     Route::any('add_corporate', 'ClientManagement@addCorporate')->name('add-corporate');
     Route::any('corporate-list/{company_id}', 'ClientManagement@listCorporate')->name('corporate-list');
+    Route::any('/edit_client/{corporate_id}','ClientManagement@edit_corporate')->name('edit_client');
+    Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
+    Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')->name('delete_client');
+    Route::any('/corporate-document/{corporate_id}','ClientManagement@CorporateDocument')->name('corporate-document');
+    Route::any('add-corporate-document','ClientManagement@addCorporatedocument')->name('add-corporate-document');
+    Route::any('corporate-document-details/{id}','ClientManagement@viewCorporateDocument')->name('corporate-document-details');
+    Route::any('edit-corporate-document/{id}','ClientManagement@editCorporateDocument')->name('edit-corporate-document');
+    Route::any('update-document-details','ClientManagement@updateDocumentDetails')->name('update-document-details');
+    Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')->name('view-document-details');
+        //Lawyer
+    Route::any('asign-lawyer','ClientManagement@asignlawyer')->name('asign-lawyer');
+    Route::any('add_lawyer','ClientManagement@add_lawyer')->name('add_lawyer');
+    Route::any('edit_lawyer/{id}','ClientManagement@edit_lawyer')->name('edit_lawyer');
+    Route::any('update_lawyer',"ClientManagement@update_lawyer")->name('update_lawyer');
+    Route::any('view_lawyer/{id}','ClientManagement@view_lawyer')->name('view_lawyer');
+    Route::any('/delete_lawyer/{id}','ClientManagement@delete_lawyer')->name('delete_lawyer');
 
-// Lawyernt
-Route::any('asign-lawyer','ClientManagement@asignlawyer')->name('asign-lawyer');
-Route::any('add_lawyer','ClientManagement@add_lawyer')->name('add_lawyer');
-Route::any('edit_lawyer/{id}','ClientManagement@edit_lawyer')->name('edit_lawyer');
-Route::any('update_lawyer',"ClientManagement@update_lawyer")->name('update_lawyer');
-Route::any('view_lawyer/{id}','ClientManagement@view_lawyer')->name('view_lawyer');
-Route::any('/delete_lawyer/{id}','ClientManagement@delete_lawyer')->name('delete_lawyer');
 
-Route::any('/edit_client/{corporate_id}','ClientManagement@edit_corporate')->name('edit_client');
-Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
-Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')->name('delete_client');
-Route::any('/corporate-document/{corporate_id}','ClientManagement@CorporateDocument')->name('corporate-document');
-Route::any('add-corporate-document','ClientManagement@addCorporatedocument')->name('add-corporate-document');
-Route::any('corporate-document-details/{id}','ClientManagement@viewCorporateDocument')->name('corporate-document-details');
-Route::any('edit-corporate-document/{id}','ClientManagement@editCorporateDocument')->name('edit-corporate-document');
-Route::any('update-document-details','ClientManagement@updateDocumentDetails')->name('update-document-details');
-Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')->name('view-document-details');
-//end corporate
-//end Client-List
+
 
     //Client-Documents
     Route::any('client-document/{id}', 'ClientManagement@document')->name('client-document');
