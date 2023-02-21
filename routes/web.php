@@ -112,27 +112,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('/supplier_paid_details{id}', 'storecontroller@supplier_paid_details')->name('paid_details');
     //store controller
 
-     // Store Stock details
-    Route::any('view_stock_details', 'store_oneController@stock_details')->name('stock_details');
-    Route::any('stock_details', 'store_oneController@stock_details')->name('stock_details');
-    Route::any('create_stock{id}', 'store_oneController@create_stock')->name('create_stock');
-    Route::any('edit_stock_details{id}', 'store_oneController@edit_stock_details')->name('edit_stock_details');
-    Route::any('update_stock', 'store_oneController@update_stock')->name('update_stock');
-    Route::any('add_stock', 'store_oneController@add_stock')->name('add_stock');
-    Route::any('view_add_stock_details{id}', 'store_oneController@view_add_details')->name('view_add_stock_details');
-    Route::any('view_add_new_stock_details', 'store_oneController@view_add_new_stock_details')->name('view_add_new_stock_details');
-    Route::any('view_purchase_details_stock{id}', 'store_oneController@view_purchase_details_stock')->name('view_purchase_details_stock');
-    Route::any('issue_stock_details', 'storeController@issue_stock_details')->name('issue_stock_details');
-    Route::any('store_reorder', 'storeController@store_reorder')->name('store_reorder');
-    Route::any('empty_stock', 'storeController@empty_stock')->name('empty_stock');
-
-    // Store issued details
-    Route::any('display_issued_stock ', 'storeController@display_issued_stock')->name('display_issued_stock');
-    Route::any('view_issued_details{id}', 'storeController@view_issued_details')->name('view_issued_details');
-
-    // Route::any('update_stock','storecontroller@update_stock')->name('update_stock');
-// Route::any('get_item_data_ajax','storecontroller@get_item_data_ajax')->name('get_item_data_ajax');
-
+     
     //inventory settings
     Route::any('inventory_setting', 'storecontroller@inventory_setting')->name('inventory_setting');
     Route::any('view_setting', 'storecontroller@view_setting')->name('view_setting');
