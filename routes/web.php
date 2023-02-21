@@ -356,6 +356,20 @@ use App\Http\Controllers\issued_summary;
     Route::any('quotation', 'clientinvoicing@Quotation')->name('quotation');
     Route::any('new-document', 'clientinvoicing@newDocumnet')->name('new-document');
     Route::any('edit-document', 'clientinvoicing@editDocument')->name('edit-document');
+    //Report
+    Route::any('client_invoicingindex', "clientinvoicing@index")->name('client_invoicingindex');
+    Route::any('debtors_aging_report', "clientinvoicing@deptorsaggingreport")->name('debtors_aging_report');
+    Route::any('debtors_list', "clientinvoicing@deptorslist")->name('debtors_list');
+    Route::any('fee_note_items_billed', "clientinvoicing@filenoteitembilled")->name('fee_note_items_billed');
+    Route::any('fee_note_items_received', "clientinvoicing@filenoteitemreceived")->name('fee_note_items_received');
+    Route::any('fee_note_report', "clientinvoicing@feenotereport")->name('fee_note_report');
+    Route::any('other_reports', "clientinvoicing@otherreport")->name('other_reports');
+    Route::any('quotation_item_report', "clientinvoicing@quotationitemreport")->name('quotation_item_report');
+    Route::any('fee_expected_advocate', "clientinvoicing@feeexpectedadvocate")->name('fee_expected_advocate');
+    Route::any('credit_notes', "clientinvoicing@creditnotes")->name('credit_notes');
+    Route::any('new_credit_notes', "clientinvoicing@newcreditnotes")->name('new_credit_notes');
+    Route::any('capture_billable_items', "clientinvoicing@billable_items")->name('billable_items');
+    Route::any('view_bill', "clientinvoicing@view_bill_item")->name('view_bill_item');
     //client invoicing controller
 //user management controller
         //index
@@ -592,38 +606,13 @@ use App\Http\Controllers\issued_summary;
     Route::any('/Request_staff_item', "filemanagement@Request_staff_item_list")->name('Request_staff_item_list');
     Route::any('/new_Request_staff_item', "filemanagement@add_Request_staff_item_list")->name('add_Request_staff_item_list');
     Route::any('/Process_Request', "filemanagement@Process_Request_list")->name('Process_Request_list');
-
+        //file instructions
     Route::any('/edit_file_instruction/{id}', "filemanagement@edit_file_instruction_list")->name('edit_file_instruction');
-
     Route::any('/update_file_instruction', "filemanagement@updatefileinstruction")->name('update_file_instruction');
-
     Route::any('/edit_office_instruction/{id}', "filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
-
     Route::any('/delete_file/{id}', "filemanagement@destroyfileinstruction")->name('delete_file');
-
-
-    //client invoicing
-
-    //Report
-    Route::any('client_invoicingindex', "clientinvoicing@index")->name('client_invoicingindex');
-    Route::any('debtors_aging_report', "clientinvoicing@deptorsaggingreport")->name('debtors_aging_report');
-    Route::any('debtors_list', "clientinvoicing@deptorslist")->name('debtors_list');
-    Route::any('fee_note_items_billed', "clientinvoicing@filenoteitembilled")->name('fee_note_items_billed');
-    Route::any('fee_note_items_received', "clientinvoicing@filenoteitemreceived")->name('fee_note_items_received');
-    Route::any('fee_note_report', "clientinvoicing@feenotereport")->name('fee_note_report');
-    Route::any('other_reports', "clientinvoicing@otherreport")->name('other_reports');
-    Route::any('quotation_item_report', "clientinvoicing@quotationitemreport")->name('quotation_item_report');
-    Route::any('fee_expected_advocate', "clientinvoicing@feeexpectedadvocate")->name('fee_expected_advocate');
-    Route::any('credit_notes', "clientinvoicing@creditnotes")->name('credit_notes');
-    Route::any('new_credit_notes', "clientinvoicing@newcreditnotes")->name('new_credit_notes');
-    //Report
-
-    //anandhu
-    Route::any('capture_billable_items', "clientinvoicing@billable_items")->name('billable_items');
-    Route::any('view_bill', "clientinvoicing@view_bill_item")->name('view_bill_item');
-    //anandhu
-
-    // hr module belji
+    //file management controller
+// hr module belji
     Route::any('hrindex', 'hrindex@index')->name('hrindex');
     Route::any('recruitment', 'hrindex@recruitment')->name('recruitment');
     //employee start
