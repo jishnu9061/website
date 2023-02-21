@@ -83,6 +83,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('/editdeallowance', 'hrcontroller@editdeallowance')->name('editdeallowance');
     Route::any('/editdereduction', 'hrcontroller@editdereduction')->name('editdereduction');
     Route::any('/loandelete{id}', 'hrcontroller@loandelete');
+    Route::any('/manualattendance', 'hrcontroller@manualattendance')->name('manualattendance');
     //hr controller
 //department controller
     Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
@@ -113,15 +114,6 @@ use App\Http\Controllers\issued_summary;
     //store controller
 
      
-    //vipin
-    Route::any('/patient_details', 'casualitycontroller@patient_details')->name('patient_details');
-    Route::any('/casuality_billing{id}', 'casualitycontroller@casuality_billing')->name('casuality_billing');
-    Route::any('/ambulance_details', 'ambulancecontroller@ambulance_details')->name('ambulance_details');
-    Route::any('/allocateamb', 'ambulancecontroller@allocateamb')->name('allocateamb');
-    Route::any('/addamb_patient', 'ambulancecontroller@addamb_patient')->name('addamb_patient');
-    Route::any('/ambpatient_details', 'ambulancecontroller@ambpatient_details')->name('ambpatient_details');
-    Route::any('/cancel_patient', 'ambulancecontroller@cancel_patient')->name('cancel_patient');
-    Route::any('/manualattendance', 'hrcontroller@manualattendance')->name('manualattendance');
     Route::get('/billing', function () {
         return view('hospitals/billing');
     }
