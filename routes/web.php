@@ -112,17 +112,6 @@ use App\Http\Controllers\issued_summary;
     Route::any('/supplier_paid_details{id}', 'storecontroller@supplier_paid_details')->name('paid_details');
     //store controller
 
-    // add Purchase
-    Route::any('view_purchase', 'storecontroller@create_purchase')->name('create_purchase');
-    Route::any('purchase_order_view', 'storecontroller@purchase_order_view')->name('purchase_order_view');
-    Route::any('show_purchase_detailes{id}', 'storecontroller@show_purchase_order')->name('show_purchase_order');
-    Route::any('manage_purchase', 'storecontroller@view_received_details')->name('manage_purchase');
-    Route::any('view_purchse_print', 'storecontroller@print_purchase')->name('view_purchase_print');
-    Route::any('print{id}', 'storecontroller@print_purchase_detailes')->name('print');
-    Route::any('view_purchase_detailes{id}', 'storecontroller@view_purchase_detailes')->name('view_purchase_detailes');
-    Route::any('create_purchase_new_item', 'storecontroller@create_purchase_new_item')->name('create_purchase_new_item');
-    Route::any('edit_purchase_detailes{id}', 'storecontroller@edit_purchase_detailes')->name('edit_purchase_detailes');
-    Route::any('purchase_detailes_view{id}', 'storecontroller@purchase_detailes_view')->name('purchase_detailes_view');
     
     Route::any('item_edit_detailes{id}', 'storecontroller@item_edit_detailes')->name('edit_purchase_detailes');
     Route::any('item_edit', 'storecontroller@item_edit')->name('item_edit');
