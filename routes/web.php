@@ -349,6 +349,14 @@ use App\Http\Controllers\issued_summary;
 //client invoicing controller
     Route::any('drn_fee_notes', 'clientinvoicing@drnfee')->name('drn_fee_notes');
     Route::any('new_drn_fee_notes', 'clientinvoicing@newdrnfee')->name('new_drn_fee_notes');
+    Route::any('receipt-report', 'clientinvoicing@receiptReport')->name('receipt-report');
+    Route::any('reverse-receipt', 'clientinvoicing@reverseReport')->name('reverse-receipt');
+    Route::any('receipt-reprint', 'clientinvoicing@receiptReprint')->name('receipt-reprint');
+    Route::any('issue-receipt', 'clientinvoicing@issuceReceipt')->name('issue-receipt');
+    Route::any('quotation', 'clientinvoicing@Quotation')->name('quotation');
+    Route::any('new-document', 'clientinvoicing@newDocumnet')->name('new-document');
+    Route::any('edit-document', 'clientinvoicing@editDocument')->name('edit-document');
+    //client invoicing controller
 //user management controller
         //index
     Route::any('user_management', 'UserManagement@index')->name('user_management');
@@ -486,38 +494,19 @@ use App\Http\Controllers\issued_summary;
         //search list
     Route::any('search-list', 'ClientManagement@listSearch')->name('search-list');
     Route::any('register-client', 'ClientManagement@registerClient')->name('register-client');
-    //CRM-Registration
+    //client management controller
+//crm controller
+        //Registration
     Route::any('view-registration', 'CrmController@viewRegistration')->name('view-registration');
     Route::any('add-registration', 'CrmController@addRegistration')->name('add-registration');
     Route::any('edit-registration/{id}', 'CrmController@editRegistration')->name('edit-registration');
     Route::any('update-registration', 'CrmController@updateRegistration')->name('update-registration');
     Route::any('delete-registration/{id}', 'CrmController@deleteRegistration')->name('delete-registration');
     Route::any('show-registration/{id}', 'CrmController@showRegistration')->name('show-registration');
-    //end registration
+    
 
-   
-    //end communication
 
     
-    //end search list
-
-
-    //client invoicing
-    Route::any('receipt-report', 'clientinvoicing@receiptReport')->name('receipt-report');
-    Route::any('reverse-receipt', 'clientinvoicing@reverseReport')->name('reverse-receipt');
-    Route::any('receipt-reprint', 'clientinvoicing@receiptReprint')->name('receipt-reprint');
-    Route::any('issue-receipt', 'clientinvoicing@issuceReceipt')->name('issue-receipt');
-    Route::any('quotation', 'clientinvoicing@Quotation')->name('quotation');
-    Route::any('new-document', 'clientinvoicing@newDocumnet')->name('new-document');
-    Route::any('edit-document', 'clientinvoicing@editDocument')->name('edit-document');
-    //end client invoicing
-
-    //Mugunthan
-
-
-
-    //vinu
-
     //manage files
     Route::any('file_managementindex', "filemanagement@index")->name('file_managementindex');
     Route::any('file-list', "filemanagement@views")->name('file-list');
