@@ -176,33 +176,14 @@ use App\Http\Controllers\issued_summary;
     Route::any('/get_total_number_of_item', 'AccountsController@get_total_number_of_item')->name('get_total_number_of_item');
     Route::post('/create_new_stock_issue', 'AccountsController@create_new_stock_issue')->name('create_new_stock_issue');
     //accounts controller
-
-    
-   
-    
+//calender controller
     Route::any('/calendar_event', 'CalenderController@index')->name('calendar-event');
     Route::any('/calendar_event/action', 'CalenderController@action');
-   
-    Route::any('/add_labtest', 'doctorController@add_labtest')->name('add_labtest');
-    Route::any('/view_lab_description{id}', 'doctorController@view_lab_description')->name('view_lab_description');
-    Route::any('/edit_labtest{id}', 'doctorController@edit_labtest')->name('edit_labtest');
-    Route::any('/update_labtest', 'doctorController@update_labtest')->name('update_labtest');
-    Route::any('/delete_labtest{id}', 'doctorController@delete_labtest')->name('delete_labtest');
-    route::any('/delete_preclab{id}', 'doctorController@delete_preclab');
-    Route::any('/add_surgery', 'doctorController@add_surgery')->name('add_surgery');
-    Route::any('/print_uploads{id}', 'doctorController@print_uploads')->name('print_uploads');
-    Route::any('/add_procedure{id}', 'doctorController@add_procedure')->name('add_procedure');
-    Route::any('/otpatient_details', 'doctorController@otpatient_details')->name('otpatient_details');
-    Route::any('/add_ot_patient', 'doctorController@add_ot_patient')->name('add_ot_patient');
-    Route::any('/edit_ot_patient', 'doctorController@update_ot_patient')->name('edit_ot_patient');
-    Route::any('surgery_delete{id}', 'doctorController@surgery_delete')->name('surgery_delete');
-    // Route::any('/add_surgery_types', 'surgeryController@add_surgery_types')->name('add_surgery_types');
-    Route::any('/add_surtypes', 'surgeryController@store')->name('add_surtypes');
-    Route::any('/update_surtypes', 'surgeryController@update')->name('update_surtypes');
-    Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surgery');
-   
     Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
     Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
+    //calender controller
+   
+   
 
     //---------------------------RESHMA-------------------------------------------//
 // system setup index
