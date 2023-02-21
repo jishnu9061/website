@@ -345,29 +345,22 @@ use App\Http\Controllers\issued_summary;
     Route::any('menu_access_configuration', 'SystemSetup@menuaccess')->name('menu_access_configuration');
         //usefullinks
     Route::any('useful_links', 'SystemSetup@usefullinks')->name('useful_links');
-
-
-    //client invoicing
-// fee_notes/drn/interim notes
+    // system setup controller
+//client invoicing controller
     Route::any('drn_fee_notes', 'clientinvoicing@drnfee')->name('drn_fee_notes');
     Route::any('new_drn_fee_notes', 'clientinvoicing@newdrnfee')->name('new_drn_fee_notes');
-
-    //user management
+//user management controller
+        //index
     Route::any('user_management', 'UserManagement@index')->name('user_management');
-    //USER details
-//manage user accounts
+        //manage user accounts
     Route::any('manage_user_account', 'UserManagement@manageuseraccount')->name('manage_user_account');
     Route::any('reg_new_user', 'UserManagement@regnewuser')->name('reg_new_user');
-
     Route::any('/user_destroy/{id}', "UserManagement@userdestroy")->name('user_destroy');
-
     Route::any('/user_edit/{id}', 'UserManagement@useredit')->name('user_edit');
-
     Route::any('/update_user', 'UserManagement@userupdate')->name('update_user');
-
     Route::any('user_attachments', 'UserManagement@attachments')->name('user_attachments');
     Route::any('user_comments', 'UserManagement@comments')->name('user_comments');
-    //end
+    
 //change password
     Route::any('change_user_password', 'UserManagement@changepassword')->name('change_user_password');
 
