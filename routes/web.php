@@ -101,21 +101,6 @@ use App\Http\Controllers\issued_summary;
     Route::any('/usermanagement', 'hospitalcontroller@usermanagement')->name('usermanagement');
     //hospital controller
 
-
-    // vipin
-    Route::any('/add_pharmacy_sub', 'hospitalcontroller@add_pharmacy_sub')->name('add_pharmacy_sub');
-    Route::any('/update_phar_dept', 'hospitalcontroller@update_phar_dept')->name('update_phar_dept');
-    Route::any('/delete_pharma_dept/{phar_deptid}', 'hospitalcontroller@delete_pharma_dept')->name('delete_pharma_dept');
-    Route::any('/adddepartmentadmin', 'hospitalcontroller@adddepartmentadmin')->name('adddepartmentadmin');
-    Route::any('/view_dept_admin', 'hospitalcontroller@view_dept_admin')->name('view_dept_admin');
-    Route::any('/adddepadmins', 'hospitalcontroller@adddepadmins')->name('adddepadmins');
-    Route::any('/new_department', 'hospitalcontroller@new_department')->name('new_department');
-    Route::any('/update_department', 'hospitalcontroller@update_department')->name('update_department');
-    Route::any('/delete_department{id}', 'hospitalcontroller@delete_department')->name('delete_department');
-    Route::any('/delete_roles{id}', 'hospitalcontroller@delete_roles')->name('delete_roles');
-    Route::any('/saverole_details', 'hospitalcontroller@saverole_details')->name('saverole_details');
-    Route::any('/detailpatient{id}', 'patientcontroller@detailpatient');
-    Route::any('/dischargepatient{id}', 'patientcontroller@dischargepatient');
     //lab
     Route::any('/labcategory', 'labcontroller@labcategory');
     Route::any('/dellabcat{id}', 'labcontroller@dellabcat');
