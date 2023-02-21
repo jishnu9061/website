@@ -176,12 +176,18 @@ use App\Http\Controllers\issued_summary;
     Route::any('/get_total_number_of_item', 'AccountsController@get_total_number_of_item')->name('get_total_number_of_item');
     Route::post('/create_new_stock_issue', 'AccountsController@create_new_stock_issue')->name('create_new_stock_issue');
     //accounts controller
+//acc index controller
+    Route::any('accindex', 'accindex@index')->name('accindex');
+    //acc index controller
 //calender controller
     Route::any('/calendar_event', 'CalenderController@index')->name('calendar-event');
     Route::any('/calendar_event/action', 'CalenderController@action');
     Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
     Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
     //calender controller
+// calender index controller
+    Route::any('calander', "Calender@index")->name('calander');
+    // calender index controller
 // system setup controller
         //index
     Route::any('system_setup', 'SystemSetup@index')->name('system_setup');
@@ -631,7 +637,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('view_job_appl_details_2', 'hrindex@view_job_appl_details_2')->name('view_job_appl_details_2');
             //reviewd applications
     Route::any('reviewed_details', 'hrindex@reviewed_details')->name('reviewed_details');
-        //employee 
+        //employee
     Route::any('addemployee', "employeecontroller@store")->name('addemployee');
     Route::any('create_employee/{id}', "employeecontroller@create")->name('create_employee');
         //Manage Staffs
@@ -639,21 +645,17 @@ use App\Http\Controllers\issued_summary;
     Route::any('/view_staff_details/{id}', 'hrindex@view_staff_details')->name('view_staff_details');
         //department
     Route::any('hr_department', 'hrindex@hrdepartment')->name('hr_department');
+        //performance
     Route::any('performance_department', 'hrindex@performance_department')->name('performance_department');
-       
-   
     Route::any('quarterly_performance_form', 'hrindex@quarterly_performance_form')->name('quarterly_performance_form');
     Route::any('add_kpi', 'hrindex@add_kpi')->name('add_kpi');
     Route::any('mid_year_performance', 'hrindex@mid_year_performance')->name('mid_year_performance');
     Route::any('annual_performance_form', 'hrindex@annual_performance_form')->name('annual_performance_form');
-    Route::any('accindex', 'accindex@index')->name('accindex');
-    Route::any('new_communication', 'ClientManagement@add_communication')->name('add_communication');
-    Route::any('calander', "Calender@index")->name('calander');
-
+        //overtime
     Route::any('over_time', 'hrindex@over_time_list')->name('over_time');
     Route::any('view_over_time', 'hrindex@viewover_time_list')->name('view_over_time');
+        //assignment
     Route::any('add_assingment', 'hrindex@add_assignment')->name('add_assingment');
-
     Route::any('edit-assigment/{id}', 'hrindex@editassigment')->name('edit-assigment');
     Route::any('update-assigment', 'hrindex@updateassigment')->name('update-assigment');
     Route::any('drop-assigment/{id}', 'hrindex@dropassigment')->name('drop-assigment');
