@@ -221,23 +221,20 @@ use App\Http\Controllers\issued_summary;
     Route::any('/update_court', 'SystemSetup@updatecourt')->name('update_court');
     Route::any('/delete_court/{id}', 'SystemSetup@deletecourt')->name('delete_court');
     Route::any('add_court_category', 'SystemSetup@addcourtcategory')->name('add_court_category');
-    
-//letter types
+        //letter types
     Route::any('letter_types', 'SystemSetup@lettertype')->name('letter_types');
     Route::any('add_letter_category', 'SystemSetup@addlettercategory')->name('add_letter_category');
     Route::any('edit_letter_type/{id}', 'SystemSetup@editlettertype')->name('edit_letter_type');
     Route::any('/update_letter_type', 'SystemSetup@updatelettertype')->name('update_letter_type');
     Route::any('/delete_letter_type/{id}', 'SystemSetup@deletelettertype')->name('delete_letter_type');
     Route::any('document_letter_category', 'SystemSetup@documentlettercategory')->name('document_letter_category');
-    //end
-//payment items
+        //payment items
     Route::any('payment_items', 'SystemSetup@paymentitem')->name('payment_items');
     Route::any('add_payment_item', 'SystemSetup@addpaymentitem')->name('add_payment_item');
     Route::any('edit_payment_item/{id}', 'SystemSetup@editpaymentitem')->name('edit_payment_item');
     Route::any('/update_payment_item', 'SystemSetup@updatepaymentitem')->name('update_payment_item');
     Route::any('/delete_payment_item/{id}', 'SystemSetup@deletepaymentitem')->name('delete_payment_item');
-    //end
-//description selection
+        //description selection
     Route::any('description_selectn', 'SystemSetup@descriptionselection')->name('description_selectn');
     Route::any('add_desc_sel', 'SystemSetup@adddescsel')->name('add_desc_sel');
     Route::any('edit_desc_sel/{id}', 'SystemSetup@editdescsel')->name('edit_desc_sel');
