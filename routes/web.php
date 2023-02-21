@@ -319,16 +319,14 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit_billable_activities/{id}', 'SystemSetup@editbillableactivities')->name('edit_billable_activities');
     Route::any('/update_billable_activities', 'SystemSetup@updatebillableactivities')->name('update_billable_activities');
     Route::any('/delete_billable_activities/{id}', 'SystemSetup@deletebillableactivities')->name('delete_billable_activities');
-    //end
-//bank account details
+        //bank account details
     Route::any('bank_details', 'SystemSetup@bankdetails')->name('bank_details');
     Route::any('add_bank_account', 'SystemSetup@addbankaccount')->name('add_bank_account');
     Route::any('edit_bank_account/{id}', 'SystemSetup@editbankaccount')->name('edit_bank_account');
     Route::any('/update_bank_account', 'SystemSetup@updatebankaccount')->name('update_bank_account');
     Route::any('/delete_bank_account/{id}', 'SystemSetup@deletebankaccount')->name('delete_bank_account');
     Route::any('add_bank_document', 'SystemSetup@bankdocument')->name('add_bank_document');
-    //end
-//leave days per year
+        //leave days per year
     Route::any('leave_days_year', 'SystemSetup@leavedays')->name('leave_days_year');
     Route::any('add_leave_days', 'SystemSetup@addleavedays')->name('add_leave_days');
     Route::any('edit_leave_days/{id}', 'SystemSetup@editleavedays')->name('edit_leave_days');
