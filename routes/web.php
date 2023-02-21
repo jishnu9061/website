@@ -176,18 +176,8 @@ use App\Http\Controllers\issued_summary;
     Route::any('/get_total_number_of_item', 'AccountsController@get_total_number_of_item')->name('get_total_number_of_item');
     Route::post('/create_new_stock_issue', 'AccountsController@create_new_stock_issue')->name('create_new_stock_issue');
     //accounts controller
-//sarjana added consultation
-    Route::post('/addhistory', 'doctorController@addhistory')->name('addhistory');
-    Route::post('/managehistory', 'doctorController@managehistory')->name('managehistory');
-    Route::any('/edit_history{history_id}', 'doctorController@edit_history')->name('edit_history');
-    Route::any('/update_history', 'doctorController@update_history')->name('update_history');
-    Route::post('/add_prescription', 'doctorController@add_prescription')->name('add_prescription');
-    // Route::post('/add_labtest','doctorController@add_labtest')->name('add_labtest');
-    Route::any('/view_prescription{id}', 'doctorController@view_prescription')->name('view_prescription');
-    Route::any('/edit_prescription{id}', 'doctorController@edit_prescription')->name('edit_prescription');
-    Route::any('/update_prescription', 'doctorController@update_prescription')->name('update_prescription');
-    Route::any('/delete_prescription_med{presc_id}', 'doctorController@delete_prescription_med')->name('delete_prescription_med');
-    Route::any('/get_subdept_floor{id}', 'hospitalController@get_subdept_floor')->name('get_subdept_floor');
+
+    
     // Route::post('/add_labtest','doctorController@add_labtest')->name('add_labtest');
 // Route::any('/edit_labtest{id}','doctorController@update_labtest')->name('edit_labtest');
     Route::any('/add_labtest', 'doctorController@add_labtest')->name('add_labtest');
