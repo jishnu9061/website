@@ -20,9 +20,7 @@ class ClientManagement extends Controller
     {
         return view('client-management.client-index');
     }
-
-
-
+    
     public function view()
     {
         $company_id = Auth::user()->company_id;
