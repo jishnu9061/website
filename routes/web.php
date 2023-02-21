@@ -540,6 +540,10 @@ use App\Http\Controllers\issued_summary;
     Route::any('conveyance-sheet', "filemanagement@conveyance")->name('conveyance-sheet');
     Route::any('file-progress-list', "filemanagement@fileprogresslist")->name('file-progress-list');
     Route::any('meeting-rooms', "filemanagement@meetingrooms")->name('meeting-rooms');
+    Route::any('view-file-list-progress/{id}', 'filemanagement@viewfilelisprogress')->name('view-file-list-progress');
+    Route::any('bringup', "filemanagement@bringup")->name('bringup');
+    Route::any('file-progress-report', "filemanagement@fileprogressreport")->name('file-progress-report');
+    Route::any('file-status-summary', "filemanagement@filestatussummary")->name('file-status-summary');
         //diary management
     Route::any('diary-management', "filemanagement@diarymanagement")->name('diary-management');
     Route::any('add-event', "filemanagement@addevent")->name('add-event');
@@ -558,32 +562,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('generate-document', "filemanagement@generatedocument")->name('generate-document');
     
 
-
-//document templates
-Route::any('template-category', "filemanagement@template")->name('template-category');
-Route::any('add-template', "filemanagement@addtemplate")->name('add-template');
-//document templates
-
-//file progress
-Route::any('add-file-progress', "filemanagement@addprogress")->name('add-file-progress');
-// Route::any('file_corporate',"filemanagement@file_corporate")->name('file_corporate');
-
-Route::any('/edit-file-progress/{id}', "filemanagement@editprogress")->name('edit-file-progress');
-Route::any('/update_progress', "filemanagement@update_progress")->name('update_progress');
-Route::any('/delete-file-progress/{id}', "filemanagement@delete_progress")->name('delete-file-progress');
-Route::any('progress-bringup', "filemanagement@progressbringup")->name('progress-bringup');
-Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringup');
-
-
-    Route::any('view-file-list-progress/{id}', 'filemanagement@viewfilelisprogress')->name('view-file-list-progress');
-
-    Route::any('bringup', "filemanagement@bringup")->name('bringup');
-    Route::any('file-progress-report', "filemanagement@fileprogressreport")->name('file-progress-report');
-    Route::any('file-status-summary', "filemanagement@filestatussummary")->name('file-status-summary');
-    //file status report
-
-
-    //file report
+  //file report
     Route::any('file-report', "filemanagement@filereport")->name('file-report');
     Route::any('file-opened-report', "filemanagement@fileopenreport")->name('file-opened-report');
     Route::any('file-closed-report', "filemanagement@fileclosedreport")->name('file-closed-report');
