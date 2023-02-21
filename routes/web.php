@@ -101,27 +101,6 @@ use App\Http\Controllers\issued_summary;
     Route::any('/usermanagement', 'hospitalcontroller@usermanagement')->name('usermanagement');
     //hospital controller
 
-    //lab
-    Route::any('/labcategory', 'labcontroller@labcategory');
-    Route::any('/dellabcat{id}', 'labcontroller@dellabcat');
-    Route::any('/labtests', 'labcontroller@labtests');
-    Route::any('/dellabtest{id}', 'labcontroller@dellabtest');
-    Route::any('/labprofile', 'labcontroller@labprofile');
-    Route::any('/patlabtest', 'labcontroller@labtestpat');
-    Route::any('/dellabprof{id}', 'labcontroller@dellabprof');
-    Route::any('/update_lab_tests', 'labcontroller@update_lab_tests');
-    Route::any('/alllabtests', 'labcontroller@alllabtests');
-    Route::any('/alllabtestsview', 'labcontroller@alllabtestsview');
-    Route::post('/viewlabproff', 'labcontroller@viewlabproff');
-    Route::any('/viewlabres{id}', 'labcontroller@viewlabres');
-    Route::any('/uploadlabres{id}', 'labcontroller@uploadlabres');
-    Route::any('/submitlabres', 'labcontroller@submitlabres');
-
-    //admin
-
-
-
-    //Pharmacy
 
 
     // vipin
