@@ -305,20 +305,15 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit_currency/{id}', 'SystemSetup@editcurrency')->name('edit_currency');
     Route::any('/update_currency', 'SystemSetup@updatecurrency')->name('update_currency');
     Route::any('/delete_currency/{id}', 'SystemSetup@deletecurrency')->name('delete_currency');
-    //end
-
-//OTHER SETTINGS
-//database backups
+        //database backups
     Route::any('database_backup', 'SystemSetup@databasebackup')->name('database_backup');
-    //end
-//tansport zone
+        //tansport zone
     Route::any('Transport_zones', 'SystemSetup@transportzone')->name('Transport_zones');
     Route::any('add_transport_zone', 'SystemSetup@addtransportzone')->name('add_transport_zone');
     Route::any('edit_transport_zone/{id}', 'SystemSetup@edittransportzone')->name('edit_transport_zone');
     Route::any('/update_transport_zone', 'SystemSetup@updatetransportzone')->name('update_transport_zone');
     Route::any('/delete_transport_zone/{id}', 'SystemSetup@deletetransportzone')->name('delete_transport_zone');
-    //end
-//billable activities
+        //billable activities
     Route::any('billable_activities', 'SystemSetup@billableactivities')->name('billable_activities');
     Route::any('add_billable_activities', 'SystemSetup@addbillableactivities')->name('add_billable_activities');
     Route::any('edit_billable_activities/{id}', 'SystemSetup@editbillableactivities')->name('edit_billable_activities');
