@@ -113,18 +113,6 @@ use App\Http\Controllers\issued_summary;
     //store controller
    
 
-    // Medecine Group
-    Route::any('/view_medicine_group', 'storecontroller@create_medicine_group')->name('view_medicine_group');
-    Route::any('/create_medicine_group', 'storecontroller@add_group')->name('create_medicine_group');
-    Route::any('/edit_group', 'storecontroller@edit_group')->name('edit_group');
-    Route::any('/update_group', 'storecontroller@update_group')->name('update_group');
-    Route::any('/delete_group{id}', 'storecontroller@delete_group')->name('delete_group');
-    //sarjana added payment type
-    Route::any('/payment_type', 'storecontroller@create_payment_type')->name('payment_type');
-    Route::any('/add_payment_type', 'storecontroller@add_payment_type')->name('add_payment_type');
-    Route::any('/edit_payment_type', 'storecontroller@edit_payment_type')->name('edit_payment_type');
-    Route::any('/update_payment_type', 'storecontroller@update_payment_type')->name('update_payment_type');
-    Route::any('/delete_payment_type{payment_id}', 'storecontroller@delete_payment_type')->name('delete_payment_type');
     // Medicine Brand Name
     Route::any('/view_brand_name', 'storecontroller@create_brand_name')->name('view_brand_name');
     Route::any('/create_brand', 'storecontroller@add_brand')->name('create_brand');
