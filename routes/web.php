@@ -113,15 +113,6 @@ use App\Http\Controllers\issued_summary;
     //store controller
 
     
-    Route::any('item_edit_detailes{id}', 'storecontroller@item_edit_detailes')->name('edit_purchase_detailes');
-    Route::any('item_edit', 'storecontroller@item_edit')->name('item_edit');
-    Route::any('item_update', 'storecontroller@item_update')->name('item_update');
-    Route::any('update_purchase_items', 'storecontroller@update_purchase_items')->name('update_purchase_items');
-    Route::any('return_detailes{id}', 'storecontroller@return_detailes')->name('return_detailes');
-    Route::any('edit_return_detailes{id}', 'storecontroller@edit_return_detailes')->name('edit_return_detailes');
-    Route::any('return_items', 'storecontroller@return_items')->name('return_items');
-    Route::any('return_items_one', 'storecontroller@return_items_one')->name('return_items-one');
-    Route::any('create_purchase_medicine', 'storecontroller@create_purchase_medicine')->name('create_purchase_medicine');
     Route::any('add_advance_payment', 'storecontroller@create_advance_payment')->name('create_advance_payment');
     Route::any('update_payment', 'storecontroller@update_payment')->name('update_payment');
     Route::any('received_order_detailes', 'storecontroller@received_order_detailes')->name('received_order_detailes');
