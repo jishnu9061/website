@@ -389,17 +389,13 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit_user_department/{id}', 'UserManagement@edituserdepartment')->name('edit_user_department');
     Route::any('/update_user_department', 'UserManagement@updateuserdepartment')->name('update_user_department');
     Route::any('/delete_user_department/{id}', 'UserManagement@deleteuserdepartment')->name('delete_user_department');
-
-    //end
-//manage towns
+        //manage towns
     Route::any('manage_towns', 'UserManagement@managetowns')->name('manage_towns');
     Route::any('add_town', 'UserManagement@addtown')->name('add_town');
-
     Route::any('edit_town/{id}', 'UserManagement@edittown')->name('edit_town');
     Route::any('/update_town', 'UserManagement@updatetown')->name('update_town');
     Route::any('/delete_town/{id}', 'UserManagement@deletetown')->name('delete_town');
-    //end
-//advocate targets
+        //advocate targets
     Route::any('advocates_target', 'UserManagement@advocatestarget')->name('advocates_target');
     Route::any('add_new_entry', 'UserManagement@addnew')->name('add_new_entry');
     Route::any('edit_advocate_target', 'UserManagement@editadvocatetarget')->name('edit_advocate_target');
@@ -410,8 +406,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('advocates_target_2025', 'UserManagement@advocatestarget2025')->name('advocates_target_2025');
     Route::any('advocates_target_2026', 'UserManagement@advocatestarget2026')->name('advocates_target_2026');
 
-    //end user management
-//---------------------RESHMA--------------------------------------
+ 
 
 
 
