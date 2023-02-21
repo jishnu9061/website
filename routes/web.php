@@ -113,21 +113,6 @@ use App\Http\Controllers\issued_summary;
     //store controller
 
      
-
-    // vipin
-    Route::any('/casuality_patient', 'casualitycontroller@index')->name('casuality_patient');
-    Route::any('/catuality_register', 'casualitycontroller@create')->name('catuality_register');
-    Route::any('/addcatualities', 'casualitycontroller@store')->name('addcatualities');
-    Route::any('/catualitypatient', 'casualitycontroller@addpatient')->name('catualitypatient');
-    Route::any('/all_catualitypatients', 'casualitycontroller@allpatients')->name('all_catualitypatients');
-    Route::any('/update_cpatient', 'casualitycontroller@update_cpatient')->name('update_cpatient');
-    Route::any('/view_cltypatient{id}', 'casualitycontroller@show')->name('view_cltypatient');
-    //sarjana added
-    Route::any('/manage_casu_type', 'casualitycontroller@manage_casu_type')->name('manage_casu_type');
-    Route::any('/save_casu_type', 'casualitycontroller@save_casu_type')->name('save_casu_type');
-    Route::any('/update_casu_type', 'casualitycontroller@update_casu_type')->name('update_casu_type');
-    Route::any('/delete_casuality_type{id}', 'casualitycontroller@delete_casuality_type')->name('delete_casuality_type');
-    Route::any('/search_casu_pat', 'casualitycontroller@search_casu_pat')->name('search_casu_pat');
     //vipin
     Route::any('/patient_details', 'casualitycontroller@patient_details')->name('patient_details');
     Route::any('/casuality_billing{id}', 'casualitycontroller@casuality_billing')->name('casuality_billing');
