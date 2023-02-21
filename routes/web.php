@@ -119,25 +119,7 @@ use App\Http\Controllers\issued_summary;
 
      
    
-    Route::any('/addpatinsurance', 'patientcontroller@addpatinsurance');
-    Route::post('projects/importProject', 'ProjectController@importProject')->name('importProject');
-    Route::resource('projects', ProjectController::class);
-    Auth::routes();
 
-    Route::get('/expanse_type', 'ExpanseController@index')->name('expanse_type');
-    Route::post('/save_expanse_type', 'ExpanseController@save_expanse_type')->name('save_expanse_type');
-    Route::post('/update_expanse_type', 'ExpanseController@update_expanse_type')->name('update_expanse_type');
-    Route::any('/delete_expanse_type{id}', 'ExpanseController@delete_expanse_type')->name('delete_expanse_type');
-
-
-
-
-    Route::get('/expanse_type', 'ExpanseController@index')->name('expanse_type');
-
-
-
-
-    Route::get('/home', 'homecontroller@index')->name('home');
 
     //Accounts Module by Anu s Kumar
     Route::get('/ledger_acounts', 'AccountsController@ledger_acounts')->name('ledger_acounts');
