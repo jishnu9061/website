@@ -690,8 +690,7 @@ use App\Http\Controllers\issued_summary;
         //Attendance Sheet 
     Route::any('attendance_sheet', 'hrindex@attendance_sheet')->name('attendance_sheet');
     Route::any('view_attendance', 'hrindex@view_attendance')->name('view_attendance');
-
-    //HR-Manage Salary Subhasree
+        //Manage Salary 
     Route::any('manage_salary', 'hrindex@manage_salary')->name('manage_salary');
     Route::any('manage_salary_index', 'hrindex@manage_salary_index')->name('manage_salary_index');
     Route::any('allowances', 'hrindex@allowances')->name('allowances');
@@ -700,8 +699,8 @@ use App\Http\Controllers\issued_summary;
     Route::any('statutory_deductions', 'hrindex@statutory_deductions')->name('statutory_deductions');
     Route::any('other_payment', 'hrindex@other_payment')->name('other_payment');
     Route::any('overtime', 'hrindex@overtime')->name('overtime');
-
-    //Store & Inventory
+    //hr index controller
+//Store controller
     Route::any('Store_&_Inventory_index', 'store@index')->name('Store_&_Inventory_index');
     Route::any('manage_categories', 'store@list_manage_categories')->name('manage_categories');
     Route::any('add_product', 'store@addproduct')->name('add_product');
@@ -729,9 +728,8 @@ use App\Http\Controllers\issued_summary;
     Route::any('/edit_manage_items/{id}', 'store@editmanage_items')->name('edit_manage_items');
     Route::any('update_manage_items', 'store@update_manage_items')->name('update_manage_items');
     Route::any('/drop_manage_items/{id}', 'store@drop_manage_items')->name('drop_manage_items');
-
-
-    //Purchase Management
+    //Store controller
+//Purchase Management controller
     Route::any('purchase_index', 'PurchaseManagement@index_purchase')->name('purchase_index');
     Route::any('purchase_order', 'PurchaseManagement@purchase_order')->name('purchase_order');
     Route::any('store_purchase', 'PurchaseManagement@store_purchase')->name('store_purchase');
