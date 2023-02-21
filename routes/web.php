@@ -204,28 +204,24 @@ use App\Http\Controllers\issued_summary;
     Route::any('holiday_2020', 'SystemSetup@holiday2020')->name('holiday_2020');
     Route::any('holiday_2021', 'SystemSetup@holiday2021')->name('holiday_2021');
     Route::any('holiday_2022', 'SystemSetup@holiday2022')->name('holiday_2022');
-    
-//Other Configuration
+        //Other Configuration
     Route::any('other_confgn', 'SystemSetup@othrconftn')->name('other_confgn');
-    //end
-//Company branch
+        //Company branch
     Route::any('company_branch', 'SystemSetup@branch')->name('company_branch');
     Route::any('add_company_branch', 'SystemSetup@addbranch')->name('add_company_branch');
     Route::any('/edit_company_branch/{id}', 'SystemSetup@editbranch')->name('edit_company_branch');
     Route::any('/update_company_branch', 'SystemSetup@updatebranch')->name('update_company_branch');
     Route::any('/delete_company_branch/{id}', 'SystemSetup@deletebranch')->name('delete_company_branch');
-    //end
-//configurations
+        //configurations
     Route::any('configu_ration', 'SystemSetup@Configtn')->name('configu_ration');
-    //end
-//courts
+        //courts
     Route::any('courts', 'SystemSetup@courts')->name('courts');
     Route::any('add_court', 'SystemSetup@addcourt')->name('add_court');
     Route::any('edit_court/{id}', 'SystemSetup@editcourt')->name('edit_court');
     Route::any('/update_court', 'SystemSetup@updatecourt')->name('update_court');
     Route::any('/delete_court/{id}', 'SystemSetup@deletecourt')->name('delete_court');
     Route::any('add_court_category', 'SystemSetup@addcourtcategory')->name('add_court_category');
-    //end
+    
 //letter types
     Route::any('letter_types', 'SystemSetup@lettertype')->name('letter_types');
     Route::any('add_letter_category', 'SystemSetup@addlettercategory')->name('add_letter_category');
