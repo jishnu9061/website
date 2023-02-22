@@ -51,10 +51,10 @@ float:right;
 text-align:right;
 color: #999;
 }
-</style>  
+</style>
    </head>
    <body>
-   
+
     {{-- heading --}}
     <div class="container">
     {{-- <h4 id="hdtpa"><b>Bank Account Details</b></h4> --}}
@@ -79,11 +79,11 @@ color: #999;
         </div>
     </div>
     <br>
-    
- 
-        
+
+
+
         <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
+
 {{-- <a href="{{('add_bank_account')}}"><button class="btn btn-primary">Add New Account</button></a> --}}
                 {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Account</button> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -91,7 +91,7 @@ color: #999;
             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add New Account</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
     <div class="header_wrap">
@@ -108,13 +108,13 @@ color: #999;
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-   
+
     <!-- <h6 style="text-align:center; ">Bank Account Details</h6> -->
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
@@ -159,7 +159,11 @@ color: #999;
 
                            <div class="dropdown-menu">
                             <a class="dropdown-item"
-                                href="{{url('edit_bank_account',$detail->id)}}">Edit Bank Account</a>
+                                {{-- href="{{url('edit_bank_account',$detail->id)}}">Edit Bank Account</a> --}}
+                            <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_bank_details" href="#">Edit Bank Account
+                                                            
+                                                            </a>
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_bank_account',$detail->id)}}">Delete Bank Account</a> --}}
                                 <a href="#"onclick=deletebank(this) data-id="{{ $detail->id }}"data-toggle="modal"
@@ -217,8 +221,8 @@ color: #999;
                                     <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('add_bank_account') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 @csrf
                 <div class="row">
                 <div class="col-md-3">
@@ -276,10 +280,10 @@ color: #999;
                             <option>STIMA DT SACCO SOCIETY LIMITED</option>
                             <option>TRANS-NATIONAL BANK</option>
                             <option>VICTORIA COMMERCIAL BANK</option>
-                         
+
 
                         </select></br>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -304,11 +308,11 @@ color: #999;
 
                                 </div>
                                 <input type="text" class="form-control" name="branch" id="username" required>
-                                
+
                             </div>
                         </div>
                     </div>
-                   
+
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Account Name</label>
@@ -325,7 +329,7 @@ color: #999;
 <br>
 <div class="row">
 
-                   
+
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Account Number</label>
@@ -335,7 +339,7 @@ color: #999;
                                 </div>
                                 <input type="text" class="form-control" name="account_no" id="username" required></br>
                                 <div class="invalid-feedback" style="width: 100%;">
-                                 
+
                                 </div>
                             </div>
                         </div>
@@ -350,7 +354,7 @@ color: #999;
                                 </div>
                                 <input type="text" class="form-control" name="bank_code" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                  
+
                                 </div>
                             </div>
                         </div>
@@ -365,12 +369,12 @@ color: #999;
                                 </div>
                                 <input type="text" class="form-control" name="branch_code" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
-                              
+
                                 </div>
                             </div>
                         </div>
                     </div>
-              
+
         <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Swift Code</label>
@@ -391,7 +395,7 @@ color: #999;
                     </div>
                     <input type="text" class="form-control" name="mpesa_no" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
-              
+
                     </div>
                 </div>
             </div>
@@ -446,11 +450,234 @@ color: #999;
 </div>
 </div>
 </div>
+ {{-- Start Edit Bank Details --}}
+    <div class="modal fade" id="edit_bank_details" style="">
+        <!-- edit bank -->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                    @csrf
+                    <h5><b>Edit Bank Details:-</b></h5>
+
+                    <div class="row">
+                        <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="bank"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Bank
+                                            </label>
+                                        <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select type="text" value="" name="bank" style="width:100%;">
+                            <option>---Select---</option>
+                            <option>AFRICAN BANKING CORP LTD</option>
+                            <option>AKIBA BANK LTD</option>
+                            <option>BANK OF AFRICA LTD</option>
+                            <option>BANK OF BARODA</option>
+                            <option>BANK OF INDIA</option>
+                            <option>BARCLAYS BANK</option>
+                            <option>CENTRAL BANK OF KENYA</option>
+                            <option>CFC BANK</option>
+                            <option>CHASE BANK (K) LTD</option>
+                            <option>CITI BANK</option>
+                            <option>CO-OPERATIVE BANK</option>
+                            <option>COMMERCIAL BANK OF AFRICA</option>
+                            <option>CONSOLIDATED BANK</option>
+                            <option>CREDIT BANK LTD</option>
+                            <option>DEVELOPMENT BANK OF KENYA LIMITED</option>
+                            <option>DIAMOND TRUST BANK KENYA LIMITED</option>
+                            <option>DIRECT MPESA</option>
+                            <option>DUBAI BANK OF KENYA</option>
+                            <option>EQUITORIAL COMMERCIAL BANK LTD</option>
+                            <option>EQUITY BANK</option>
+                            <option>FAMILY BANK LTD</option>
+                            <option>FIDELITY BANK</option>
+                            <option>FINA BANK LTD</option>
+                            <option>GIRO BANK BANDA STREET</option>
+                            <option>GUARDIAN BANK</option>
+                            <option>HABIB BANK LTD</option>
+                            <option>HFCK</option>
+                            <option>I & M BANK</option>
+                            <option>IMPERIAL BANK</option>
+                            <option>KENYA COMMERCIAL BANK</option>
+                            <option>MIDDLE EAST BANK</option>
+                            <option>MWITO SACCO SOCIETY LTD</option>
+                            <option>NATIONAL BANK OF KENYA</option>
+                            <option>NIC BANK</option>
+                            <option>ORIENTAL COMMERCIAL BANK</option>
+                            <option>PARAMOUNT / UNIVERSAL BANK</option>
+                            <option>PAYPAL</option>
+                            <option>POST BANK</option>
+                            <option>PRIME BANK LTD</option>
+                            <option>SIDIAN BANK</option>
+                            <option>SOUTHERN CREDIT BANKING CORPORATION</option>
+                            <option>STANBIC BANK KENYA LTD</option>
+                            <option>STANDARD CHARTERED BANK</option>
+                            <option>STIMA DT SACCO SOCIETY LIMITED</option>
+                            <option>TRANS-NATIONAL BANK</option>
+                            <option>VICTORIA COMMERCIAL BANK</option>
+
+
+                        </select></br>
+
+                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="branch"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Branch
+                                            Type</label>
+                                        <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="branch" id="username" required>
+
+                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="account_name"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Account Name
+                                            Status</label>
+                                         <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="account_name" id="username" required>
+
+                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="account_no"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Account Number</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <input type="text" class="form-control" name="account_no" id="username" required></br>
+                                                <div class="invalid-feedback" style="width: 100%;">
+
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="bank_code"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Bank Code</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+            
+                                            </div>
+                                            <input type="text" class="form-control" name="bank_code" id="age">
+                                            <div class="invalid-feedback" style="width: 100%;">
+            
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="branch_code"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Branch Code
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+            
+                                            </div>
+                                            <input type="text" class="form-control" name="branch_code" id="confirm_password" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+            
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 0px;">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="swift_code"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Swift Code
+                                            </label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                            
+                                                </div>
+                                                <input type="text" class="form-control" name="swift_code" id="confirm_password" required>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="mpesa_no"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Mpesa No</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                        
+                                            </div>
+                                            <input type="text" class="form-control" name="mpesa_no" id="confirm_password" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                        
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="g/l_account"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Bank G/L Account</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                        
+                                            </div>
+                                            <select type="text" value="" name="bank_gl_ac"style="width:100%;">
+                                                    <option>---Select---</option>
+                                                    <option>8004==> Client A/C Sidian Bank</option>
+                                                    <option>8000==>Client Account - Cooperative Bank</option>
+                                                    <option>8008==>Client Account - Cooperative Bank (USD)</option>
+                                                    <option>8003==>Client Account - DTB Bank</option>
+                                                    <option>8006==>Client Account - Equity Bank</option>
+                                                    <option>8009==>Client Account - PayPal</option>
+                                                    <option>8001==>Office Account - Cooperative Bank</option>
+                                                    <option>8010==>Office Account - DIRECT MPESA</option>
+                                                    <option>8002==>Office Account - DIRECT MPESA</option>
+                                                    <option>8010==>Office Account - Stima Sacco Society Ltd</option>
+                                                    <option>8005==>Office Account - Sidian Bank</option>
+                        
+                                                </select>
+                                        </div>
+                                </div>
+                                <div class="row document_details " style="margin-bottom: 20px;">
+                                    {{-- Add More Document details:- javascript --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class style="width: 20%">
+                    </div>
+                    <div class="col-sm">
+
+                        <button type="submit" class="btn btn-primary float:right;"
+                            style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                            --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                        </button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                            onclick="history.back()">Cancel</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    {{-- End edit corporate client --}}
 <div class="modal fade" id="deleteBank" style=""> <!-- delete bank -->
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">
             <!---- Modal Header -->
-            <form method="post"  id="delete_bank" action="{{url('delete_bank_account',$detail->id)}}" enctype="multipart/form-data"> 
+            <form method="post"  id="delete_bank" action="{{url('delete_bank_account',$detail->id)}}" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" id="id" value="id">
                 <div class="modal-header" style="padding:0rem 0rem;">
@@ -459,7 +686,7 @@ color: #999;
                 <!-- Modal body -->
                 <div class="modal-body" >
                     <div class="container">
-                        <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
                         </div>
                             <div class="row">
                                 <div class="" style="width: 30%;">
@@ -481,5 +708,5 @@ color: #999;
         </div>
 </html>
   @endsection
-      
+
 
