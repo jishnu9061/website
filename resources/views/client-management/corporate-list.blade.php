@@ -53,140 +53,15 @@
             color: #999;
         }
 
-        th {
-            width: 30%;
+        input[type='file'] {
+            opacity: 0
         }
 
-        .outer {
-            border-color: #1d1d50;
-            width=45%;
-            border-radius: 7px;
+        input[type='file'] {
+            color: rgba(0, 0, 0, 0)
         }
-
-        .add_doc {
-            text-decoration: none;
-            display: inline-block;
-            */width: 30px;
-            height: 30px;
-            background: #8bc34a;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #1d1d50;
-            align-items: center;
-            line-height: 0.7;
-            */display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .exdocdelete {
-            text-decoration: none;
-            display: inline-block;
-            background: #f44336;
-            color: #1d1d50;
-            font-size: 1.5rem;
-            font-weight: bold;
-            width: 30px;
-            height: 30px;
-            margin-left: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .docflex {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        .doc_warp {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e4e1e1;
-        }
-
-        .doc_contanier {
-            max-width: 1000px;
-            background: white;
-            border-radius: 5px;
-            padding: 20px;
-            */box-shadow: 0 2px 2px 43px black;
-        }
-
-        .doc_input {
-            padding: 8px 10px;
-            width: 50%;
-            border-radius: 5px;
-            border-color: #1d1d50;
-        }
-
-        .doc_input:focus {
-            outline: 1px solid #efefef;
-        }
-
-        .add_decduct {
-            text-decoration: none;
-            display: inline-block;
-            */width: 30px;
-            height: 30px;
-            background: #8bc34a;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #1d1d50;
-            justify-content: space-evenly;
-            align-items: center;
-            line-height: 0.9;
-            cursor: pointer;
-        }
-
-        .decduct_input {
-            padding: 8px 10px;
-            width: 20%;
-            border-radius: 5px;
-            border-color: #1d1d50;
-        }
-
-        #e_passmessage {
-            display: block;
-            color: #1d1d50;
-            position: relative;
-        }
-
-        /* Add a green text color and a checkmark when the requirements are right */
-        .passvalid {
-            color: green;
-            margin: 0px;
-            font-size: 10px;
-        }
-
-        .passvalid:before {
-            position: relative;
-            left: 0px;
-            content: "✔";
-        }
-
-        /* Add a red text color and an "x" when the requirements are wrong */
-        .passinvalid {
-            color: red;
-            margin: 0px;
-            font-size: 10px;
-            padding-left: 10px;
-        }
-
-        .passinvalid:before {
-            position: relative;
-            left: 0px;
-            content: "✖";
-        }
-
-        /*Toggle button*/
+    </style>
+    <style>
         .switch {
             position: relative;
             display: inline-block;
@@ -245,6 +120,46 @@
 
         .slider.round:before {
             border-radius: 50%;
+        }
+
+        /* The message box is shown when the user clicks on the password field */
+        #passmessage {
+            display: none;
+            color: #1d1d50;
+            position: relative;
+        }
+
+        #e_passmessage {
+            display: none;
+            color: #1d1d50;
+            position: relative;
+        }
+
+        /* Add a green text color and a checkmark when the requirements are right */
+        .passvalid {
+            color: green;
+            margin: 0px;
+            font-size: 10px;
+        }
+
+        .passvalid:before {
+            position: relative;
+            left: 0px;
+            content: "✔";
+        }
+
+        /* Add a red text color and an "x" when the requirements are wrong */
+        .passinvalid {
+            color: red;
+            margin: 0px;
+            font-size: 10px;
+            padding-left: 10px;
+        }
+
+        .passinvalid:before {
+            position: relative;
+            left: 0px;
+            content: "✖";
         }
     </style>
 
@@ -320,8 +235,9 @@
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"><label class="switch">
-                                            <input type="checkbox" data-id="" onclick="changestatus(this)"
-                                                id="status" class="check">
+                                            <input type="checkbox" data-id="{{ $list->corporate_id }}"
+                                                onclick="changestatus(this)" id="status" class="check"
+                                                {{ $list->status == 1 ? 'checked' : '' }}>
                                             <span class="slider round"></span>
                                         </label>
                                     </td>
@@ -679,7 +595,7 @@
                                     {{-- Add More Document details:- javascript --}}
                                 </div>
                             </div>
-                        </div>
+                    </div>
                     <div class="row">
                         <div class="row">
                             <div class="" style="width: 50%;">
@@ -699,7 +615,7 @@
             </div>
         </div>
     </div>
-    
+
     {{-- </div>End create corporate client --}}
     {{-- Start Edit Cororate Client --}}
     <div class="modal fade" id="edit_corporate_client_details" style="">
@@ -707,10 +623,11 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <!---- Modal Header -->
-                <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data" id="addemployee">
+                <form method="post" id="update_corporate" action="" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
+                    <input type="hidden" id="corporateid" value="corporateid">
                     <h5><b>Edit Corporate Client Details:-</b></h5>
-
                     <div class="row">
                         <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
                             <div class="row">
@@ -770,7 +687,7 @@
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Country</label>
                                     <input type="text" placeholder="Country"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        class="form-control" name="city" id="" value="" required>
+                                        class="form-control" name="country" id="country" value="" required>
                                 </div>
                                 <div class="" style="width:33%;"><span style="color: red">*</span>
                                     <label for="city"
@@ -835,13 +752,13 @@
                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
                                             name="gender" id="" required>
                                             <option>Select Reporting Day</option>
-                                            <option value="1">Monday</option>
-                                            <option value="2">Tuesday</option>
-                                            <option value="3">Wednesday</option>
-                                            <option value="4">Thursday</option>
-                                            <option value="5">Friday</option>
-                                            <option value="6">Saturday</option>
-                                            <option value="7">Sunday</option>
+                                            <option>Monday</option>
+                                            <option>Tuesday</option>
+                                            <option>Wednesday</option>
+                                            <option>Thursday</option>
+                                            <option>Friday</option>
+                                            <option>Saturday</option>
+                                            <option>Sunday</option>
                                         </select>
                                     </div>
                                 </div>
@@ -868,7 +785,8 @@
                                         Source</label>
                                     <input type="text" placeholder="Client Source Narration"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        class="form-control" name="city" id="" value="" required>
+                                        class="form-control" name="source_nartion" id="source_nartion" value=""
+                                        required>
                                 </div>
                                 <div class="" style="width:33%;"><span style="color: red">*</span>
                                     <label for="city"
@@ -888,9 +806,9 @@
                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
                                             name="gender" id="" required>
                                             <option>Select Client Industry</option>
-                                            <option value="1">Construction</option>
-                                            <option value="2">Auto Mobile</option>
-                                            <option value="2">Hospital</option>
+                                            <option>Construction</option>
+                                            <option>Auto Mobile</option>
+                                            <option>Hospital</option>
                                         </select>
                                     </div>
                                 </div>
@@ -921,7 +839,8 @@
                                         Code</label>
                                     <input type="text" placeholder="Postal Code"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        class="form-control" name="city" id="" value="" required>
+                                        class="form-control" name="postal_code" id="postal_code" value=""
+                                        required>
                                 </div>
                                 <div class="" style="width:25%;"><span style="color: red">*</span>
                                     <label for="city"
@@ -929,7 +848,7 @@
                                     </label>
                                     <input type="text" placeholder="Town"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        class="form-control" name="city" id="" value="" required>
+                                        class="form-control" name="town" id="town" value="" required>
                                 </div>
                             </div>
                             <div class="row">
@@ -939,7 +858,7 @@
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Physical
                                             Address</label>
                                         <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Physical Address"
-                                            name="postal_addr" form="addemployee"></textarea>
+                                            name="physical_address" id="physical_address"></textarea>
                                     </div>
                                 </div>
                                 <div style="width:50%">
@@ -947,8 +866,8 @@
                                         <label for="postal_addr"
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes
                                         </label>
-                                        <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Notes" name="postal_addr"
-                                            form="addemployee"></textarea>
+                                        <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Notes" name="notes"
+                                            id="notes" form="notes"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -996,9 +915,63 @@
                             onclick="history.back()">Cancel</button>
                     </div>
             </div>
-            </form>
         </div>
+        </form>
     </div>
+    <script>
+        function changestatus(param) { // change copany status 
+            var status = $(param).prop('checked') == true ? 1 : 0;
+            var user_id = $(param).data('id');
+            $.ajax({
+                type: "post",
+                dataType: "json",
+                url: "{{ route('changestatus_corporate') }}",
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    'status': status,
+                    'corporate_id': user_id
+                },
+                success: function(data) {
+                    toastr.options.closeButton = true;
+                    toastr.options.closeMethod = 'fadeOut';
+                    toastr.options.closeDuration = 1;
+                    toastr.success(data.success);
+                }
+            });
+        }
+
+        function editcompany(param) { // edit company get details 
+            var corporateid = $(param).data('id');
+            $.ajax({
+                type: "GET",
+                url: 'edit_client/' + corporateid,
+                success: function(response) {
+                    $('#client_no').val(response.result.client_no);
+                    $('#client_type').val(response.result.client_type);
+                    $('#cityzen').val(response.result.cityzen);
+                    $('#certificate').val(response.result.certificate);
+                    $('#country').val(response.result.country);
+                    $('#telephone').val(response.result.telephone);
+                    $('#fax').val(response.result.fax);
+                    $('#email').val(response.result.email);
+                    $('#website').val(response.result.website);
+                    $('#brought').val(response.result.brought);
+                    $('#status_reporting').val(response.result.status_reporting);
+                    $('#client_source').val(response.result.client_source);
+                    $('#source_naration').val(response.result.source_naration);
+                    $('#client_name').val(response.result.client_name);
+                    $('#postal_address').val(response.result.postal_address);
+                    $('#pin_no').val(response.result.pin_no);
+                    $('#postal_code').val(response.result.postal_code);
+                    $('#town').val(response.result.town);
+                    $('#physical_address').val(response.result.physical_address);
+                    $('#notes').val(response.result.notes);
+                    $('#corporateid').val(corporateid);
+                    $('#update_corporate').attr('action', "{{ url('update-corporate') }}" + "/" + corporateid);
+                }
+            });
+        }
+    </script>
     {{-- End edit corporate client --}}
     <div class="modal fade" id="deletecompany" style="">
         <!-- delete company -->
