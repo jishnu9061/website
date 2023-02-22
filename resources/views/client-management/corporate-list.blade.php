@@ -326,11 +326,10 @@
                                         </label>
                                     </td>
                                     <td scope="row"class="text-center">
-                                        <div class="btn-group">
+                                        <div class="btn-group" >
                                             <a class="btn" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false" style="border-color:none;"> ⋮ </a>
-
-                                            <div class="dropdown-menu">
+                                            <div class="dropdown-menu" style="overflow: scroll;height:250px;">
                                                 <a class="dropdown-item" data-toggle="modal"
                                                     data-target="#edit_corporate_client_details" href="#">Edit Client
                                                     Details
@@ -708,7 +707,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <!---- Modal Header -->
-                <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data" id="addemployee">
                     @csrf
                     <h5><b>Edit Corporate Client Details:-</b></h5>
 
@@ -1130,7 +1129,6 @@
         }
         add_decduct.addEventListener("click", add_decduct_input); // Add More Decduction percentage author@udayan --end
     </script>
-
     <script>
         function deletecompany(param) { //Delete clent confirmation message 
             var deleteuniqueid = $(param).data('id');
