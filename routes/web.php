@@ -941,7 +941,6 @@ use App\Http\Controllers\issued_summary;
 //crm controller
         //index
     Route::any('crm_index', "CrmController@index_view")->name('crm_index');
-
         //individual
     Route::any('view-registration', 'CrmController@viewRegistration')->name('view-registration');
     Route::any('add-registration', 'CrmController@addRegistration')->name('add-registration');
@@ -1043,57 +1042,7 @@ use App\Http\Controllers\issued_summary;
 
 
 
-//Customer Relationship Mamagement
-Route::any('crm_index', "CrmController@index_view")->name('crm_index');
-Route::any('about', "etc@index")->name('about');
-Route::any('help', "etc@index_help")->name('help');
 
-Route::any('manage_tasks', "CrmController@manage_tasks")->name('manage_tasks');
-Route::any('view_manage_task/{id}', "CrmController@view_manage_task")->name('view_manage_task');
-Route::any('edit_manage_task/{id}', "CrmController@edit_manage_task")->name('edit_manage_task');
-Route::any('projects', "CrmController@projects")->name('projects');
-Route::any('view_project', "CrmController@view_project")->name('view_project');
-Route::any('edit_project', "CrmController@edit_project")->name('edit_project');
-Route::any('Corporate', "CrmController@Corporates")->name('Corporate');
-
-Route::any('edit_Corporate/{Id}', "CrmController@edit_Corporates")->name('edit_Corporate');
-
-Route::any('view_Corporate/{id}', "CrmController@view_Corporates")->name('view_Corporate');
-Route::any('add_Corporate', "CrmController@add_Corporates")->name('add_Corporate');
-Route::any('update_Corporate', "CrmController@update_Corporates")->name('update_Corporate');
-Route::any('drop_Corporate/{id}', "CrmController@drop_Corporates")->name('drop_Corporate');
-
-
-
-
-
-Route::any('expense', "CrmController@expense")->name('expense');
-Route::any('view_expense/{id}', "CrmController@view_expense")->name('view_expense');
-Route::any('edit_expense/{id}', "CrmController@edit_expense")->name('edit_expense');
-Route::any('crm_panel', "CrmController@crm_panel")->name('crm_panel');
-Route::any('lead', "CrmController@leads")->name('lead');
-Route::any('view_lead/{Id}', "CrmController@view_leads")->name('view_lead');
-Route::any('store_proposal_leads', "CrmController@store_proposal_leads")->name('store_proposal_leads');
-// Route::any('leads_edits',"CrmController@leads_edits")->name('leads_edits');
-
-
-Route::any('proposal_lead{Id}', "CrmController@proposal_leads")->name('proposal_lead');
-Route::any('individual_lead', "CrmController@individual_leads")->name('individual_lead');
-Route::any('view_individual_lead/{id}', "CrmController@view_individual_leads")->name('view_individual_lead');
-Route::any('individual_proposal_lead/{id}', "CrmController@individual_proposal_leads")->name('individual_proposal_lead');
-Route::any('store_individual_proposal_leads', "CrmController@store_individual_proposal_leads")->name('store_individual_proposal_leads');
-
-
-
-
-
-
-Route::any('add_manage_task', "CrmController@add_manage_tasks")->name('add_manage_task');
-Route::any('update_manage_task', "CrmController@update_manage_task")->name('update_manage_task');
-Route::any('drop_manage_task/{id}', "CrmController@drop_manage_task")->name('drop_manage_task');
-Route::any('add_expense', "CrmController@add_expense")->name('add_expense');
-Route::any('update_expense', "CrmController@update_expense")->name('update_expense');
-Route::any('drop_expense/{id}', "CrmController@drop_expense")->name('drop_expense');
 
 //employee start
 Route::any('addemployee', "employeecontroller@store")->name('addemployee');
