@@ -155,401 +155,313 @@
                                         <form method="post" action="{{ url('new_office_instructions') }}"
                                             enctype="multipart/form-data">
                                             @csrf
-
-
                                             <div class="row">
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username"> Date</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="date" class="form-control" name="date"
-                                                                id="username" required>
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Number is required.
-                                                            </div>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="date"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
+                                                        <input type="date" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="date" id="" value="" required>
                                                     </div>
                                                 </div>
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Instruction Type</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <select name="instruction_type" id="cars">
-                                                                <option>select...</option>
-                                                                <option>Demo 1</option>
-                                                                <option>Demo 2</option>
-                                                                <option>Demo 3</option>
-                                                                <option>Demo 4</option>
-                                                            </select>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="instruction_type"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Instruction
+                                                            Type</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="instruction_type" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Demo 1</option>
+                                                            <option>Demo 2</option>
+                                                            <option>Demo 3</option>
+                                                            <option>Demo 4</option>
+                                                        </select>
                                                     </div>
                                                 </div>
-
-
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Instruction Category</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <select name="instruction_category" id="cars">
-                                                                <option>select...</option>
-                                                                <option>Demo 1</option>
-                                                                <option>Demo 2</option>
-                                                                <option>Demo 3</option>
-                                                                <option>Demo 4</option>
-                                                            </select>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="instruction_category"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Instruction
+                                                            Category</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="instruction_category" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Demo 1</option>
+                                                            <option>Demo 2</option>
+                                                            <option>Demo 3</option>
+                                                            <option>Demo 4</option>
+                                                        </select>
                                                     </div>
-                                                </div>
-
-                                            </div>
-
-                                            <br>
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Receiver</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="text" class="form-control" name="receiver"
-                                                                id="age">
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Incorporation is required
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Currency</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <select name="currency" id="cars">
-                                                                <option>select...</option>
-                                                                <option>Demo 1</option>
-                                                                <option>Demo 2</option>
-                                                                <option>Demo 3</option>
-                                                                <option>Demo 4</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Exchange Rate</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="text" class="form-control" name="exchange_rate"
-                                                                id="confirm_password" required>
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Telephone Number is required.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
                                                 </div>
                                             </div>
-                                            <br>
                                             <div class="row">
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Expense Category</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <select name="expence_category" id="cars">
-                                                                <option>select...</option>
-                                                                <option>Demo 1</option>
-                                                                <option>Demo 2</option>
-                                                                <option>Demo 3</option>
-                                                                <option>Demo 4</option>
-                                                            </select>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="receiver"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Receiver</label>
+                                                        <input type="date" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="receiver" id="" value=""
+                                                            required>
                                                     </div>
                                                 </div>
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Turn-Around Time(TAT)</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <select name="turn_around" id="cars">
-                                                                <option>select...</option>
-                                                                <option>Demo 1</option>
-                                                                <option>Demo 2</option>
-                                                                <option>Demo 3</option>
-                                                                <option>Demo 4</option>
-                                                            </select>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="currency"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="currency" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Demo 1</option>
+                                                            <option>Demo 2</option>
+                                                            <option>Demo 3</option>
+                                                            <option>Demo 4</option>
+                                                        </select>
                                                     </div>
                                                 </div>
-
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Priority</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <select name="priority" id="cars">
-                                                                <option>select...</option>
-                                                                <option>Demo 1</option>
-                                                                <option>Demo 2</option>
-                                                                <option>Demo 3</option>
-                                                                <option>Demo 4</option>
-                                                            </select>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="exchange_rate"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Exchange
+                                                            Rate</label>
+                                                        <input type="text" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="exchange_rate" id="" value=""
+                                                            required>
                                                     </div>
                                                 </div>
-
                                             </div>
-                                            <br>
                                             <div class="row">
-
-                                                <div class="col-md-6">
-                                                    <div class="mb-1">
-                                                        <label for="username">Amount</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="text" class="form-control" name="amount"
-                                                                id="username" required>
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Number is required.
-                                                            </div>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="expence_category"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Expense
+                                                            Category</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="expence_category" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Demo 1</option>
+                                                            <option>Demo 2</option>
+                                                            <option>Demo 3</option>
+                                                            <option>Demo 4</option>
+                                                        </select>
                                                     </div>
                                                 </div>
-
-                                                <div class="col-md-6">
-                                                    <div class="mb-1">
-                                                        <label for="username">Details</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <textarea class="form-control" id="form7Example7"
-                                                                name="detail" rows="3"></textarea>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="turn_around"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Turn-Around
+                                                            Time(TAT)</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="turn_around" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Demo 1</option>
+                                                            <option>Demo 2</option>
+                                                            <option>Demo 3</option>
+                                                            <option>Demo 4</option>
+                                                        </select>
                                                     </div>
                                                 </div>
-
-
-
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="priority"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Priority</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="priority" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Demo 1</option>
+                                                            <option>Demo 2</option>
+                                                            <option>Demo 3</option>
+                                                            <option>Demo 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
-
+                                            <div class="row">
+                                                <div class="col-md-6" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="amount"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Amount</label>
+                                                        <input type="text" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="amount" id="" value="" required>
+                                                    </div>
+                                                </div>
+                                                <div style="width:50%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="detail"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Details</label>
+                                                        <textarea class="outer" rows="4"
+                                                            style="border-color:#1d1d50;border-radius:7px;width:100%;"
+                                                            cols="41" placeholder="Physical Address" name="detail"
+                                                            form="addemployee"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <hr class="mb-4">
-
-
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="mb-1">
-                                                        <label for="username">Send Notification To</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <select name="send_notification" id="cars">
-                                                                <option>select...</option>
-                                                                <option>Demo 1</option>
-                                                                <option>Demo 2</option>
-                                                                <option>Demo 3</option>
-                                                                <option>Demo 4</option>
-                                                            </select>
-                                                        </div>
+                                                <div class="col-md-6" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="send_notification"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Send
+                                                            Notification To</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="send_notification" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Demo 1</option>
+                                                            <option>Demo 2</option>
+                                                            <option>Demo 3</option>
+                                                            <option>Demo 4</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <br>
-
-                                            <!-- <div class="container">
-                    <div class="row">
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
-                        <button type="submit" class="btn btn-primary float:right" style="width:45%">Send Instruction</button>
-                        <button type="submit" class="btn btn-primary float:left"style="width:45%">Close</button>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-</div>
-
-</form>
-</div>
-</div>
-
-
-
-
-</div>
-</div> -->
-                                            <div class="row">
-                                                <div class="col-sm">
-
-                                                </div>
-                                                <div class="col-sm">
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <br>
-                                                    <button type="submit" class="btn btn-primary float:right;"
-                                                        Style="width:45%;">Send</button>
-                                                    <button type="button" class="btn btn-primary float:left"
-                                                        Style="width:45%;" data-dismiss="modal">Close</button>
-                                                </div>
-                                            </div>
                                     </div>
-                                    </form>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="row">
+                                    <div class="col-sm">
 
-                    </div>
-                    <div class="modal" id="mymodal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <div class="modal-body">
-                                        <form action="">
-                                            <div>
-                                                <input type="text" name="type" class="form-control"
-                                                    placeholder="Client Type">
-                                                <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                                            </div>
-                                        </form>
+                                    </div>
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm">
+                                        <br>
+                                        <button type="submit" class="btn btn-primary float:right;"
+                                            Style="width:45%;">Send</button>
+                                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                            data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="modal" id="my">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <div class="modal-body">
-                                    <form action="">
-                                        <div>
-                                            <input type="text" name="type" class="form-control" placeholder="Country">
-                                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                                        </div>
-                                    </form>
-                                </div>
+
+            </div>
+            <div class="modal" id="mymodal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-body">
+                                <form action="">
+                                    <div>
+                                        <input type="text" name="type" class="form-control" placeholder="Client Type">
+                                        <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <br>
-            <!-- Supplier modal Edit End -->
-
-            <!-- Delete  confirmation Message -->
-
-            <!-- End delete confirmation message -->
         </div>
-        <script>
-        function myFunction() {
-            if (!confirm("Are you sure to delete this"))
-                event.preventDefault();
-        }
-        </script>
-        <script>
-        $(function() {
-            $("#new-item").dataTable();
-        })
-        </script>
+        <div class="modal" id="my">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-body">
+                            <form action="">
+                                <div>
+                                    <input type="text" name="type" class="form-control" placeholder="Country">
+                                    <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- Supplier modal Edit End -->
 
-        {{-- Search booking script --}}
-        <script>
-        $(document).ready(function() {
-            $('.searchingBook').select2();
-        });
-        </script>
-        {{-- search booking script end --}}
-        <!-- Delete  confirmation Message -->
-        <script>
-        function myFunction() {
-            if (!confirm("Are you sure to delete this"))
-                event.preventDefault();
-        }
-        </script>
-        <!-- End delete confirmation message -->
+    <!-- Delete  confirmation Message -->
 
-        <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-        <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
-        </script>
-        <script type="text/javascript" charset="utf8"
-            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+    <!-- End delete confirmation message -->
+</div>
+<script>
+function myFunction() {
+    if (!confirm("Are you sure to delete this"))
+        event.preventDefault();
+}
+</script>
+<script>
+$(function() {
+    $("#new-item").dataTable();
+})
+</script>
 
-        {{-- Supplier Edit start --}}
+{{-- Search booking script --}}
+<script>
+$(document).ready(function() {
+    $('.searchingBook').select2();
+});
+</script>
+{{-- search booking script end --}}
+<!-- Delete  confirmation Message -->
+<script>
+function myFunction() {
+    if (!confirm("Are you sure to delete this"))
+        event.preventDefault();
+}
+</script>
+<!-- End delete confirmation message -->
 
-        <script>
-        $(document).on('click', '#edit_medicine_details', function() {
+<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
+</script>
+<script type="text/javascript" charset="utf8"
+    src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
-            var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden').val();
-            var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
-            var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name').val();
-            var medicine_group = $(this).closest('#data').find('#medicine_group').val();
-            var medicicine_category_name = $(this).closest('#data').find('#medicine_category_name1').val();
-            var medicine_generic_name = $(this).closest('#data').find('#medicine_generic_name').val();
-            var medicine_manufactuure_name = $(this).closest('#data').find('#medicine_manufactuure_name').val();
-            var medicine_supplier_name = $(this).closest('#data').find('#medicine_supplier_name').val();
-            var medicine_minimum_level = $(this).closest('#data').find('#medicine_minimum_level').val();
-            var medicine_reorder_level = $(this).closest('#data').find('#medicine_reorder_level').val();
-            var medicine_unit_packing = $(this).closest('#data').find('#medicine_unit_packing').val();
-            var medicine_composition = $(this).closest('#data').find('#medicine_composition').val();
-            var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
-            var medicine_images = $(this).closest('#data').find('#medicine_images').val();
+{{-- Supplier Edit start --}}
+
+<script>
+$(document).on('click', '#edit_medicine_details', function() {
+
+    var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden').val();
+    var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
+    var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name').val();
+    var medicine_group = $(this).closest('#data').find('#medicine_group').val();
+    var medicicine_category_name = $(this).closest('#data').find('#medicine_category_name1').val();
+    var medicine_generic_name = $(this).closest('#data').find('#medicine_generic_name').val();
+    var medicine_manufactuure_name = $(this).closest('#data').find('#medicine_manufactuure_name').val();
+    var medicine_supplier_name = $(this).closest('#data').find('#medicine_supplier_name').val();
+    var medicine_minimum_level = $(this).closest('#data').find('#medicine_minimum_level').val();
+    var medicine_reorder_level = $(this).closest('#data').find('#medicine_reorder_level').val();
+    var medicine_unit_packing = $(this).closest('#data').find('#medicine_unit_packing').val();
+    var medicine_composition = $(this).closest('#data').find('#medicine_composition').val();
+    var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
+    var medicine_images = $(this).closest('#data').find('#medicine_images').val();
 
 
 
-            $("#edit_id").val(medicine_id_hidden);
-            $("#edit_medicine_name").val(medicine_name);
-            $("#edit_brand_name").val(medicine_brand_name);
-            $("#edit_medicine_group").val(medicine_group);
-            $("#edit_category_name").val(medicine_category_name);
-            $("#edit_generic_name").val(medicicine_genric_name);
-            $("#edit_manufacture_name").val(medicine_manufactuure_name);
-            $("#edit_supplier_name").val(medicine_supplier_name);
-            $("#edit_minimum_level").val(medicine_minimum_level);
-            $("#edit_reorder").val(medicine_reorder_level);
-            $("#edit_minimum_level").val(medicine_minimum_level);
-            $("#edit_unit_packing").val(medicine_unit_packing);
-            $("#edit_medicine_details1").val(medicine_composition);
-            $("#edit_medicine_note").val(medicine_notes);
-            $("#edit_image").val(medicine_images);
-        });
-        </script>
-        {{-- Supplier Edit End --}}
-        @endsection
+    $("#edit_id").val(medicine_id_hidden);
+    $("#edit_medicine_name").val(medicine_name);
+    $("#edit_brand_name").val(medicine_brand_name);
+    $("#edit_medicine_group").val(medicine_group);
+    $("#edit_category_name").val(medicine_category_name);
+    $("#edit_generic_name").val(medicicine_genric_name);
+    $("#edit_manufacture_name").val(medicine_manufactuure_name);
+    $("#edit_supplier_name").val(medicine_supplier_name);
+    $("#edit_minimum_level").val(medicine_minimum_level);
+    $("#edit_reorder").val(medicine_reorder_level);
+    $("#edit_minimum_level").val(medicine_minimum_level);
+    $("#edit_unit_packing").val(medicine_unit_packing);
+    $("#edit_medicine_details1").val(medicine_composition);
+    $("#edit_medicine_note").val(medicine_notes);
+    $("#edit_image").val(medicine_images);
+});
+</script>
+{{-- Supplier Edit End --}}
+@endsection

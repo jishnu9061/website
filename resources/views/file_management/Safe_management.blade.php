@@ -143,133 +143,81 @@
                                         <form method="post" action="{{ url('new_Safe_management') }}"
                                             enctype="multipart/form-data">
                                             @csrf
-
-
-
-
                                             <div class="row">
-
-
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username"> Date</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="date" class="form-control" name="date"
-                                                                id="username" required>
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Number is required.
-                                                            </div>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="date"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
+                                                        <input type="date" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="date" id="" value="" required>
                                                     </div>
                                                 </div>
-
-
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Client</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <select name="client" id="cars">
-                                                                <option>select</option>
-                                                                <option>Client 1</option>
-                                                                <option>Client 2</option>
-                                                            </select>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="client"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="client" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Client 1</option>
+                                                            <option>Client 2</option>
+                                                        </select>
                                                     </div>
                                                 </div>
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">File</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <select name="file" id="cars">
-                                                                <option>select</option>
-                                                                <option>File 1</option>
-                                                                <option>File 2</option>
-                                                            </select>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="file"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="file" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>File 1</option>
+                                                            <option>File 2</option>
+                                                        </select>
                                                     </div>
                                                 </div>
-
                                             </div>
-
-                                            <br>
                                             <div class="row">
-
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Safe Name</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <select name="safe_name" id="cars">
-                                                                <option>select</option>
-                                                                <option>Safe 1</option>
+                                            <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="safe_name"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Safe Name</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="safe_name" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Safe 1</option>
                                                                 <option>Safe 2</option>
-                                                            </select>
-                                                        </div>
+                                                        </select>
                                                     </div>
                                                 </div>
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Ref No.In Safe</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="text" class="form-control" name="ref_no"
-                                                                id="age">
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Incorporation is required
-                                                            </div>
-                                                        </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="ref_no"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Ref No.In Safe</label>
+                                                        <input type="text" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="ref_no" id="" value="" required>
                                                     </div>
                                                 </div>
-
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Approver</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <select name="approver" id="cars">
-                                                                <option>select</option>
-                                                                <option>Person 1</option>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="approver"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Approver</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="approver" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Person 1</option>
                                                                 <option>Person 2</option>
-                                                            </select>
-                                                        </div>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
-
-
                                             <div id="test" style="height:20px;"></div>
-
-
-
-
-                                            <br>
-                                            <!-- <h3 class="text-center" style="color: #070344;"><b>Documents</b></h3> -->
-
-
-
-
-                                            <!-- <div class="modal-header">
-                                        <b><u>Documents</u></b></span></div><br> -->
                                             <div class="modal-header">
                                                 <h2 class="text-center"><b>Documents</b></h2>
 
@@ -351,8 +299,8 @@
                                                     <div class="col-sm">
                                                         <br>
                                                         <button type="submit" class="btn btn-primary float:right;"
-                                                            Style="width:60%;">Save</button>
-                                                        <button type="button" class="btn btn-primary float:right;"
+                                                            Style="width:45%;">Save</button>
+                                                        <button type="button" Style="width:45%;" class="btn btn-primary float:right;"
                                                             data-dismiss="modal">Cancel</button>
                                                     </div>
                                                 </div>
