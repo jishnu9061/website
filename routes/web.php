@@ -965,28 +965,40 @@ use App\Http\Controllers\issued_summary;
     Route::any('view_individual_lead/{id}', "CrmController@view_individual_leads")->name('view_individual_lead');
     Route::any('individual_proposal_lead/{id}', "CrmController@individual_proposal_leads")->name('individual_proposal_lead');
     Route::any('store_individual_proposal_leads', "CrmController@store_individual_proposal_leads")->name('store_individual_proposal_leads');
-    
+        //manage task
+    Route::any('manage_tasks', "CrmController@manage_tasks")->name('manage_tasks');
+    Route::any('view_manage_task/{id}', "CrmController@view_manage_task")->name('view_manage_task');
+    Route::any('edit_manage_task/{id}', "CrmController@edit_manage_task")->name('edit_manage_task');
+    Route::any('add_manage_task', "CrmController@add_manage_tasks")->name('add_manage_task');
+    Route::any('update_manage_task', "CrmController@update_manage_task")->name('update_manage_task');
+    Route::any('drop_manage_task/{id}', "CrmController@drop_manage_task")->name('drop_manage_task');
+        //project
+    Route::any('projects', "CrmController@projects")->name('projects');
+    Route::any('view_project', "CrmController@view_project")->name('view_project');
+    Route::any('edit_project', "CrmController@edit_project")->name('edit_project');
+        //expense
+    Route::any('expense', "CrmController@expense")->name('expense');
+    Route::any('view_expense/{id}', "CrmController@view_expense")->name('view_expense');
+    Route::any('edit_expense/{id}', "CrmController@edit_expense")->name('edit_expense');
+    Route::any('add_expense', "CrmController@add_expense")->name('add_expense');
+    Route::any('update_expense', "CrmController@update_expense")->name('update_expense');
+    Route::any('drop_expense/{id}', "CrmController@drop_expense")->name('drop_expense');
+        //crm panel
+    Route::any('crm_panel', "CrmController@crm_panel")->name('crm_panel');
     //crm controller
   
     
     Route::any('about', "etc@index")->name('about');
     Route::any('help', "etc@index_help")->name('help');
 
-    Route::any('manage_tasks', "CrmController@manage_tasks")->name('manage_tasks');
-    Route::any('view_manage_task/{id}', "CrmController@view_manage_task")->name('view_manage_task');
-    Route::any('edit_manage_task/{id}', "CrmController@edit_manage_task")->name('edit_manage_task');
-    Route::any('projects', "CrmController@projects")->name('projects');
-    Route::any('view_project', "CrmController@view_project")->name('view_project');
-    Route::any('edit_project', "CrmController@edit_project")->name('edit_project');
+   
+    
    
 
 
 
 
-    Route::any('expense', "CrmController@expense")->name('expense');
-    Route::any('view_expense/{id}', "CrmController@view_expense")->name('view_expense');
-    Route::any('edit_expense/{id}', "CrmController@edit_expense")->name('edit_expense');
-    Route::any('crm_panel', "CrmController@crm_panel")->name('crm_panel');
+    
    
 
 
@@ -996,13 +1008,8 @@ use App\Http\Controllers\issued_summary;
 
 
 
-    Route::any('add_manage_task', "CrmController@add_manage_tasks")->name('add_manage_task');
-    Route::any('update_manage_task', "CrmController@update_manage_task")->name('update_manage_task');
-    Route::any('drop_manage_task/{id}', "CrmController@drop_manage_task")->name('drop_manage_task');
-    Route::any('add_expense', "CrmController@add_expense")->name('add_expense');
-    Route::any('update_expense', "CrmController@update_expense")->name('update_expense');
-    Route::any('drop_expense/{id}', "CrmController@drop_expense")->name('drop_expense');
-
+   
+   
 //file report
 Route::any('file-report', "filemanagement@filereport")->name('file-report');
 Route::any('file-opened-report', "filemanagement@fileopenreport")->name('file-opened-report');
