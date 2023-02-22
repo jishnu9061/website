@@ -20,9 +20,7 @@ class ClientManagement extends Controller
     {
         return view('client-management.client-index');
     }
-
-
-
+    
     public function view()
     {
         $company_id = Auth::user()->company_id;
@@ -1114,23 +1112,22 @@ class ClientManagement extends Controller
 
     public function addCommunication(Request $Request)
     {
-        $company_id = Auth::user()->company_id;
-        $branch_id = Auth::user()->branch_id ?? null;
         $communication_date = $Request['date'];
         $client = $Request['Client'];
         $file = $Request['File'];
-        $customer = $Request['Customer'];
+        $customer = $Request['customer'];
         $telephone_no = $Request['telephone'];
         $email = $Request['Email'];
         $communication_source = $Request['Sources'];
         $mode_of_communication = $Request['Communication'];
         $communicated = $Request['Communicated'];
-        $duration = $Request['Duration'];
-        $person_handling = $Request['Handling'];
+        $duration = $Request['duration'];
+        $other_communication = $Request['other_communication'];
+        $communicated_description = $Request['communication_description'];
+        $action_plan = $Request['action_plan'];
+        $person_handling = $Request['handling'];
         $time = $Request['Timer'];
-        $others = $Request['Others'];
-        $communicated_description = $Request['Description'];
-        $action_plan = $Request['Action'];
+        $others_handling = $Request['Other_handling'];
 
         DB::table('cra_conversations')->insert([
             'communication_date' => $communication_date,
@@ -1142,18 +1139,17 @@ class ClientManagement extends Controller
             'communication_source' =>  $communication_source,
             'mode_of_communication' =>  $mode_of_communication,
             'communicated' => $communicated,
+            'other_communication' => $other_communication,
             'duration' => $duration,
             'person_handling' =>  $person_handling,
             'time' =>  $time,
-            'others' => $others,
+            'others_handling' => $others_handling,
             'communicated_description' =>  $communicated_description,
             'action_plan' =>  $action_plan,
-            'company_id' => $company_id,
-            'branch_id' => $branch_id,
+
         ]);
 
-
-        return redirect('/communication-list/' . $company_id);
+        return redirect('/communication-list');
     }
 
 
