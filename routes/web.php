@@ -1024,42 +1024,9 @@ use App\Http\Controllers\issued_summary;
 
 
 
-//reshma
-Route::any('hr_department','hrindex@hrdepartment')->name('hr_department');
-Route::any('performance_department','hrindex@performance_department')->name('performance_department');
-Route::any('job_posts','hrindex@job_posts')->name('job_posts');
-Route::any('edit_job_post/{id}','hrindex@edit_job_post')->name('edit_job_post');
-Route::any('/update_job_post','hrindex@update_job_post')->name('update_job_post');
-Route::any('/delete_job_post/{id}','hrindex@delete_job_post')->name('delete_job_post');
-Route::any('/view_job_post/{id}','hrindex@view_job_post')->name('view_job_post');
-//reshma
-Route::any('view_job_applications', 'hrindex@view_job_applications')->name('view_job_applications');
-Route::any('view_application_details', 'hrindex@view_application_details')->name('view_application_details');
-Route::any('view_job_appl_details_1', 'hrindex@view_job_appl_details_1')->name('view_job_appl_details_1');
-Route::any('view_job_appl_details_2', 'hrindex@view_job_appl_details_2')->name('view_job_appl_details_2');
-Route::any('create_job_post', 'hrindex@create_job_post')->name('create_job_post');
-Route::any('reviewed_details', 'hrindex@reviewed_details')->name('reviewed_details');
-Route::any('quarterly_performance_form', 'hrindex@quarterly_performance_form')->name('quarterly_performance_form');
-Route::any('add_kpi', 'hrindex@add_kpi')->name('add_kpi');
-Route::any('mid_year_performance', 'hrindex@mid_year_performance')->name('mid_year_performance');
-Route::any('annual_performance_form', 'hrindex@annual_performance_form')->name('annual_performance_form');
-Route::any('accindex', 'accindex@index')->name('accindex');
-Route::any('new_communication', 'ClientManagement@add_communication')->name('add_communication');
-Route::any('calander', "Calender@index")->name('calander');
 
-Route::any('over_time', 'hrindex@over_time_list')->name('over_time');
-Route::any('view_over_time', 'hrindex@viewover_time_list')->name('view_over_time');
-Route::any('add_assingment', 'hrindex@add_assignment')->name('add_assingment');
 
-Route::any('edit-assigment/{id}', 'hrindex@editassigment')->name('edit-assigment');
-Route::any('update-assigment', 'hrindex@updateassigment')->name('update-assigment');
-Route::any('drop-assigment/{id}', 'hrindex@dropassigment')->name('drop-assigment');
 
-Route::any('add_bank_names', 'hrindex@addbanknames')->name('add_bank_names');
-Route::any('bank_names', 'hrindex@bank_names')->name('bank_names');
-Route::any('/edit_bank_name/{id}', 'hrindex@editbanknames')->name('edit_bank_name');
-Route::any('/update_bank', 'hrindex@updatebankname')->name('update_bank');
-Route::any('/delete_bank/{id}', 'hrindex@deletebank')->name('delete_bank');
 
 Route::any('task_allocation', 'hrindex@task_allocation')->name('task_allocation');
 Route::any('view_task_allocation', 'hrindex@view_task_allocation')->name('view_task_allocation');
