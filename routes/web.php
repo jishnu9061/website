@@ -1031,34 +1031,7 @@ use App\Http\Controllers\issued_summary;
 
 
 
-//Store & Inventory
-Route::any('Store_&_Inventory_index', 'store@index')->name('Store_&_Inventory_index');
-Route::any('manage_categories', 'store@list_manage_categories')->name('manage_categories');
-Route::any('add_product', 'store@addproduct')->name('add_product');
-Route::any('/edit_product/{id}', 'store@editproduct')->name('edit_product');
-Route::any('update_product', 'store@updateproduct')->name('update_product');
-Route::any('/delete_product/{id}', 'store@deleteproduct')->name('delete_product');
-Route::any('manage_items', 'store@list_manage_items')->name('manage_items');
-Route::any('stock_list', 'store@stock_list_tab')->name('stock_list');
-Route::any('request_item', 'store@request_items')->name('request_item');
-Route::any('item_movement', 'store@item_movement_report')->name('item_movement');
-Route::any('view_item_movement', 'store@view_item_movement_report')->name('view_item_movement');
-Route::any('re_order', 'store@re_order_list')->name('re_order');
-Route::any('view_item_details', 'store@viewitemdetails')->name('view_item_details');
-Route::any('edit_manage_categories', 'store@edit_list_manage_categories')->name('edit_manage_categories');
-Route::any('edit_request_item', 'store@edit_request_items')->name('edit_request_item');
-Route::any('add_categories', 'store@list_add_categories')->name('add_categories');
-Route::any('edit_categories', 'store@list_edit_categories')->name('edit_categories');
-Route::any('view_requst', 'store@list_view_requst')->name('view_requst');
-Route::any('new_categories', 'store@newcategories')->name('new_categories');
-Route::any('/edit_category/{id}', 'store@editcategory')->name('edit_category');
-Route::any('update_category', 'store@updatecategory')->name('update_category');
-Route::any('/delete_category/{id}', 'store@deletecategory')->name('delete_category');
-Route::any('issue_view_requst', 'store@list_issue_requst')->name('issue_view_requst');
-Route::any('addmanage_items', 'store@add_manage_items')->name('addmanage_items');
-Route::any('/edit_manage_items/{id}', 'store@editmanage_items')->name('edit_manage_items');
-Route::any('update_manage_items', 'store@update_manage_items')->name('update_manage_items');
-Route::any('/drop_manage_items/{id}', 'store@drop_manage_items')->name('drop_manage_items');
+
 
 
 //Purchase Management
