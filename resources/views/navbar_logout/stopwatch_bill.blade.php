@@ -1,15 +1,15 @@
-<div style="border:1px solid black; border-radius:10px; width:140px;">
+<div style="border:1px solid black; border-radius:10px; width:140px;" class="display-time">
     <div class="stopwatch">
-        <i id="displayWatch" style="padding:4px;" id="task">00:00:00
-        </i>
+        <h7 id="displayWatch" style="padding:4px;" id="task">00:00:00
+        </h7>
         <i class="bi bi-caret-right" onclick="watchstart()"></i>
         <i class="bi bi-arrow-clockwise" onclick="watchReset()"></i>
         <i class="bi bi-stop-circle" onclick="watchstop()" data-toggle="modal" data-target="#myModel"></i>
     </div>
 </div>
 
-<div class="modal fade" id="myModel">
-    <div class="modal-dialog modal-xl">
+<div class="modal fade" data-backdrop="false" id="myModel">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header" style="padding:0rem 0rem;">
                 <div style="padding:1rem 1rem;">
@@ -22,12 +22,107 @@
                         @csrf
                         <div class="container">
                             <div class="row">
-                                <div class="" style="width: 33%">
-                                    <div class="">
-                                        <label for="company_name"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;"></label>
-                                        <input type="text" placeholder="Enter Certificate Of Incorporation "
-                                            style="width=45%" class="form-control" name="certificate" id="" value="">
+                                <div class="col-md-4">
+                                    <div class="mb-1">
+                                        <label for="username">Duration</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="" id="" value=""
+                                                placeholder="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="mb-1">
+                                        <label for="username">Time</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="" id="myText" value=""
+                                                placeholder="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-1">
+                                        <label for="username">Matter</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <select name="matter" id="cars">
+                                                <option value="">select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-1">
+                                        <label for="username">Activity Category</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <select name="activity" id="cars">
+                                                <option value="">select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-1">
+                                        <label for="username">Date</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="date" class="form-control" name="" id="date" value=""  placeholder="mm/dd/yyyy"
+                                                placeholder="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-1">
+                                        <label for="username">Description</label>
+                                        <div class="input-group">
+                                            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="mb-1">
+                                        <label for="username">Firm user</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <select name="user" id="cars">
+                                                <option value="">{{$copmany_name_for_sidebar->company_name}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="mb-1">
+                                        <label for="username">Rate</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="rate" id="" value=""
+                                                placeholder="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -77,10 +172,10 @@ function watchstart() {
 
 }
 
-function watchstop() {
+function watchstop(response) {
     var name = $('#task').val();
     clearInterval(timer);
-
+    document.getElementById("myText").value = displayWatch.innerHTML;
 }
 
 function watchReset() {
@@ -88,4 +183,8 @@ function watchReset() {
     [seconds, minutes, hours] = [0, 0, 0];
     displayWatch.innerHTML = "00:00:00";
 }
+
+$('#date').val(new Date().toJSON().slice(0,10));
+
+
 </script>
