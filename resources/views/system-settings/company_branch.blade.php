@@ -136,7 +136,11 @@
                 
                                                     <div class="dropdown-menu">
                                                         <a class="dropdown-item"
-                                                            href="{{ url('edit_company_branch', $branch->id) }}">Edit Branch</a>
+                                                            {{-- href="{{ url('edit_company_branch', $branch->id) }}">Edit Branch</a> --}}
+                                                            <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_company_branch" href="#">Edit Branch
+                                                        
+                                                            </a>
                                                         <a class="dropdown-item"
                                                             {{-- href="{{ url('delete_company_branch', $branch->id) }}">Delete Branch</a> --}}
                                                             <a href="#"onclick=deletebranch(this) data-id="{{ $branch->id }}"data-toggle="modal"
@@ -404,6 +408,212 @@
                                     </div>
                                 </div>
                             </div>
+                            {{-- Start Edit Company Branch --}}
+    <div class="modal fade" id="edit_company_branch" style="">
+        <!-- edit company -->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                    @csrf
+                    <h5><b>Edit Company Branch :-</b></h5>
+
+                    <div class="row">
+                        <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="branch_no"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Branch No
+                                            </label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"></div>
+                                                <input class="form-control" type="text"
+                                                    id="bnum" name="bnum" value="">
+                                                <div class="invalid-feedback" style="width: 100%;">
+                                                    Required Field.
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="branch_code"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Branch Code
+                                            </label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"></div>
+                                                <input type="text" id="bcode" name="bcodes"
+                                                    class="form-control" value="">
+                                                <div class="invalid-feedback" style="width: 100%;">
+                                                    Required Field.
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="branch_name"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Branch Name
+                                            </label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"></div>
+                                                <input type="text" id="bname"
+                                                    name="bname"class="form-control"
+                                                    value="">
+                                                <div class="invalid-feedback" style="width: 100%;">
+                                                    Required Field.
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="postal_address"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal Address</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"></div>
+
+                                                <textarea rows="4" cols="50" name="paddress" class="form-control" type="text"></textarea>
+                                                <div class="invalid-feedback" style="width: 100%;">
+                                                    Required Field.
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="physical_address"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Physical Address</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <textarea rows="4" cols="50" name="physicaladd" class="form-control" type="text"></textarea>
+
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="tel"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Tel
+                                        No</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" id="tel" name="tel"
+                                                class="form-control" value="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 0px;">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="mobile"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Mobile
+                                            No</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"></div>
+                                                <input type="text" id="mobile" name="mobile"
+                                                    class="form-control" value="">
+                                                <div class="invalid-feedback" style="width: 100%;">
+                                                    Required Field.
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="fax"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Fax</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" id="fax" name="fax"
+                                                class="form-control" value="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="town"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Town</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <select name="town"
+                                                id="town"style="width:100%;">
+                                                <option>---select---</option>
+                                                <option>Nairobi </option>
+                                                <option>Kisumu</option>
+                                                <option>Nakuru</option>
+                                                <option>Mombasa</option>
+                                                <option>Thika</option>
+                                                <option>Malindi</option>
+                                            </select>
+
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+
+                            </div>
+                            <div class="row" style="margin-top: 0px;">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="email"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"></div>
+                                                <input type="email" id="email"
+                                                    name="email"class="form-control"
+                                                    value="">
+                                                <div class="invalid-feedback" style="width: 100%;">
+                                                    Required Field.
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="website"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Website
+                                          
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" id="website" name="website"
+                                                class="form-control">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row document_details " style="margin-bottom: 20px;">
+                                    {{-- Add More Document details:- javascript --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class style="width: 20%">
+                    </div>
+                    <div class="col-sm">
+
+                        <button type="submit" class="btn btn-primary float:right;"
+                            style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                            --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                        </button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                            onclick="history.back()">Cancel</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    {{-- End edit company branch --}}
                             <div class="modal fade" id="deleteBranch" style=""> <!-- delete company branch -->
                                 <div class="modal-dialog modal-lg" style="width:30%;">
                                     <div class="modal-content">

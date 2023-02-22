@@ -146,8 +146,12 @@ color: #999;
                                     aria-expanded="false" style="border-color:none;"> ⋮ </a>
 
                            <div class="dropdown-menu">
-                            <a class="dropdown-item"
-                                href="{{url('edit_letter_type',$letter->id)}}">Edit Letter</a>
+                            {{-- <a class="dropdown-item"
+                                href="{{url('edit_letter_type',$letter->id)}}">Edit Letter</a> --}}
+                                <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_letter_types" href="#">Edit Letter Types
+                                                            
+                                                            </a>
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_letter_type',$letter->id)}}">Delete Letter</a> --}}
                                 <a href="#"onclick=deleteletter(this) data-id="{{ $letter->id }}"data-toggle="modal"
@@ -291,7 +295,94 @@ color: #999;
 </div>
 </div>
 </div>
+ {{-- Start Edit Letter Types --}}
+ <div class="modal fade" id="edit_letter_types" style="">
+    <!-- Edit Letter Types -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Letter Types:-</b></h5>
 
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                   <label for="letter_category"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Letter Category
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="lettertype" id="" value="">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                        Required Field.
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                   <label for="letter_types"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Letter Types
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="lettertype" id="" value="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                        <label for="letter_type_name"
+                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Letter Type Name
+                                         </label>
+
+                                         <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="lettertypname" id="" value="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                            </div>
+                        
+                            <div class="col-sm-4">
+                            </div>
+                        </div>
+                        <div class="doc_contanier"style="*/background-color:orange;">
+                          
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+                 
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit letter types --}}
 <div class="modal fade" id="deleteLetter" style=""> <!-- delete letter types -->
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">

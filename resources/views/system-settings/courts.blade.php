@@ -151,8 +151,12 @@ color: #999;
                                     aria-expanded="false" style="border-color:none;"> ⋮ </a>
 
                            <div class="dropdown-menu">
-                            <a class="dropdown-item"
-                                href="{{url('edit_court',$court_details->id)}}">Edit Court</a>
+                            {{-- <a class="dropdown-item"
+                                href="{{url('edit_court',$court_details->id)}}">Edit Court</a> --}}
+                                <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_court" href="#">Edit Court
+                                                            
+                                                            </a>
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_court',$court_details->id)}}">Delete Court</a> --}}
                                 <a href="#"onclick=deletecourt(this) data-id="{{ $court_details->id }}"data-toggle="modal"
@@ -361,6 +365,107 @@ color: #999;
 </div>
 </div>
 </div>
+ {{-- Start Edit Court --}}
+ <div class="modal fade" id="edit_court" style="">
+    <!-- Edit Court-->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b> Edit Court:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                   <label for="date"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="Date" class="form-control" id="" name="date"value="">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                        Required Field.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                   <label for="court_category"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Court Category
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <select type="text" value="" id="" name="courtcat">
+                                                <option>Select</option>
+                                               
+                                <option>Supreme Court</option>
+                                <option>Court Of Appeal</option>
+                                <option>High Court</option>
+                                <option>Industrial Court</option>
+                                <option>Magistrate Court</option>
+                                <option>Islamic Court</option>
+                                <option>Labour Court</option>
+                                <option>East Africa Court</option>
+                                <option>Small Claim Court</option>
+                                <option>Others</option>
+                                            </select>
+                                          <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                        <label for="court_name"
+                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Court Name
+                                         </label>
+
+                                         <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text"  id="" name="courtname"value=""class="form-control">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                            </div>
+                        
+                            <div class="col-sm-4">
+                            </div>
+                        </div>
+                        <div class="doc_contanier"style="*/background-color:orange;">
+                          
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+                 
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit court --}}
 <div class="modal fade" id="deleteCourt" style=""> <!-- delete court -->
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">
