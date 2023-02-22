@@ -515,15 +515,6 @@ use App\Http\Controllers\issued_summary;
     Route::any('search-list', 'ClientManagement@listSearch')->name('search-list');
     Route::any('register-client', 'ClientManagement@registerClient')->name('register-client');
     //client management controller
-//crm controller
-        //Registration
-    Route::any('view-registration', 'CrmController@viewRegistration')->name('view-registration');
-    Route::any('add-registration', 'CrmController@addRegistration')->name('add-registration');
-    Route::any('edit-registration/{id}', 'CrmController@editRegistration')->name('edit-registration');
-    Route::any('update-registration', 'CrmController@updateRegistration')->name('update-registration');
-    Route::any('delete-registration/{id}', 'CrmController@deleteRegistration')->name('delete-registration');
-    Route::any('show-registration/{id}', 'CrmController@showRegistration')->name('show-registration');
-    //crm controller
 //file management controller
         //index
     Route::any('file_managementindex', "filemanagement@index")->name('file_managementindex');
@@ -946,10 +937,38 @@ use App\Http\Controllers\issued_summary;
         //undeposited fund
     Route::any('undeposited_fund', 'OfficeAdministration@undeposited_funds')->name('undeposited_fund');
     Route::any('submit_undeposit_fund', 'OfficeAdministration@submit_undeposit_fund')->name('submit_undeposit_fund');
-   
-  
-    //Customer Relationship Mamagement
+    //Office Administration controller
+//crm controller
+        //index
     Route::any('crm_index', "CrmController@index_view")->name('crm_index');
+
+        //individual
+    Route::any('view-registration', 'CrmController@viewRegistration')->name('view-registration');
+    Route::any('add-registration', 'CrmController@addRegistration')->name('add-registration');
+    Route::any('edit-registration/{id}', 'CrmController@editRegistration')->name('edit-registration');
+    Route::any('update-registration', 'CrmController@updateRegistration')->name('update-registration');
+    Route::any('delete-registration/{id}', 'CrmController@deleteRegistration')->name('delete-registration');
+    Route::any('show-registration/{id}', 'CrmController@showRegistration')->name('show-registration');
+        //corporate
+    Route::any('Corporate', "CrmController@Corporates")->name('Corporate');
+    Route::any('edit_Corporate/{Id}', "CrmController@edit_Corporates")->name('edit_Corporate');
+    Route::any('view_Corporate/{id}', "CrmController@view_Corporates")->name('view_Corporate');
+    Route::any('add_Corporate', "CrmController@add_Corporates")->name('add_Corporate');
+    Route::any('update_Corporate', "CrmController@update_Corporates")->name('update_Corporate');
+    Route::any('drop_Corporate/{id}', "CrmController@drop_Corporates")->name('drop_Corporate');
+        //lead
+    Route::any('lead', "CrmController@leads")->name('lead');
+    Route::any('view_lead/{Id}', "CrmController@view_leads")->name('view_lead');
+    Route::any('store_proposal_leads', "CrmController@store_proposal_leads")->name('store_proposal_leads');
+    Route::any('proposal_lead{Id}', "CrmController@proposal_leads")->name('proposal_lead');
+    Route::any('individual_lead', "CrmController@individual_leads")->name('individual_lead');
+    Route::any('view_individual_lead/{id}', "CrmController@view_individual_leads")->name('view_individual_lead');
+    Route::any('individual_proposal_lead/{id}', "CrmController@individual_proposal_leads")->name('individual_proposal_lead');
+    Route::any('store_individual_proposal_leads', "CrmController@store_individual_proposal_leads")->name('store_individual_proposal_leads');
+    
+    //crm controller
+  
+    
     Route::any('about', "etc@index")->name('about');
     Route::any('help', "etc@index_help")->name('help');
 
@@ -959,15 +978,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('projects', "CrmController@projects")->name('projects');
     Route::any('view_project', "CrmController@view_project")->name('view_project');
     Route::any('edit_project', "CrmController@edit_project")->name('edit_project');
-    Route::any('Corporate', "CrmController@Corporates")->name('Corporate');
-
-    Route::any('edit_Corporate/{Id}', "CrmController@edit_Corporates")->name('edit_Corporate');
-
-    Route::any('view_Corporate/{id}', "CrmController@view_Corporates")->name('view_Corporate');
-    Route::any('add_Corporate', "CrmController@add_Corporates")->name('add_Corporate');
-    Route::any('update_Corporate', "CrmController@update_Corporates")->name('update_Corporate');
-    Route::any('drop_Corporate/{id}', "CrmController@drop_Corporates")->name('drop_Corporate');
-
+   
 
 
 
@@ -976,18 +987,10 @@ use App\Http\Controllers\issued_summary;
     Route::any('view_expense/{id}', "CrmController@view_expense")->name('view_expense');
     Route::any('edit_expense/{id}', "CrmController@edit_expense")->name('edit_expense');
     Route::any('crm_panel', "CrmController@crm_panel")->name('crm_panel');
-    Route::any('lead', "CrmController@leads")->name('lead');
-    Route::any('view_lead/{Id}', "CrmController@view_leads")->name('view_lead');
-    Route::any('store_proposal_leads', "CrmController@store_proposal_leads")->name('store_proposal_leads');
-    // Route::any('leads_edits',"CrmController@leads_edits")->name('leads_edits');
+   
 
 
-    Route::any('proposal_lead{Id}', "CrmController@proposal_leads")->name('proposal_lead');
-    Route::any('individual_lead', "CrmController@individual_leads")->name('individual_lead');
-    Route::any('view_individual_lead/{id}', "CrmController@view_individual_leads")->name('view_individual_lead');
-    Route::any('individual_proposal_lead/{id}', "CrmController@individual_proposal_leads")->name('individual_proposal_lead');
-    Route::any('store_individual_proposal_leads', "CrmController@store_individual_proposal_leads")->name('store_individual_proposal_leads');
-
+  
 
 
 
