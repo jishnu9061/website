@@ -986,11 +986,10 @@ use App\Http\Controllers\issued_summary;
         //crm panel
     Route::any('crm_panel', "CrmController@crm_panel")->name('crm_panel');
     //crm controller
-  
-    
+//etc controller  
     Route::any('about', "etc@index")->name('about');
     Route::any('help', "etc@index_help")->name('help');
-
+    //etc controller  
    
     
    
@@ -1022,33 +1021,8 @@ use App\Http\Controllers\issued_summary;
 
 
 
-//Report
-Route::any('client_invoicingindex', "clientinvoicing@index")->name('client_invoicingindex');
-Route::any('debtors_aging_report', "clientinvoicing@deptorsaggingreport")->name('debtors_aging_report');
-Route::any('debtors_list', "clientinvoicing@deptorslist")->name('debtors_list');
-Route::any('fee_note_items_billed', "clientinvoicing@filenoteitembilled")->name('fee_note_items_billed');
-Route::any('fee_note_items_received', "clientinvoicing@filenoteitemreceived")->name('fee_note_items_received');
-Route::any('fee_note_report', "clientinvoicing@feenotereport")->name('fee_note_report');
-Route::any('other_reports', "clientinvoicing@otherreport")->name('other_reports');
-Route::any('quotation_item_report', "clientinvoicing@quotationitemreport")->name('quotation_item_report');
-Route::any('fee_expected_advocate', "clientinvoicing@feeexpectedadvocate")->name('fee_expected_advocate');
-Route::any('credit_notes', "clientinvoicing@creditnotes")->name('credit_notes');
-Route::any('new_credit_notes', "clientinvoicing@newcreditnotes")->name('new_credit_notes');
-//Report
 
-//anandhu
-Route::any('capture_billable_items', "clientinvoicing@billable_items")->name('billable_items');
-Route::any('view_bill', "clientinvoicing@view_bill_item")->name('view_bill_item');
-//anandhu
 
-// hr module belji
-Route::any('hrindex', 'hrindex@index')->name('hrindex');
-Route::any('recruitment', 'hrindex@recruitment')->name('recruitment');
-
-// HR-Manage Staffs Subhasree
-
-Route::any('/edit_staff_details/{id}', 'hrindex@edit_staff_details')->name('edit_staff_details');
-Route::any('/view_staff_details/{id}', 'hrindex@view_staff_details')->name('view_staff_details');
 
 //reshma
 Route::any('hr_department','hrindex@hrdepartment')->name('hr_department');
