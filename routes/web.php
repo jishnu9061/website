@@ -1028,41 +1028,8 @@ use App\Http\Controllers\issued_summary;
 
 
 
-Route::any('task_allocation', 'hrindex@task_allocation')->name('task_allocation');
-Route::any('view_task_allocation', 'hrindex@view_task_allocation')->name('view_task_allocation');
-Route::any('edit_task_allocation', 'hrindex@edit_task_allocation')->name('edit_task_allocation');
-Route::any('timesheet', 'hrindex@timesheets')->name('timesheet');
-Route::any('timesheetweek', 'hrindex@timesheetweeks')->name('timesheetweek');
-Route::any('viewsheet', 'hrindex@viewsheets')->name('viewsheet');
-Route::any('timesheetmonth', 'hrindex@timesheetmonths')->name('timesheetmonth');
-Route::any('monthviewsheet', 'hrindex@monthviewsheets')->name('monthviewsheet');
 
-//HR-leave request Subhasree
-Route::any('leave_request_details', 'hrindex@leave_request')->name('leave_request_details');
-Route::any('addleaverequest', 'hrindex@addleaverequest')->name('addleaverequest');
-Route::any('approve_leave_request', 'hrindex@approve_leave_request')->name('approve_leave_request');
-Route::any('view_leave_request', 'hrindex@view_leave_request')->name('view_leave_request');
-Route::any('edit_leave_request/{id}', 'hrindex@edit_leave_request')->name('edit_leave_request');
-Route::any('/update_leave_request', 'hrindex@update_leave_request')->name('update_leave_request');
-Route::any('/leave_balance', 'hrindex@leave_balance')->name('leave_balance');
 
-Route::any('internal_memos', 'hrindex@internal_memos')->name('internal_memos');
-Route::any('view_memo', 'hrindex@view_memo')->name('view_memo');
-Route::any('edit_memo', 'hrindex@edit_memo')->name('edit_memo');
-
-//HR-Attendance Sheet Subhasree
-Route::any('attendance_sheet', 'hrindex@attendance_sheet')->name('attendance_sheet');
-Route::any('view_attendance', 'hrindex@view_attendance')->name('view_attendance');
-
-//HR-Manage Salary Subhasree
-Route::any('manage_salary', 'hrindex@manage_salary')->name('manage_salary');
-Route::any('manage_salary_index', 'hrindex@manage_salary_index')->name('manage_salary_index');
-Route::any('allowances', 'hrindex@allowances')->name('allowances');
-Route::any('commissions', 'hrindex@commissions')->name('commissions');
-Route::any('loan', 'hrindex@loan')->name('loan');
-Route::any('statutory_deductions', 'hrindex@statutory_deductions')->name('statutory_deductions');
-Route::any('other_payment', 'hrindex@other_payment')->name('other_payment');
-Route::any('overtime', 'hrindex@overtime')->name('overtime');
 
 //Store & Inventory
 Route::any('Store_&_Inventory_index', 'store@index')->name('Store_&_Inventory_index');
