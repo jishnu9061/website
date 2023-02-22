@@ -1034,26 +1034,6 @@ use App\Http\Controllers\issued_summary;
 
 
 
-//Purchase Management
-Route::any('purchase_index', 'PurchaseManagement@index_purchase')->name('purchase_index');
-Route::any('purchase_order/{id}', 'PurchaseManagement@purchase_order')->name('purchase_order');
-Route::any('store_purchase', 'PurchaseManagement@store_purchase')->name('store_purchase');
-Route::any('view_purchase_order/{purchase_id}', 'PurchaseManagement@view_purchase_order')->name('view_purchase_order');
-Route::any('purchase_order_report', 'PurchaseManagement@purchase_order_report')->name('purchase_order_report');
-Route::any('vendor_performance_report', 'PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');
-Route::any('purchase_print/{purchase_id}', 'PurchaseManagement@purchase_print')->name('purchase_print');
-Route::any('view_supplier', 'PurchaseManagement@view_supplier')->name('view_supplier');
-Route::any('edit_supplier', 'PurchaseManagement@edit_supplier')->name('edit_supplier');
-// Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
-Route::any('ledger_details/{supplier_name}', 'PurchaseManagement@ledger_details')->name('ledger_details');
-Route::any('purchase_view/{purchase_id}', 'PurchaseManagement@purchase_view')->name('purchase_view');
-Route::any('edit_purchase/{purchase_id}', 'PurchaseManagement@edit_purchase')->name('edit_purchase');
-Route::any('supplier', 'PurchaseManagement@suppliers')->name('supplier');
-Route::any('store_supplier', 'PurchaseManagement@store_supplier')->name('store_supplier');
-Route::any('ledger_add_payment/{purchase_id}', 'PurchaseManagement@ledger_add_payment')->name('ledger_add_payment');
-Route::any('update_ledger_add_payment', 'PurchaseManagement@update_ledger_add_payment')->name('update_ledger_add_payment');
-Route::any('view_ledger_details/{purchase_id}', 'PurchaseManagement@view_ledger_details')->name('view_ledger_details');
-//end  Purchase Management
 
 
 //practice Area Management
