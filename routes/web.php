@@ -989,70 +989,10 @@ use App\Http\Controllers\issued_summary;
     Route::any('about', "etc@index")->name('about');
     Route::any('help', "etc@index_help")->name('help');
     //etc controller  
-   
-    
-   
-
-
-
-
-    
-   
-
-
-  
-
-
-
-
-
-   
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//employee start
-Route::any('addemployee', "employeecontroller@store")->name('addemployee');
-Route::any('create_employee/{id}', "employeecontroller@create")->name('create_employee');
-//employee end
-
-//calender start
-Route::any('calendar_data', "calender@show")->name('calendar_data');
-Route::any('calendar/store', "calender@store")->name('calendar/store');
-Route::any('calendar/update/{id}', "calender@update");
-Route::any('calendar/delete/{id}', "calender@destroy");
-Route::any('update_calendar/{id}', "calender@updateall");
-//calender end
+//calender 
+    Route::any('calendar_data', "calender@show")->name('calendar_data');
+    Route::any('calendar/store', "calender@store")->name('calendar/store');
+    Route::any('calendar/update/{id}', "calender@update");
+    Route::any('calendar/delete/{id}', "calender@destroy");
+    Route::any('update_calendar/{id}', "calender@updateall");
+    //calender 
