@@ -1041,43 +1041,7 @@ use App\Http\Controllers\issued_summary;
 
 
 
-//Office Administration
-Route::any('office_admin_index', 'OfficeAdministration@office_admin_index')->name('office_admin_index');
-Route::any('creditor_list', 'OfficeAdministration@creditor_list')->name('creditor_list');
-Route::any('creditors_aging_report', 'OfficeAdministration@creditors_aging_report')->name('creditors_aging_report');
-Route::any('supplier_expense_report', 'OfficeAdministration@supplier_expense_report')->name('supplier_expense_report');
-Route::any('pay_supplier_invoice', 'OfficeAdministration@pay_supplier_invoice')->name('pay_supplier_invoice');
-Route::any('supplier_credit_notes', 'OfficeAdministration@supplier_credit_notes')->name('supplier_credit_notes');
 
-Route::any('add_supplier_invoice', 'OfficeAdministration@add_supplier_invoice')->name('add_supplier_invoice');
-Route::any('supplier_invoice', 'OfficeAdministration@supplier_invoice')->name('supplier_invoice');
-Route::any('view_supplier_invoice', 'OfficeAdministration@view_supplier_invoice')->name('view_supplier_invoice');
-Route::any('edit_supplier_invoice', 'OfficeAdministration@edit_supplier_invoice')->name('edit_supplier_invoice');
-
-Route::any('balance', 'OfficeAdministration@balances')->name('balance');
-Route::any('cheque', 'OfficeAdministration@cheques')->name('cheque');
-Route::any('file_office', 'OfficeAdministration@file_offices')->name('file_office');
-Route::any('Payment', 'OfficeAdministration@Payments')->name('Payment');
-Route::any('budget', 'OfficeAdministration@budgets')->name('budget');
-Route::any('supplier_monthly_schedule', 'OfficeAdministration@supplier_monthly_schedule')->name('supplier_monthly_schedule');
-Route::any('suppliers_list', 'OfficeAdministration@suppliers_list')->name('suppliers_list');
-Route::any('contractual_supplier', 'OfficeAdministration@contractual_suppliers')->name('contractual_supplier');
-Route::any('payments_transfer', 'OfficeAdministration@payments_transfers')->name('payments_transfer');
-Route::any('payment_report', 'OfficeAdministration@payment_reports')->name('payment_report');
-Route::any('submit_payment_reports', 'OfficeAdministration@submit_payment_reports')->name('submit_payment_reports');
-Route::any('petty_payment', 'OfficeAdministration@petty_payments')->name('petty_payment');
-Route::any('petty_report', 'OfficeAdministration@petty_reports')->name('petty_report');
-Route::any('settled_fee', 'OfficeAdministration@settled_fees')->name('settled_fee');
-Route::any('settlement_report', 'OfficeAdministration@settlement_reports')->name('settlement_report');
-Route::any('undeposited_fund', 'OfficeAdministration@undeposited_funds')->name('undeposited_fund');
-Route::any('submit_undeposit_fund', 'OfficeAdministration@submit_undeposit_fund')->name('submit_undeposit_fund');
-Route::any('view_supplier_credit', 'OfficeAdministration@view_supplier_credit')->name('view_supplier_credit');
-Route::any('edit_supplier_credit', 'OfficeAdministration@edit_supplier_credit')->name('edit_supplier_credit');
-Route::any('view_supplier_invoice', 'OfficeAdministration@view_supplier_invoice')->name('view_supplier_invoice');
-Route::any('edit_supplier_invoice', 'OfficeAdministration@edit_supplier_invoice')->name('edit_supplier_invoice');
-Route::any('view_supplier_list', 'OfficeAdministration@view_supplier_list')->name('view_supplier_list');
-Route::any('edit_supplier_list', 'OfficeAdministration@edit_supplier_list')->name('edit_supplier_list');
-Route::any('view_supplier_invoice_Details', 'OfficeAdministration@view_supplier_invoice_Details')->name('view_supplier_invoice_Details');
 
 //Customer Relationship Mamagement
 Route::any('crm_index', "CrmController@index_view")->name('crm_index');
