@@ -837,56 +837,60 @@ use App\Http\Controllers\issued_summary;
     Route::any('update_practice_area', 'PracticeAreaManagement@update_practice_area')->name('update_practice_area');
     Route::any('delete_practice_area/{id}', 'PracticeAreaManagement@delete_practice_area')->name('delete_practice_area');
     //practice Area Management controller
-    //Elibrary
+//Elibrary controller
+        //index
     Route::any('libraryindex', 'elibrary@index')->name('libraryindex');
+        //subject
     Route::any('subject/{id}', 'elibrary@subjects')->name('subject');
     Route::any('add_subject', 'elibrary@addsubjects')->name('add_subject');
     Route::any('/editsubject/{id}', 'elibrary@editsubjects')->name('editsubject');
     Route::any('update_subject', 'elibrary@updatesubjects')->name('update_subject');
     Route::any('/deletesubject/{id}', 'elibrary@deletesubjects')->name('deletesubject');
+        //file
     Route::any('file/{id}', 'elibrary@files')->name('file');
     Route::any('add_file', 'elibrary@addfiles')->name('add_file');
     Route::any('/editfile/{id}', 'elibrary@editfiles')->name('editfile');
     Route::any('update_file', 'elibrary@updatefiles')->name('updatee_file');
     Route::any('/delete_file/{id}', 'elibrary@deletefiles')->name('deletefile');
     Route::any('viewfile', 'elibrary@viewfiles')->name('viewfile');
+        //site
     Route::any('site/{id}', 'elibrary@sites')->name('site');
     Route::any('add_site', 'elibrary@addsites')->name('add_site');
     Route::any('update_site', 'elibrary@updatesites')->name('update_site');
     Route::any('/editsite/{id}', 'elibrary@editsites')->name('editsite');
     Route::any('/delete_site/{id}', 'elibrary@deletesites')->name('delete_site');
+        //precedence
     Route::any('precedence/{id}', 'elibrary@precedences')->name('precedence');
     Route::any('add_precedence', 'elibrary@addprecedences')->name('add_precedence');
     Route::any('/editprecedence/{id}', 'elibrary@editprecedences')->name('editprecedence');
     Route::any('update_precedence', 'elibrary@updateprecedences')->name('update_precedence');
     Route::any('/delete_precedence/{id}', 'elibrary@deleteprecedence')->name('delete_precedence');
     Route::any('viewprecedence/{id}', 'elibrary@viewprecedences')->name('viewprecedence');
-
+        //subject category
     Route::any('subject_category/{id}', 'elibrary@subject_categorys')->name('subject_category');
-
     Route::any('add_subject_category', 'elibrary@addsubject_categorys')->name('add_subject_category');
     Route::any('/editsubject_category/{id}', 'elibrary@editsubject_categorys')->name('editsubject_category');
     Route::any('/update_subject_category', 'elibrary@updatesubjectcategorys')->name('update_subject_category');
     Route::any('/deletesubject_category/{id}', 'elibrary@deletesubject_categorys')->name('deletesubject_category');
-
     Route::any('editsubject_category', 'elibrary@editsubject_categorys')->name('editsubject_category');
-
-
-
-    //Tender Management
+    //Elibrary controller
+//Tender Management controller
+        //index
     Route::any('tender_index', 'TenderManagement@tender_index')->name('tender_index');
+        //tender details
     Route::any('tender_details', 'TenderManagement@tender_details')->name('tender_details');
     Route::any('store_tender', 'TenderManagement@store_tender')->name('store_tender');
     Route::any('view_tender_details/{id}', 'TenderManagement@view_tender_details')->name('view_tender_details');
     Route::any('edit_tender_details/{id}', 'TenderManagement@edit_tender_details')->name('edit_tender_details');
     Route::any('update_tender_details', 'TenderManagement@update_tender_details')->name('update_tender_details');
     Route::any('delete_tender_details/{id}', 'TenderManagement@delete_tender_details')->name('delete_tender_details');
+        //apply tender
     Route::any('apply_tender', 'TenderManagement@apply_tender')->name('apply_tender');
     Route::any('view_apply_tender/{id}', 'TenderManagement@view_apply_tender')->name('view_apply_tender');
     Route::any('tender_applied_details', 'TenderManagement@tender_applied_details')->name('tender_applied_details');
     Route::any('view_tender_applied/{id}', 'TenderManagement@view_tender_applied')->name('view_tender_applied');
     Route::any('store_apply_tender', 'TenderManagement@store_apply_tender')->name('store_apply_tender');
-
+    //Tender Management controller
 
     //Office Administration
     Route::any('office_admin_index', 'OfficeAdministration@office_admin_index')->name('office_admin_index');
