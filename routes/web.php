@@ -1039,19 +1039,6 @@ use App\Http\Controllers\issued_summary;
 
 
 
-//Tender Management
-Route::any('tender_index', 'TenderManagement@tender_index')->name('tender_index');
-Route::any('tender_details', 'TenderManagement@tender_details')->name('tender_details');
-Route::any('store_tender', 'TenderManagement@store_tender')->name('store_tender');
-Route::any('view_tender_details/{id}', 'TenderManagement@view_tender_details')->name('view_tender_details');
-Route::any('edit_tender_details/{id}', 'TenderManagement@edit_tender_details')->name('edit_tender_details');
-Route::any('update_tender_details', 'TenderManagement@update_tender_details')->name('update_tender_details');
-Route::any('delete_tender_details/{id}', 'TenderManagement@delete_tender_details')->name('delete_tender_details');
-Route::any('apply_tender', 'TenderManagement@apply_tender')->name('apply_tender');
-Route::any('view_apply_tender/{id}', 'TenderManagement@view_apply_tender')->name('view_apply_tender');
-Route::any('tender_applied_details', 'TenderManagement@tender_applied_details')->name('tender_applied_details');
-Route::any('view_tender_applied/{id}', 'TenderManagement@view_tender_applied')->name('view_tender_applied');
-Route::any('store_apply_tender', 'TenderManagement@store_apply_tender')->name('store_apply_tender');
 
 
 //Office Administration
