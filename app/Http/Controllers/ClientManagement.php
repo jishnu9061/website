@@ -387,6 +387,17 @@ class ClientManagement extends Controller
 
         return redirect('/corporate-list/' . $company_id);
     }
+    public function changestatus_corporate(Request $request)
+    {
+        $uniqueid = $request->corporate_id;
+        $status = DB::table('cra_corporate_client_details')->where('corporate_id', $uniqueid)->select('status')->first();
+        if($status->status == 1){
+            DB::table('cra_corporate_client_details')->where('corporate_id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_corporate_client_details')->where('corporate_id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
+    }
 
     public function CorporateDocument($corporate_id)
     {

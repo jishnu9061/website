@@ -444,9 +444,10 @@ use App\Http\Controllers\issued_summary;
     Route::any('client-index', "ClientManagement@index")->name('client-index');
     Route::any('update-client', "ClientManagement@updateClient")->name('update-client');
     Route::any('delete-client/{id}', "ClientManagement@deleteClient")->name('delete-client');
-        //coporate
+    //coporate
     Route::any('add_corporate', 'ClientManagement@addCorporate')->name('add-corporate');
     Route::any('corporate-list/{company_id}', 'ClientManagement@listCorporate')->name('corporate-list');
+    Route::post('/changestatus_corporate',"ClientManagement@changestatus_corporate")->name('changestatus_corporate');
     Route::any('/edit_client/{corporate_id}','ClientManagement@edit_corporate')->name('edit_client');
     Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
     Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')->name('delete_client');
