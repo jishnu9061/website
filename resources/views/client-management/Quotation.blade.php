@@ -50,19 +50,19 @@ float:right;
 text-align:right;
 color: #999;
 }
-</style>     
+</style>
     </head>
 
 <body>
-    
+
         <!-- <h3 class="text-center" style="color: #070344; "><b>New Quotation</b></h3> -->
-       
-          
+
+
             <div class="container">
         <!-- <div id="mydatatable_filter" class="dataTables_filter">
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
         </div> -->
-        
+
          <div class="container">
         <div class="row" style="height:50px;">
             <div class="col-sm-4" style="padding-top:5px;">
@@ -84,8 +84,8 @@ color: #999;
                     <b style="font-size:18px;"> Quotation Details</b>
                 </h4>
             </div>
-       
-            
+
+
 
     <div class="header_wrap">
       <div class="num_rows">
@@ -101,7 +101,7 @@ color: #999;
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
@@ -115,7 +115,7 @@ color: #999;
                 <br>
                 <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
-	
+
                         <thead>
                             <tr>
                                 <!-- <th class="text-center">No</th> -->
@@ -144,8 +144,10 @@ color: #999;
                                                 <div class="dropdown-menu">
                                                     <a class="dropdown-item"
                                                         href="#">View Quotation</a>
-                                                    <a class="dropdown-item"
-                                                        href="{{url('edit-Quotation',$list->id)}}">Edit Quotation</a>
+                                                    {{-- <a class="dropdown-item"
+                                                        href="{{url('edit-Quotation',$list->id)}}">Edit Quotation</a> --}}
+                                                        <a class="dropdown-item" data-toggle="modal"
+                                                        data-target="#edit_quotation" href="#">Edit Quotation</a>
                                                     <a class="dropdown-item"
                                                         {{-- href="{{url('delete-Quotation',$list->id)}}">Delete Quotation</a> --}}
                                                          href="#"onclick=deletequotation(this) data-id="{{$list->id}}"data-toggle="modal"
@@ -245,13 +247,17 @@ color: #999;
                                                             <div class="mb-1">
                                                                 <label for="username">Client Ref No</label>
                                                                 <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <input type="text" class="form-control" name="ref"
-                                                                        id="age" value="" placeholder="" min="0"
-                                                                        max="99">
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-                                                                        Age is required.
+                                                                    <div class="input-group-prepend">
+
                                                                     </div>
+                                                                    <select name="client" id="cars">
+                                                                        <option>---select---</option>
+                                                                        <option>client 1</option>
+                                                                        <option>client 2</option>
+                                                                        <option>client 3</option>
+                                                                        <option>client 4</option>
+
+                                                                    </select>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -367,7 +373,7 @@ color: #999;
                                                     <br>
                                                     <br>
                                                     <!-- <h2 style="text-align:center;"> Quotation Items</h2> -->
-                                                  
+
                                                         <div class="text-center">
                                                             <h4><b> Quotation Items</b></h4>
 
@@ -490,132 +496,290 @@ color: #999;
                     </div>
 
 
-                    <!-- The Modal -->
-                    <div class="modal fade" id="editmed">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
 
-                                <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#435ebe">
-                                    <h4 class="text-white">Edit Medicine</h4>
-
-                                </div>
-
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <form method="post" action="{{url('update_medicine')}}"
-                                            enctype="multipart/form-data">
-                                            @csrf
-                                            <h4 class="text-center"><b>Medicine Details</b></h4><br>
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <label for="">Brand Name</label>
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label for="">Medicine Name</label>
-                                                    <input type="text" id="edit_medicine_name" name="medicine_name"
-                                                        class="form-control" required><br>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <div class="col-sm">
-                                                        <label for="">Medicine Group</label>
-
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label for="">Medicine Category Name</label>
-
-
-                                                </div>
-
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <label for="">Generic name</label>
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label>Manufacturer Name</label>
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label>Supplier Name</label>
-
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <label for="">Minimum Level</label>
-                                                    <input type="text" id="edit_minimum_level" name="minimum_level"
-                                                        class="form-control"><br>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label>Reorder Level</label>
-                                                    <input type="text" name="reorder" id="edit_reorder"
-                                                        class="form-control" placeholder=""><br>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <label class="text-color:white;">Unit/Packing</Label>
-                                                    <input type="text" name="unit_packing" id="edit_unit_packing"
-                                                        class="form-control" placeholder=""><br>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label>Upload Medicine Image</label>
-                                                    <input type="file" name="editimage" id="edit_image"
-                                                        class="form-control" placeholder="Image"><br>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <label>Medicine Composition</label>
-                                                    <textarea class="form-control" id="edit_medicine_details1"
-                                                        name="medicine_detailss" rows="3" placeholder=""></textarea><br>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label>Notes</label>
-                                                    <textarea class="form-control" id="edit_medicine_note"
-                                                        name="medicine_note" rows="3" placeholder=""></textarea><br>
-                                                </div>
-                                            </div>
-                                            <br>
-
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <input type="hidden" class="form-control" id="edit_id"
-                                                        name="method_id">
-
-                                                </div>
-                                            </div>
-
-
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary text-white"
-                                                    style="width:15%;background-color:#435ebe"
-                                                    data-bs-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary"
-                                                    style="background-color:#435ebe;width:15%;">Update</button>
-                                            </div>
-                                    </div>
-                                    <div class="container">
-
-                                    </div>
-                                </div>
-
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
 
-                <br>
-                <!-- Supplier modal Edit End -->
+{{-- Start Edit Quotation --}}
+<div class="modal fade" id="edit_quotation" style="">
+    <!-- edit quotation -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Quotation:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="document_type"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Document Type
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <select name="document" id="cars">
+                                                <option>---select---</option>
+                                                <option>Type 1</option>
+                                                <option>Type 2</option>
+                                                <option>Type 3</option>
+                                                <option>Type 4</option>
+
+                                            </select>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="issue_date"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Issue Date</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="date" class="form-control" name="issue"
+                                                id="age" value="" placeholder="corporation"
+                                                min="0" max="99">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Age is required.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="client_name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Name</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <select name="client" id="cars">
+                                                <option>---select---</option>
+                                                <option>client 1</option>
+                                                <option>client 2</option>
+                                                <option>client 3</option>
+                                                <option>client 4</option>
+
+                                            </select>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="client_ref_no"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Ref No</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <select name="responsible" id="cars">
+                                                <option>---select---</option>
+                                                <option>staff-1</option>
+                                                <option>staff-2</option>
+                                                <option>staff-3</option>
+                                                <option>staff-4</option>
+                                            </select>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="currency"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+
+                                        </div>
+                                        <select name="currency" id="cars">
+                                            <option>---select---</option>
+                                            <option>currency 1</option>
+                                            <option>currency 2</option>
+                                            <option>currency 3</option>
+                                            <option>currency 4</option>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="exchange_rate"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Exchange Rate
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="rate"
+                                            value="" id="confirm_password" placeholder="">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Password is required.
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 0px;">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="approver"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Approver
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                            </div>
+                                            <select name="approver" id="cars">
+                                                <option>---select---</option>
+                                                <option>Approver 1</option>
+                                                <option>Approver 2</option>
+                                                <option>Approver 3</option>
+                                                <option>Approver 4</option>
+                                            </select>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="bank_account"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Bank Account</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        </div>
+                                        <select name="account" id="cars">
+                                            <option>---select---</option>
+                                            <option>43556737</option>
+                                            <option>44556737</option>
+                                            <option>335567373</option>
+                                            <option>667567374</option>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="billing_info"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Billing Information</label>
+                                    <div class="input-group">
+                                        <textarea class="form-control" id="form7Example7"
+                                            rows="3" name="Information"></textarea>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Postal Address is required.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="to the attender of"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">To The attender Of</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control"
+                                            name="attender" value="" id="confirm_password"
+                                            placeholder="">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Password is required.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="subject"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Subject/Title</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control"
+                                            name="subject" value="" id="confirm_password"
+                                            placeholder="">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Password is required.
+                                        </div>
+                                    </div>
+                            </div>
+                                            <h5><b>Quotation Items:-</b></h5>
+                                            <a href=""><button class="btn btn-primary ">Add New Quotation</button></a>
+                                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                                <label for="type"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Type</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+
+                                                        </div>
+                                                        <select name="type" id="cars">
+                                                            <option>---select---</option>
+                                                            <option>Type 1</option>
+                                                            <option>Type 2</option>
+                                                            <option>Type 3</option>
+                                                            <option>Type 4</option>
+                                                        </select>
+                                                    </div>
+                                            </div>
+                                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                                <label for="particulers"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Particulers</label>
+                                                    <div class="input-group">
+                                                        <textarea class="form-control" id="form7Example7"
+                                                            rows="2" name="Rendered"></textarea>
+                                                        <div class="invalid-feedback" style="width: 100%;">
+                                                            Postal Address is required.
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                                <label for="amount"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Amount</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend"></div>
+                                                        <input type="text" class="form-control"
+                                                            name="amount" id="age" value="" placeholder=""
+                                                            min="0" max="99">
+                                                        <div class="invalid-feedback" style="width: 100%;">
+                                                            Age is required.
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                                <label for="vat"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">V.A.T</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+
+                                                        </div>
+                                                        <select name="vat" id="cars">
+                                                            <option>---select---</option>
+                                                            <option>V.A.T 1</option>
+                                                            <option>V.A.T 2</option>
+                                                            <option>V.A.T 3</option>
+                                                            <option>V.A.T 4</option>
+                                                        </select>
+                                                    </div>
+                                            </div>
+                                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                                <label for="comments"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comments</label>
+                                                    <div class="input-group">
+                                                        <textarea class="form-control" id="form7Example7"
+                                                            rows="2" name="Rendered"
+                                                            name="comments"></textarea>
+                                                        <div class="invalid-feedback" style="width: 100%;">
+                                                            Postal Address is required.
+                                                        </div>
+                                                    </div>
+                                            </div>
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit follow up --}}
 
                 <!-- Delete  confirmation Message -->
                 <div class="modal fade" id="deleteQuotation" style=""> <!-- delete corporate -->
