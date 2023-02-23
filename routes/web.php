@@ -457,6 +457,8 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit-corporate-document/{id}','ClientManagement@editCorporateDocument')->name('edit-corporate-document');
     Route::any('update-document-details','ClientManagement@updateDocumentDetails')->name('update-document-details');
     Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')->name('view-document-details');
+    Route::any('send_mail', 'ClientManagement@send_mail')->name('send_mail');
+    Route::any('post_important_date', 'ClientManagement@post_important_date')->name('post_important_date');
         //Lawyer
     Route::any('asign-lawyer','ClientManagement@asignlawyer')->name('asign-lawyer');
     Route::any('add_lawyer','ClientManagement@add_lawyer')->name('add_lawyer');
