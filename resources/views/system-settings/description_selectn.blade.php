@@ -50,7 +50,7 @@ float:right;
 text-align:right;
 color: #999;
 }
-</style>  
+</style>
 
 
 {{-- heading --}}
@@ -78,7 +78,7 @@ color: #999;
 </div>
 <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
+
 {{-- <a href="{{('add_desc_sel')}}"><button class="btn btn-primary">Add Description Selection</button></a> --}}
                 {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Description Selection</button> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -86,11 +86,11 @@ color: #999;
             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Description Selection</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                     
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
   <!-- <a href="{{('add_desc_sel')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Description Selection</button></a><br><br> -->
 
-  
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -105,13 +105,13 @@ color: #999;
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-     
+
     <div class="table-responsive">
         <table class="table table-striped table-class" id="table-id">
                   <thead>
@@ -121,18 +121,18 @@ color: #999;
                         <th class="text-center" >Selection Description</th>
                         <th class="text-center" >Status</th>
                         <th class="text-center" >Action</th>
-                      
+
       </thead>
       <tbody>
       @foreach($description_selection as $description)
-      
+
                     </tr>
                     <tr class="text-center">
                         <!-- <td>{{$description->id}}</td> -->
                         <td>{{$description->Description_Selection_Name}}</td>
                         <td >{{$description->Selection_Description}}</td>
                         <td class="text-center" ></td>
-                        
+
                         {{-- <td  scope="row"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_desc_sel',$description->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <span class="m-2"></span>
@@ -141,10 +141,14 @@ color: #999;
                                 <div class="btn-group">
                                     <a class="btn" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false" style="border-color:none;"> ⋮ </a>
-    
+
                                <div class="dropdown-menu">
-                                <a class="dropdown-item"
-                                    href="{{url('edit_desc_sel',$description->id)}}">Edit Description Selection</a>
+                                {{-- <a class="dropdown-item"
+                                    href="{{url('edit_desc_sel',$description->id)}}">Edit Description Selection</a> --}}
+                                    <a class="dropdown-item" data-toggle="modal"
+                                    data-target="#edit_description_selection" href="#">Edit Description Selection
+
+                                            </a>
                                 <a class="dropdown-item"
                                     {{-- href="{{url('delete_desc_sel',$description->id)}}">Delete Description Selection</a> --}}
                                     <a href="#"onclick=deletedescription(this) data-id="{{ $description->id }}"data-toggle="modal"
@@ -154,7 +158,7 @@ color: #999;
                         </tr>
                     @endforeach
       </tbody>
-                   
+
                 </table>
                 <br>
                 {{-- <!--		Start Pagination -->
@@ -190,13 +194,13 @@ color: #999;
                 <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
     <option>Activate Category</option>
     <option>De-Activate Category</option>
-   
+
 </select>
 <input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
     </div>
     </div> -->
 
-   
+
   <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
   <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -212,8 +216,8 @@ color: #999;
                                     <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('add_desc_sel') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->  
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
     @csrf
 <div class="row">
                     <div class="col-md-6">
@@ -267,11 +271,74 @@ color: #999;
     <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->
+          {{-- Start Edit Description Selection --}}
+          <div class="modal fade" id="edit_description_selection" style="">
+            <!-- Edit Description Selection -->
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!---- Modal Header -->
+                    <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                        @csrf
+                        <h5><b>Edit Description Selection:-</b></h5>
+
+                        <div class="row">
+                            <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                                <div class="row">
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                           <label for="description_selection_name"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;"> Name
+                                            </label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"></div>
+                                                <input type="text"  id="" name="desselname"value=""class="form-control">
+                                                <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                           <label for="selection_description"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Selection Description
+                                                </label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"></div>
+                                                    <input type="text" class="form-control" name="seldes" id="" value="">
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Required Field.
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="row document_details " style="margin-bottom: 20px;">
+                                        {{-- Add More Document details:- javascript --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class style="width: 20%">
+                        </div>
+                        <div class="col-sm">
+
+                            <button type="submit" class="btn btn-primary float:right;"
+                                style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                            </button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                                onclick="history.back()">Cancel</button>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+         {{-- End edit description selection --}}
 <div class="modal fade" id="deleteDescription" style=""> <!-- delete description selection -->
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">
             <!---- Modal Header -->
-            <form method="post"  id="delete_description_selection" action="{{url('delete_desc_sel',$description->id)}}" enctype="multipart/form-data"> 
+            <form method="post"  id="delete_description_selection" action="{{url('delete_desc_sel',$description->id)}}" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" id="id" value="id">
                 <div class="modal-header" style="padding:0rem 0rem;">
@@ -280,7 +347,7 @@ color: #999;
                 <!-- Modal body -->
                 <div class="modal-body" >
                     <div class="container">
-                        <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
                         </div>
                             <div class="row">
                                 <div class="" style="width: 30%;">
@@ -300,7 +367,6 @@ color: #999;
 </div>
 </div>
   @endsection
-      
 
 
 
@@ -315,4 +381,4 @@ color: #999;
 
 
 
-   
+
