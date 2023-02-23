@@ -173,7 +173,11 @@
                                                 <a class="dropdown-item" href="{{url('show-registration',$registration->id)}}">View
                                                     Client
                                                     Details</a>
-                                                <a class="dropdown-item" href="{{url('edit-registration',$registration->id)}}">Edit
+                                                {{-- <a class="dropdown-item" href="{{url('edit-registration',$registration->id)}}">Edit
+                                                    Client
+                                                    Details</a> --}}
+                                                    <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_individual_customers" href="#">Edit
                                                     Client
                                                     Details</a>
                                                 <a class="dropdown-item"
@@ -423,131 +427,210 @@
                 </div>
 
 
-                <!-- The Modal -->
-                <div class="modal fade" id="editmed">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
 
-                            <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#435ebe">
-                                <h4 class="text-white">Edit Medicine</h4>
-
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class="container">
-                                    <form method="post" action="{{url('update_medicine')}}"
-                                        enctype="multipart/form-data">
-                                        @csrf
-                                        <h4 class="text-center"><b>Medicine Details</b></h4><br>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Brand Name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Name</label>
-                                                <input type="text" id="edit_medicine_name" name="medicine_name"
-                                                    class="form-control" required><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <div class="col-sm">
-                                                    <label for="">Medicine Group</label>
-
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Category Name</label>
-
-
-                                            </div>
-
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Generic name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Manufacturer Name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Supplier Name</label>
-
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Minimum Level</label>
-                                                <input type="text" id="edit_minimum_level" name="minimum_level"
-                                                    class="form-control"><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Reorder Level</label>
-                                                <input type="text" name="reorder" id="edit_reorder" class="form-control"
-                                                    placeholder=""><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label class="text-color:white;">Unit/Packing</Label>
-                                                <input type="text" name="unit_packing" id="edit_unit_packing"
-                                                    class="form-control" placeholder=""><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Upload Medicine Image</label>
-                                                <input type="file" name="editimage" id="edit_image" class="form-control"
-                                                    placeholder="Image"><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label>Medicine Composition</label>
-                                                <textarea class="form-control" id="edit_medicine_details1"
-                                                    name="medicine_detailss" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Notes</label>
-                                                <textarea class="form-control" id="edit_medicine_note"
-                                                    name="medicine_note" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                        </div>
-                                        <br>
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="hidden" class="form-control" id="edit_id" name="method_id">
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary text-white"
-                                                style="width:15%;background-color:#435ebe"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary"
-                                                style="background-color:#435ebe;width:15%;">Update</button>
-                                        </div>
-                                </div>
-                                <div class="container">
-
-                                </div>
-                            </div>
-
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
-            <br>
-            <!-- Supplier modal Edit End -->
+{{-- Start Edit Individual Customers --}}
+<div class="modal fade" id="edit_individual_customers" style="">
+    <!-- edit individual customers -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Individual Customers:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;"> Name
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control"
+                                                name="client_name" id="username" value=""
+                                                placeholder="Name" required>
+
+                                            <!-- <input type="text" class="form-control" name="name"
+                                            id="username" value="" placeholder="Client name"
+                                            required> -->
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Customer Name is required.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="postal_code"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal Code</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="Code"
+                                                id="username" value="" placeholder="Postal Code"
+                                                required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="town"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Town</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+
+                                            <select name="town" id="username"
+                                                style="width:100%;">
+                                                <option>---select--- </option>
+                                                <option>Nairobi </option>
+
+                                            </select>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Town is required.
+                                            </div>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="country"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Country</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <select name="country" id="cars">
+                                                <option>---select---</option>
+                                                <option>kenya</option>
+                                            </select>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="telephone"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone No</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control"
+                                            name="telephone" id="username" value=""
+                                            placeholder="Telephone" required>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Telephone No is required.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="email_address"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email Address
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="email"
+                                            id="username" value="" placeholder="Email"
+                                            required>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Email Address is required.
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 0px;">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="mobile_no"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Mobile No
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control"
+                                                name="mobile" id="age" value=""
+                                                placeholder="Mobile No" min="0" max="99">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Mobile No is required.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="website"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Website</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control"
+                                            name="website" value="" id="confirm_password"
+                                            placeholder="Website">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Web site is required.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="registration_date"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Registration Date</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="date" class="form-control" name="Date"
+                                            value="" id="confirm_password"
+                                            placeholder="Web Site">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Registration Date
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="client-address"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Address</label>
+                                    <div class="input-group">
+                                        <textarea class="form-control" id="form7Example7"
+                                            rows="2" name="caddress"></textarea>
+                                        <div class="invalid-feedback" style="width: 100%;">
+
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="physical-address"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Physical Address</label>
+                                    <div class="input-group">
+                                        <textarea class="form-control" id="form7Example7"
+                                            rows="2" name="paddress"></textarea>
+                                        <div class="invalid-feedback" style="width: 100%;">
+
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit individual customers --}}
 
             <!-- Delete  confirmation Message -->
             <div class="modal fade" id="deleteIndividual" style=""> <!-- delete corporate -->
