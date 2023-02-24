@@ -137,9 +137,9 @@
                                 <br>
                                 <br>
                                 <div style="text-align: right;">
-                                <button  style="float: right;" type="submit" class="btn btn-primary">Cancel</button>
-                                <button  style="float: right;" type="button" class="btn btn-primary"
-                                    data-dismiss="modal">Add</button>
+                                <button  style="float: right;"  class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                                <button  style="float: right;" type="submit" type="button" class="btn btn-primary"
+                                    >Add</button>
 
                         </div>
                         </form>
