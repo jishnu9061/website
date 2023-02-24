@@ -161,8 +161,12 @@ color: #999;
                                     aria-expanded="false" style="border-color:none;"> ⋮ </a>
 
                            <div class="dropdown-menu">
-                            <a class="dropdown-item"
-                                href="{{url('edit_payment_item',$payment->id)}}">Edit Payment Item</a>
+                            {{-- <a class="dropdown-item"
+                                href="{{url('edit_payment_item',$payment->id)}}">Edit Payment Item</a> --}}
+                                <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_payment_items" href="#">Edit Payment Item
+                                                            
+                                                            </a>
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_payment_item',$payment->id)}}">Delete Payment Item</a> --}}
                                 <a href="#"onclick=deletepayment(this) data-id="{{ $payment->id }}"data-toggle="modal"
@@ -331,6 +335,118 @@ color: #999;
 </div>
 </div>
 </div>
+{{-- Start Edit Payment Items --}}
+<div class="modal fade" id="edit_payment_items" style="">
+    <!-- edit payment -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Payment Items:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="item_code"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item Code
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="icode" id="" value="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="item_group"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item Group
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <select type="text" value="" id="" name="igroup"style="width:100%;">
+                                                <option>---Select---</option>
+                                               
+                                <option>01-Legal Fees</option>
+                                <option>02-Vatable Disbursement(Telephone,Postage,Transport etc)</option>
+                                <option>03-Client Funds</option>
+                                <option>99-VAT Amount</option>
+                                <option>04-Non-Vatable Disbursement(Stamp Duty,Registration Fees etc)</option>
+                                
+                                            </select>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="item_name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item Name
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="iname" id="" value="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="item_comment"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item Comments</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="icomments" id="" value="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="item_short_name"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item Short Name</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="ishortname" id="" value="">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit corporate client --}}
 <div class="modal fade" id="deletePayment" style=""> <!-- delete payment item -->
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">

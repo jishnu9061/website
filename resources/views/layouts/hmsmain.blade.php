@@ -361,7 +361,7 @@
                 </ul>
                 <div style=" width: 350px">
                     @include('navbar_logout.stopwatch_bill')
-                    {{-- <li class="nav-item p-1 "  style=" text-decoration: none; list-style:none;" >
+                    {{-- <li class="nav-item p-1 "  style="text-decoration: none; list-style:none;" >
                                 <form class="form-inline my-2 my-lg-0"style="" >
                                     <input onkeydown="myFunction(event)" name="search" class="form-control mr-sm-2" id="searchbar" onkeyup="search_animal()" type="text" placeholder="Search" aria-label="Search">
                                     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"> </i> </button>

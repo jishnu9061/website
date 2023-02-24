@@ -138,8 +138,12 @@ color: #999;
                                         aria-expanded="false" style="border-color:none;"> ⋮ </a>
 
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item"
-                                            href="{{url('edit_holiday',$holiday->id)}}">Edit Holiday</a>
+                                        {{-- <a class="dropdown-item"
+                                            href="{{url('edit_holiday',$holiday->id)}}">Edit Holiday</a> --}}
+                                            <a class="dropdown-item" data-toggle="modal"
+                                            data-target="#edit_holiday" href="#">Edit Holiday
+
+                                                    </a>
                                         <a class="dropdown-item"
                                             {{-- href="{{url('delete_holiday',$holiday->id)}}">Delete Holiday</a> --}}
                                             <a href="#"onclick=deleteholiday(this) data-id="{{ $holiday->id }}"data-toggle="modal"
@@ -239,11 +243,74 @@ color: #999;
 </div>
 </body>
 </div>
+{{-- Start Edit Holiday --}}
+<div class="modal fade" id="edit_holiday" style="">
+    <!-- Edit Holiday-->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Holiday:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                   <label for="date"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;"> Date
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="date" class="form-control" name="date" id="date" value="">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                        Required Field.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                   <label for="day"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Day
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="day" class="form-control" name="day" id="day" value="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+ {{-- End edit holiday --}}
 <div class="modal fade" id="deleteHoliday" style=""> <!-- delete holiday -->
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">
             <!---- Modal Header -->
-            <form method="post"  id="delete_holiday" action="{{url('delete_holiday',$holiday->id)}}" enctype="multipart/form-data"> 
+            <form method="post"  id="delete_holiday" action="{{url('delete_holiday',$holiday->id)}}" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" id="id" value="id">
                 <div class="modal-header" style="padding:0rem 0rem;">
@@ -252,7 +319,7 @@ color: #999;
                 <!-- Modal body -->
                 <div class="modal-body" >
                     <div class="container">
-                        <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
                         </div>
                             <div class="row">
                                 <div class="" style="width: 30%;">

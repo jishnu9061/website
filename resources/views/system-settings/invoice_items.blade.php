@@ -155,7 +155,11 @@ color: #999;
 
                            <div class="dropdown-menu">
                             <a class="dropdown-item"
-                                href="{{url('edit_invoice_item',$invoice->id)}}">Edit Invoice Item</a>
+                                {{-- href="{{url('edit_invoice_item',$invoice->id)}}">Edit Invoice Item</a> --}}
+                                <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_invoice_items" href="#">Edit Invoice Item
+                                                            
+                                                            </a>
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_invoice_item',$invoice->id)}}">Delete Invoice Item</a> --}}
                                 <a href="#"onclick=deleteinvoice(this) data-id="{{ $invoice->id }}"data-toggle="modal"
@@ -333,6 +337,142 @@ color: #999;
 </div>
 </div>
 </div>
+{{-- Start Edit Invoice Items --}}
+<div class="modal fade" id="edit_invoice_items" style="">
+    <!-- edit invoice -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Invoice Items:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="type_name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Type Name
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text"  id="" name="typename"value="" class="form-control" >
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="comments"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comments
+                                        Type</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text"  id="" name="comments"value=""class="form-control" >
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="item_name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item Name
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text"  id="" name="iname"value=""class="form-control" >
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="item_category"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item Category</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <select type="text" value="" id="" name="category"style="width:100%;">
+                                            <option>---select---</option>
+                                            <option>Fees</option>
+                                            <option>Disbursements w/VAT</option>
+                                            <option>Disbursements w/o VAT</option>
+                                        </select>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="salestax_code"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Sales Tax Code</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <select type="text" value="" id="" name="sales_tax_code"style="width:100%;">
+                                        <option>---select---</option>
+                                        <option>Non-Taxable</option>
+                                        <option>Taxable</option>
+                                    </select>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="income_account"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Income Account
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <select type="text" value="" id="" name="account"style="width:92%;">
+                                        <option>---select---</option>
+                                        <option>1000====Income from Legal Fees</option>
+                                        <option>1100====Other Income</option>
+                                        <option>1101====Other Income - Vatable Disbursements</option>
+                                        <option>1102====Other Income - Miscellaneous Income</option>
+                                        <option>1103====Other Income - Interest Earned</option>
+                                        <option>1104====Other Income - Loan Administration Fees</option>
+                                        <option>9500====Other Income - Client gets Account Payable - Cooperative Bank</option>
+                                        </select>
+                                        <div class="col-md-1">
+                        
+                                       
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit invoice items --}}
 <div class="modal fade" id="deleteInvoice" style=""> <!-- delete Invoice Items -->
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">

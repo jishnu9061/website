@@ -120,9 +120,12 @@
                                                     <a class="dropdown-item"
                                                         href="{{url('view_Corporate',$list->Id)}}">View Client
                                                         Details</a>
-                                                    <a class="dropdown-item"
+                                                    {{-- <a class="dropdown-item"
                                                         href="{{url('edit_Corporate',$list->Id)}}">Edit Client
-                                                        Details</a>
+                                                        Details</a> --}}
+                                                        <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_corporate_customers" href="#">Edit Client
+                                                    Details</a>
                                                     <a class="dropdown-item"
                                                         {{-- href="{{url('drop_Corporate',$list->Id)}}">Delete Client
                                                         Details</a> --}}
@@ -433,6 +436,260 @@
 
                                                 </form>
                                             </div>
+{{-- Start Edit Corporate Customers --}}
+<div class="modal fade" id="edit_corporate_customers" style="">
+    <!-- edit corporate customers -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Corporate Customers:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;"> Name
+                                        </label>
+                                        <div class="input-group">
+
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="name"
+                                                id="username" value="" placeholder="" required>
+                                            <!-- <input type="text" class="form-control" name="name"
+                                            id="username" value="" placeholder="Client name"
+                                            required> -->
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Customer Name is required.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="gst_office"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">GST Office</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control"
+                                                name="office" id="username" value=""
+                                                placeholder="" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="gst_no"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">GST No</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="gst"
+                                                id="username" value="" placeholder="" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="social_security_no"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Social Security No</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control"
+                                                name="security" id="username" value=""
+                                                placeholder="" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="customer_authority"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Customer Authority</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control"
+                                            name="customer" id="username" value=""
+                                            placeholder="" required>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Postal Code is required.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="phone"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Phone
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="phone"
+                                            id="username" value="" placeholder="" required>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Postal Code is required.
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 0px;">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="fax"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Fax
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="fax"
+                                                id="username" value="" placeholder="" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="email"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="email" class="form-control"
+                                            name="email" id="username" value=""
+                                            placeholder="" required>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Postal Code is required.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="web"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Website</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="web"
+                                            id="username" value="" placeholder="" required>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Postal Code is required.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="country"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Country</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+
+                                        </div>
+                                        <select name="country" id="cars">
+                                            <option>---select---</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4 </option>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="state"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">State</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <select name="state" id="state">
+                                            <option>---select---</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4 </option>
+                                        </select>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Postal Code is required.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="city"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">City</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <select name="city" id="city">
+                                            <option>---select---</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4 </option>
+                                        </select>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Postal Code is required.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="town"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Town</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="town"
+                                            id="username" value="" placeholder="" required>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Postal Code is required.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="post_code"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Post Code</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="post"
+                                            id="username" value="" placeholder="" required>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Postal Code is required.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="address"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Address</label>
+                                    <div class="input-group">
+                                        <textarea class="form-control" id="form7Example7"
+                                            rows="2" name="address"></textarea>
+                                        <div class="invalid-feedback" style="width: 100%;">
+
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit corporate customers --}}
+
                                             <div class="modal fade" id="deleteCorporate" style=""> <!-- delete corporate -->
                                                 <div class="modal-dialog modal-lg" style="width:30%;">
                                                     <div class="modal-content">

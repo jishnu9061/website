@@ -387,13 +387,24 @@ class ClientManagement extends Controller
 
         return redirect('/corporate-list/' . $company_id);
     }
+    public function changestatus_corporate(Request $request)
+    {
+        $uniqueid = $request->corporate_id;
+        $status = DB::table('cra_corporate_client_details')->where('corporate_id', $uniqueid)->select('status')->first();
+        if($status->status == 1){
+            DB::table('cra_corporate_client_details')->where('corporate_id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_corporate_client_details')->where('corporate_id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
+    }
 
     public function CorporateDocument($corporate_id)
     {
         $corporate_docs = DB::table('cra_corporate_client_details')->where('corporate_id', $corporate_id)->first();
         return view('client-management.corporate-document', compact('corporate_docs', 'corporate_id'));
     }
-
+   
 
     public function viewCorporateDocument($corporate_id)
     {
@@ -568,8 +579,16 @@ class ClientManagement extends Controller
         DB::table('cra_corporate_client_details')->where('corporate_id', $corporate_id)->delete();
         return redirect('/corporate-list');
     }
-
-    //end corporate_client
+    public function sendMail(Request $Request)
+    {
+        return redirect('/corporate-list');
+    }
+    public function post_important_date(Request $Request)
+    {
+        return redirect('/corporate-list');
+    }
+    
+        //end corporate_client
 
     //document
 

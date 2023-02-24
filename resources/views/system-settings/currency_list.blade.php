@@ -149,7 +149,11 @@ color: #999;
 
                            <div class="dropdown-menu">
                             <a class="dropdown-item"
-                                href="{{url('edit_currency',$currency->id)}}">Edit Currency</a>
+                                {{-- href="{{url('edit_currency',$currency->id)}}">Edit Currency</a> --}}
+                                <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_currency_list" href="#">Edit Currency
+                                                            
+                                                            </a>
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_currency',$currency->id)}}">Delete Currency</a> --}}
                                 <a href="#"onclick=deletecurrency(this) data-id="{{ $currency->id }}"data-toggle="modal"
@@ -289,6 +293,107 @@ color: #999;
 </div>
 </div>
 </div>
+
+ {{-- Start Edit Currency List --}}
+ <div class="modal fade" id="edit_currency_list" style="">
+    <!-- edit Currency -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Currency List:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="currency_name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency Name
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text"  id="" name="currency"value="" class="form-control" >
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="currency_symbol"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency Symbol
+                                        Type</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text"  id="" name="csymbol"value="" class="form-control" >
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="exchange_rate"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Exchange Rate
+                                        Status</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="number"  id="" name="exchangerate"value=""class="form-control">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="default_account"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Default Account</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <select type="text" value="" id="" name="account"style="width:100%;">
+                                            <option>---Select---</option>
+                                            <option>8000====Client Account- Cooperative Bank</option>
+                                            <option>8003====Client Account- DTB Bank</option>
+                                            <option>8004====Client Account- Sidian Bank</option>
+                                            <option>8006====Client Account- Equity Bank</option>
+                                            <option>8008====Client Account- Coperative Bank (USD)</option>
+                                            <option>8009====Client Account- PayPal</option>
+                                        </select>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit currency list --}}
 <div class="modal fade" id="deleteCurrency" style=""> <!-- delete currency list -->
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">

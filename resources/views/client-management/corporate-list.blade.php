@@ -7,131 +7,131 @@
     </nav>
     <br><br>
     <style>
-        .pagination>li>span {
-            position: relative;
-            float: left;
-            padding: 6px 12px;
-            margin-left: -1px;
-            line-height: 1.42857143;
-            color: #337ab7;
-            text-decoration: none;
-            background-color: #fff;
-            border: 1px solid #ddd;
-        }
-
-        .pagination {
-            margin: 0;
-        }
-
-        .pagination li:hover {
-            cursor: pointer;
-        }
-
-        .header_wrap {
-            padding: 30px 0;
-        }
-
-        .num_rows {
-            width: 20%;
-            float: left;
-        }
-
-        .tb_search {
-            width: 20%;
-            float: right;
-        }
-
-        .pagination-container {
-            width: 70%;
-            float: left;
-        }
-
-        .rows_count {
-            width: 20%;
-            float: right;
-            text-align: right;
-            color: #999;
-        }
-
-        th {
-            width: 30%;
-        }
-
-        .outer {
-            border-color: #1d1d50;
-            width=45%;
-            border-radius: 7px;
-        }
-
-        .add_doc {
-            text-decoration: none;
-            display: inline-block;
-            */width: 30px;
-            height: 30px;
-            background: #8bc34a;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #1d1d50;
-            align-items: center;
-            line-height: 0.7;
-            */display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .exdocdelete {
-            text-decoration: none;
-            display: inline-block;
-            background: #f44336;
-            color: #1d1d50;
-            font-size: 1.5rem;
-            font-weight: bold;
-            width: 30px;
-            height: 30px;
-            margin-left: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .docflex {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        .doc_warp {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e4e1e1;
-        }
-
-        .doc_contanier {
-            max-width: 1000px;
-            background: white;
-            border-radius: 5px;
-            padding: 20px;
-            */box-shadow: 0 2px 2px 43px black;
-        }
-
-        .doc_input {
-            padding: 8px 10px;
-            width: 50%;
-            border-radius: 5px;
-            border-color: #1d1d50;
-        }
-
-        .doc_input:focus {
+         th {width: 30%;}
+        .outer{border-color: #1d1d50;width=45%;border-radius: 7px;}
+        .add_doc{text-decoration: none;display: inline-block;*/width: 30px;height: 30px;background: #8bc34a;font-size: 2rem;
+            font-weight: bold;color: #1d1d50;align-items: center;line-height: 0.7;*/display: flex;justify-content: center;
+            align-items: center;cursor: pointer;}
+        .exdocdelete{text-decoration: none;display: inline-block;background: #f44336;color: #1d1d50;font-size: 1.5rem;
+            font-weight:bold;width: 30px;height: 30px;margin-left: auto;display: flex;justify-content: center;align-items: center;
+            cursor: pointer;}
+        .docflex{display: flex;gap:1.5rem;margin-bottom: 15px;}
+        .doc_warp{display: flex;justify-content: space-evenly;align-items: center;width: 100%;margin-bottom: 20px;
+            padding-bottom:15px;border-bottom:2px solid #e4e1e1;}
+        .doc_contanier{max-width: 1000px;background: white;border-radius: 5px;padding: 20px;*/box-shadow: 0 2px 2px 43px black;}
+        .doc_input{padding: 8px 10px;width: 50%;border-radius: 5px;border-color: #1d1d50;}
+        .doc_input:focus{
             outline: 1px solid #efefef;
         }
+        .pagination>li>span {
+                position: relative;
+                float: left;
+                padding: 6px 12px;
+                margin-left: -1px;
+                line-height: 1.42857143;
+                color: #337ab7;
+                text-decoration: none;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                }
+            .pagination {
+            margin: 0;
+            }
 
-        .add_decduct {
+            .pagination li:hover{
+            cursor: pointer;
+            }
+
+            .header_wrap {
+            padding:30px 0;
+            }
+            .num_rows {
+            width: 20%;
+            float:left;
+            }
+            .tb_search{
+            width: 20%;
+            float:right;
+            }
+            .pagination-container {
+            width: 70%;
+            float:left;
+            }
+
+            .rows_count {
+            width: 20%;
+            float:right;
+            text-align:right;
+            color: #999;
+            }
+            input[type='file'] {
+            opacity:0    
+            }
+            input[type='file'] {
+            color: rgba(0, 0, 0, 0)
+            }
+        </style>
+        <style>
+            .switch {
+              position: relative;
+              display: inline-block;
+              width: 50px;
+              height: 20px;
+            }
+            
+            .switch input { 
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+            
+            .slider {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #6c757d;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+            
+            .slider:before {
+              position: absolute;
+              content: "";
+              height: 15px;
+              width: 15px;
+              left: 4px;
+              bottom: 2.5px;
+              background-color: white;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+            
+            .check:checked + .slider {
+              background-color: #0edb7c;
+            }
+            
+            .check:focus + .slider {
+              box-shadow: 0 0 1px #0edb7c;
+            }
+            
+            .check:checked + .slider:before {
+              -webkit-transform: translateX(26px);
+              -ms-transform: translateX(26px);
+              transform: translateX(26px);
+            }
+            
+            /* Rounded sliders */
+            .slider.round {
+              border-radius: 34px;
+            }
+            
+            .slider.round:before {
+              border-radius: 50%;
+            }
+            .add_decduct{
             text-decoration: none;
             display: inline-block;
             */width: 30px;
@@ -145,107 +145,43 @@
             line-height: 0.9;
             cursor: pointer;
         }
-
-        .decduct_input {
+        .decduct_input{
             padding: 8px 10px;
             width: 20%;
             border-radius: 5px;
             border-color: #1d1d50;
         }
-
         #e_passmessage {
-            display: block;
+            display:block;
             color: #1d1d50;
             position: relative;
-        }
-
-        /* Add a green text color and a checkmark when the requirements are right */
-        .passvalid {
+            }
+            /* Add a green text color and a checkmark when the requirements are right */
+            .passvalid {
             color: green;
             margin: 0px;
             font-size: 10px;
-        }
+            }
 
-        .passvalid:before {
+            .passvalid:before {
             position: relative;
             left: 0px;
             content: "✔";
-        }
+            }
 
-        /* Add a red text color and an "x" when the requirements are wrong */
-        .passinvalid {
+            /* Add a red text color and an "x" when the requirements are wrong */
+            .passinvalid {
             color: red;
             margin: 0px;
             font-size: 10px;
             padding-left: 10px;
-        }
+            }
 
-        .passinvalid:before {
+            .passinvalid:before {
             position: relative;
             left: 0px;
             content: "✖";
-        }
-
-        /*Toggle button*/
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 20px;
-        }
-
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #6c757d;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 15px;
-            width: 15px;
-            left: 4px;
-            bottom: 2.5px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        .check:checked+.slider {
-            background-color: #0edb7c;
-        }
-
-        .check:focus+.slider {
-            box-shadow: 0 0 1px #0edb7c;
-        }
-
-        .check:checked+.slider:before {
-            -webkit-transform: translateX(26px);
-            -ms-transform: translateX(26px);
-            transform: translateX(26px);
-        }
-
-        /* Rounded sliders */
-        .slider.round {
-            border-radius: 34px;
-        }
-
-        .slider.round:before {
-            border-radius: 50%;
-        }
+            }
     </style>
 
     <div class="container">
@@ -320,8 +256,9 @@
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"><label class="switch">
-                                            <input type="checkbox" data-id="" onclick="changestatus(this)"
-                                                id="status" class="check">
+                                            <input type="checkbox" data-id="{{ $list->corporate_id }}"
+                                                onclick="changestatus(this)" id="status" class="check"
+                                                {{ $list->status == 1 ? 'checked' : '' }}>
                                             <span class="slider round"></span>
                                         </label>
                                     </td>
@@ -346,9 +283,18 @@
                                                     href="{{ url('corporate-document-details', $list->corporate_id) }}">View
                                                     Document Details</a>
                                                 <a class="dropdown-item" href="#">Engagement Letter</a>
-                                                <a class="dropdown-item" href="#">Send Mail</a>
-                                                <a class="dropdown-item" href="#">Post Important Date</a>
-                                                <a class="dropdown-item" href="#">Post Status Summary</a>
+                                                <a class="dropdown-item" data-toggle="modal"
+                                                data-target="#send_mail" href="#">Send Mail
+                                                
+                                            </a>
+                                                <a class="dropdown-item" data-toggle="modal"
+                                                data-target="#post_important_date" href="#">Post Important Date
+                                                
+                                            </a>
+                                                <a class="dropdown-item" data-toggle="modal"
+                                                data-target="#post_status_summary" href="#">Post Status Summary
+                                                
+                                            </a>
                                                 <a class="dropdown-item" href="#">Send Message</a>
                                                 <a class="dropdown-item" href="#">Post Comment</a>
                                             </div>
@@ -670,7 +616,8 @@
                                 <div class="col-sm-4">
                                 </div>
                             </div>
-                            <div class="doc_contanier"style="*/background-color:orange;">
+                            <div class="doc_contanier"style="*/background-color:orange;width:100%;
+                            ">
                                 <div class="doc_warp">
                                     <h6>Add Contact Person details:-</h6>
                                     <a class="add_doc">&plus;</a>
@@ -679,12 +626,13 @@
                                     {{-- Add More Document details:- javascript --}}
                                 </div>
                             </div>
-                        </div>
+                        </form>
+                    </div>
                     <div class="row">
                         <div class="row">
-                            <div class="" style="width: 50%;">
+                            < class=""  style="width: 50%;>
                             </div>
-                            <div lass="" style="width: 0%"></div>
+                            <div class="" style="width: 0%"></div>
                             <div class="col-sm" style="padding-right: 0px;width: 50%">
                                 <br>
                                 <button type="submit" onclick="return Validate()" class="btn btn-primary float:right;"
@@ -699,7 +647,7 @@
             </div>
         </div>
     </div>
-    
+
     {{-- </div>End create corporate client --}}
     {{-- Start Edit Cororate Client --}}
     <div class="modal fade" id="edit_corporate_client_details" style="">
@@ -707,10 +655,12 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <!---- Modal Header -->
-                <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data" id="addemployee">
+                <form method="post" id="update_corporate" action="" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
+                    <input type="hidden" id="corporateid" value="corporateid">
                     <h5><b>Edit Corporate Client Details:-</b></h5>
-
+                    
                     <div class="row">
                         <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
                             <div class="row">
@@ -770,7 +720,7 @@
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Country</label>
                                     <input type="text" placeholder="Country"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        class="form-control" name="city" id="" value="" required>
+                                        class="form-control" name="country" id="country" value="" required>
                                 </div>
                                 <div class="" style="width:33%;"><span style="color: red">*</span>
                                     <label for="city"
@@ -835,13 +785,13 @@
                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
                                             name="gender" id="" required>
                                             <option>Select Reporting Day</option>
-                                            <option value="1">Monday</option>
-                                            <option value="2">Tuesday</option>
-                                            <option value="3">Wednesday</option>
-                                            <option value="4">Thursday</option>
-                                            <option value="5">Friday</option>
-                                            <option value="6">Saturday</option>
-                                            <option value="7">Sunday</option>
+                                            <option>Monday</option>
+                                            <option>Tuesday</option>
+                                            <option>Wednesday</option>
+                                            <option>Thursday</option>
+                                            <option>Friday</option>
+                                            <option>Saturday</option>
+                                            <option>Sunday</option>
                                         </select>
                                     </div>
                                 </div>
@@ -868,7 +818,8 @@
                                         Source</label>
                                     <input type="text" placeholder="Client Source Narration"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        class="form-control" name="city" id="" value="" required>
+                                        class="form-control" name="source_nartion" id="source_nartion" value=""
+                                        required>
                                 </div>
                                 <div class="" style="width:33%;"><span style="color: red">*</span>
                                     <label for="city"
@@ -888,9 +839,9 @@
                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
                                             name="gender" id="" required>
                                             <option>Select Client Industry</option>
-                                            <option value="1">Construction</option>
-                                            <option value="2">Auto Mobile</option>
-                                            <option value="2">Hospital</option>
+                                            <option>Construction</option>
+                                            <option>Auto Mobile</option>
+                                            <option>Hospital</option>
                                         </select>
                                     </div>
                                 </div>
@@ -921,7 +872,8 @@
                                         Code</label>
                                     <input type="text" placeholder="Postal Code"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        class="form-control" name="city" id="" value="" required>
+                                        class="form-control" name="postal_code" id="postal_code" value=""
+                                        required>
                                 </div>
                                 <div class="" style="width:25%;"><span style="color: red">*</span>
                                     <label for="city"
@@ -929,7 +881,7 @@
                                     </label>
                                     <input type="text" placeholder="Town"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        class="form-control" name="city" id="" value="" required>
+                                        class="form-control" name="town" id="town" value="" required>
                                 </div>
                             </div>
                             <div class="row">
@@ -939,7 +891,7 @@
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Physical
                                             Address</label>
                                         <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Physical Address"
-                                            name="postal_addr" form="addemployee"></textarea>
+                                            name="physical_address" id="physical_address"></textarea>
                                     </div>
                                 </div>
                                 <div style="width:50%">
@@ -947,8 +899,8 @@
                                         <label for="postal_addr"
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes
                                         </label>
-                                        <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Notes" name="postal_addr"
-                                            form="addemployee"></textarea>
+                                        <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Notes" name="notes"
+                                            id="notes" form="notes"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -996,9 +948,63 @@
                             onclick="history.back()">Cancel</button>
                     </div>
             </div>
-            </form>
         </div>
+        </form>
     </div>
+    <script>
+        function changestatus(param) { // change copany status 
+            var status = $(param).prop('checked') == true ? 1 : 0;
+            var user_id = $(param).data('id');
+            $.ajax({
+                type: "post",
+                dataType: "json",
+                url: "{{ route('changestatus_corporate') }}",
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    'status': status,
+                    'corporate_id': user_id
+                },
+                success: function(data) {
+                    toastr.options.closeButton = true;
+                    toastr.options.closeMethod = 'fadeOut';
+                    toastr.options.closeDuration = 1;
+                    toastr.success(data.success);
+                }
+            });
+        }
+
+        function editcompany(param) { // edit company get details 
+            var corporateid = $(param).data('id');
+            $.ajax({
+                type: "GET",
+                url: 'edit_client/' + corporateid,
+                success: function(response) {
+                    $('#client_no').val(response.result.client_no);
+                    $('#client_type').val(response.result.client_type);
+                    $('#cityzen').val(response.result.cityzen);
+                    $('#certificate').val(response.result.certificate);
+                    $('#country').val(response.result.country);
+                    $('#telephone').val(response.result.telephone);
+                    $('#fax').val(response.result.fax);
+                    $('#email').val(response.result.email);
+                    $('#website').val(response.result.website);
+                    $('#brought').val(response.result.brought);
+                    $('#status_reporting').val(response.result.status_reporting);
+                    $('#client_source').val(response.result.client_source);
+                    $('#source_naration').val(response.result.source_naration);
+                    $('#client_name').val(response.result.client_name);
+                    $('#postal_address').val(response.result.postal_address);
+                    $('#pin_no').val(response.result.pin_no);
+                    $('#postal_code').val(response.result.postal_code);
+                    $('#town').val(response.result.town);
+                    $('#physical_address').val(response.result.physical_address);
+                    $('#notes').val(response.result.notes);
+                    $('#corporateid').val(corporateid);
+                    $('#update_corporate').attr('action', "{{ url('update-corporate') }}" + "/" + corporateid);
+                }
+            });
+        }
+    </script>
     {{-- End edit corporate client --}}
     <div class="modal fade" id="deletecompany" style="">
         <!-- delete company -->
@@ -1144,5 +1150,189 @@
     <script type="text/javascript" charset="utf8"
         src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
-    {{-- Supplier Edit start --}}
+
+    {{-- Start Send Mail Modal --}}
+    <div class="modal fade" id="send_mail" style="">
+        <!-- Send Mail -->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" id="send_mail" action="{{ url('send_mail') }}" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <input type="hidden" id="send_mail" value="corporateid">
+                    <h5><b>Send Mail:-</b></h5>
+                    <div class="row">
+                        <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                            <div class="row">
+                                <div class="" style="width: 100%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="email_to"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email Address(To)</label>
+                                        <input type="email" placeholder=" "
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="first_name" id="" value=""
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 100%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="email_from"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email Address(Cc)</label>
+                                            <input type="email" placeholder=" "
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="first_name" id="" value=""
+                                            required>
+                                            
+                                    </div>
+                                </div>
+                                <div class="" style="width: 100%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="email_bcc"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email Address(Bcc)</label>
+                                            <input type="email" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="first_name" id="" value=""
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 100%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="subject"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Subject</label>
+                                            <input type="text" placeholder=" "
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="first_name" id="" value=""
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="" style="width:100%;"><span style="color: red">*</span>
+                                    <label for="message"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Message</label>
+                                        <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Message"
+                                        name="message" form="addemployee"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class style="width: 20%">
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                           
+                            <button type="button" class="btn btn-primary float:left" Style="width:35%;"
+                                onclick="history.back()">Email</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:30%;"
+                                onclick="history.back()">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:30%;"
+                                onclick="history.back()">View</button>
+                        </div>
+
+                </div>
+            </div>
+            </form>
+        </div>
+        {{-- Start post important date Modal --}}
+        <div class="modal fade" id="post_important_date" style="">
+            <!--post important date -->
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!---- Modal Header -->
+                    <form method="post" action="" enctype="multipart/form-data" id="addemployee">
+                        @csrf
+                        @method('PUT')
+                        <input type="hidden" id="post_important_date" value="corporateid">
+                       <h5><b>post important date:-</b></h5>
+        
+                        <div class="row">
+                            <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                                <div class="row">
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="date"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
+                                            <input type="date" placeholder=" "
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="first_name" id="" value=""
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 70%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="title"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Title</label>
+                                                <input type="text" placeholder=" "
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="first_name" id="" value=""
+                                                required>
+                                                
+                                        </div>
+                                    </div>
+                                    <div class="row document_details " style="margin-bottom: 20px;">
+                                        {{-- Add More Document details:- javascript --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class style="width: 20%">
+                        </div>
+                        <div class="col-sm">
+                       
+                            <button type="submit" class="btn btn-primary float:right;"
+                                style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Post
+                            </button>
+                            
+                        </div>
+                    </form>  
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    {{-- Start Post Status Summary --}}
+    <div class="modal fade" id="post_status_summary" style="">
+        <!--Post Status Summary -->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" id="send_mail" action="" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <input type="hidden" id="send_mail" value="corporateid">
+                    <h5><b>Post Status Summary:-</b></h5>
+                    <div class="" style="width:100%;"><span style="color: red">*</span>
+                        <label for="summary"
+                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Summary</label>
+                            <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Message"
+                            name="message" form="addemployee"></textarea>
+                    </div>
+                    <div class="row document_details " style="margin-bottom: 20px;">
+                        {{-- Add More Document details:- javascript --}}
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        </div>
+        <div class style="width: 20%">
+        </div>
+        <div class="col-sm">
+          
+            <button type="submit" class="btn btn-primary float:right;"
+                style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Post
+            </button>
+            
+        </div>
+    </form>  
+</div>
+</div>
+
+</div>
+</div>
 @endsection

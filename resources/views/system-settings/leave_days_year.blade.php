@@ -158,7 +158,12 @@ color: #999;
 
                            <div class="dropdown-menu">
                             <a class="dropdown-item"
-                                href="{{url('edit_leave_days',$leave->id )}}">Edit Leave</a>
+                                {{-- href="{{url('edit_leave_days',$leave->id )}}">Edit Leave</a> --}}
+                              
+                            <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_leave_days_per_year" href="#">Edit Leave</a>
+                                                
+                                               
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_leave_days',$leave->id)}}">Delete Leave</a> --}}
                                 <a href="#"onclick=deleteleave(this) data-id="{{ $leave->id }}"data-toggle="modal"
@@ -330,6 +335,138 @@ color: #999;
 </div>
 </div>
 </div>
+ {{-- Start Edit Leave Days Per Year --}}
+    <div class="modal fade" id="edit_leave_days_per_year" style="">
+        <!-- edit leave-->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                    @csrf
+                    <h5><b>Edit Leave Days Per Year :-</b></h5>
+
+                    <div class="row">
+                        <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                            <label for="username"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Year
+                                            </label>
+
+                                        <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select type="year" value="" name="year"style="width:100%;">
+                            <option>---Select---</option>
+                            <option>2025</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                         
+
+                        </select>
+                                
+                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="username"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Annual Leave Days
+                                            </label>
+                                       <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="leaveday" id="confirm_password" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                             
+                                </div>
+                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="username"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Saturday Working Days
+                                            </label>
+                                         <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select type="text" value="" name="saturday"style="width:100%;">
+                            <option>---Select---</option>
+                            <option>Not a Working Day</option>
+                            <option>Yes (Half Day)</option>
+                            <option>Yes (Full Day)</option>
+                          
+                        </select>
+                </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="username"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Perfomance Duration
+                                            </label>
+                                       <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select type="text" value="" name="performance"style="width:100%;">
+                            <option>---Select---</option>
+                            <option>Monthly</option>
+                            <option>Quarterly</option>
+                            <option>Bi Annual</option>
+                            <option>Annual</option>
+                        </select>
+                    <div class="invalid-feedback" style="width: 100%;">
+                     
+                    </div>
+                </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="username"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Pay Personal Relief
+                                            </label>
+                                      <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input type="text" class="form-control" name="pay" id="confirm_password" required>
+                </div>
+                                </div>
+                                 <div class="row document_details " style="margin-bottom: 20px;">
+                                    {{-- Add More Document details:- javascript --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class style="width: 20%">
+                    </div>
+                    <div class="col-sm">
+                        
+                        <button type="submit" class="btn btn-primary float:right;"
+                            style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                            --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                        </button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                            onclick="history.back()">Cancel</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    {{-- End leave days per year --}}
 <div class="modal fade" id="deleteLeave" style=""> <!-- delete leave days per year -->
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">

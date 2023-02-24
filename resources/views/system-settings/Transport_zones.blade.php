@@ -153,7 +153,11 @@ color: #999;
 
                            <div class="dropdown-menu">
                             <a class="dropdown-item"
-                                href="{{url('edit_transport_zone',$detail->id)}}">Edit Transport Zone</a>
+                                {{-- href="{{url('edit_transport_zone',$detail->id)}}">Edit Transport Zone</a> --}}
+                                <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_transport_zones" href="#">Edit Transport Zones
+                                                          
+                                                            </a>
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_transport_zone',$detail->id)}}">Delete Transport Zone</a> --}}
                                 <a href="#"onclick=deletetransport(this) data-id="{{ $detail->id }}"data-toggle="modal"
@@ -279,6 +283,97 @@ color: #999;
 </div>
 </div>
 </div>
+{{-- Start Edit Transport Zones --}}
+<div class="modal fade" id="edit_transport_zones" style="">
+    <!-- Edit Transport Zones-->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Transport Zones:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                   <label for="zone_name"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Zone Name
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+        
+                                        </div>
+                                        <input type="text" class="form-control" name="zone_name" id="age">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                             
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                   <label for="zone_areas"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Zone Areas
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+            
+                                            </div>
+                                            <input type="text" class="form-control" name="zone_areas" id="age">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Incorporation is required
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                        <label for="cost"
+                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Cost(Kshs)
+                                         </label>
+
+                                         <div class="input-group">
+                                            <div class="input-group-prepend">
+            
+                                            </div>
+                                            <input type="text" class="form-control" name="cost" id="age">
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                            </div>
+                        
+                            <div class="col-sm-4">
+                            </div>
+                        </div>
+                        <div class="doc_contanier"style="*/background-color:orange;">
+                          
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+                 
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit billable activity --}}
 <div class="modal fade" id="deleteTransport" style=""> <!-- delete transport zones -->
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">

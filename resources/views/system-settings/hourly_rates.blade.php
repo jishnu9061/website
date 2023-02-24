@@ -85,10 +85,7 @@
                 </div>
             </div>
             <br>
-
-
-
-            <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+                <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
             {{-- <a href="{{('add_hourly_rates')}}"><button class="btn btn-primary">Add User Hourly Rates</button></a> --}}
             {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add User Hourly Rates</button> --}}
@@ -118,22 +115,17 @@
                                     <option value="100">100</option>
                                     <option value="5000">Show ALL Rows</option>
                                 </select>
-
                             </div>
                         </div>
                         <div class="tb_search">
                             <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()"
                                 placeholder="Search.." class="form-control">
                         </div>
-
-
                         <!-- <h6 style="text-align:center; ">Hourly Rates</h6> -->
-
-                        <div class="table-responsive">
+                         <div class="table-responsive">
                             <table class="table table-striped table-class" id="table-id">
                                 <thead>
                                     <tr>
-
                                         <!-- <th class="text-center">*</th> -->
                                         <th class="text-center">User / Staff</th>
                                         <th class="text-center">Currency</th>
@@ -144,7 +136,6 @@
                                 <tbody>
                                     @foreach ($hourly_rate as $rate)
                                         <tr id="data">
-
                                             <!-- <td scope="row" class="text-center">{{ $rate->id }}</td> -->
                                             <td scope="row" class="text-center">{{ $rate->user_staff }}</td>
                                             <td scope="row" class="text-center">{{ $rate->currency }}</td>
@@ -160,9 +151,11 @@
                                                         aria-expanded="false" style="border-color:none;"> ⋮ </a>
 
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item"
+                                                        {{-- <a class="dropdown-item"
                                                             href="{{ url('edit_hourly_rates', $rate->id) }}">Edit Hourly
-                                                            Rate</a>
+                                                            Rate</a> --}}
+                                                            <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_hourly_rate" href="#">Edit Hourly Rate</a>
                                                         <a class="dropdown-item" {{-- href="{{url('delete_hourly_rates',$rate->id)}}" data-toggle="modal" data-id="{{$rate->id }}"onclick="deletecompany(this)" data-target="#deletecompany">Delete Hourly Rate</a> --}}
                                                             href="#"onclick=deleterate(this)
                                                             data-id=""data-toggle="modal"
@@ -174,9 +167,6 @@
                                 </tbody>
                             </table>
                         </div>
-
-
-
                         <!-- 		End of Container -->
                         <!--		Start Pagination -->
                         <div class='pagination-container'>
@@ -279,8 +269,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
                                                 <div class="col-md-4">
                                                     <div class="mb-1">
                                                         <label for="username">Hourly Rate</label>
@@ -319,6 +307,133 @@
                             </div>
                         </div>
                     </div>
+                     {{-- Start Edit Hourly Rate --}}
+    <div class="modal fade" id="edit_hourly_rate" style="">
+        <!-- Edit Hourly Rate -->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
+                    @csrf
+                    <h5><b>Edit Hourly Rate:-</b></h5>
+
+                    <div class="row">
+                        <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                       <label for="username"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">User / Staff
+                                        </label>
+                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                            </div>
+                                                            <select type="text" value=""
+                                                                name="user"style="width:100%;">
+                                                                <option>--Select---</option>
+                                                                <option>Alekeen W Benson</option>
+                                                                <option>Cedric Opara</option>
+                                                                <option>Corrine Auma</option>
+                                                                <option>Evans Munene</option>
+                                                                <option>Florance Muthama</option>
+                                                                <option>George Njoroge</option>
+                                                                <option>Gichui Kirogo</option>
+                                                                <option>Hillary Wamunyolo Casmir</option>
+                                                                <option>Jackline Ogwemo</option>
+                                                                <option>John Wachira</option>
+                                                                <option>Jukius Mburu</option>
+                                                                <option>Kevin Kavila</option>
+                                                                <option>Martin Kyalo</option>
+                                                                <option>Mike Ogutu </option>
+                                                                <option>Owino PH Onyango</option>
+                                                                <option>Princess Caroline</option>
+                                                                <option>Sarah Gladys</option>
+                                                                <option>Thagichu Nyaga</option>
+                                                                <option>Wambua Musyoka</option>
+                                                            </select></br>
+
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                       <label for="username"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency
+                                            </label>
+                                     <div class="input-group">
+                                                            <div class="input-group-prepend">
+
+                                                            </div>
+                                                            <select type="text" value=""
+                                                                name="currency"style="width:100%;">
+                                                                <option>---Select---</option>
+                                                                <option>KES</option>
+                                                                <option>USD</option>
+                                                                <option>EUR</option>
+                                                                <option>GBP</option>
+                                                                <option>AUD</option>
+                                                                <option>CAD</option>
+                                                                <option>SEK</option>
+                                                                <option>DKK</option>
+                                                                <option>JPY</option>
+                                                                <option>CHF</option>
+                                                                <option>HKD</option>
+
+                                                            </select>
+
+                                                            <div class="invalid-feedback" style="width: 100%;">
+
+                                                            </div>
+                                                        </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                            <label for="username"
+                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Hourly Rate
+                                             </label>
+
+                                       <div class="input-group">
+                                                            <div class="input-group-prepend">
+
+                                                            </div>
+                                                            <input type="text" class="form-control" name="rate"
+                                                                id="confirm_password" required>
+                                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                </div>
+
+                                <div class="col-sm-4">
+                                </div>
+                            </div>
+                            <div class="doc_contanier"style="*/background-color:orange;">
+
+                                <div class="row document_details " style="margin-bottom: 20px;">
+                                    {{-- Add More Document details:- javascript --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class style="width: 20%">
+                    </div>
+                    <div class="col-sm">
+
+                        <button type="submit" class="btn btn-primary float:right;"
+                            style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                            --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                        </button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                            onclick="history.back()">Cancel</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    {{-- End edit hourly rate --}}
                     <div class="modal fade" id="deleteRate" style="">
                         <!-- delete hourly rate -->
                         <div class="modal-dialog modal-lg" style="width:30%;">
