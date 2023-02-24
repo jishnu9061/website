@@ -83,7 +83,7 @@
                                                 <a class="btn" data-toggle="dropdown" aria-haspopup="true"
                                                     aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal"
+                                                    <a class="dropdown-item" data-toggle="modal" data-target="#viewModal"
                                                         href="{{ url('view_supplier_credit') }}">View Supplier Credit</a>
                                                     <a class="dropdown-item" data-toggle="modal" data-target="#editModal" href="{{ url('edit_supplier_credit') }}">Edit
                                                         Supplier Credit</a>
@@ -326,15 +326,11 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="exampleModal">
+            <div class="modal fade" id="viewModal">
                 <div class="modal-dialog modal-xl" style="width: 60%">
                     <div class="modal-content">
                         <!-- Modal Header -->
-                        <div class="modal-header" style="padding:0rem 0rem;">
-                            <div style="padding:1rem 1rem;">
-                                <h4 class="text-centre"><b>View Supplier Credit Note</b></h4>
-                            </div>
-                        </div>
+                          <h5><b>View Supplier Credit Note:-</b></h5>
                         <!-- Modal body -->
                         <div class="modal-body">
                             <div class="container">
@@ -556,11 +552,7 @@
                 <div class="modal-dialog modal-xl" style="width: 60%">
                     <div class="modal-content">
                         <!-- Modal Header -->
-                        <div class="modal-header" style="padding:0rem 0rem;">
-                            <div style="padding:1rem 1rem;">
-                                <h4 class="text-centre"><b>Edit Supplier Credit Note</b></h4>
-                            </div>
-                        </div>
+                        <h5><b>Edit Supplier List:-</b></h5>
                         <!-- Modal body -->
                         <div class="modal-body">
                             <div class="container">
