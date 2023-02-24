@@ -529,7 +529,7 @@
             exdocflex.appendChild(exdocname);
             exdocflex.appendChild(docidnumber);
             exdocflex.appendChild(btndele);
-            ++i;
+            ++m;
         }
         adddoc.addEventListener("click",exdocaddinput);// Add More Document details author@udayan --end
     

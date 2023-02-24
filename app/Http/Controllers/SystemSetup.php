@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Auth;
 
 class SystemSetup extends Controller
 {
@@ -203,9 +204,15 @@ class SystemSetup extends Controller
 
     public function branch()
     {
-        $branch_details = DB::table('cra_company_branch_details')->get();
-        $company_id = DB::table('users')->where('company_id', 1)->get();
-        return view('system-settings.company_branch', compact('branch_details', 'company_id'));
+        $branch_details = DB::table('cra_company_branch_details')->where('company_id',Auth::user()->company_id)->whereNull('deleted_at')->get();
+        $employee_count=[];
+        foreach($branch_details as $branch){
+            $em_count=DB::table('employee_job_history')->where('branch_id',$branch->id)
+            ->whereNull('doe')->whereNull('eoc')
+            ->count()??0;
+            array_push($employee_count,$em_count);
+        }
+        return view('system-settings.company_branch', compact('branch_details','employee_count'));
     }
 
 
@@ -213,13 +220,16 @@ class SystemSetup extends Controller
     {
         $company_id = $Request['company_id'];
         $branch_no = $Request['bnum'];
-        $branch_code = $Request['bcodes'];
-        $branch_name = $Request['bname'];
+        $branch_code = $Request['branch_code'];
+        $branch_name = $Request['branch_name'];
         $address = $Request['paddress'];
         $physical_address = $Request['physicaladd'];
-        $telephone = $Request['tel'];
+        $telephone = $Request['telephone'];
         $mobile = $Request['mobile'];
         $town = $Request['town'];
+        $State = $Request['state'];
+        $country = $Request['country'];
+        $pincode = $Request['pincode'];
         $email = $Request['email'];
         $website = $Request['website'];
 
@@ -231,58 +241,97 @@ class SystemSetup extends Controller
             'branch_name' => $branch_name,
             'address' => $address,
             'physical_address' => $physical_address,
+            'State'=>$State,
+            'country'=>$country,
+            'pincode'=>$pincode,
             'telephone' => $telephone,
             'mobile' => $mobile,
             'town' => $town,
             'email' => $email,
             'website' => $website,
+            'status'=> 1,
+            'created_at'=>date('Y-m-d H:i:s'),
 
         ]);
         return redirect('/company_branch');
-        //  return view('system-settings.add_company_branch');
     }
 
     public function editbranch($id)
     {
-
-        $branch_details = DB::table('cra_company_branch_details')->where('id', $id)->first();
-        return view('system-settings.edit_company_branch', compact('branch_details', 'id'));
+        $branch_edit = DB::table('cra_company_branch_details')->where('id', $id)->first();
+        return response()->json([
+            'status' => 200,
+            'result' => $branch_edit,
+        ]);
     }
-    public function updatebranch(Request $Request)
+    public function updatebranch(Request $Request ,$id)
     {
-        $id = $Request['id'];
-        $branch_no = $Request['bnum'];
-        $branch_code = $Request['bcodes'];
-        $branch_name = $Request['bname'];
-        $address = $Request['paddress'];
-        $physical_address = $Request['physicaladd'];
-        $telephone = $Request['tel'];
-        $mobile = $Request['mobile'];
-        $fax = $Request['fax'];
-        $town = $Request['town'];
-        $email = $Request['email'];
-        $website = $Request['website'];
+        $branch_id = $id;
+        // print_r($id);die;
+        $status=$Request['e_status'];
+        $check_status=DB::table('cra_company_branch_details')->where('id',$branch_id )->first();
+        if($status != $check_status->status){
+            if($status == 0){
+                DB::table('users')->where('branch_id',$id)->whereNull('deleted_at')->update([        
+                    'status'=>0]);
+                DB::table('employee_job_history')->whereNull('doe')
+                    ->where('branch_id',$id)->update([        
+                    'job_status'=>0]);
+            }elseif($status == 1){
+                DB::table('users')->where('branch_id',$id)->whereNull('deleted_at')->update([        
+                    'status'=>1]);
+                DB::table('employee_job_history')->whereNull('doe')
+                    ->where('employee_job_history.branch_id',$id)->update([        
+                    'employee_job_history.job_status'=>1]);
+            }
+        }
+        
+        $branch_no = $Request['e_bnum'];
+        $branch_code = $Request['e_branch_code'];
+        $branch_name = $Request['e_branch_name'];
+        $address = $Request['e_paddress'];
+        $physical_address = $Request['e_physicaladd'];
+        $telephone = $Request['e_telephone'];
+        $mobile = $Request['e_mobile'];
+        $town = $Request['e_town'];
+        $State = $Request['e_state'];
+        $country = $Request['e_country'];
+        $pincode = $Request['e_pincode'];
+        $email = $Request['e_email'];
+        $website = $Request['e_website'];
+        
 
-        $update_company_branch = array(
+
+        DB::table('cra_company_branch_details')->where('id',$branch_id )->update([
             'branch_no' => $branch_no,
-            'branch_code' =>  $branch_code,
+            'branch_code' => $branch_code,
             'branch_name' => $branch_name,
-            'address' =>  $address,
-            'physical_address' =>  $physical_address,
-            'telephone' =>  $telephone,
-            'mobile' =>   $mobile,
-            'fax' =>  $fax,
-            'town' =>  $town,
-            'email' =>  $email,
-            'website' =>  $website,
-
-        );
-        DB::table('cra_company_branch_details')->where('id', $id)->update($update_company_branch);
+            'address' => $address,
+            'physical_address' => $physical_address,
+            'State'=>$State,
+            'country'=>$country,
+            'pincode'=>$pincode,
+            'telephone' => $telephone,
+            'mobile' => $mobile,
+            'town' => $town,
+            'email' => $email,
+            'website' => $website,
+            'status'=> $status,
+            'updated_at'=>date('Y-m-d H:i:s'),
+        ]);
+        
         return redirect('/company_branch');
     }
     public function deletebranch($id)
     {
-        DB::table('cra_company_branch_details')->where('id', $id)->delete();
+        DB::table('cra_company_branch_details')->where('id', $id)->update([       
+            'deleted_at'=>date('Y-m-d H:i:s'),
+            'status'=>2]);
+        DB::table('users')->where('branch_id',$id)->whereNull('deleted_at')->update([        
+                 'status'=>0]);
+        DB::table('employee_job_history')->whereNull('doe')
+            ->where('employee_job_history.branch_id',$id)->update([        
+                'employee_job_history.job_status'=>0]);
         return redirect('/company_branch');
     }
     //////////////////////// END COMPANY_BRANCH///////////////////////////////////

@@ -304,8 +304,8 @@ input[type='file'] {
                     </div>
                 </div>
                 <div class="tb_search">
-                    <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()"
-                        placeholder="Search Company" class="form-control">
+                    <input type="text" id="search_input_all"   onkeyup="FilterkeyWord_all_table()"
+                        placeholder="Search Company" class="form-control" value="{{ $search }}">
                 </div>
                 <div class="table-responsive">
                     <table class="table table-striped table-class" id="table-id">
@@ -1029,55 +1029,7 @@ input[type='file'] {
         }
         upload_doc.addEventListener("click",upload_doc_fn);// Add More Decduction percentage author@udayan --end
 
-            // edit password validation start
-            var e_checkpass = document.getElementById("e_password");
-            var e_passletter = document.getElementById("e_passletter");
-            var e_passnumber = document.getElementById("e_passnumber");
-            var e_passlength = document.getElementById("e_passlength");
-            e_checkpass.onfocus = function() {// for password validation display
-                document.getElementById("e_passmessage").style.display = "block";
-            }
-            e_checkpass.onblur = function() {// for password validation hide
-                document.getElementById("e_passmessage").style.display = "none";
-            }
-            e_checkpass.onkeyup = function() {
-                // Validate lowercase letters
-                var lowerCaseLetters = /[a-z]/g;
-                if(e_checkpass.value.match(lowerCaseLetters)) {  
-                    e_passletter.classList.remove("passinvalid");
-                    e_passletter.classList.add("passvalid");
-                } else {
-                    e_passletter.classList.remove("passvalid");
-                    e_passletter.classList.add("passinvalid");
-                }
-                // Validate numbers
-                var numbers = /[0-9]/g;
-                if(e_checkpass.value.match(numbers)) {  
-                    e_passnumber.classList.remove("passinvalid");
-                    e_passnumber.classList.add("passvalid");
-                } else {
-                    e_passnumber.classList.remove("passvalid");
-                    e_passnumber.classList.add("passinvalid");
-                }
-                // Validate length
-                if(e_checkpass.value.length >= 8) {
-                    e_passlength.classList.remove("passinvalid");
-                    e_passlength.classList.add("passvalid");
-                } else {
-                    e_passlength.classList.remove("passvalid");
-                    e_passlength.classList.add("passinvalid");
-                }
-            }
-            function e_Validate() {// to  check password and conform password are same
-                var e_password = document.getElementById("e_password").value;
-                var e_confirmPassword = document.getElementById("e_password_1").value;
-                if (e_password != e_confirmPassword) {
-                    alert("Please enter same password in both");
-                    return false;
-                }
-                return true;
-            }
-            // edit password validation end here
+    
     
     </script>
 <!-------------------------------------------------------------- END CHANGE DESTINATION ------------------------------------------------------>
@@ -1169,159 +1121,47 @@ input[type='file'] {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script>
-function changestatus(param) { // change copany status 
-    var status = $(param).prop('checked') == true ? 1 : 0;
-    var user_id = $(param).data('id');
-    $.ajax({
-        type: "post",
-        dataType: "json",
-        url: "{{route('changestatus_com')}}",
-        data: {
-            "_token": "{{ csrf_token() }}",
-            'status': status,
-            'user_id': user_id
-        },
-        success: function(data) {
-            toastr.options.closeButton = true;
-            toastr.options.closeMethod = 'fadeOut';
-            toastr.options.closeDuration = 1;
-            toastr.success(data.success);
+    
+        window.onload = function() {
+            $(document).ready(function(){
+                var s_count = $('.table').children('tbody').children('tr:first-child').children('td').length;
+                var s_input, s_filter, s_table, s_tr, s_td, s_i;
+                s_input = document.getElementById("search_input_all");
+                var s_input_value = document.getElementById("search_input_all").s_value;
+                s_filter = s_input.value.toLowerCase();
+                if (s_input_value != '') {
+                    s_table = document.getElementById("table-id");
+                    s_tr = s_table.getElementsByTagName("tr");
+                    for (s_i = 1; s_i < s_tr.length; s_i++) {
+                        var s_flag = 0;
+                        for (s_j = 0; s_j < s_count; s_j++) {
+                            s_td = s_tr[s_i].getElementsByTagName("td")[s_j];
+                            if (s_td) {
+
+                                var s_td_text = s_td.innerHTML;
+                                if (s_td.innerHTML.toLowerCase().indexOf(s_filter) > -1) {
+                                    //var td_text = td.innerHTML;  
+                                    //td.innerHTML = 'shaban';
+                                    s_flag = 1;
+                                } else {
+                                    //DO NOTHING
+                                }
+                            }
+                        }
+                        if (s_flag == 1) {
+                            s_tr[s_i].style.display = "";
+                        } else {
+                            s_tr[s_i].style.display = "none";
+                        }
+                    }
+                } else {
+                    $('#maxRows').trigger('change');
+                }
+            });
         }
-    });
-}
+    
+</script>
 
-function editcompany(param) { // edit company get details 
-    var uniqueid = $(param).data('id');
-    $.ajax({
-        type: "GET",
-        url: 'edit_company/' + uniqueid,
-        success: function(response) {
-            $('#GSTin').val(response.result.GSTin);
-            $('#address').val(response.result.address);
-            $('#city').val(response.result.city);
-            $('#e_blah_1').attr('src', '{{asset(' / ') }}/images/logo/' + response.result.company_logo);
-            $('#company_name').val(response.result.company_name);
-            $('#company_type').val(response.result.company_type);
-            $('#company_website').val(response.result.company_website);
-            $('#email').val(response.result.email);
-            $('#e_blah').attr('src', '{{asset(' / ') }}/images/faces/' + response.result.photo_path);
-            $('#postal_code').val(response.result.postal_code);
-            $('#username').val(response.result.users_name);
-            $('#password').val(response.result.password);
-            $('#uniqueid').val(uniqueid);
-            $('#update_company').attr('action', "{{ url('update_company') }}" + "/" + uniqueid);
-        }
-    });
-}
 
-function deletecompany(param) { // edit company get details 
-    var deleteuniqueid = $(param).data('id');
-    var deletecompany_name = $(param).data('name');
-    $('#deleteuniqueid').val(deleteuniqueid);
-    $('#deletcompany_name').html(deletecompany_name);
-    document.getElementById("deletcompany_name").innerHTML = deletecompany_name;
-    $('#delete_company').attr('action', "{{ url('delete_company') }}" + "/" + deleteuniqueid);
-}
-//createt password validation start
-var checkpass = document.getElementById("checkpass");
-var passletter = document.getElementById("passletter");
-var passnumber = document.getElementById("passnumber");
-var passlength = document.getElementById("passlength");
-checkpass.onfocus = function() { // for password validation display
-    document.getElementById("passmessage").style.display = "block";
-}
-checkpass.onblur = function() { // for password validation hide
-    document.getElementById("passmessage").style.display = "none";
-}
-checkpass.onkeyup = function() {
-    // Validate lowercase letters
-    var lowerCaseLetters = /[a-z]/g;
-    if (checkpass.value.match(lowerCaseLetters)) {
-        passletter.classList.remove("passinvalid");
-        passletter.classList.add("passvalid");
-    } else {
-        passletter.classList.remove("passvalid");
-        passletter.classList.add("passinvalid");
-    }
-    // Validate numbers
-    var numbers = /[0-9]/g;
-    if (checkpass.value.match(numbers)) {
-        passnumber.classList.remove("passinvalid");
-        passnumber.classList.add("passvalid");
-    } else {
-        passnumber.classList.remove("passvalid");
-        passnumber.classList.add("passinvalid");
-    }
-    // Validate length
-    if (checkpass.value.length >= 8) {
-        passlength.classList.remove("passinvalid");
-        passlength.classList.add("passvalid");
-    } else {
-        passlength.classList.remove("passvalid");
-        passlength.classList.add("passinvalid");
-    }
-}
-
-function Validate() { // to  check password and conform password are same
-    var password = document.getElementById("checkpass").value;
-    var confirmPassword = document.getElementById("checkpass_1").value;
-    if (password != confirmPassword) {
-        alert("Please enter same password in both");
-        return false;
-    }
-    return true;
-}
-// create password validation end here
-// edit password validation start
-var e_checkpass = document.getElementById("e_password");
-var e_passletter = document.getElementById("e_passletter");
-var e_passnumber = document.getElementById("e_passnumber");
-var e_passlength = document.getElementById("e_passlength");
-e_checkpass.onfocus = function() { // for password validation display
-    document.getElementById("e_passmessage").style.display = "block";
-}
-e_checkpass.onblur = function() { // for password validation hide
-    document.getElementById("e_passmessage").style.display = "none";
-}
-e_checkpass.onkeyup = function() {
-    // Validate lowercase letters
-    var lowerCaseLetters = /[a-z]/g;
-    if (e_checkpass.value.match(lowerCaseLetters)) {
-        e_passletter.classList.remove("passinvalid");
-        e_passletter.classList.add("passvalid");
-    } else {
-        e_passletter.classList.remove("passvalid");
-        e_passletter.classList.add("passinvalid");
-    }
-    // Validate numbers
-    var numbers = /[0-9]/g;
-    if (e_checkpass.value.match(numbers)) {
-        e_passnumber.classList.remove("passinvalid");
-        e_passnumber.classList.add("passvalid");
-    } else {
-        e_passnumber.classList.remove("passvalid");
-        e_passnumber.classList.add("passinvalid");
-    }
-    // Validate length
-    if (e_checkpass.value.length >= 8) {
-        e_passlength.classList.remove("passinvalid");
-        e_passlength.classList.add("passvalid");
-    } else {
-        e_passlength.classList.remove("passvalid");
-        e_passlength.classList.add("passinvalid");
-    }
-}
-
-function e_Validate() { // to  check password and conform password are same
-    var e_password = document.getElementById("e_password").value;
-    var e_confirmPassword = document.getElementById("e_password_1").value;
-    if (e_password != e_confirmPassword) {
-        alert("Please enter same password in both");
-        return false;
-    }
-    return true;
-}
-// edit password validation end here
-</script> --}}
 
 @endsection
