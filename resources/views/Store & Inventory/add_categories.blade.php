@@ -122,15 +122,15 @@
 
 
                             <div class="modal fade" id="myModal">
-                                <div class="modal-dialog modal-lg">
+                                <div class="modal-dialog modal-lg" style="width: 35%">
                                     <div class="modal-content">
-
+                    
                                         <!-- Modal Header -->
                                         <div class="modal-header">
                                             <h2 class="text-center"><b>Add Category</b></h2>
-
+                    
                                         </div>
-
+                    
                                         <!-- Modal body -->
                                         <div class="modal-body">
                                             <div class="container">
@@ -142,29 +142,30 @@
                                                                 <label for="username">Category Name</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend">
-
+                    
                                                                     </div>
                                                                     <input type="text" class="form-control"
                                                                         name="category_name" id="age">
                                                                 </div>
                                                             </div>
                                                         </div>
-
-
+                    
+                    
                                                     </div>
-
+                    
                                                     <br>
                                                     <br>
-                                                    <button type="submit" class="btn btn-primary">Add</button>
-                                                    <button type="button" class="btn btn-primary"
-                                                        data-dismiss="modal">Cancel</button>
-
+                                                    <div style="text-align: right;">
+                                                    <button  style="float: right;" type="submit" class="btn btn-primary">Cancel</button>
+                                                    <button  style="float: right;" type="button" class="btn btn-primary"
+                                                        data-dismiss="modal">Add</button>
+                    
                                             </div>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>  
 
                         </div>
                         <div class="modal" id="mymodal">
