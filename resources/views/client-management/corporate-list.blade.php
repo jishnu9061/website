@@ -1236,6 +1236,7 @@
             </div>
             </form>
         </div>
+        </div>
         {{-- Start post important date Modal --}}
         <div class="modal fade" id="post_important_date" style="">
             <!--post important date -->

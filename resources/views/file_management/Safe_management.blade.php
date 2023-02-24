@@ -98,8 +98,8 @@
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="#">View File
                                                 </a>
-                                                <a class="dropdown-item"
-                                                    href="{{url('edit_Safe_management',$management->id)}}">Edit File
+                                                <a class="dropdown-item"  data-toggle="modal" data-target="#edit_management" 
+                                                    href="">Edit File
                                                 </a>
                                                 <a class="dropdown-item"
                                                     href="{{url('delete_Safe_management',$management->id)}}">Delete
@@ -132,17 +132,14 @@
                             <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h2 class="text-center"><b>Register Documents In Safe</b></h2>
-
-                                </div>
-
+                            
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
                                         <form method="post" action="{{ url('new_Safe_management') }}"
                                             enctype="multipart/form-data">
                                             @csrf
+                                            <h4 class=""><b>Register Documents In Safe:-</b></h4>
                                             <div class="row">
                                                 <div class="col-md-4" style="width: 33%">
                                                     <div class=""><span style="color: red">*</span>
@@ -288,7 +285,6 @@
 
 
                                                 </div>
-                                                <br>
                                                 <div class="row">
                                                     <div class="col-sm">
 
@@ -348,36 +344,229 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!--------------------------------------------------START EDIT SAFE MANAGEMENT ------------------------------------------------------>
+            <div class="modal fade" id="edit_management">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                               
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <form method="post" action="{{ url('') }}"
+                                            enctype="multipart/form-data">
+                                            @csrf
+                                            <h4 class=""><b>Edit Documents:-</b></h4>
+                                            <div class="row">
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="date"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
+                                                        <input type="date" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="date" id="" value="" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="client"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="client" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Client 1</option>
+                                                            <option>Client 2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="file"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="file" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>File 1</option>
+                                                            <option>File 2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="safe_name"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Safe Name</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="safe_name" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Safe 1</option>
+                                                                <option>Safe 2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="ref_no"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Ref No.In Safe</label>
+                                                        <input type="text" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="ref_no" id="" value="" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="approver"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Approver</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="approver" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>Person 1</option>
+                                                                <option>Person 2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="test" style="height:20px;"></div>
+                                            <div class="modal-header">
+                                                <h2 class="text-center"><b>Documents</b></h2>
+
+                                            </div>
+                                            <div class="tab-content" id="myTabContent">
+                                                <div class="table-responsive">
+                                                    <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                                        aria-labelledby="home-tab">
+
+                                                        <table class="table table-bordered" id="new-item">
+                                                            <thead style="font-size:15px; width:100%;">
+                                                                <tr>
+                                                                    <th class="text-center">Doc No</th>
+                                                                    <th class="text-center">Catrgory</th>
+                                                                    <th class="text-center">Document</th>
+                                                                    <th class="text-center">Action</th>
 
 
-                <!-- <div class="row">
-                                    <div class="col-sm">
+                                                                    </th>
 
-                                    </div>
-                                    <div class="col-sm">
 
-                                    </div>
-                                    <div class="col-sm">
-                                        <br>
-                                        <button type="submit" class="btn btn-primary float:right;"
-                                            Style="width:46%;">Upload</button>
-                                        <button type="button" class="btn btn-primary float:left"
-                                            Style="width:45%;">Close</button>
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+
+                                                                <tr id="data">
+
+                                                                    <td scope="row" class="text-center"
+                                                                        style="width:100px;"><input type="text"
+                                                                            name="doc_no" id="age"></td>
+
+                                                                    <td scope="row">
+                                                                        <select style="width:100%;" name="category">
+                                                                            <option>select</option>
+                                                                        </select>
+                                                                    </td>
+
+
+                                                                    <td scope="row" class="text-center"
+                                                                        style="width:40%;">
+                                                                        <input type="text" name="document"
+                                                                            style="width:100%;">
+                                                                    </td>
+                                                                    <td scope="row" class="text-center"><a href=""><i
+                                                                                style="color:black;" class="fa fa-edit"
+                                                                                aria-hidden="true"></td>
+
+                                                                </tr>
+
+
+
+                                                            </tbody>
+
+                                                        </table>
+                                                        <br>
+
+
+                                                        {{-- <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="mb-1">
+                                                        <button type="" class="btn btn-primary submit_btn"
+                                                            style=" margin-left:0px; width:200px;">New Document</button>
+                                                    </div>
+                                                </div>
+                                            </div> --}}
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm">
+
+                                                    </div>
+                                                    <div class="col-sm">
+
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        <br>
+                                                        <button type="submit" class="btn btn-primary float:right;"
+                                                            Style="width:45%;">Save</button>
+                                                        <button type="button" Style="width:45%;" class="btn btn-primary float:right;"
+                                                            data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
-                            </form>
 
                         </div>
+                        <div class="modal" id="mymodal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="modal-body">
+                                            <form action="">
+                                                <div>
+                                                    <input type="text" name="type" class="form-control"
+                                                        placeholder="Client Type">
+                                                    <button class="btn btn-primary sub_btnn"
+                                                        type="submit">submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div> -->
-                <br>
-                <!-- Supplier modal Edit End -->
-
-                <!-- Delete  confirmation Message -->
-
-                <!-- End delete confirmation message -->
+                    <div class="modal" id="my">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div>
+                                                <input type="text" name="type" class="form-control"
+                                                    placeholder="Country">
+                                                <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!--------------------------------------------------END EDIT SAFE MANAGEMENT -------------------------------------------------------->
             <script>
             function myFunction() {
                 if (!confirm("Are you sure to delete this"))

@@ -590,6 +590,9 @@ use App\Http\Controllers\issued_summary;
     Route::any('safe-register-report', "filemanagement@saferegisterreport")->name('safe-register-report');
     Route::any('/u_details', "filemanagement@u_details")->name('u_details');
         //office instructions
+        Route::any('/file-list-progress-report', "filemanagement@filelistprogressreport")->name('file-list-progress-report');
+        Route::any('/client-monthly-file-status', "filemanagement@clientmonthlystatus")->name('client-monthly-file-status');
+        Route::any('/staff-monthly-status-report', "filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
     Route::any('/office_instructions', "filemanagement@new_instructions")->name('new_instruction');
     Route::any('/new_office_instructions', "filemanagement@add_new_instructions")->name('add_new_instructions');
     Route::any('/update_office_instruction', "filemanagement@updateofficeinstructions")->name('update_office_instruction');
