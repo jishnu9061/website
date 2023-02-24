@@ -404,7 +404,7 @@ class ClientManagement extends Controller
         $corporate_docs = DB::table('cra_corporate_client_details')->where('corporate_id', $corporate_id)->first();
         return view('client-management.corporate-document', compact('corporate_docs', 'corporate_id'));
     }
-
+   
 
     public function viewCorporateDocument($corporate_id)
     {
@@ -579,8 +579,16 @@ class ClientManagement extends Controller
         DB::table('cra_corporate_client_details')->where('corporate_id', $corporate_id)->delete();
         return redirect('/corporate-list');
     }
-
-    //end corporate_client
+    public function sendMail(Request $Request)
+    {
+        return redirect('/corporate-list');
+    }
+    public function post_important_date(Request $Request)
+    {
+        return redirect('/corporate-list');
+    }
+    
+        //end corporate_client
 
     //document
 

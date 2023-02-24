@@ -155,9 +155,7 @@
                                                             href="{{ url('edit_hourly_rates', $rate->id) }}">Edit Hourly
                                                             Rate</a> --}}
                                                             <a class="dropdown-item" data-toggle="modal"
-                                                    data-target="#edit_hourly_rate" href="#">Edit Hourly
-                                                            Rate
-                                                            </a>
+                                                    data-target="#edit_hourly_rate" href="#">Edit Hourly Rate</a>
                                                         <a class="dropdown-item" {{-- href="{{url('delete_hourly_rates',$rate->id)}}" data-toggle="modal" data-id="{{$rate->id }}"onclick="deletecompany(this)" data-target="#deletecompany">Delete Hourly Rate</a> --}}
                                                             href="#"onclick=deleterate(this)
                                                             data-id=""data-toggle="modal"
@@ -408,12 +406,12 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                 </div>
-                            
+
                                 <div class="col-sm-4">
                                 </div>
                             </div>
                             <div class="doc_contanier"style="*/background-color:orange;">
-                              
+
                                 <div class="row document_details " style="margin-bottom: 20px;">
                                     {{-- Add More Document details:- javascript --}}
                                 </div>
@@ -423,7 +421,7 @@
                     <div class style="width: 20%">
                     </div>
                     <div class="col-sm">
-                     
+
                         <button type="submit" class="btn btn-primary float:right;"
                             style="margin-left: 61%;--clr: #1D1D50;width:19%;
                             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
