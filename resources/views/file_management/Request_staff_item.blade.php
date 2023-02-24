@@ -122,17 +122,14 @@
                                 <div class="modal-content">
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header">
-                                        <h4 class="text-center"><b>Request Safe Item:-</b></h4>
-
-                                    </div>
-
+                                    
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('new_Request_staff_item') }}"
                                                 enctype="multipart/form-data">
                                                 @csrf
+                                                <h4 class=""><b>Request Safe Item:-</b></h4>
                                                 <div class="row">
 
                                                     <div class="col-md-4" style="width: 33%">
@@ -279,17 +276,14 @@
                                 <div class="modal-content">
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header">
-                                        <h4 class="text-center"><b>Edit Request Safe Item:-</b></h4>
-
-                                    </div>
-
+                                  
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('') }}"
                                                 enctype="multipart/form-data">
                                                 @csrf
+                                                <h4 class=""><b>Edit Request Safe Item:-</b></h4>
                                                 <div class="row">
 
                                                     <div class="col-md-4" style="width: 33%">

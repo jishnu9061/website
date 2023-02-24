@@ -154,17 +154,14 @@
                                 <div class="modal-content">
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header">
-                                        <h4 class="text-center"><b>Add Instruction:-</b></h4>
-
-                                    </div>
-
+                                  
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('file_new_instruction') }}"
                                                 enctype="multipart/form-data">
                                                 @csrf
+                                                <h4 class=""><b>Add Instruction:-</b></h4>
                                                 <div class="row">
                                                     <div class="col-md-4" style="width: 33%">
                                                         <div class=""><span style="color: red">*</span>
@@ -416,17 +413,14 @@
                         <div class="modal-content">
 
                             <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="text-center"><b>Edit Instruction:-</b></h4>
-
-                            </div>
-
+                        
                             <!-- Modal body -->
                             <div class="modal-body">
                                 <div class="container">
                                     <form method="post" action=""
                                         enctype="multipart/form-data">
                                         @csrf
+                                        <h4 class=""><b>Edit Instruction:-</b></h4>
                                         <div class="row">
                                             <div class="col-md-4" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>

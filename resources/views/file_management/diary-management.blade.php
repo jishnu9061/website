@@ -184,11 +184,7 @@
                                 <div class="modal-content">
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header">
-                                        <h4 class="text-center"><b>Add Event:-</b></h4>
-
-                                    </div>
-
+                              
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="container">
@@ -196,6 +192,7 @@
                                                 enctype="multipart/form-data">
 
                                                 @csrf
+                                                <h4 class=""><b>Add Event:-</b></h4>
                                                 <div class="row">
                                                     <div class="col-md-6" style="width: 33%">
                                                         <div class=""><span style="color: red">*</span>
@@ -515,17 +512,14 @@
                         <div class="modal-content">
 
                             <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="text-center"><b>Edit Event:-</b></h4>
-
-                            </div>
-
+                           
                             <!-- Modal body -->
                             <div class="modal-body">
                                 <div class="container">
                                     <form method="post" action="{{ url('') }}" enctype="multipart/form-data">
 
                                         @csrf
+                                        <h4 class=""><b>Edit Event:-</b></h4>
                                         <div class="row">
                                             <div class="col-md-6" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>

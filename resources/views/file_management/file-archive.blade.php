@@ -166,17 +166,13 @@
         <div class="modal-content">
 
             <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="text-center"><b>Add Box No:-</b></h4>
-
-            </div>
-
+  
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
                     <form method="post" action="{{ url('add-box-no') }}" enctype="multipart/form-data">
                         @csrf
-
+                        <h4 class=""><b>Add Box No:-</b></h4>
                         <div class="row">
                             <div class="col-md-6" style="width: 33%">
                                 <div class=""><span style="color: red">*</span>
@@ -235,17 +231,13 @@
         <div class="modal-content">
 
             <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="text-center"><b>Edit Box No:-</b></h4>
-
-            </div>
-
+           
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
                     <form method="post" action="{{ url('') }}" enctype="multipart/form-data">
                         @csrf
-
+                        <h4 class=""><b>Edit Box No:-</b></h4>
                         <div class="row">
                             <div class="col-md-6" style="width: 33%">
                                 <div class=""><span style="color: red">*</span>

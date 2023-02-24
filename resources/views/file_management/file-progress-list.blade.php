@@ -252,10 +252,7 @@
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h4><b>Add File Progress:-</b></h4>
-                                </div>
-
+                                
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
@@ -263,7 +260,7 @@
                                         <form method="post" action="{{ url('add-file-progress') }}"
                                             enctype="multipart/form-data">
                                             @csrf
-
+                                            <h4><b>Add File Progress:-</b></h4>
                                             <div class="row">
 
                                                 <div class="col-md-12 order-md-1">
@@ -576,11 +573,7 @@
                     <div class="modal-content">
 
                         <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="text-center"><b>Add File Progress/Action:-</b></h4>
-
-                        </div>
-
+                        
                         <!-- Modal body -->
                         <div class="modal-body">
                             <div class="container">
@@ -594,6 +587,7 @@
 
                                             <form method="post" action="" id="form">
                                                 @csrf
+                                                <h4 class=""><b>Add File Progress/Action:-</b></h4>
                                                 <div class="row">
                                                     <div class="" style="width: 33%">
                                                         <div class=""><span style="color: red">*</span>
@@ -778,10 +772,7 @@
                 <div class="modal-content">
 
                     <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="text-center"><b>Add File Bringup/Reminder:-</b></h4>
-
-                    </div>
+                    
 
                     <!-- Modal body -->
                     <div class="modal-body">
@@ -796,6 +787,7 @@
 
                                         <form method="post" action="" id="form">
                                             @csrf
+                                            <h4 class=""><b>Add File Bringup/Reminder:-</b></h4>
                                             <div class="row">
                                                 <div class="col-md-6" style="width: 33%">
                                                     <div class=""><span style="color: red">*</span>
@@ -961,11 +953,7 @@
             <div class="modal-content">
 
                 <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="text-center"><b>Book A Court:-</b></h4>
-
-                </div>
-
+                
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
@@ -978,6 +966,8 @@
 
                                     <form method="post" action="" id="form">
                                         @csrf
+                                        <h4 class=""><b>Book A Court:-</b></h4>
+
                                         <div class="row">
 
                                             <div class="col-md-6" style="width: 33%">
@@ -1208,11 +1198,7 @@
             <div class="modal-content">
 
                 <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="text-center"><b>Court Attendance Sheet:-</b></h4>
-
-                </div>
-
+                
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
@@ -1225,6 +1211,7 @@
 
                                     <form method="post" action="" id="form">
                                         @csrf
+                                        <h4 class=""><b>Court Attendance Sheet:-</b></h4>
                                         <div class="row">
                                             <div class="col-md-4" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>
@@ -1523,10 +1510,7 @@
             <div class="modal-content">
 
                 <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="text-center"><b>New Arbiration Form:-</b></h4>
-
-                </div>
+             
 
                 <!-- Modal body -->
                 <div class="modal-body">
@@ -1540,6 +1524,7 @@
 
                                     <form method="post" action="" id="form">
                                         @csrf
+                                        <h4 class=""><b>New Arbiration Form:-</b></h4>
                                         <div class="row">
                                             <div class="col-md-6" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>
@@ -1777,11 +1762,7 @@
             <div class="modal-content">
 
                 <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="text-center"><b>Conveyence Sheet:-</b></h4>
-
-                </div>
-
+                
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
@@ -1794,6 +1775,7 @@
 
                                     <form method="post" action="" id="form">
                                         @csrf
+                                        <h4 class=""><b>Conveyence Sheet:-</b></h4>
                                         <div class="row">
                                             <div class="col-md-4" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>
@@ -2161,20 +2143,15 @@
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h4><b>Edit File Progress:-</b></h4>
-                                </div>
-
+                                
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
-
                                         <form method="post" action="{{ url('') }}"
                                             enctype="multipart/form-data">
                                             @csrf
-
+                                            <h4><b>Edit File Progress:-</b></h4>
                                             <div class="row">
-
                                                 <div class="col-md-12 order-md-1">
 
                                                     <div class="row">

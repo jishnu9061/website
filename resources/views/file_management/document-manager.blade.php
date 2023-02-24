@@ -138,11 +138,7 @@
                             <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h4 class="text-center"><b>Upload Documents:-</b></h4>
-
-                                </div>
-
+                              
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
@@ -156,6 +152,7 @@
 
                                                     <form method="post" action="" id="form">
                                                         @csrf
+                                                        <h4 class=""><b>Upload Documents:-</b></h4>
                                                         <div class="row">
                                                             <div class="col-md-4" style="width: 33%">
                                                                 <div class=""><span style="color: red">*</span>
@@ -376,11 +373,7 @@
                     <div class="modal-content">
 
                         <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="text-center"><b>Generate Document:-</b></h4>
-
-                        </div>
-
+                      
                         <!-- Modal body -->
                         <div class="modal-body">
                             <div class="container">
@@ -394,6 +387,7 @@
 
                                             <form method="post" action="" id="form">
                                                 @csrf
+                                                <h4 class=""><b>Generate Document:-</b></h4>
                                                 <div class="row">
                                                     <div class="col-md-3" style="width: 33%">
                                                         <div class=""><span style="color: red">*</span>

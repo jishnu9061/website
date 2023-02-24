@@ -120,17 +120,14 @@
                             <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h4 class="text-center"><b>Add Template:-</b></h4>
-
-                                </div>
-
+                          
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
                                         <form method="post" action="{{ url('add-template') }}"
                                             enctype="multipart/form-data">
                                             @csrf
+                                            <h4 class=""><b>Add Template:-</b></h4>
                                             <div class="row">
                                                 <div class="col-md-4" style="width: 33%">
                                                     <div class=""><span style="color: red">*</span>
@@ -204,17 +201,14 @@
                             <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h4 class="text-center"><b>Edit Template:-</b></h4>
-
-                                </div>
-
+                        
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
                                         <form method="post" action=""
                                             enctype="multipart/form-data">
                                             @csrf
+                                            <h4 class=""><b>Edit Template:-</b></h4>
                                             <div class="row">
                                                 <div class="col-md-4" style="width: 33%">
                                                     <div class=""><span style="color: red">*</span>
