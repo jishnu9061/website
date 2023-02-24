@@ -32,7 +32,7 @@
                 <span style="margin-left: 1rem;">Company</span>
             </a>
             @php
-            $admin = array("company_branch", "change_user_password", "manage_user_roles", "view_roles_per_user",
+            $admin = array("company_branch","manage_job_title", "change_user_password", "manage_user_roles", "view_roles_per_user",
             "manage_user_group", "manage_user_department", "manage_towns");
             @endphp
             @if (in_array(request()->path(), $admin))
@@ -53,6 +53,19 @@
                             @endif
                         </a>
                     </li>{{--1st submenu end--}}
+                    @if(request()->path()== "manage_job_title"){{--2st submenu start --}}
+                    <li class="submenu-item ">
+                        <a href="{{url('manage_job_title')}}" class='sidebar-link'
+                            style="background-color:#1D1D50 ; color:white;">
+                            <span style="margin-left:0px;font-align:center;">●</span><span
+                                style="margin-left:5px">Manage Job Titles</span>
+                            @else
+                    <li class="submenu-item ">
+                        <a href="{{url('manage_job_title')}}" class='sidebar-link'>
+                            <span>Manage Job Titles</span>
+                            @endif
+                        </a>
+                    </li>{{--2st submenu end--}}
                 </ul>
         </li>
         <li id="2" class="sidebar-item  has-sub">{{--  Second menu--}}
@@ -564,7 +577,7 @@
                 <span style="margin-left: 1rem;">HR</span>
             </a>
             @php
-            $admin = array('employee_list/'.Auth::user()->company_id,'add_staff',"staffs", "recruitment",
+            $admin = array('employee_list','add_staff',"staffs", "recruitment",
             "performance_department", "loans", "payslip", "attendanceview", "attendance", "timesheet",
             "task_allocation", "leave_request_details", "attendance_sheet", "bank_names", "internal_memos");
             @endphp
@@ -573,15 +586,15 @@
                 @else
                 <ul class="submenu" style="display: none;">
                     @endif
-                    @if(request()->path()== 'employee_list/'.Auth::user()->company_id){{-- 0th  submenu start --}}
+                    @if(request()->path()== 'employee_list'){{-- 0th  submenu start --}}
                     <li class="submenu-item ">
-                        <a href="{{url('employee_list/'.Auth::user()->company_id)}}" class='sidebar-link'
+                        <a href="{{url('employee_list')}}" class='sidebar-link'
                             style="background-color:#1D1D50 ; color:white;">
                             <span style="margin-left:0px;font-align:center;">●</span><span
                                 style="margin-left:5px">Employee List</span>
                             @else
                     <li class="submenu-item ">
-                        <a href="{{url('employee_list/'.Auth::user()->company_id)}}" class='sidebar-link'>
+                        <a href="{{url('employee_list')}}" class='sidebar-link'>
                             <span>Employee List</span>
                             @endif
                         </a>

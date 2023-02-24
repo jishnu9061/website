@@ -23,8 +23,10 @@ class employeecontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function employee_list($id)
+    public function employee_list()
     {
+        $search=request()->query('search')??null;
+        $id=Auth::user()->company_id;
         $employee_list = DB::table('employee_dets')->where('employee_dets.company_id', $id)->where('employee_job_history.doe',null)
         ->leftjoin('employee_job_history','employee_job_history.unique_id','employee_dets.unique_id')
         ->select('employee_dets.id as id',
@@ -42,8 +44,11 @@ class employeecontroller extends Controller
         $all_employee =[] ;
         foreach($employee_list as $employee){
             $employee_branch=DB::table('cra_company_branch_details')->where('id',$employee->branch_id)->first();
+            
             if( empty($employee_branch)){
-                continue;
+                $employee_br="Not Assigned";
+            }else{
+                $employee_br=$employee_branch->branch_name;
             }
             $employee_role = DB::table('roles')->where('id', $employee->role_id)->first();
             $employee_depart=DB::table('departments')->where('id',$employee->dept_id)->first();
@@ -53,7 +58,7 @@ class employeecontroller extends Controller
                 "name"=>$employee->first_name.' '.$employee->last_name,
                 "photo"=>$employee->photo,
                 "depart"=>$employee_depart->depname,
-                "barnch"=>$employee_branch->branch_name,
+                "barnch"=>$employee_br,
                 "designation"=>$employee_role->role,
                 "email"=>$employee->email,
                 "contact"=>$employee->contact_no,
@@ -63,7 +68,7 @@ class employeecontroller extends Controller
         }
     
         
-        return view('employee.employee_list',compact('all_employee'));
+        return view('employee.employee_list',compact('all_employee','search'));
     }
 
     /**
@@ -99,8 +104,9 @@ class employeecontroller extends Controller
             array_push($extra_doc,$doc_dets);
         }
         $doc_json = json_encode($extra_doc);
+        
         }else{
-            $doc_json = "";
+            $doc_json = json_encode('');
         }// --------------------------more document details end
         if(!empty($request->decduct)){//more decduct percentage start
             $decduct = $request->decduct;
@@ -110,11 +116,12 @@ class employeecontroller extends Controller
                     "decduct_name"=> $dec[0],
                     "decduct_percentage"=>$dec[1],
                 ];
-                array_push($decduct_arr, $dec);
+                array_push($decduct_arr, $dect);
             }
+            
             $decduct_dets = json_encode($decduct_arr);
         }else{
-            $decduct_dets = "";
+            $decduct_dets = json_encode('');
         }//----------------------------more decduct percentage start
         $employee_id = DB::table('employee_dets')->insertGetId([
             "company_id"=>$company_id,
@@ -155,6 +162,7 @@ class employeecontroller extends Controller
             "parters_drawing"=>$request->parters_drawing,
             "payroll_decduction_from"=>$request->payroll_decduction,
             "taxed"=>$request->taxed,
+            "pension_percent"=>$request->pension_percent,
             "decduct_percent"=>$decduct_dets,
             "bank_name"=>$request->bank,
             "acc_no"=>$request->acc_no,

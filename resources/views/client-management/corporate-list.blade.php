@@ -203,7 +203,7 @@
                     text-align:center;
                     box-shadow: inset 0 0 3px #d3d0ca;
                     opacity: .9;">
-                    <b style="font-size:18px;">Corporate Client List</b>
+                    <b style="font-size:18px;">Corporat Client List</b>
                 </h4>
             </div>
             <div class="col-sm-4" style="">
@@ -1242,7 +1242,9 @@
             </div>
 
         </div>
+
     </div>
+
         {{-- Start post important date Modal --}}
         <div class="modal fade" id="post_important_date" style="">
             <!--post important date -->
