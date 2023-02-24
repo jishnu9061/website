@@ -129,99 +129,62 @@
             </tbody>
         </table>
     </div>
-
-
     <div class="modal fade" id="myModal">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl" style="width: 35%">
             <div class="modal-content">
-
                 <!-- Modal Header -->
-                <div class="modal-header">
-                    <h2 class="text-centre"><b>Post Comment</b></h2>
-
+                <div class="modal-header" style="padding:0rem 0rem;">
+                    <div style="padding:1rem 1rem;">
+                        <h4 class="text-centre"><b>Edit Supplier Credit Note</b></h4>
+                    </div>
                 </div>
-
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
-                        <form method="post" enctype="multipart/form-data" action="{{url('')}}">
-                            @csrf
-                            <div class="container">
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <div class="mb-2">
-
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <div class="mb-2">
-                                            <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                rows="3"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <div class="mb-2">
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <div class="mb-2">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <div class="mb-2">
-                                            <label for="inputEmail4">Send To</label>
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>select</option>
-                                                <option value="1">supplier 1</option>
-                                                <option value="2">supplier 2</option>
-                                                
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <div class="mb-2">
-                                           
-                                        </div>
-                                    </div>
-                                   
-                                </div>
-
-                            </div>
-
-                            <br>
-                            <br>
-                            <div class="row">
-                                <div class="col-sm">
-
-                                </div>
-                                <div class="col-sm">
-                                    <button type="submit" class="btn btn-primary " Style="width:50%;">Submit</button>
-                                    <button type="button" class="btn btn-primary " Style="width:45%;"
-                                        data-dismiss="modal">Close</button>
-                                </div>
-                                <div class="col-sm">
-
+                        <div class="" style="width: 97%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    rows="3"></textarea>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Client No is required.
                                 </div>
                             </div>
-
+                        </div>
+                        <div class="" style="width: 97%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="inputEmail4">Send To</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>select</option>
+                                    <option value="1">supplier 1</option>
+                                    <option value="2">supplier 2</option>
+                                    
+                                </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Client No is required.
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
-
-                    </form>
+                    <div class="row">
+                        <div class="row">
+                            <div class="" style="width: 50%;">
+                            </div>
+                            <div lass="" style="width: 0%"></div>
+                            <div class="col-sm" style="padding-right: 0px;width: 50%">
+                                <br>
+                                <button type="submit" onclick="return Validate()"
+                                    class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+                                <button type="button" class="btn btn-primary float:left"
+                                    Style="width:45%;"data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <br>
             </div>
-
-
         </div>
     </div>
-
-
-
 </div>
 @endsection
