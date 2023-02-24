@@ -1295,7 +1295,7 @@
                         <div class="col-sm">
 
                             <button type="submit" class="btn btn-primary float:right;"
-                                style="margin-left: 81%;--clr: #1D1D50;width:19%;
+                                style="margin-left: 84%;--clr: #1D1D50;width:19%;
                                 --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Post
                             </button>
 
@@ -1335,7 +1335,7 @@
         <div class="col-sm">
 
             <button type="submit" class="btn btn-primary float:right;"
-                style="margin-left: 81%;--clr: #1D1D50;width:19%;
+                style="margin-left: 83%;--clr: #1D1D50;width:19%;
                 --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Post
             </button>
 
@@ -1456,7 +1456,7 @@
         <div class="col-sm">
 
             <button type="submit" class="btn btn-primary float:right;"
-                style="margin-left: 81%;--clr: #1D1D50;width:19%;
+                style="margin-left: 83%;--clr: #1D1D50;width:19%;
                 --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Post
             </button>
 
