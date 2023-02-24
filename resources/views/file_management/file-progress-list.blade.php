@@ -2160,6 +2160,7 @@
     <div class="modal fade" id="edit_file_progress">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
+                                <!-- Modal Header -->
                                 <div class="modal-header">
                                     <h4><b>Edit File Progress:-</b></h4>
                                 </div>
