@@ -57,14 +57,16 @@
     <div>
         <h4 id="hdtpa"><b>File Archive</b></h4>
     </div>
-    <br>
+    <div class="row" style="height:50px;">
+    <div class="col-sm-4" style="padding-top:5px;">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Box No</button>
+    </div>
     <!--
             <div id="mydatatable_filter" class="dataTables_filter">
                 <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
             </div> -->
-    {{-- <a href="{{('add-box-no')}}"><button class="btn btn-primary">Add Box No</button></a> --}}
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Box No</button>
-    <br>
+    
     <div class="header_wrap">
         <div class="num_rows">
             <div class="form-group">

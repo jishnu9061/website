@@ -155,7 +155,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header">
-                                        <h2 class="text-center"><b>Add Instruction</b></h2>
+                                        <h4 class="text-center"><b>Add Instruction:-</b></h4>
 
                                     </div>
 

@@ -121,7 +121,7 @@
 
                                 <!-- Modal Header -->
                                 <div class="modal-header">
-                                    <h2 class="text-center"><b>Add Incoming Letter</b></h2>
+                                    <h4 class="text-center"><b>Add Incoming Letter:-</b></h4>
 
                                 </div>
 

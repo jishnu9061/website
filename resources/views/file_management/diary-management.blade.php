@@ -182,7 +182,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header">
-                                        <h2 class="text-center"><b>Add Event</b></h2>
+                                        <h4 class="text-center"><b>Add Event:-</b></h4>
 
                                     </div>
 

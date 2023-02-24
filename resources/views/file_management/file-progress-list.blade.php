@@ -253,8 +253,7 @@
                             <div class="modal-content">
                                 <!-- Modal Header -->
                                 <div class="modal-header">
-                                    <h2 class="text-center"><b>Add File Progress</b></h2>
-
+                                    <h4><b>Add File Progress:-</b></h4>
                                 </div>
 
                                 <!-- Modal body -->
@@ -506,7 +505,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <br>
                                             <div class="row">
                                                 <div class="col-sm">
 
@@ -579,7 +577,7 @@
 
                         <!-- Modal Header -->
                         <div class="modal-header">
-                            <h2 class="text-center"><b>Add File Progress/Action</b></h2>
+                            <h4 class="text-center"><b>Add File Progress/Action:-</b></h4>
 
                         </div>
 
@@ -703,32 +701,13 @@
                                                 </div>
                                                 <div>
                                                     <h5 style=" margin-left:0;">Action Description</h5>
-
-
                                                 </div>
-
-
-
-                                                <br>
-
                                                 <div>
                                                     <h4 style=" margin-left:0;">Send To Billing ?</h4>
-
-
                                                 </div>
-
-
                                                 <div>
                                                     <h4 style=" margin-left:0;">Send To Timesheet ?</h4>
-
-
                                                 </div>
-
-
-
-
-
-                                                <br>
                                                 <div class="row">
                                                     <div class="col-sm">
 
@@ -800,7 +779,7 @@
 
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h2 class="text-center"><b>Add File Bringup/Reminder</b></h2>
+                        <h4 class="text-center"><b>Add File Bringup/Reminder:-</b></h4>
 
                     </div>
 
@@ -915,13 +894,10 @@
                                             <br>
                                             <div class="row">
                                                 <div class="col-sm">
-
                                                 </div>
                                                 <div class="col-sm">
-
                                                 </div>
                                                 <div class="col-sm">
-                                                    <br>
                                                     <button type="submit" class="btn btn-primary float:right;"
                                                         Style="width:45%;">Save</button>
                                                     <button type="button" Style="width:45%;"
@@ -986,7 +962,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h2 class="text-center"><b>Book A Court</b></h2>
+                    <h4 class="text-center"><b>Book A Court:-</b></h4>
 
                 </div>
 
@@ -1170,13 +1146,10 @@
                                         <br>
                                         <div class="row">
                                             <div class="col-sm">
-
                                             </div>
                                             <div class="col-sm">
-
                                             </div>
                                             <div class="col-sm">
-                                                <br>
                                                 <button type="submit" class="btn btn-primary float:right;"
                                                     Style="width:45%;">Save</button>
                                                 <button type="button" Style="width:45%;"
@@ -1236,7 +1209,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h2 class="text-center"><b>Court Attendance Sheet</b></h2>
+                    <h4 class="text-center"><b>Court Attendance Sheet:-</b></h4>
 
                 </div>
 
@@ -1487,16 +1460,12 @@
                             </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-sm">
-
                     </div>
                     <div class="col-sm">
-
                     </div>
                     <div class="col-sm">
-                        <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
                         <button type="button" Style="width:45%;" class="btn btn-primary float:right;"
                             data-dismiss="modal">Cancel</button>
@@ -1555,7 +1524,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h2 class="text-center"><b>New Arbiration Form</b></h2>
+                    <h4 class="text-center"><b>New Arbiration Form:-</b></h4>
 
                 </div>
 
@@ -1809,7 +1778,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h2 class="text-center"><b>Conveyence Sheet</b></h2>
+                    <h4 class="text-center"><b>Conveyence Sheet:-</b></h4>
 
                 </div>
 
@@ -2130,18 +2099,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-                                <br>
-
-
-
-
-
-
                             </div>
-
-                            <br>
                             <div class="row">
                                 <div class="col-sm">
 
@@ -2150,7 +2108,6 @@
 
                                 </div>
                                 <div class="col-sm">
-                                    <br>
                                     <button type="submit" class="btn btn-primary float:right;"
                                         Style="width:60%;">Save</button>
                                     <button type="button" class="btn btn-primary float:right;"

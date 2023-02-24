@@ -133,7 +133,7 @@
 
                                 <!-- Modal Header -->
                                 <div class="modal-header">
-                                    <h2 class="text-center"><b>Register Documents In Safe</b></h2>
+                                    <h4 class="text-center"><b>Register Documents In Safe:-</b></h4>
 
                                 </div>
 
@@ -288,7 +288,6 @@
 
 
                                                 </div>
-                                                <br>
                                                 <div class="row">
                                                     <div class="col-sm">
 

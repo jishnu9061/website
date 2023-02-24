@@ -123,7 +123,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header">
-                                        <h2 class="text-center"><b>Request Safe Item</b></h2>
+                                        <h4 class="text-center"><b>Request Safe Item:-</b></h4>
 
                                     </div>
 
@@ -214,7 +214,6 @@
 
                                         <div>
                                             <div class="container">
-                                                <br>
                                                 <div class="row">
                                                     <div class="col-sm">
 
@@ -223,7 +222,6 @@
 
                                                     </div>
                                                     <div class="col-sm">
-                                                        <br>
                                                         <button type="submit"
                                                             class="btn btn-primary float:right;" Style="width:45%;">Save</button>
                                                         <button type="button" class="btn btn-primary float:right;"

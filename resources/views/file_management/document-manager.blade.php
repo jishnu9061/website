@@ -139,7 +139,7 @@
 
                                 <!-- Modal Header -->
                                 <div class="modal-header">
-                                    <h2 class="text-center"><b>Upload Documents</b></h2>
+                                    <h4 class="text-center"><b>Upload Documents:-</b></h4>
 
                                 </div>
 
@@ -377,7 +377,7 @@
 
                         <!-- Modal Header -->
                         <div class="modal-header">
-                            <h2 class="text-center"><b>Generate Document</b></h2>
+                            <h4 class="text-center"><b>Generate Document:-</b></h4>
 
                         </div>
 
