@@ -53,7 +53,6 @@
                     <textarea class="form-control" rows="3" name="Description">{{$edit_tender_details->description}}</textarea>
                 </div>
             </div>
-            <br>
             <div class="row">
                 <div class="col-sm">
 
