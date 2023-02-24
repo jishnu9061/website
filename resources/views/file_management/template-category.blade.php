@@ -86,7 +86,7 @@
                                             <a class="btn" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="{{url('edit_template')}}">Edit
+                                                <a class="dropdown-item" data-toggle="modal" data-target="#edit_template"  href="#">Edit
                                                     Template</a>
                                                 <a class="dropdown-item" href="#">Delete
                                                     Template</a>
@@ -197,13 +197,82 @@
                                 </table>
                             </div>
                         </div>
+                    </div>
 
-                        <br>
-                        <!-- Supplier modal Edit End -->
+                    <div class="modal fade" id="edit_template">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
 
-                        <!-- Delete  confirmation Message -->
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="text-center"><b>Edit Template:-</b></h4>
 
-                        <!-- End delete confirmation message -->
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <form method="post" action=""
+                                            enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="row">
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="template"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="template" id="" required>
+                                                            <option>---select---</option>
+                                                            <option>template 1</option>
+                                                            <option>template 2</option>
+                                                            <option>template 3</option>
+                                                            <option>template 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="title"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Title</label>
+                                                        <input type="text" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="title" id="" value="" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="to_upload"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Template
+                                                            To Upload</label>
+                                                        <input type="file" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="to_upload" id="" value=""
+                                                            required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm">
+
+                                                </div>
+                                                <div class="col-sm">
+
+                                                </div>
+                                                <div class="col-sm">
+                                                    <br>
+                                                    <button type="submit" class="btn btn-primary float:right;"
+                                                        Style="width:45%;">Save</button>
+                                                    <button type="button" class="btn btn-primary float:left"
+                                                        Style="width:45%;" data-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                     <script>
                     function myFunction() {

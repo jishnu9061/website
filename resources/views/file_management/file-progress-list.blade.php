@@ -212,8 +212,8 @@
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="#">View File
                                                 </a>
-                                                <a class="dropdown-item"
-                                                    href="{{url('edit-file-progress',$list->id)}}">Edit File
+                                                <a class="dropdown-item" data-toggle="modal" data-target="#edit_file_progress"
+                                                    href="#">Edit File
                                                 </a>
                                                 <a onClick="return myFunction();" class="dropdown-item"
                                                     href="{{url('delete-file-progress',$list->id)}}">Delete
@@ -2155,6 +2155,322 @@
         </div>
     </div>
     </div>
+
+    <!---------------------------------------------------- START EDIT FILE PROGRESS --------------------------------------------------------->
+    <div class="modal fade" id="edit_file_progress">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4><b>Edit File Progress:-</b></h4>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container">
+
+                                        <form method="post" action="{{ url('') }}"
+                                            enctype="multipart/form-data">
+                                            @csrf
+
+                                            <div class="row">
+
+                                                <div class="col-md-12 order-md-1">
+
+                                                    <div class="row">
+                                                        <div class="" style="width: 33%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_name"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                                <select class="form-select"
+                                                                    aria-label="Default select example"
+                                                                    style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                    name="client_name" id="" required>
+                                                                    @if(count($client_list))
+                                                                    @foreach($client_list as $list_category)
+                                                                    <option>{{$list_category->client_name}}</option>
+                                                                    @endforeach
+                                                                    @endif
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 33%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="date_progress"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date
+                                                                    of progress</label>
+                                                                <input type="date" placeholder="Enter Email "
+                                                                    style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                    class="form-control" name="date_progress" id=""
+                                                                    value="" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 33%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="bringup_date"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">New
+                                                                    Bringup Date</label>
+                                                                <input type="date" placeholder="Enter Email "
+                                                                    style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                    class="form-control" name="bringup_date" id=""
+                                                                    value="" required>
+                                                            </div>
+                                                        </div>
+                                                        <div style="width:50%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="next_action"
+                                                                    style="width: 113px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Next
+                                                                    Action(WayForward)</label>
+                                                                <textarea class="outer" rows="4"
+                                                                    style="width:205%;border-color: #1d1d50;border-radius: 7px;"
+                                                                    cols="41" placeholder="Physical Address"
+                                                                    name="next_action" form="addemployee"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="file_name"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="file_name" id="" required>
+                                                            <option>---select---</option>
+                                                            <option>File 1</option>
+                                                            <option>File 2</option>
+                                                            <option>File 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="reminder_period"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reminder
+                                                            period(Days)</label>
+                                                        <input type="text" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="reminder_period" id="" value=""
+                                                            required>
+                                                    </div>
+                                                </div>
+                                                <div class="" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="action_type"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Action
+                                                            Type</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="action_type" id="" required>
+                                                            <option>---select---</option>
+                                                            <option>action_type 1</option>
+                                                            <option>action_type 2</option>
+                                                            <option>action_type 3</option>
+                                                            <option>action_type 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div style="width:50%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="action_description"
+                                                            style="width: 113px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Action
+                                                            Description</label>
+                                                        <textarea class="outer" rows="4"
+                                                            style="width:205%;border-color: #1d1d50;border-radius: 7px;"
+                                                            cols="41" placeholder="Physical Address"
+                                                            name="action_description" form="addemployee"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="time_taken_hours"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
+                                                            Taken(Hours)</label>
+                                                        <input type="time" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="time_taken_hours" id="" value=""
+                                                            required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="time_taken_hours"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
+                                                            Taken(Minutes)</label>
+                                                        <input type="time" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="time_taken_minutes" id=""
+                                                            value="" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="">
+                                                <h6>Send Reminder To:</h6>
+                                                <div>
+                                                    <p>Florence</p>
+                                                    <p>Princes</p>
+                                                </div>
+                                            </div>
+
+                                            <h4 style="text-align:center;">Send Billing</h4>
+
+                                            <div class="row">
+                                                <div class="" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="item_type"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item
+                                                            Type</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="item_type" id="" required>
+                                                            <option>---select---</option>
+                                                            <option>item_type 1</option>
+                                                            <option>item_type 2</option>
+                                                            <option>item_type 3</option>
+                                                            <option>item_type 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="currency"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="currency" id="" required>
+                                                            <option>---select---</option>
+                                                            <option>KES</option>
+                                                            <option>USD</option>
+                                                            <option>EUR</option>
+                                                            <option>GBP</option>
+                                                            <option>AUD</option>
+                                                            <option>CAD</option>
+                                                            <option>SEK</option>
+                                                            <option>DKK</option>
+                                                            <option>JPY</option>
+                                                            <option>CHF</option>
+                                                            <option>HKD</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="amount"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Amount</label>
+                                                        <input type="text" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="amount" id="" value="" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div id="test" style="height:20px;"></div>
+
+                                            <h4 style="text-align:center;">Send To Timesheet</h4>
+
+                                            <div class="row">
+                                                <div class="" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="start_time"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Start
+                                                            Time</label>
+                                                        <input type="time" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="start_time" id="" value=""
+                                                            required>
+                                                    </div>
+                                                </div>
+                                                <div class="" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="activity_type"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Activity
+                                                            Type</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="activity_type" id="" required>
+                                                            <option>---select---</option>
+                                                            <option>action_type 1</option>
+                                                            <option>action_type 2</option>
+                                                            <option>action_type 3</option>
+                                                            <option>action_type 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="activity"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Activity</label>
+                                                        <input type="text" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="activity" id="" value=""
+                                                            required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm">
+
+                                                </div>
+                                                <div class="col-sm">
+
+                                                </div>
+                                                <div class="col-sm">
+                                                    <br>
+                                                    <button type="submit" class="btn btn-primary float:right;"
+                                                        Style="width:45%;">Save</button>
+                                                    <button type="button" class="btn btn-primary float:left"
+                                                        Style="width:45%;" data-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal" id="mymodal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div>
+                                                <input type="text" name="type" class="form-control"
+                                                    placeholder="Client Type">
+                                                <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" id="my1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="modal-body">
+                                    <form action="">
+                                        <div>
+                                            <input type="text" name="type" class="form-control" placeholder="Country">
+                                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!---------------------------------------------------- END EIT FILE PROGRESS ------------------------------------------------------------>
 
 
     @endsection

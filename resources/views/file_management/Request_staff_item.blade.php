@@ -90,7 +90,7 @@
                                                 <div class="dropdown-menu">
                                                     <a class="dropdown-item" href="#">View File
                                                     </a>
-                                                    <a class="dropdown-item" href="#">Edit File
+                                                    <a class="dropdown-item" data-toggle="modal" data-target="#edit_safe" href="#">Edit File
                                                     </a>
                                                     <a class="dropdown-item" href="#">Delete
                                                         File </a>
@@ -273,37 +273,164 @@
                             </div>
                         </div>
                     </div>
+                    <!----------------------------------------------------------- START EDIT REQUEST -------------------------------------------->
+                    <div class="modal fade" id="edit_safe">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
 
-                    <!-- <div class="row">
-                            <div class="col-sm">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="text-center"><b>Edit Request Safe Item:-</b></h4>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('') }}"
+                                                enctype="multipart/form-data">
+                                                @csrf
+                                                <div class="row">
+
+                                                    <div class="col-md-4" style="width: 33%">
+                                                        <div class=""><span style="color: red">*</span>
+                                                            <label for="date"
+                                                                style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
+                                                            <input type="date" placeholder=""
+                                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                class="form-control" name="date" id="" value=""
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4" style="width: 33%">
+                                                        <div class=""><span style="color: red">*</span>
+                                                            <label for="client"
+                                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                            <select class="form-select"
+                                                                aria-label="Default select example"
+                                                                style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                name="client" id="" required>
+                                                                <option>---select---</option>
+                                                                <option>Client 1</option>
+                                                                <option>Client 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4" style="width: 33%">
+                                                        <div class=""><span style="color: red">*</span>
+                                                            <label for="file"
+                                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                                            <select class="form-select"
+                                                                aria-label="Default select example"
+                                                                style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                name="file" id="" required>
+                                                                <option>---select---</option>
+                                                                <option>file 1</option>
+                                                                <option>file 2</option>
+                                                                <option>file 3</option>
+                                                                <option>file 4</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4" style="width: 33%">
+                                                        <div class=""><span style="color: red">*</span>
+                                                            <label for="send_instruction"
+                                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Send
+                                                                Instruction To</label>
+                                                            <select class="form-select"
+                                                                aria-label="Default select example"
+                                                                style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                name="send_instruction" id="" required>
+                                                                <option>---select---</option>
+                                                                <option>Person 1</option>
+                                                                <option>person 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4" style="width: 33%">
+                                                        <div class=""><span style="color: red">*</span>
+                                                            <label for="approver"
+                                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Approver</label>
+                                                            <select class="form-select"
+                                                                aria-label="Default select example"
+                                                                style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                name="approver" id="" required>
+                                                                <option>---select---</option>
+                                                                <option>Admin</option>
+                                                                <option>Department Head</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div id="test" style="height:20px;"></div>
+                                        </div>
+
+
+                                        <div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm">
+
+                                                    </div>
+                                                    <div class="col-sm">
+
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        <button type="submit"
+                                                            class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                                                        <button type="button" class="btn btn-primary float:right;"
+                                                            data-dismiss="modal" Style="width:45%;">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
-                            <div class="col-sm">
-
+                            <div class="modal" id="mymodal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <div>
+                                                        <input type="text" name="type" class="form-control"
+                                                            placeholder="Client Type">
+                                                        <button class="btn btn-primary sub_btnn"
+                                                            type="submit">submit</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm">
-                                <br>
-                                <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Request
-                                    Doc</button>
-                                <button type="button" class="btn btn-primary float:left"
-                                    Style="width:45%;">Close</button>
+                        </div>
+                        <div class="modal" id="my">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="modal-body">
+                                            <form action="">
+                                                <div>
+                                                    <input type="text" name="type" class="form-control"
+                                                        placeholder="Country">
+                                                    <button class="btn btn-primary sub_btnn"
+                                                        type="submit">submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            </form>
-
-
-
-        </div>
-
-
-
-
-
-    </div>
-    </div> -->
+                    <!----------------------------------------------------------- END EDIT REQUEST ---------------------------------------------->
                     <script>
                     function myFunction() {
                         if (!confirm("Are you sure to delete this"))

@@ -136,7 +136,6 @@
                             @endforeach
                         </tbody>
                     </table>
-
                 </div>
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">

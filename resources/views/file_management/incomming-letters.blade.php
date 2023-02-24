@@ -86,7 +86,7 @@
                                                 aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="#">View Letter Details</a>
-                                                <a class="dropdown-item" href="#">Edit Letter Details</a>
+                                                <a class="dropdown-item"  data-toggle="modal" data-target="#edit_letter" href="#">Edit Letter Details</a>
                                                 <a class="dropdown-item" href="#">Delete Letter Details</a>
 
                                             </div>
@@ -330,6 +330,224 @@
                     </div>
                 </div>
             </div>
+
+            <!---------------------------------------------------------------- START EDIT LETTER ------------------------------------------------->
+            <div class="modal fade" id="edit_letter">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="text-center"><b>Edit Incoming Letter:-</b></h4>
+
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <form method="post" action="{{ url('') }}"
+                                            enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="row">
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="letter_date"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Letter
+                                                            Date</label>
+                                                        <input type="date" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="letter_date" id="" value=""
+                                                            required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="client"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="client" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="file"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="file" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="received_form"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Received
+                                                            From</label>
+                                                        <input type="text" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="received_form" id="" value=""
+                                                            required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="category"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Document
+                                                            Category</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="category" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="letter_name"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Letter
+                                                            Name</label>
+                                                        <input type="text" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="letter_name" id="" value=""
+                                                            required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="delivered_by"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Delivered
+                                                            By</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="delivered_by" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="other"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Other</label>
+                                                        <input type="text" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="other" id="" value="" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="delivered_to"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Delivered
+                                                            To</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="delivered_to" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="viewer"
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Viewer(s)</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                            name="viewer" id="" required>
+                                                            <option>-----select-----</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6" style="width: 33%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label for="upload_copy"
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Upload
+                                                            a Copy</label>
+                                                        <input type="file" placeholder=""
+                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                            class="form-control" name="upload_copy" id="" value=""
+                                                            required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm">
+
+                                                </div>
+                                                <div class="col-sm">
+
+                                                </div>
+                                                <div class="col-sm">
+                                                    <br>
+                                                    <button type="submit" class="btn btn-primary float:right;"
+                                                        Style="width:45%;">Save</button>
+                                                    <button type="button"  Style="width:45%;" class="btn btn-primary float:right;"
+                                                        data-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal" id="mymodal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div>
+                                                <input type="text" name="type" class="form-control"
+                                                    placeholder="Client Type">
+                                                <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" id="my">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="modal-body">
+                                    <form action="">
+                                        <div>
+                                            <input type="text" name="type" class="form-control" placeholder="Country">
+                                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------------------------------------------------- END EDIT LETTER --------------------------------------------------->
             <script>
             function myFunction() {
                 if (!confirm("Are you sure to delete this"))

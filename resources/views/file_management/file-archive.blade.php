@@ -126,7 +126,7 @@
                                                 data-id="{{ $list->id }}" data-toggle="modal" data-target="#viewmyModal"
                                                 href="{{url('view-list',$list->id)}}">View File
                                             </a>
-                                            <a class="dropdown-item" href="{{url('edit-box-no',$list->id)}}">Edit File
+                                            <a class="dropdown-item" data-toggle="modal" data-target="#edit_box_no"  href="#">Edit File
                                             </a>
                                             <a class="dropdown-item" href="{{url('delete-box-no',$list->id)}}">Delete
                                                 File </a>
@@ -167,7 +167,7 @@
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h2 class="text-center"><b>Add Box No</b></h2>
+                <h4 class="text-center"><b>Add Box No:-</b></h4>
 
             </div>
 
@@ -228,6 +228,76 @@
     </div>
 
 </div>
+
+<!-------------------------------------------------------- START EDIT BOX NO -------------------------------------------------------------------->
+<div class="modal fade" id="edit_box_no">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="text-center"><b>Edit Box No:-</b></h4>
+
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+                    <form method="post" action="{{ url('') }}" enctype="multipart/form-data">
+                        @csrf
+
+                        <div class="row">
+                            <div class="col-md-6" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="box_type"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Box
+                                        Type</label>
+                                    <select class="form-select" aria-label="Default select example"
+                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                        name="box_type" id="" required>
+                                        <option>.....select.....</option>
+                                        <option>Box Type 1</option>
+                                        <option>Box Type 2</option>
+                                        <option>Box Type 3</option>
+                                        <option>Box Type 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="box_no"
+                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Box
+                                        No</label>
+                                    <input type="text" placeholder=""
+                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                        class="form-control" name="box_no" id="" value="" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm">
+
+                            </div>
+                            <div class="col-sm">
+
+                            </div>
+                            <div class="col-sm">
+                                <br>
+                                <button type="submit" class="btn btn-primary float:right;"
+                                    Style="width:45%;">Save</button>
+                                <button type="button" Style="width:45%;" class="btn btn-primary float:right;"
+                                    data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-------------------------------------------------------- END EDIT BOX NO ---------------------------------------------------------------------->
 <!------------Modal-View---------------->
 
 <div class="modal fade" id="viewmyModal">

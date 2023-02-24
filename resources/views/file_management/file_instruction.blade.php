@@ -117,8 +117,8 @@
                                                 <a class="btn" data-toggle="dropdown" aria-haspopup="true"
                                                     aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item"
-                                                        href="{{url('edit_file_instruction',$instruction->id)}}">Edit
+                                                    <a class="dropdown-item" data-toggle="modal" data-target="#edit_instruction"
+                                                        href="#">Edit
                                                         File
                                                         Instruction</a>
                                                     <a class="dropdown-item"
@@ -337,7 +337,8 @@
                                                     <div class="col-md-4" style="width: 33%">
                                                         <div class=""><span style="color: red">*</span>
                                                             <label for="send_notification"
-                                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Send Notification To</label>
+                                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Send
+                                                                Notification To</label>
                                                             <select class="form-select"
                                                                 aria-label="Default select example"
                                                                 style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
@@ -409,6 +410,254 @@
                     </div>
                 </div>
 
+                <!---------------------------------------------------------- START EDIT FILE INSTRUCTION -------------------------------------------------------->
+                <div class="modal fade" id="edit_instruction">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="text-center"><b>Edit Instruction:-</b></h4>
+
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="container">
+                                    <form method="post" action=""
+                                        enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="row">
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="date"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date(to)</label>
+                                                    <input type="date" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="date" id="" value="" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="client"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="client" id="" required>
+                                                        <option>-----select-----</option>
+                                                        <option>demo 2</option>
+                                                        <option>demo 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="file"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="file" id="" required>
+                                                        <option>-----select-----</option>
+                                                        <option>demo 2</option>
+                                                        <option>demo 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="instruction"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Instruction
+                                                        Type</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="instruction" id="" required>
+                                                        <option>-----select-----</option>
+                                                        <option>demo 2</option>
+                                                        <option>demo 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="category"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Instruction
+                                                        Category</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="category" id="" required>
+                                                        <option>-----select-----</option>
+                                                        <option>demo 2</option>
+                                                        <option>demo 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="receiver"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Receiver</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="receiver" id="" required>
+                                                        <option>-----select-----</option>
+                                                        <option>demo 2</option>
+                                                        <option>demo 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="currency"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="currency" id="" required>
+                                                        <option>-----select-----</option>
+                                                        <option>demo 2</option>
+                                                        <option>demo 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="exchange"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Exchange
+                                                        Rate</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="exchange" id="" value="" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="turn_around"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Turn-Around
+                                                        Time</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="turn_around" id="" required>
+                                                        <option>-----select-----</option>
+                                                        <option>demo 2</option>
+                                                        <option>demo 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="priority"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Turn-Around
+                                                        Time</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="priority" id="" required>
+                                                        <option>-----select-----</option>
+                                                        <option>demo 2</option>
+                                                        <option>demo 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="amount"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Amount</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="amount" id="" value="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div style="width:205%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="details"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Details</label>
+                                                    <textarea class="outer" rows="4"
+                                                        style="border-color:#1d1d50;border-radius:7px;width:100%;"
+                                                        cols="41" placeholder="Physical Address" name="details"
+                                                        form="addemployee"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="mb-4">
+                                        <div class="row">
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="send_notification"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Send
+                                                        Notification To</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="send_notification" id="" required>
+                                                        <option>-----select-----</option>
+                                                        <option>demo 2</option>
+                                                        <option>demo 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+
+                                            </div>
+                                            <div class="col-sm">
+
+                                            </div>
+                                            <div class="col-sm">
+                                                <br>
+                                                <button type="submit" class="btn btn-primary float:right;"
+                                                    Style="width:45%;">Save</button>
+                                                <button type="submit" class="btn btn-primary float:left"
+                                                    Style="width:45%;">Cancel</button>
+                                            </div>
+                                        </div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal" id="mymodal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="modal-body">
+                                    <form action="">
+                                        <div>
+                                            <input type="text" name="type" class="form-control"
+                                                placeholder="Client Type">
+                                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="my">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-body">
+                                <form action="">
+                                    <div>
+                                        <input type="text" name="type" class="form-control" placeholder="Country">
+                                        <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------------------------------- END EDIT FILE INSTRUCTION ---------------------------------------------------------->
 
 
 
@@ -419,82 +668,80 @@
 
 
 
+        <script>
+        function myFunction() {
+            if (!confirm("Are you sure to delete this"))
+                event.preventDefault();
+        }
+        </script>
+        <script>
+        $(function() {
+            $("#new-item").dataTable();
+        })
+        </script>
 
-                <script>
-                function myFunction() {
-                    if (!confirm("Are you sure to delete this"))
-                        event.preventDefault();
-                }
-                </script>
-                <script>
-                $(function() {
-                    $("#new-item").dataTable();
-                })
-                </script>
+        {{-- Search booking script --}}
+        <script>
+        $(document).ready(function() {
+            $('.searchingBook').select2();
+        });
+        </script>
+        {{-- search booking script end --}}
+        <!-- Delete  confirmation Message -->
+        <script>
+        function myFunction() {
+            if (!confirm("Are you sure to delete this"))
+                event.preventDefault();
+        }
+        </script>
+        <!-- End delete confirmation message -->
 
-                {{-- Search booking script --}}
-                <script>
-                $(document).ready(function() {
-                    $('.searchingBook').select2();
-                });
-                </script>
-                {{-- search booking script end --}}
-                <!-- Delete  confirmation Message -->
-                <script>
-                function myFunction() {
-                    if (!confirm("Are you sure to delete this"))
-                        event.preventDefault();
-                }
-                </script>
-                <!-- End delete confirmation message -->
+        <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
+        </script>
+        <script type="text/javascript" charset="utf8"
+            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
-                <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-                <script type="text/javascript" charset="utf8"
-                    src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
-                </script>
-                <script type="text/javascript" charset="utf8"
-                    src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+        {{-- Supplier Edit start --}}
 
-                {{-- Supplier Edit start --}}
+        <script>
+        $(document).on('click', '#edit_medicine_details', function() {
 
-                <script>
-                $(document).on('click', '#edit_medicine_details', function() {
-
-                    var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden').val();
-                    var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
-                    var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name').val();
-                    var medicine_group = $(this).closest('#data').find('#medicine_group').val();
-                    var medicicine_category_name = $(this).closest('#data').find('#medicine_category_name1')
-                        .val();
-                    var medicine_generic_name = $(this).closest('#data').find('#medicine_generic_name').val();
-                    var medicine_manufactuure_name = $(this).closest('#data').find(
-                        '#medicine_manufactuure_name').val();
-                    var medicine_supplier_name = $(this).closest('#data').find('#medicine_supplier_name').val();
-                    var medicine_minimum_level = $(this).closest('#data').find('#medicine_minimum_level').val();
-                    var medicine_reorder_level = $(this).closest('#data').find('#medicine_reorder_level').val();
-                    var medicine_unit_packing = $(this).closest('#data').find('#medicine_unit_packing').val();
-                    var medicine_composition = $(this).closest('#data').find('#medicine_composition').val();
-                    var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
-                    var medicine_images = $(this).closest('#data').find('#medicine_images').val();
+            var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden').val();
+            var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
+            var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name').val();
+            var medicine_group = $(this).closest('#data').find('#medicine_group').val();
+            var medicicine_category_name = $(this).closest('#data').find('#medicine_category_name1')
+                .val();
+            var medicine_generic_name = $(this).closest('#data').find('#medicine_generic_name').val();
+            var medicine_manufactuure_name = $(this).closest('#data').find(
+                '#medicine_manufactuure_name').val();
+            var medicine_supplier_name = $(this).closest('#data').find('#medicine_supplier_name').val();
+            var medicine_minimum_level = $(this).closest('#data').find('#medicine_minimum_level').val();
+            var medicine_reorder_level = $(this).closest('#data').find('#medicine_reorder_level').val();
+            var medicine_unit_packing = $(this).closest('#data').find('#medicine_unit_packing').val();
+            var medicine_composition = $(this).closest('#data').find('#medicine_composition').val();
+            var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
+            var medicine_images = $(this).closest('#data').find('#medicine_images').val();
 
 
 
-                    $("#edit_id").val(medicine_id_hidden);
-                    $("#edit_medicine_name").val(medicine_name);
-                    $("#edit_brand_name").val(medicine_brand_name);
-                    $("#edit_medicine_group").val(medicine_group);
-                    $("#edit_category_name").val(medicine_category_name);
-                    $("#edit_generic_name").val(medicicine_genric_name);
-                    $("#edit_manufacture_name").val(medicine_manufactuure_name);
-                    $("#edit_supplier_name").val(medicine_supplier_name);
-                    $("#edit_minimum_level").val(medicine_minimum_level);
-                    $("#edit_reorder").val(medicine_reorder_level);
-                    $("#edit_minimum_level").val(medicine_minimum_level);
-                    $("#edit_unit_packing").val(medicine_unit_packing);
-                    $("#edit_medicine_details1").val(medicine_composition);
-                    $("#edit_medicine_note").val(medicine_notes);
-                    $("#edit_image").val(medicine_images);
-                });
-                </script>
-                {{-- Supplier Edit End --}}
-                @endsection
+            $("#edit_id").val(medicine_id_hidden);
+            $("#edit_medicine_name").val(medicine_name);
+            $("#edit_brand_name").val(medicine_brand_name);
+            $("#edit_medicine_group").val(medicine_group);
+            $("#edit_category_name").val(medicine_category_name);
+            $("#edit_generic_name").val(medicicine_genric_name);
+            $("#edit_manufacture_name").val(medicine_manufactuure_name);
+            $("#edit_supplier_name").val(medicine_supplier_name);
+            $("#edit_minimum_level").val(medicine_minimum_level);
+            $("#edit_reorder").val(medicine_reorder_level);
+            $("#edit_minimum_level").val(medicine_minimum_level);
+            $("#edit_unit_packing").val(medicine_unit_packing);
+            $("#edit_medicine_details1").val(medicine_composition);
+            $("#edit_medicine_note").val(medicine_notes);
+            $("#edit_image").val(medicine_images);
+        });
+        </script>
+        {{-- Supplier Edit End --}}
+        @endsection
