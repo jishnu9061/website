@@ -622,8 +622,7 @@
                                 <div class="col-sm-4">
                                 </div>
                             </div>
-                            <div class="doc_contanier"style="*/background-color:orange;width:100%;
-                            ">
+                            <div class="doc_contanier"style="*/background-color:orange;width:100%;">
                                 <div class="doc_warp">
                                     <h6>Add Contact Person details:-</h6>
                                     <a class="add_doc">&plus;</a>
@@ -636,7 +635,7 @@
                     </div>
                     <div class="row">
                         <div class="row">
-                            < class=""  style="width: 50%;>
+                            <div class=""  style="width: 50%;">
                             </div>
                             <div class="" style="width: 0%"></div>
                             <div class="col-sm" style="padding-right: 0px;width: 50%">
