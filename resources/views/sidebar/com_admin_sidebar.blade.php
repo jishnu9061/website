@@ -1181,49 +1181,49 @@
                 <span style="margin-left: 1rem;">Procurement</span>
             </a>
             @php
-            $admin = array("purchase_order/".Auth::user()->company_id, "purchase_order_report", "supplier");
+            $admin = array("purchase_order","purchase_order_report", "supplier");
             @endphp
             @if (in_array(request()->path(), $admin))
             <ul class="submenu" style="display: block;">
                 @else
                 <ul class="submenu" style="display: none;">
                     @endif
-                    @if(request()->path()== "purchase_order/".Auth::user()->company_id){{-- 1st  submenu start --}}
+                    @if(request()->path()== "purchase_order"){{-- 1st  submenu start --}}
                     <li class="submenu-item ">
-                        <a href="{{url('purchase_order/'.Auth::user()->company_id)}}" class='sidebar-link'
+                        <a href="{{url('purchase_order')}}" class='sidebar-link'
                             style="background-color:#1D1D50 ; color:white;">
                             <span style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">New
                                 Purchase Orders</span>
                             @else
                     <li class="submenu-item ">
-                        <a href="{{url('purchase_order/'.Auth::user()->company_id)}}" class='sidebar-link'>
+                        <a href="{{url('purchase_order')}}" class='sidebar-link'>
                             <span>New Purchase Orders</span>
                             @endif
                         </a>
                     </li>{{-- 1st submenu end --}}
                     @if(request()->path()==
-                    "purchase_order_report/".Auth::user()->company_id){{-- 2nd  submenu start --}}
+                    "purchase_order_report"){{-- 2nd  submenu start --}}
                     <li class="submenu-item ">
-                        <a href="{{url('purchase_order_report/'.Auth::user()->company_id)}}" class='sidebar-link'
+                        <a href="{{url('purchase_order_report')}}" class='sidebar-link'
                             style="background-color:#1D1D50 ; color:white;">
                             <span style="margin-left:0px;font-align:center;">●</span><span
                                 style="margin-left:5px">Purchase Orders reports</span>
                             @else
                     <li class="submenu-item ">
-                        <a href="{{url('purchase_order_report/'.Auth::user()->company_id)}}" class='sidebar-link'>
+                        <a href="{{url('purchase_order_report')}}" class='sidebar-link'>
                             <span>Purchase Orders reports</span>
                             @endif
                         </a>
                     </li>{{-- 2nd submenu end --}}
-                    @if(request()->path()== "supplier/".Auth::user()->company_id){{-- 3rd  submenu start --}}
+                    @if(request()->path()== "supplier"){{-- 3rd  submenu start --}}
                     <li class="submenu-item ">
-                        <a href="{{url('supplier/'.Auth::user()->company_id)}}" class='sidebar-link'
+                        <a href="{{url('supplier')}}" class='sidebar-link'
                             style="background-color:#1D1D50 ; color:white;">
                             <span style="margin-left:0px;font-align:center;">●</span><span
                                 style="margin-left:5px">Supplier</span>
                             @else
                     <li class="submenu-item ">
-                        <a href="{{url('supplier/'.Auth::user()->company_id)}}" class='sidebar-link'>
+                        <a href="{{url('supplier')}}" class='sidebar-link'>
                             <span>Supplier</span>
                             @endif
                         </a>
