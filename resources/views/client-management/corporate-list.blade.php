@@ -65,7 +65,7 @@
             color: #999;
             }
             input[type='file'] {
-            opacity:0    
+            opacity:0
             }
             input[type='file'] {
             color: rgba(0, 0, 0, 0)
@@ -78,13 +78,13 @@
               width: 50px;
               height: 20px;
             }
-            
-            .switch input { 
+
+            .switch input {
               opacity: 0;
               width: 0;
               height: 0;
             }
-            
+
             .slider {
               position: absolute;
               cursor: pointer;
@@ -96,7 +96,7 @@
               -webkit-transition: .4s;
               transition: .4s;
             }
-            
+
             .slider:before {
               position: absolute;
               content: "";
@@ -108,26 +108,26 @@
               -webkit-transition: .4s;
               transition: .4s;
             }
-            
+
             .check:checked + .slider {
               background-color: #0edb7c;
             }
-            
+
             .check:focus + .slider {
               box-shadow: 0 0 1px #0edb7c;
             }
-            
+
             .check:checked + .slider:before {
               -webkit-transform: translateX(26px);
               -ms-transform: translateX(26px);
               transform: translateX(26px);
             }
-            
+
             /* Rounded sliders */
             .slider.round {
               border-radius: 34px;
             }
-            
+
             .slider.round:before {
               border-radius: 50%;
             }
@@ -285,18 +285,24 @@
                                                 <a class="dropdown-item" href="#">Engagement Letter</a>
                                                 <a class="dropdown-item" data-toggle="modal"
                                                 data-target="#send_mail" href="#">Send Mail
-                                                
+
                                             </a>
                                                 <a class="dropdown-item" data-toggle="modal"
                                                 data-target="#post_important_date" href="#">Post Important Date
-                                                
+
                                             </a>
                                                 <a class="dropdown-item" data-toggle="modal"
                                                 data-target="#post_status_summary" href="#">Post Status Summary
-                                                
+
                                             </a>
-                                                <a class="dropdown-item" href="#">Send Message</a>
-                                                <a class="dropdown-item" href="#">Post Comment</a>
+                                                <a class="dropdown-item"  data-toggle="modal"
+                                                data-target="#send_message" href="#">Send Message
+
+                                            </a>
+                                                <a class="dropdown-item" data-toggle="modal"
+                                                data-target="#post_comment" href="#">Post Comment
+
+                                            </a>
                                             </div>
                                         </div>
                                     </td>
@@ -616,8 +622,7 @@
                                 <div class="col-sm-4">
                                 </div>
                             </div>
-                            <div class="doc_contanier"style="*/background-color:orange;width:100%;
-                            ">
+                            <div class="doc_contanier"style="*/background-color:orange;width:100%;">
                                 <div class="doc_warp">
                                     <h6>Add Contact Person details:-</h6>
                                     <a class="add_doc">&plus;</a>
@@ -630,7 +635,7 @@
                     </div>
                     <div class="row">
                         <div class="row">
-                            < class=""  style="width: 50%;>
+                            <div class=""  style="width: 50%;">
                             </div>
                             <div class="" style="width: 0%"></div>
                             <div class="col-sm" style="padding-right: 0px;width: 50%">
@@ -660,7 +665,7 @@
                     @method('PUT')
                     <input type="hidden" id="corporateid" value="corporateid">
                     <h5><b>Edit Corporate Client Details:-</b></h5>
-                    
+
                     <div class="row">
                         <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
                             <div class="row">
@@ -952,7 +957,7 @@
         </form>
     </div>
     <script>
-        function changestatus(param) { // change copany status 
+        function changestatus(param) { // change copany status
             var status = $(param).prop('checked') == true ? 1 : 0;
             var user_id = $(param).data('id');
             $.ajax({
@@ -973,7 +978,7 @@
             });
         }
 
-        function editcompany(param) { // edit company get details 
+        function editcompany(param) { // edit company get details
             var corporateid = $(param).data('id');
             $.ajax({
                 type: "GET",
@@ -1136,7 +1141,7 @@
         add_decduct.addEventListener("click", add_decduct_input); // Add More Decduction percentage author@udayan --end
     </script>
     <script>
-        function deletecompany(param) { //Delete clent confirmation message 
+        function deletecompany(param) { //Delete clent confirmation message
             var deleteuniqueid = $(param).data('id');
             var deletecompany_name = $(param).data('name');
             $('#deleteuniqueid').val(deleteuniqueid);
@@ -1183,7 +1188,7 @@
                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                             class="form-control" name="first_name" id="" value=""
                                             required>
-                                            
+
                                     </div>
                                 </div>
                                 <div class="" style="width: 100%">
@@ -1223,7 +1228,7 @@
                         <div class="col-sm">
                         </div>
                         <div class="col-sm">
-                           
+
                             <button type="button" class="btn btn-primary float:left" Style="width:35%;"
                                 onclick="history.back()">Email</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:30%;"
@@ -1233,10 +1238,13 @@
                         </div>
 
                 </div>
-            </div>
             </form>
+            </div>
+
         </div>
-        </div>
+
+    </div>
+
         {{-- Start post important date Modal --}}
         <div class="modal fade" id="post_important_date" style="">
             <!--post important date -->
@@ -1248,11 +1256,11 @@
                         @method('PUT')
                         <input type="hidden" id="post_important_date" value="corporateid">
                        <h5><b>post important date:-</b></h5>
-        
+
                         <div class="row">
                             <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
                                 <div class="row">
-                                    <div class="" style="width: 33%">
+                                    <div class="" style="width: 100%">
                                         <div class=""><span style="color: red">*</span>
                                             <label for="date"
                                                 style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
@@ -1262,7 +1270,7 @@
                                                 required>
                                         </div>
                                     </div>
-                                    <div class="" style="width: 70%">
+                                    <div class="" style="width: 100%">
                                         <div class=""><span style="color: red">*</span>
                                             <label for="title"
                                                 style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Title</label>
@@ -1270,7 +1278,7 @@
                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                 class="form-control" name="first_name" id="" value=""
                                                 required>
-                                                
+
                                         </div>
                                     </div>
                                     <div class="row document_details " style="margin-bottom: 20px;">
@@ -1279,22 +1287,26 @@
                                 </div>
                             </div>
                         </div>
-                        <div class style="width: 20%">
+                        <div class style="width:20%;">
                         </div>
                         <div class="col-sm">
-                       
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+
                             <button type="submit" class="btn btn-primary float:right;"
-                                style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                                style="margin-left: 84%;--clr: #1D1D50;width:19%;
                                 --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Post
                             </button>
-                            
+
                         </div>
-                    </form>  
+                    </form>
                 </div>
             </div>
-            
+
         </div>
-    </div>
+
     {{-- Start Post Status Summary --}}
     <div class="modal fade" id="post_status_summary" style="">
         <!--Post Status Summary -->
@@ -1315,25 +1327,144 @@
                     <div class="row document_details " style="margin-bottom: 20px;">
                         {{-- Add More Document details:- javascript --}}
                     </div>
-                </div>
-            </div>
-           
-        </div>
-        </div>
         <div class style="width: 20%">
         </div>
         <div class="col-sm">
-          
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+
             <button type="submit" class="btn btn-primary float:right;"
-                style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                style="margin-left: 83%;--clr: #1D1D50;width:19%;
                 --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Post
             </button>
-            
-        </div>
-    </form>  
-</div>
-</div>
 
-</div>
-</div>
+        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {{-- Start Send Message --}}
+    <div class="modal fade" id="send_message" style="">
+        <!-- Send Message -->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" id="send_mail" action="" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <input type="hidden" id="send_mail" value="corporateid">
+                    <h5><b>Send Message:-</b></h5>
+                    <div class="row">
+                        <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                            <div class="row">
+                                <div class="" style="width: 100%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="to"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">To</label>
+                                        <input type="text" placeholder=" "
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="first_name" id="" value=""
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 100%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="message"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">SMS Message</label>
+                                            <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Type message here"
+                                            name="message" form="addemployee"></textarea>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 70%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="date"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date Scheduled</label>
+                                            <input type="date" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="first_name" id="" value=""
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 30%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="time"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">time</label>
+                                            <input type="time" placeholder=" "
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="first_name" id="" value=""
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class style="width: 20%">
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="button" class="btn btn-primary float:left" Style="width:30%;"
+                                onclick="history.back()">Send</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:30%;"
+                                onclick="history.back()">Save</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:35%;"
+                                onclick="history.back()">Cancel</button>
+                        </div>
+                    </div>
+
+            </form>
+                </div>
+
+        </div>
+    </div>
+    {{-- Start Post Comment --}}
+    <div class="modal fade" id="post_comment" style="">
+        <!--Post Comment -->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" id="send_mail" action="" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <input type="hidden" id="send_mail" value="corporateid">
+                    <h5><b>Post Comment:-</b></h5>
+                    <div class="" style="width:100%;"><span style="color: red">*</span>
+                        <label for="comment"
+                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Post Comment</label>
+                            <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Post a comment"
+                            name="message" form="addemployee"></textarea>
+                    </div>
+                    <div class="row document_details " style="margin-bottom: 20px;">
+                        {{-- Add More Document details:- javascript --}}
+                    </div>
+        <div class style="width: 20%">
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+
+            <button type="submit" class="btn btn-primary float:right;"
+                style="margin-left: 83%;--clr: #1D1D50;width:19%;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Post
+            </button>
+
+        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 @endsection

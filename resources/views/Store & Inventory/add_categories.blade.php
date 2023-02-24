@@ -93,11 +93,16 @@
                                                         aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                                     <div class="dropdown-menu">
 
-                                                        <a class="dropdown-item"
-                                                            href="{{url('edit_category',$list->id)}}">Edit Category</a>
-                                                        <a class="dropdown-item"
-                                                            href="{{url('delete_category',$list->id)}}">Delete Category</a>
-
+                                                        {{-- <a class="dropdown-item"
+                                                            href="{{url('edit_category',$list->id)}}">Edit Category</a> --}}
+                                                            <a class="dropdown-item" data-toggle="modal"
+                                                            data-target="#edit_category" href="#">Edit Category</a>
+                                                        {{-- <a class="dropdown-item"
+                                                            href="{{url('delete_category',$list->id)}}">Delete Category</a> --}}
+                                                            <a class="dropdown-item" href=""data-toggle="modal" data-id=""
+                                                            data-name=""onclick="deletecompany(this)"
+                                                            data-target="#delete_category">Delete Category
+                                                          </a>
                                                     </div>
                                                 </div>
                                             </td>
@@ -208,134 +213,94 @@
 
                 <br>
 
-                <!-- The Modal -->
-                <div class="modal fade" id="editmed">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
+{{-- Start Edit Category --}}
+<div class="modal fade" id="edit_category" style="">
+    <!-- edit category -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Category:-</b></h5>
 
-                            <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#435ebe">
-                                <h4 class="text-white">Edit Medicine</h4>
-
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class="container">
-                                    <form method="post" action="" enctype="multipart/form-data">
-                                        @csrf
-                                        <h4 class="text-center"><b>Medicine Details</b></h4>
-                                        <br>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Brand Name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Name</label>
-                                                <input type="text" id="edit_medicine_name" name="medicine_name"
-                                                    class="form-control" required><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <div class="col-sm">
-                                                    <label for="">Medicine Group</label>
-
-                                                </div>
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="category_name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Category Name
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
 
                                             </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Category Name</label>
-
-
-                                            </div>
-
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Generic name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Manufacturer Name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Supplier Name</label>
-
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Minimum Level</label>
-                                                <input type="text" id="edit_minimum_level" name="minimum_level"
-                                                    class="form-control"><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Reorder Level</label>
-                                                <input type="text" name="reorder" id="edit_reorder" class="form-control"
-                                                    placeholder=""><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label class="text-color:white;">Unit/Packing</Label>
-                                                <input type="text" name="unit_packing" id="edit_unit_packing"
-                                                    class="form-control" placeholder=""><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Upload Medicine Image</label>
-                                                <input type="file" name="editimage" id="edit_image" class="form-control"
-                                                    placeholder="Image"><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label>Medicine Composition</label>
-                                                <textarea class="form-control" id="edit_medicine_details1"
-                                                    name="medicine_detailss" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Notes</label>
-                                                <textarea class="form-control" id="edit_medicine_note"
-                                                    name="medicine_note" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                        </div>
-                                        <br>
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="hidden" class="form-control" id="edit_id" name="method_id">
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary text-white"
-                                                style="width:15%;background-color:#435ebe"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary"
-                                                style="background-color:#435ebe;width:15%;">Update</button>
+                                            <input type="text" class="form-control"
+                                                name="category_name" id="age">
                                         </div>
                                 </div>
-                                <div class="container">
-
-                                </div>
                             </div>
-
-                            </form>
-
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
 
-            </div>
-
-            <br>
-            <!-- Supplier modal Edit End -->
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit category --}}
 
             <!-- Delete  confirmation Message -->
-
+            <div class="modal fade" id="delete_category" style="">
+                <!-- delete item -->
+                <div class="modal-dialog modal-lg" style="width:30%;">
+                    <div class="modal-content">
+                        <!---- Modal Header -->
+                        <form method="post" id="delete_item" action="{{url('delete_category',$list->id)}}" enctype="multipart/form-data">
+                            @csrf
+                            <input type="hidden" id="deleteuniqueid" value="uniqueid">
+                            <div class="modal-header" style="padding:0rem 0rem;">
+                                <div style="padding:1rem 1rem;">
+                                    <h4 class="text-centre"><b>Delete <span id="deletcompany_name"></span></b></h4>
+                                </div>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <h6><b><span>Are you sure?</span></b></h6>
+                                    </div>
+                                    <div class="row">
+                                        <div class="" style="width: 30%;">
+                                        </div>
+                                        <div lass="" style="width: 0%"></div>
+                                        <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                            <br>
+                                            <button type="submit" class="btn btn-primary float:right;"
+                                                Style="width:45%;background-color:#DD4132;">Yes</button>
+                                            <button type="button" class="btn btn-primary float:left"
+                                                Style="width:45%;"data-dismiss="modal">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <!-- End delete confirmation message -->
         </div>
 

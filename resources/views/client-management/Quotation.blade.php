@@ -779,7 +779,7 @@ color: #999;
         </form>
     </div>
 </div>
-{{-- End edit follow up --}}
+{{-- End edit Quotation --}}
 
                 <!-- Delete  confirmation Message -->
                 <div class="modal fade" id="deleteQuotation" style=""> <!-- delete corporate -->
