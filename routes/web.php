@@ -32,7 +32,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('/delete_company/{id}', "superadmincontroller@delete_company")->name('delete_company');
     //superadmin
 //mange employee route start
-    Route::any('employee_list/{id}',"employeecontroller@employee_list")->name('employee_list');
+    Route::any('employee_list',"employeecontroller@employee_list")->name('employee_list');
     Route::any('create_employee/getrole/{id}', "addcontroller@get_role")->name('getrole');
     //mange employee route end
 //home controller
@@ -195,7 +195,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('company_details', 'SystemSetup@company')->name('company_details');
     Route::any('add_company_details', 'SystemSetup@addcompany')->name('add_company_details');
     Route::any('edit_company_details/{id}', 'SystemSetup@editcompany')->name('edit_company_details');
-    Route::any('/update_company_details', 'SystemSetup@updatecompany')->name('update_company_details');
+    Route::any('update_company_details/{id}', 'SystemSetup@updatecompany')->name('update_company_details');
     Route::any('view_company_details', 'SystemSetup@viewcompany')->name('view_company_details');
         //weekend and holiday
     Route::any('weekend_holiday', 'SystemSetup@holiday')->name('weekend_holiday');
@@ -216,7 +216,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('company_branch', 'SystemSetup@branch')->name('company_branch');
     Route::any('add_company_branch', 'SystemSetup@addbranch')->name('add_company_branch');
     Route::any('/edit_company_branch/{id}', 'SystemSetup@editbranch')->name('edit_company_branch');
-    Route::any('/update_company_branch', 'SystemSetup@updatebranch')->name('update_company_branch');
+    Route::any('/update_company_branch/{id}', 'SystemSetup@updatebranch')->name('update_company_branch');
     Route::any('/delete_company_branch/{id}', 'SystemSetup@deletebranch')->name('delete_company_branch');
         //configurations
     Route::any('configu_ration', 'SystemSetup@Configtn')->name('configu_ration');
@@ -400,7 +400,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('view_roles_per_user', 'UserManagement@rolesperuser')->name('view_roles_per_user');
     Route::any('edit_view_roles', 'UserManagement@editviewroles')->name('edit_view_roles');
         //manage user roles
-    Route::any('manage_user_roles', 'UserManagement@manageuserroles')->name('manage_user_roles');
+    Route::any('manage_job_title', 'UserManagement@manageJobTitle')->name('manage_job_title');
     Route::any('add_user_roles', 'UserManagement@adduserrole')->name('add_user_roles');
     Route::any('/edit_user_roles/{id}', 'UserManagement@edituserrole')->name('edit_user_roles');
     Route::any('/update_role', 'UserManagement@updaterole')->name('update_role');

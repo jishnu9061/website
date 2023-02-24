@@ -3,21 +3,18 @@
 @section('content')
 <nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
-    <a href="#" style="color: #1D1D50;">User Management</a> /
-    <a href="#" style="color: #1D1D50;">Manage User Roles</a>
+    <a href="#" style="color: #1D1D50;">Company Setup</a> /
+    <a href="#" style="color: #1D1D50;">Manage Job Titles</a>
 </nav>
 <br><br>
-        <!-- <button class="btn btn-primary"
-                            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Roles</u></b></span></button><br>
-                      -->
         <div class="container">
             {{-- heading --}}
-            <h4 id="hdtpa"><b>Manage Roles</b></h4>
+            <h4 id="hdtpa"><b>Manage Job Titles/Positions</b></h4>
             <br>
 
-
+            <i><h2> Under construction</h2></i>
             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-
+<div style="display:none;">
             {{-- <a href="{{('add_user_roles')}}"><button class="btn btn-primary">Add New Role</button></a> --}}
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New
                 Role</button>
@@ -102,42 +99,14 @@
                             </nav>
                         </div>
                         <div class="rows_count">Showing 11 to 20 of 100</div>
-
-                        <!-- 		End of Container -->
-                        <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-                        <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content" >
-
-                                    <!-- Modal Header -->
-                                    <div class="modal-header">
-                                        <h2 class="text-centre"><b>Add New Role</b></h2>
-
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                        <div class="container">
-                                            <form method="post" action="{{ url('add_user_roles') }}"
-                                                enctype="multipart/form-data">
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-@csrf
-       <div class="row">
-                <div class="col-md-12 " >
-                    <label >Role Name:</label>
-                    <div class="row">
-                        <div class="col-md-11">
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="role_name" value="" class="form-control">
-                            <div class="invalid-feedback" style="width: 100%;">
-                            Required Field.
-                        </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>
+                        <!-- 		End of Container -->
+                        <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+
+
             <script>
                 function deleteuser(param) { // delete role 
                     var deleteid = $(param).data('id');
