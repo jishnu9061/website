@@ -20,7 +20,7 @@
         <!-- <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2> -->
 
         <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                        <b><u>Client Registration</u></b></span> -->
+                                    <b><u>Client Registration</u></b></span> -->
         {{-- heading --}}
         <div class="container">
             <h4 id="hdtpa"><b>Manage Items</b></h4>
@@ -120,252 +120,241 @@
 
                             <!-- 		End of Container -->
                             <div class="modal fade" id="myModal">
-                                <div class="modal-dialog modal-lg" style="width: 35%">
+                                <div class="modal-dialog modal-lg" style="width: 50%">
                                     <div class="modal-content">
                                         <!-- Modal Header -->
-                                        <h5><b>Add Items:-</b></h5>
+                                        <h4 class="text-centre"><b>Add Items:-</b></h4>
                                         <!-- Modal body -->
                                         <div class="modal-body">
                                             <div class="container">
 
-
-                                                <form method="post" action="addmanage_items" id="form">
+                                                <form method="post" action="{{ url('add_corporate') }}"
+                                                    enctype="multipart/form-data">
                                                     @csrf
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="mb-1">
-                                                                <label for="category_name"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Category
-                                                                </label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <select name="category" id="username"
-                                                                        style="border-color:#1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="" style="width: 33%">
+                                                                <div class=""><span style="color: red">*</span>
+                                                                    <label for="gender"
+                                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Category
+                                                                    </label>
+                                                                    <select class="form-select"
+                                                                        aria-label="Default select example"
+                                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                        name="gender" id="" required>
                                                                         <option>select</option>
                                                                         @if (count($get_items))
                                                                             @foreach ($get_items as $lists)
-                                                                                <option>{{ $lists->category_name }}</option>
+                                                                                <option>{{ $lists->category_name }}
+                                                                                </option>
                                                                             @endforeach
                                                                         @endif
                                                                     </select>
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-                                                                        Town is required.
-                                                                    </div>
-
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="mb-1">
+                                                            <div class="" style="width: 33%">
+                                                                {{-- <div class=""><span style="color: red">*</span> --}}
                                                                 <label for="category_name"
                                                                     style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item
                                                                     Type
                                                                 </label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <input type="text" name="type" list="cityname"
-                                                                        style="border-color:#1d1d50;width:100%;border-radius: 7px;height:35px;">
-                                                                    <datalist id="cityname">
-                                                                        <option value="Book">
-                                                                        <option value="Pen">
-                                                                        <option value="Ink">
-                                                                    </datalist>
-                                                                </div>
+
+                                                                <input type="text" placeholder="Enter Client No "
+                                                                    style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                    class="form-control" name="cityzen" id=""
+                                                                    value=""required>
+                                                                <datalist id="cityname">
+                                                                    <option value="Book">
+                                                                    <option value="Pen">
+                                                                    <option value="Ink">
+                                                                </datalist>
+
                                                             </div>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="category_name"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item
-                                                                    Name
-                                                                </label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-
-                                                                    </div>
-                                                                    <input type="text" class="form-control"
-                                                                        style="border-color:#1d1d50;width:100%;border-radius: 7px;height:35px;"
-                                                                        name="name" id="age">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="category_name"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Record
-                                                                    Level
-                                                                </label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-
-                                                                    </div>
-                                                                    <input type="text" class="form-control"
-                                                                        style="border-color:#1d1d50;width:100%;border-radius: 7px;height:35px;"
-                                                                        name="level" id="age">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="category_name"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Stock
-                                                                    Level
-                                                                </label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-
-                                                                    </div>
-                                                                    <input type="text" class="form-control"
-                                                                        name="stock" id="age"
-                                                                        style="border-color:#1d1d50;width:100%;border-radius: 7px;height:35px;">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="text-align: right;">
-                                                        <button style="float: right;" class="btn btn-primary"
-                                                            data-dismiss="modal">Cancel</button>
-                                                        <button style="float: right;" type="submit" type="button"
-                                                            class="btn btn-primary">Add</button>
-
-                                                    </div>
-
-
-                                            </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            {{-- Start Edit Item --}}
-                            <div class="modal fade" id="edit_item" style="">
-                                <!-- edit item -->
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <!---- Modal Header -->
-                                        <form method="post" action="{{ url('') }}" enctype="multipart/form-data"
-                                            id="addemployee">
-                                            @csrf
-                                            <h5><b>Edit Item:-</b></h5>
-
-                                            <div class="row">
-                                                <div class=""
-                                                    style="*/background-color: #d3d0ca;border-radius:5px;">
-                                                    <div class="row">
-                                                        <div class="" style="width: 33%">
-                                                            <div class=""><span style="color: red">*</span>
-                                                                <label for="category"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Category
-                                                                </label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-
-                                                                    <select name="category" id="username"
-                                                                        style="width:100%;">
-                                                                        <option>select</option>
-                                                                        @if (count($get_items))
-                                                                            @foreach ($get_items as $lists)
-                                                                                <option>{{ $lists->category_name }}</option>
-                                                                            @endforeach
-                                                                        @endif
+                                                            <div class="" style="width: 33%">
+                                                                <div class=""><span style="color: red">*</span>
+                                                                    <label for="gender"
+                                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Citizen
+                                                                        Status</label>
+                                                                    <select class="form-select"
+                                                                        aria-label="Default select example"
+                                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                        name="gender" id="" required>
+                                                                        <option>Select Cityzen</option>
+                                                                        <option value="1">Residental</option>
+                                                                        <option value="2">Non Residential</option>
                                                                     </select>
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-                                                                        Town is required.
-                                                                    </div>
-
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="" style="width: 33%">
-                                                            <div class=""><span style="color: red">*</span>
-                                                                <label for="item_type"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item
-                                                                    Type</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <input type="text" name="type" list="cityname"
-                                                                        style="width:100%;">
-                                                                    <datalist id="cityname" style="width:100%;">
-                                                                        <option value="Book">
-                                                                        <option value="Pen">
-                                                                        <option value="Ink">
-                                                                    </datalist>
+
+                                                        <div class="row">
+                                                            <div class="" style="width: 50%">
+                                                                <div class="">
+                                                                    <label for="company_name"
+                                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Record
+                                                                        Level</label>
+                                                                    <input type="text"
+                                                                        placeholder="Enter Certificate Of Incorporation "
+                                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                        class="form-control" name="certificate"
+                                                                        id="" value="">
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="" style="width: 33%">
-                                                            <div class=""><span style="color: red">*</span>
-                                                                <label for="item_name"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item
-                                                                    Name</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-
-                                                                    </div>
-                                                                    <input type="text" class="form-control"
-                                                                        name="name" id="age">
+                                                            <div class="" style="width: 50%">
+                                                                {{-- <div class=""><span style="color: red">*</span> --}}
+                                                                <label for=""
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Stock
+                                                                    Level</label>
+                                                                <input type="text" placeholder="Enter Country"
+                                                                    style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                    class="form-control" name="country" id=""
+                                                                    value="">
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    City/State/Country is required.
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="" style="width: 33%">
-                                                            <div class=""><span style="color: red">*</span>
-                                                                <label for="reorder_level"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reorder
-                                                                    Level</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-
-                                                                    </div>
-                                                                    <input type="text" class="form-control"
-                                                                        name="level" id="age">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="" style="width:33%;"><span
-                                                                style="color: red">*</span>
-                                                            <label for="stock_level"
-                                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Stock
-                                                                Level</label>
-                                                            <div class="input-group">
-                                                                <div class="input-group-prepend">
-
-                                                                </div>
-                                                                <input type="text" class="form-control" name="stock"
-                                                                    id="age">
-                                                            </div>
-                                                        </div>
-                                                        <div class="row document_details " style="margin-bottom: 20px;">
-                                                            {{-- Add More Document details:- javascript --}}
-                                                        </div>
+                                                </form>
+                                            </div>
+                                            <div class="row">
+                                                <div class="row">
+                                                    <div class="" style="width: 50%;">
+                                                    </div>
+                                                    <div class="" style="width: 0%"></div>
+                                                    <div class="col-sm" style="padding-right: 0px;width: 50%">
+                                                        <br>
+                                                        <button type="submit" onclick="return Validate()"
+                                                            class="btn btn-primary float:right;"
+                                                            Style="width:45%;">Create</button>
+                                                        <button type="button" class="btn btn-primary float:left"
+                                                            Style="width:45%;"data-dismiss="modal">Cancel</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class style="width: 20%">
-                                            </div>
-                                            <div class="col-sm">
-
-                                                <button type="submit" class="btn btn-primary float:right;"
-                                                    style="margin-left: 61%;--clr: #1D1D50;width:19%;
-                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
-                                                </button>
-                                                <button type="button" class="btn btn-primary float:left"
-                                                    Style="width:19%;" data-dismiss="modal">Cancel</button>
-                                            </div>
+                                        </div>
+                                        <br>
                                     </div>
-                                    </form>
                                 </div>
                             </div>
-                            {{-- End edit item --}}
+                            <div class="modal fade" id="edit_item">
+                                <div class="modal-dialog modal-lg" style="width: 50%">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <h4 class="text-centre"><b>Edit Items:-</b></h4>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div class="container">
 
+                                                <form method="post" action="{{ url('add_corporate') }}"
+                                                    enctype="multipart/form-data">
+                                                    @csrf
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="" style="width: 33%">
+                                                                <div class=""><span style="color: red">*</span>
+                                                                    <label for="gender"
+                                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Category
+                                                                    </label>
+                                                                    <select class="form-select"
+                                                                        aria-label="Default select example"
+                                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                        name="gender" id="" required>
+                                                                        <option>select</option>
+                                                                        @if (count($get_items))
+                                                                            @foreach ($get_items as $lists)
+                                                                                <option>{{ $lists->category_name }}
+                                                                                </option>
+                                                                            @endforeach
+                                                                        @endif
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="" style="width: 33%">
+                                                                {{-- <div class=""><span style="color: red">*</span> --}}
+                                                                <label for="category_name"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item
+                                                                    Type
+                                                                </label>
 
+                                                                <input type="text" placeholder="Enter Client No "
+                                                                    style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                    class="form-control" name="cityzen" id=""
+                                                                    value=""required>
+                                                                <datalist id="cityname">
+                                                                    <option value="Book">
+                                                                    <option value="Pen">
+                                                                    <option value="Ink">
+                                                                </datalist>
+
+                                                            </div>
+                                                            <div class="" style="width: 33%">
+                                                                <div class=""><span style="color: red">*</span>
+                                                                    <label for="gender"
+                                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Citizen
+                                                                        Status</label>
+                                                                    <select class="form-select"
+                                                                        aria-label="Default select example"
+                                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                        name="gender" id="" required>
+                                                                        <option>Select Cityzen</option>
+                                                                        <option value="1">Residental</option>
+                                                                        <option value="2">Non Residential</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="" style="width: 50%">
+                                                                <div class="">
+                                                                    <label for="company_name"
+                                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Record
+                                                                        Level</label>
+                                                                    <input type="text"
+                                                                        placeholder="Enter Certificate Of Incorporation "
+                                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                        class="form-control" name="certificate"
+                                                                        id="" value="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="" style="width: 50%">
+                                                                {{-- <div class=""><span style="color: red">*</span> --}}
+                                                                <label for=""
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Stock
+                                                                    Level</label>
+                                                                <input type="text" placeholder="Enter Country"
+                                                                    style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                                    class="form-control" name="country" id=""
+                                                                    value="">
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    City/State/Country is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="row">
+                                                <div class="row">
+                                                    <div class="" style="width: 50%;">
+                                                    </div>
+                                                    <div class="" style="width: 0%"></div>
+                                                    <div class="col-sm" style="padding-right: 0px;width: 50%">
+                                                        <br>
+                                                        <button type="submit" onclick="return Validate()"
+                                                            class="btn btn-primary float:right;"
+                                                            Style="width:45%;">Update</button>
+                                                        <button type="button" class="btn btn-primary float:left"
+                                                            Style="width:45%;"data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- Delete  confirmation Message -->
                             <div class="modal fade" id="delete_item" style="">
                                 <!-- delete item -->
