@@ -357,7 +357,7 @@
                         --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
                                                 </button>
                                                 <button type="button" class="btn btn-primary float:left"
-                                                    Style="width:19%;" onclick="history.back()">Cancel</button>
+                                                    Style="width:19%;" data-dismiss="modal">Cancel</button>
                                             </div>
                                     </div>
                                     </form>
