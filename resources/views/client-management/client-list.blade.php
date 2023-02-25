@@ -56,34 +56,15 @@
                 color: #999;
             }
 
-            /* Add a green text color and a checkmark when the requirements are right */
-            .passvalid {
-                color: green;
-                margin: 0px;
-                font-size: 10px;
+            input[type='file'] {
+                opacity: 0
             }
 
-            .passvalid:before {
-                position: relative;
-                left: 0px;
-                content: "✔";
+            input[type='file'] {
+                color: rgba(0, 0, 0, 0)
             }
-
-            /* Add a red text color and an "x" when the requirements are wrong */
-            .passinvalid {
-                color: red;
-                margin: 0px;
-                font-size: 10px;
-                padding-left: 10px;
-            }
-
-            .passinvalid:before {
-                position: relative;
-                left: 0px;
-                content: "✖";
-            }
-
-            /*Toggle button*/
+        </style>
+        <style>
             .switch {
                 position: relative;
                 display: inline-block;
@@ -143,6 +124,61 @@
             .slider.round:before {
                 border-radius: 50%;
             }
+
+            .add_decduct {
+                text-decoration: none;
+                display: inline-block;
+                */width: 30px;
+                height: 30px;
+                background: #8bc34a;
+                font-size: 2rem;
+                font-weight: bold;
+                color: #1d1d50;
+                justify-content: space-evenly;
+                align-items: center;
+                line-height: 0.9;
+                cursor: pointer;
+            }
+
+            .decduct_input {
+                padding: 8px 10px;
+                width: 20%;
+                border-radius: 5px;
+                border-color: #1d1d50;
+            }
+
+            #e_passmessage {
+                display: block;
+                color: #1d1d50;
+                position: relative;
+            }
+
+            /* Add a green text color and a checkmark when the requirements are right */
+            .passvalid {
+                color: green;
+                margin: 0px;
+                font-size: 10px;
+            }
+
+            .passvalid:before {
+                position: relative;
+                left: 0px;
+                content: "✔";
+            }
+
+            /* Add a red text color and an "x" when the requirements are wrong */
+            .passinvalid {
+                color: red;
+                margin: 0px;
+                font-size: 10px;
+                padding-left: 10px;
+            }
+
+            .passinvalid:before {
+                position: relative;
+                left: 0px;
+                content: "✖";
+            }
         </style>
 
     </head>
@@ -151,7 +187,7 @@
 
 
         <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
-                                                                                                                                            <b><u>Individual Client List</u></b> -->
+                                                                                                                                                <b><u>Individual Client List</u></b> -->
         {{-- heading --}}
         <div class="container">
             <div class="row" style="height:50px;">
@@ -159,7 +195,7 @@
                     <button type="button" class="btn btn-primary" data-toggle="modal"
                         data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                 --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add
-                        Client Client</button>
+                        New Client</button>
                 </div>
                 <div class="col-sm-4" style="">
                     <h4
@@ -219,7 +255,7 @@
                                         {{-- <th class="text-center">Documents</th> --}}
                                         <th class="text-center">Actions</th>
                                         <!-- <th class="text-center">Edit</th>
-                                                                                                                                                                <th class="text-center">Delete</th> -->
+                                                                                                                                                                    <th class="text-center">Delete</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -238,8 +274,9 @@
                                             <td></td>
                                             <td></td>
                                             <td class="text-center"><label class="switch">
-                                                    <input type="checkbox" data-id="" onclick="changestatus(this)"
-                                                        id="status" class="check">
+                                                    <input type="checkbox"data-id="{{ $list_client->id }}" onclick="changestatus(this)"
+                                                    id="status" class="check"
+                                                    {{ $list_client->status == 1 ? 'checked' : '' }}>>
                                                     <span class="slider round"></span>
                                                 </label>
                                             </td>
@@ -254,7 +291,8 @@
                                                             Details
                                                         </a>
                                                         <a class="dropdown-item" data-toggle="modal"
-                                                            data-target="#edit_corporate_client_details" href="#">Edit
+                                                            data-target="#edit_corporate_client_details"
+                                                            href="#">Edit
                                                             Client
                                                             Details
                                                         </a>
@@ -613,7 +651,7 @@
                                 <form method="post" action="{{ url('') }}" enctype="multipart/form-data"
                                     id="addemployee">
                                     @csrf
-                                    <h5><b>Edit Corporate Client Details:-</b></h5>
+                                    <h5><b>Edit Client Details:-</b></h5>
 
                                     <div class="row">
                                         <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
@@ -930,6 +968,28 @@
                     </div>
                 </div>
             </div>
+            <script>
+            function changestatus(param) { // change individal status
+                var status = $(param).prop('checked') == true ? 1 : 0;
+                var user_id = $(param).data('id');
+                $.ajax({
+                    type: "post",
+                    dataType: "json",
+                    url: "{{ route('changestatus_individual') }}",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        'status': status,
+                        'id': user_id
+                    },
+                    success: function(data) {
+                        toastr.options.closeButton = true;
+                        toastr.options.closeMethod = 'fadeOut';
+                        toastr.options.closeDuration = 1;
+                        toastr.success(data.success);
+                    }
+                });
+            }
+            <script>
             <script>
                 function deletecompany(param) { //Delete clent confirmation message 
                     var deleteuniqueid = $(param).data('id');
