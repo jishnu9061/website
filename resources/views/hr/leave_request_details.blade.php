@@ -95,13 +95,25 @@
                                         </td>
                                         {{-- <td scope="row" class="text-center"></td> --}}
                                         <td scope="row" class="text-center">
-                                            <a href="{{ url('view_leave_request', $leave->id) }}"><i
+                                            {{-- <a href="{{ url('view_leave_request', $leave->id) }}"><i
                                                     style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span
-                                                    class="m-1"></span>
-                                                <a href="{{ url('edit_leave_request', $leave->id) }}"><i
+                                                    class="m-1"></span> --}}
+                                                {{-- <a href="{{ url('edit_leave_request', $leave->id) }}"><i
                                                         style="  color:rgb(13, 1, 56);" class="fa fa-edit"
-                                                        aria-hidden="true"></i>
+                                                        aria-hidden="true"></i> --}}
                                                     {{-- <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i> --}}
+
+                                                        <div class="btn-group">
+                                                            <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="">View Leave Request</a>
+                                                                    <a class="dropdown-item" data-toggle="modal"
+                                                                    data-target="#edit_leave_request" href="#">Edit Leave Request</a>
+
+
+                                                                </div>
+                                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -335,4 +347,183 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{-- Start Edit Leave Request --}}
+<div class="modal fade" id="edit_leave_request" style="">
+    <!-- edit leave request -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Leave Request:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Name</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            {{-- <input type="text"  id="" name="name"value="{{$leave_request->name}}" class="form-control" > --}}
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                            </div>
+                                                <select name="name" id="cars">
+                                                    <option ></option>
+                                                </select>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="department"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Department</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            {{-- <input type="text"  id="" name="department"value="{{$leave_request->department}}" class="form-control" > --}}
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                            </div>
+                                            <select name="department" id="cars">
+                                                <option ></option>
+                                            </select>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="apply_date"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Apply Date</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="date"  id="" name="apply_date"value="" class="form-control" >
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="leave_type"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Leave Type</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                            </div>
+                                            <select name="leave_type" id="cars"required>
+                                                <option></option>
+                                                <option>Full Day</option>
+                                                <option>Half Day</option>
+                                                <option>Casual Leave</option>
+                                                <option>Medical Leave</option>
+
+
+                                            </select>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="from_date"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">From Date</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="date"  id="" name="date_from"value=""class="form-control">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                        Required Field.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="to_date"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">To Date
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="date"  id="" name="date_to"value=""class="form-control">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Required
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 0px;">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="no_of_days"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">No Of Days
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="number"  id="" name="number_of_days"value=""class="form-control">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Required
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="reason"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reason</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                       <textarea type="text" name="reason" value=""class="form-control"></textarea>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                        Required Field.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="document"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Upload Document</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="file"  id="" name="Upload Document" value=""class="form-control">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Required Field.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="remarks"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Remarks</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                       <textarea type="text" name="remarks" class="form-control"></textarea>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                        Required Field.
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit Quotation --}}
                     @endsection

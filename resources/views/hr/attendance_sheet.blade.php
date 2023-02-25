@@ -147,11 +147,16 @@
                         <td scope="row" class="text-center">
 
 
-                            <a href="{{url('view_attendance')}}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
+                            {{-- <a href="{{url('view_attendance')}}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span> --}}
 
                             {{-- <a href="{{url('delete_leave_request',$leave->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i> --}}
-
-
+                                <div class="btn-group">
+                                    <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                        href="#">View Attendance</a>
+                                    </div>
                         </td>
                     </tr>
 

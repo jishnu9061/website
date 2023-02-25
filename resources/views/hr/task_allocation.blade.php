@@ -76,10 +76,15 @@
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="{{ url('view_task_allocation') }}">View
                                                     Task Allocation</a>
-                                                <a class="dropdown-item" href="{{ url('edit_task_allocation') }}">Edit
-                                                    Task Allocation</a>
-                                                <a class="dropdown-item" href="#">Delete Task Allocation</a>
-
+                                                {{-- <a class="dropdown-item" href="{{ url('edit_task_allocation') }}">Edit
+                                                    Task Allocation</a> --}}
+                                                    <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_task_allocation" href="#">Edit Task Allocation</a>
+                                                {{-- <a class="dropdown-item" href="#">Delete Task Allocation</a> --}}
+                                                <a class="dropdown-item"
+                                                href="#"onclick=deletetaskallocation(this) data-id=""data-toggle="modal"
+                                                data-target="#delete_task_allocation">Delete Task Allocation</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </td>
@@ -302,4 +307,166 @@
 
 
                 </div>
+{{-- Start Edit Task Allocation --}}
+<div class="modal fade" id="edit_task_allocation" style="">
+    <!-- edit task allocation -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Task Allocation:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="emp_id"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Employee Id</label>
+                                        <input type="email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="emp_name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Employee Name</label>
+                                        <input type="email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="task"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Task</label>
+                                        <input type="email" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="department"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Department</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>-- select --</option>
+                                            <option value="1">Legal</option>
+                                            <option value="1">Accounts</option>
+                                            <option value="2">Receptionist</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="description"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Description</label>
+                                    <div class="input-group">
+                                        <textarea class="form-control" rows="3"></textarea>>
+                                    </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="task_status"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Task Status</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-- select --</option>
+                                        <option value="1">Open</option>
+                                        <option value="2">Over Due</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <h5><b>Timeline:-</b></h5>
+                        <div class="row" style="margin-top: 0px;">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="start_date"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Expected Start Date</label>
+                                        <input type="date" class="form-control">
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="end_date"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Expected End Date</label>
+                                    <input type="date" class="form-control">
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="time"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Expected Time (in hours)</label>
+                                    <input type="text" class="form-control">
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="duration"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Duration (Days)</label>
+                                    <input type="email" class="form-control">
+                            </div>
+
+                                            <h5><b>Costing:-</b></h5>
+
+                                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                                <label for="total_amount"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Total Cost Amount</label>
+                                                    <input type="text" class="form-control">
+                                            </div>
+                                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                                <label for="billing_amount"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Total Billing Amount</label>
+                                                    <input type="text" class="form-control">
+                                            </div>
+                                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                                <label for="expense_claim"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Total Expense Claim</label>
+                                                    <input type="email" class="form-control">
+                                            </div>
+
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit Quotation --}}
+<div class="modal fade" id="delete_task_allocation" style=""> <!-- delete corporate -->
+    <div class="modal-dialog modal-lg" style="width:30%;">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post"  id="delete_task_allocation" action="" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" id="id" value="id">
+                <div class="modal-header" style="padding:0rem 0rem;">
+                    <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_task_allocation"></span></b></h4></div>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body" >
+                    <div class="container">
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
+                        </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+
                 @endsection

@@ -59,11 +59,24 @@
                     <td>{{$list->branch}}</td>
                     <td>
 
-                        <a href="{{url('edit_bank_name',$list->id)}}"><i style="color:rgb(13, 1, 56);"
+                        {{-- <a href="{{url('edit_bank_name',$list->id)}}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i>
                             <span class="m-2"></span>
                             <a href="{{url('delete_bank',$list->id)}}"> <i style="color:rgb(13, 1, 56);"
-                                    class="fas fa-trash-alt"></i>
+                                    class="fas fa-trash-alt"></i> --}}
+                                    <div class="btn-group">
+                                        <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" data-toggle="modal"
+                                            data-target="#edit_bank" href="#">Edit Bank</a>
+                                            <a class="dropdown-item"
+                                             href="#"onclick=deletebank(this) data-id="{{$list->id}}"data-toggle="modal"
+                                                data-target="#delete_bank">Delete Bank</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
                     </td>
                 </tr>
                 @endforeach
@@ -125,9 +138,94 @@
 
                 </form>
             </div>
+        </div>
+    </div>
+</div>
+{{-- Start Edit Bank--}}
+<div class="modal fade" id="edit_bank" style="">
+    <!-- edit bank -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Bank:-</b></h5>
 
+                <div class="row">
 
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="bank_name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Bank Name
+                                        </label>
+                                        <input type="text" class="form-control" id="w3review" value=""
+                                name="bank_name" id="username">
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="branch"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Branch</label>
+                                        <input type="text" class="form-control" id="inputEmail4" value=""
+                                        name="branch" id="username">
+                                </div>
+                            </div>
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
 
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit bank --}}
+
+<div class="modal fade" id="delete_bank" style=""> <!-- delete bank -->
+    <div class="modal-dialog modal-lg" style="width:30%;">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post"  id="delete_bank" action="{{url('delete_bank',$list->id)}}" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" id="id" value="id">
+                <div class="modal-header" style="padding:0rem 0rem;">
+                    <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_bank"></span></b></h4></div>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body" >
+                    <div class="container">
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
+                        </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
