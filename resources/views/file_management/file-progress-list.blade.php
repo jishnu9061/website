@@ -311,7 +311,7 @@
                                                                     Action(WayForward)</label>
                                                                 <textarea class="outer" rows="4"
                                                                     style="width:205%;border-color: #1d1d50;border-radius: 7px;"
-                                                                    cols="41" placeholder="Physical Address"
+                                                                    cols="41" placeholder=""
                                                                     name="next_action" form="addemployee"></textarea>
                                                             </div>
                                                         </div>
@@ -625,7 +625,7 @@
                                                             <label for="progress_date"
                                                                 style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date
                                                                 of Progress</label>
-                                                            <input type="text" placeholder=""
+                                                            <input type="date" placeholder=""
                                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                 class="form-control" name="progress_date" id="" value=""
                                                                 required>
@@ -808,7 +808,7 @@
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="file_name"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Files</label>
-                                                        <input type="time" placeholder=""
+                                                        <input type="text" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                             class="form-control" name="file_name" id="" value=""
                                                             required>
@@ -1218,7 +1218,7 @@
                                                     <label for="attendance_date"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date
                                                         Of Attendance</label>
-                                                    <input type="text" placeholder=""
+                                                    <input type="date" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                         class="form-control" name="attendance_date" id="" value=""
                                                         required>
@@ -1605,7 +1605,7 @@
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="start_time"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time</label>
-                                                    <input type="date" placeholder=""
+                                                    <input type="time" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                         class="form-control" name="start_time" id="" value="" required>
                                                 </div>
@@ -1626,7 +1626,7 @@
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="end_time"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time</label>
-                                                    <input type="date" placeholder=""
+                                                    <input type="time" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                         class="form-control" name="end_time" id="" value="" required>
                                                 </div>

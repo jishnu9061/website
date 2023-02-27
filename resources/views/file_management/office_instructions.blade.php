@@ -200,7 +200,7 @@
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="receiver"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Receiver</label>
-                                                        <input type="date" placeholder=""
+                                                        <input type="text" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                             class="form-control" name="receiver" id="" value=""
                                                             required>
@@ -253,7 +253,7 @@
                                                 <div class="col-md-4" style="width: 33%">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="turn_around"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Turn-Around
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Turn-Around
                                                             Time(TAT)</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"

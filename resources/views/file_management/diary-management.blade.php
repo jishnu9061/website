@@ -271,7 +271,7 @@
                                                             <label for="start_date"
                                                                 style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Start
                                                                 Date</label>
-                                                            <input type="text" placeholder=""
+                                                            <input type="DATE" placeholder=""
                                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                 class="form-control" name="start_date" id="" value=""
                                                                 required>
@@ -282,7 +282,7 @@
                                                             <label for="time"
                                                                 style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Start
                                                                 Time</label>
-                                                            <input type="text" placeholder=""
+                                                            <input type="time" placeholder=""
                                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                 class="form-control" name="time" id="" value=""
                                                                 required>
@@ -295,7 +295,7 @@
                                                             <label for="end_date"
                                                                 style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">End
                                                                 Date</label>
-                                                            <input type="text" placeholder=""
+                                                            <input type="date" placeholder=""
                                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                 class="form-control" name="end_date" id="" value=""
                                                                 required>
@@ -306,7 +306,7 @@
                                                             <label for="time_1"
                                                                 style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">End
                                                                 Time</label>
-                                                            <input type="text" placeholder=""
+                                                            <input type="time" placeholder=""
                                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                 class="form-control" name="time_1" id="" value=""
                                                                 required>
@@ -364,7 +364,7 @@
                                                             <select class="form-select"
                                                                 aria-label="Default select example"
                                                                 style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                                name="Client" id="" required>
+                                                                name="client" id="" required>
                                                                 @if(count($client_list))
                                                                 @foreach($client_list as $list_category)
                                                                 <option>{{$list_category->client_name}}</option>

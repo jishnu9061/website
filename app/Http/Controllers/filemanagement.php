@@ -55,8 +55,6 @@ class filemanagement extends Controller
 
     public function addnew(Request $request)
     {
-
-
         $assoc_handling=$request['assoc_handling'];
         $client=$request['client'];
         $email=$request['email'];
@@ -162,7 +160,7 @@ class filemanagement extends Controller
     //document temblates
     public function template()
     {
-        $template_list=DB::table('cra_open_new_file_details')->get();
+        $template_list=DB::table('cra_add_template')->get();
         return view('file_management.template-category',compact('template_list'));
 
         return view('file_management.template-category');
@@ -913,7 +911,7 @@ class filemanagement extends Controller
         $Event =$request['event'];
         $User =$request['user'];
         $Others =$request['others'];
-        $Client =$request['client'];
+        $client =$request['client'];
         $File =$request['file'];
         $Notes =$request['notes'];
         $Repetition =$request['repetition'];
@@ -935,7 +933,7 @@ class filemanagement extends Controller
             'event_booked_for' =>  $Event,
             'user_invited' =>  $User,
             'other_invites' =>  $Others,
-            'client' =>  $Client,
+            'client' =>  $client,
             'file' =>   $File,
             'notes' =>   $Notes,
             'set_repetition' =>   $Repetition,
