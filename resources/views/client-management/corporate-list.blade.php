@@ -417,7 +417,7 @@
                 <div class="modal-body">
                     <div class="container">
 
-                        <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data" >
                             @csrf
                             <div class="container">
                                 <div class="row">
@@ -662,15 +662,16 @@
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Physcical
                                             Address</label>
                                         <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Physical Address"
-                                            name="physicaladdress" form="addemployee"></textarea>
+                                            name="physicaladdress"></textarea>
                                     </div>
                                     <div style="width:49%">
                                         <label for="postal_addr"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes New
                                         </label>
-                                        <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Notes" name="notes"
-                                            form="addemployee"></textarea>
+                                        <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Physical Address"
+                                        name="notesnew"></textarea>
                                     </div>
+                                    
                                 </diV>
                             </div>
                             <br>
@@ -700,10 +701,9 @@
                                     <a class="add_doc">&plus;</a>
                                 </div>
                                 <div class="row document_details " style="margin-bottom: 20px;">
-                                    {{-- Add More Document details:- javascript --}}
+                                    
                                 </div>
                             </div>
-                        </form>
                     </div>
                     <div class="row">
                         <div class="row">
@@ -713,12 +713,13 @@
                             <div class="col-sm" style="padding-right: 0px;width: 50%">
                                 <br>
                                 <button type="submit" onclick="return Validate()" class="btn btn-primary float:right;"
-                                    Style="width:45%;">Create</button>
+                                    Style="width:45%;" value="submit">Create</button>
                                 <button type="button" class="btn btn-primary float:left"
                                     Style="width:45%;"data-dismiss="modal">Cancel</button>
                             </div>
                         </div>
                     </div>
+                </form>
                 </div>
                 <br>
             </div>
@@ -1003,10 +1004,13 @@
                                 </div>
                             </div>
                             <div class="doc_contanier"style="*/background-color:orange;">
+
                                 <div class="doc_warp">
                                     <h6>Add Contact Person details:-</h6>
                                     <a class="add_doc">&plus;</a>
+                                    
                                 </div>
+                                
                                 <div class="row document_details " style="margin-bottom: 20px;">
                                     {{-- Add More Document details:- javascript --}}
                                 </div>
