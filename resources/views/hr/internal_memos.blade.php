@@ -288,7 +288,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+
             <div class style="width: 20%;">
             </div>
             <div class="col-sm">
@@ -300,11 +300,13 @@
                 <button type="button" class="btn btn-primary float:left" Style="width:19%;"
                     onclick="history.back()">Cancel</button>
             </div>
+
+
+            </form>
+        </div>
     </div>
-    </form>
 </div>
-</div>
-</div>
+
 {{-- End edit memo --}}
 <div class="modal fade" id="delete_memo" style=""> <!-- delete memo -->
     <div class="modal-dialog modal-lg" style="width:30%;">
