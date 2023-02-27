@@ -80,13 +80,14 @@
 
 
                                     <td scope="row" class="text-center"></td>
-                                    <td scope="row" class="text-center"></td>
+                                    <td scope="row" class="text-center">{{$template->title}}</td>
                                     <td scope="row" class="text-center">
                                         <div class="btn-group">
                                             <a class="btn" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" data-toggle="modal" data-target="#edit_template"  href="#">Edit
+                                                <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_template" href="#">Edit
                                                     Template</a>
                                                 <a class="dropdown-item" href="#">Delete
                                                     Template</a>
@@ -120,7 +121,7 @@
                             <div class="modal-content">
 
                                 <!-- Modal Header -->
-                          
+
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
@@ -181,32 +182,58 @@
                                                 </div>
                                             </div>
                                     </div>
-
-
-
                                 </div>
-
-
-
-
-
                                 </tbody>
                                 </table>
                             </div>
                         </div>
+                    </div><div class="modal" id="mymodal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-body">
+                                <form action="">
+                                    <div>
+                                        <input type="text" name="type" class="form-control" placeholder="Client Type">
+                                        <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="my">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-body">
+                            <form action="">
+                                <div>
+                                    <input type="text" name="type" class="form-control" placeholder="Country">
+                                    <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
 
                     <div class="modal fade" id="edit_template">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
 
                                 <!-- Modal Header -->
-                        
+
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
-                                        <form method="post" action=""
-                                            enctype="multipart/form-data">
+                                        <form method="post" action="" enctype="multipart/form-data">
                                             @csrf
                                             <h4 class=""><b>Edit Template:-</b></h4>
                                             <div class="row">

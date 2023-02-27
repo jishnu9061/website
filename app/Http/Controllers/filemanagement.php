@@ -160,7 +160,7 @@ class filemanagement extends Controller
     //document temblates
     public function template()
     {
-        $template_list=DB::table('cra_open_new_file_details')->get();
+        $template_list=DB::table('cra_add_template')->get();
         return view('file_management.template-category',compact('template_list'));
 
         return view('file_management.template-category');
