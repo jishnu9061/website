@@ -326,7 +326,7 @@ class ClientManagement extends Controller
         } // --------------------------more document details end
         $number = $Request['number'];
         $client_type = $Request['type'];
-        $citizen_status = $Request['citizen'];
+        $citizen_status = $Request['cityzen'];
         $corporation = $Request['certificate'];
         $country = $Request['country'];
         $telephone = $Request['telephone'];
@@ -336,7 +336,7 @@ class ClientManagement extends Controller
         $brought = $Request['brought'];
         $status = $Request['status'];
         $source = $Request['source'];
-        $client_narration = $Request['narration'];
+        $client_narration = $Request['naration'];
         $client_name = $Request['name'];
         $industry = $Request['industry'];
         $pin_no = $Request['pin'];
@@ -344,7 +344,7 @@ class ClientManagement extends Controller
         $postal_code = $Request['code'];
         $town = $Request['town'];
         $physical_address = $Request['physicaladdress'];
-        $Notes = $Request['notes'];
+        $Notes = $Request['notesnew'];
         $Person_Name = $Request['person'];
         $Designation = $Request['designation'];
         $mobile_no = $Request['mobile_no'];
