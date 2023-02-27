@@ -267,7 +267,7 @@ class SystemSetup extends Controller
     public function updatebranch(Request $Request ,$id)
     {
         $branch_id = $id;
-        // print_r($id);die;
+        // print_r($request->all());die;
         $status=$Request['e_status'];
         $check_status=DB::table('cra_company_branch_details')->where('id',$branch_id )->first();
         if($status != $check_status->status){
