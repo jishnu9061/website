@@ -103,7 +103,8 @@
                     <div class="mb-1">
                         <label>To Date</label>
 
-                            </div> <div class="input-group">
+                            </div>
+                            <div class="input-group">
                             <div class="input-group-prepend"></div>
                             <input type="date"  id="" name="date_to"value="{{$leave_request->date_to}}"class="form-control">
                             <div class="invalid-feedback" style="width: 100%;">

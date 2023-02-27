@@ -60,11 +60,26 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><a href="{{ url('view_memo') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
+                    <td>
+                        {{-- <a href="{{ url('view_memo') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
                                 class="m-2"></span>
                             <a href="{{ url('edit_memo') }}"><i style="color:rgb(13, 1, 56);"
                                     class="fa fa-edit"></i><span class="m-2"></span>
-                                <a href="{{ url('') }}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+                                <a href="{{ url('') }}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i> --}}
+                                    <div class="btn-group">
+                                        <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item"
+                                            href="#">View Memo</a>
+                                            <a class="dropdown-item" data-toggle="modal"
+                                            data-target="#edit_memo" href="#">Edit Memo</a>
+                                            <a class="dropdown-item"
+                                             href="#"onclick=deletememo(this) data-id=""data-toggle="modal"
+                                                data-target="#delete_memo">Delete Memo</a>
+                                                </div>
+
+                                            </div>
                     </td>
 
                 </tr>
@@ -201,5 +216,127 @@
 
 
 
+</div>
+{{-- Start Edit Memo --}}
+<div class="modal fade" id="edit_memo" style="">
+    <!-- edit memo -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Memo:-</b></h5>
+
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="date"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date
+                                        </label>
+                                        <input class="form-control" type="date" placeholder="" aria-label="input example">
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="memo from"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Memo From</label>
+                                        <input class="form-control" type="text" placeholder="" aria-label="input example">
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="memo_to"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Memo To</label>
+                                        <input class="form-control" type="text" placeholder="" aria-label="input example">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="department"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Department</label>
+                                        <input class="form-control" type="text" placeholder="" aria-label="input example">
+                                </div>
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="subject"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Subject</label>
+                                    <input class="form-control" type="text" placeholder="" aria-label="input example">
+                            </div>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <label for="description"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Description
+                                    </label>
+                                    <textarea class="form-control" rows="2" placeholder=""></textarea>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 0px;">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="documents"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Supporting Documents
+                                        </label>
+                                        <input type="file" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row document_details " style="margin-bottom: 20px;">
+                            {{-- Add More Document details:- javascript --}}
+                        </div>
+                    </div>
+                </div>
+
+            <div class style="width: 20%;">
+            </div>
+            <div class="col-sm">
+
+                <button type="submit" class="btn btn-primary float:right;"
+                    style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                    --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                </button>
+                <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                    onclick="history.back()">Cancel</button>
+            </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{{-- End edit memo --}}
+<div class="modal fade" id="delete_memo" style=""> <!-- delete memo -->
+    <div class="modal-dialog modal-lg" style="width:30%;">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post"  id="delete_bank" action="" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" id="id" value="id">
+                <div class="modal-header" style="padding:0rem 0rem;">
+                    <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_bank"></span></b></h4></div>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body" >
+                    <div class="container">
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
+                        </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
 </div>
 @endsection
