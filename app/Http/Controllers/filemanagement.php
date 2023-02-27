@@ -55,8 +55,6 @@ class filemanagement extends Controller
 
     public function addnew(Request $request)
     {
-
-
         $assoc_handling=$request['assoc_handling'];
         $client=$request['client'];
         $email=$request['email'];
@@ -913,7 +911,7 @@ class filemanagement extends Controller
         $Event =$request['event'];
         $User =$request['user'];
         $Others =$request['others'];
-        $Client =$request['client'];
+        $client =$request['client'];
         $File =$request['file'];
         $Notes =$request['notes'];
         $Repetition =$request['repetition'];
@@ -935,7 +933,7 @@ class filemanagement extends Controller
             'event_booked_for' =>  $Event,
             'user_invited' =>  $User,
             'other_invites' =>  $Others,
-            'client' =>  $Client,
+            'client' =>  $client,
             'file' =>   $File,
             'notes' =>   $Notes,
             'set_repetition' =>   $Repetition,

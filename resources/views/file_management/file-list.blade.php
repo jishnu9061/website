@@ -186,7 +186,7 @@
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="email"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email</label>
-                                                    <input type="email" placeholder="Enter Email "
+                                                    <input type="email" placeholder="Enter Your Email "
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                         class="form-control" name="email" id="" value="" required>
                                                 </div>
@@ -195,7 +195,7 @@
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="phone"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone</label>
-                                                    <input type="email" placeholder="Enter Email "
+                                                    <input type="number" placeholder="Enter Your Tel.No "
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                         class="form-control" name="phone" id="" value="" required>
                                                 </div>
@@ -204,7 +204,7 @@
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="address"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Address</label>
-                                                    <input type="text" placeholder="Enter Email "
+                                                    <input type="text" placeholder=" "
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                         class="form-control" name="address" id="" value="" required>
                                                 </div>
@@ -243,7 +243,7 @@
                                                     <label for="recent_progress"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Most
                                                         Recent Progress</label>
-                                                    <input type="text" placeholder="Enter Email "
+                                                    <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                         class="form-control" name="recent_progress" id="" value=""
                                                         required>
@@ -254,7 +254,7 @@
                                                     <label for="work_flow"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Work
                                                         Flow</label>
-                                                    <input type="text" placeholder="Enter Email "
+                                                    <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                         class="form-control" name="work_flow" id="" value="" required>
                                                 </div>
@@ -299,9 +299,9 @@
                                                     <label for="close_date"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Closing
                                                         Date</label>
-                                                    <input type="date" placeholder="Enter Email "
+                                                    <input type="date" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="open_date" id="" value="" required>
+                                                        class="form-control" name="close_date" id="" value="" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -327,7 +327,7 @@
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comments</label>
                                                     <textarea class="outer" rows="4"
                                                         style="width:100%;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        cols="41" placeholder="Physical Address" name="comments"
+                                                        cols="41" placeholder="" name="comments"
                                                         form="addemployee"></textarea>
                                                 </div>
                                             </div>
@@ -340,9 +340,9 @@
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="close_date"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notification</label>
-                                                    <input type="email" placeholder="Enter Email "
+                                                    <input type="email" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="email" id="" value="" required>
+                                                        class="form-control" name="notifi_email" id="" value="" required>
                                                 </div>
                                             </div>
                                             <div class="" style="width: 33%">
@@ -350,7 +350,7 @@
                                                     <label for="phone"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone
                                                         No.</label>
-                                                    <input type="text" placeholder="Enter Email "
+                                                    <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                         class="form-control" name="phone" id="" value="" required>
                                                 </div>
@@ -359,7 +359,7 @@
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="amount"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Billing</label>
-                                                    <input type="text" placeholder="Enter Email "
+                                                    <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                         class="form-control" name="amount" id="" value="" required>
                                                 </div>
@@ -556,7 +556,7 @@
                                                         Date</label>
                                                     <input type="date" placeholder="Enter Email "
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="open_date" id="" value="" required>
+                                                        class="form-control" name="close_date" id="" value="" required>
                                                 </div>
                                             </div>
                                         </div>
