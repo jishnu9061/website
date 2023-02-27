@@ -133,12 +133,12 @@
                                                         <a class="btn" data-toggle="dropdown" aria-haspopup="true"
                                                             aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                                         <div class="dropdown-menu" style="overflow: scroll;height:100px;">
-                                                            <a href="{{ url('view-pickup', $pickup->id) }}"
+                                                            <a href="" data-toggle="modal" data-target="#viewModal"
                                                                 class="dropdown-item">View Client
                                                                 Detail
                                                             </a>
                                                             <a onClick="return myFunction();"
-                                                                href="{{ url('delete-pickup', $pickup->id) }}"
+                                                                href="" data-toggle="modal" data-target="#deletecompany"
                                                                 class="dropdown-item" style="color:black;">Delete Client
                                                                 Details</a>
                                                         </div>
@@ -406,6 +406,291 @@
                                                 </form>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="viewModal">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <h5><b>Edit Client:-</b></h5>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <form method="post" action="{{ url('store-pickup') }}" id="form">
+                                                    @csrf
+                                                    <div class="row">
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Client
+                                                                    Type</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                        <option>--select--</option>
+                                                                        <option>Corporate Client</option>
+                                                                        <option>Individual Client</option>
+
+                                                                    </select>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">File
+                                                                    Name</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color:#1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                        <option>--select--</option>
+                                                                        <option>File 1</option>
+                                                                        <option>File 2</option>
+
+                                                                    </select>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Mobile
+                                                                    No.</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="text" class="form-control"
+                                                                        name="mobile" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Person
+                                                                    Handling</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                        <option>--select--</option>
+                                                                        <option>Advocate 1</option>
+                                                                        <option>Advocate 2</option>
+
+                                                                    </select>
+
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Email</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="text" class="form-control"
+                                                                        name="email" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Client
+                                                                    Name</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                        @if (count($get_items))
+                                                                            @foreach ($get_items as $list_client)
+                                                                                <option>{{ $list_client->client_name }}
+                                                                                </option>
+                                                                            @endforeach
+                                                                        @endif
+
+                                                                    </select>
+                                                                    <!-- <input type="text" class="form-control" name="name"
+                                                                                id="username" value="" placeholder=" name"
+                                                                                required> -->
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Person
+                                                                    Picking Handling</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="text" class="form-control"
+                                                                        name="handling" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Visitors</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="text" class="form-control"
+                                                                        name="visitors" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="" style="width: 96%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Reason</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:75px;"></textarea>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="" style="width: 48%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time
+                                                                    In</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="time" class="form-control"
+                                                                        name="time-in" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 48%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time
+                                                                    Out</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="time" class="form-control"
+                                                                        name="time-out" id="username" value=""
+                                                                        placeholder="Reason"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px; cellspacing=2px;"
+                                                                        required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                            </div>
+                                                            <div class="col-sm">
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <button type="submit" class="btn btn-primary float:right"
+                                                                    style="width:45%">Save</button>
+                                                                <button type="button" class="btn btn-primary float:left"
+                                                                    Style="width:45%;" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="deletecompany" style="">
+                                <!-- delete company -->
+                                <div class="modal-dialog modal-lg" style="width:30%;">
+                                    <div class="modal-content">
+                                        <!---- Modal Header -->
+                                        <form method="post" id="delete_company" action="#" enctype="multipart/form-data">
+                                            @csrf
+                                            <input type="hidden" id="deleteuniqueid" value="uniqueid">
+                                            <div class="modal-header" style="padding:0rem 0rem;">
+                                                <div style="padding:1rem 1rem;">
+                                                    <h4 class="text-centre"><b>Delete <span id="deletcompany_name"></span></b></h4>
+                                                </div>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <h6><b><span>Are you sure?</span></b></h6>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="" style="width: 30%;">
+                                                        </div>
+                                                        <div lass="" style="width: 0%"></div>
+                                                        <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                                            <br>
+                                                            <button type="submit" class="btn btn-primary float:right;"
+                                                                Style="width:45%;background-color:#DD4132;">Yes</button>
+                                                            <button type="button" class="btn btn-primary float:left"
+                                                                Style="width:45%;"data-dismiss="modal">No</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
