@@ -138,11 +138,11 @@
                                     <tr id="data">
 
                                         <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
-                                        <td scope="row" class="text-center">{{$list->Title}}</td>
-                                        <td scope="row" class="text-center">{{$list->Client}}</td>
+                                        <td scope="row" class="text-center">{{$list->title}}</td>
+                                        <td scope="row" class="text-center">{{$list->client}}</td>
                                         <td scope="row" class="text-center">{{$list->id}}</td>
-                                        <td scope="row" class="text-center">{{$list->Time}}</td>
-                                        <td scope="row" class="text-center">{{$list->Time_End}}</td>
+                                        <td scope="row" class="text-center">{{$list->time}}</td>
+                                        <td scope="row" class="text-center">{{$list->time_end}}</td>
                                         <td scope="row" class="text-center"></td>
                                         <td scope="row" class="text-center">
                                             <div class="btn-group">

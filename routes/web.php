@@ -444,6 +444,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('client-index', "ClientManagement@index")->name('client-index');
     Route::any('update-client', "ClientManagement@updateClient")->name('update-client');
     Route::any('delete-client/{id}', "ClientManagement@deleteClient")->name('delete-client');
+    Route::post('/changestatus_individual',"ClientManagement@changestatus_individual")->name('changestatus_individual');
     //coporate
     Route::any('add_corporate', 'ClientManagement@addCorporate')->name('add-corporate');
     Route::any('corporate-list/{company_id}', 'ClientManagement@listCorporate')->name('corporate-list');
@@ -552,7 +553,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('court-attendance-sheet', "filemanagement@courtattendance")->name('court-attendance-sheet');
     Route::any('arbiration-sheet', "filemanagement@arbirationsheet")->name('arbiration-sheet');
     Route::any('conveyance-sheet', "filemanagement@conveyance")->name('conveyance-sheet');
-    Route::any('file-progress-list', "filemanagement@fileprogresslist")->name('file-progress-list');
+    Route::any('file-progress-list',"filemanagement@fileprogresslist")->name('file-progress-list');
     Route::any('meeting-rooms', "filemanagement@meetingrooms")->name('meeting-rooms');
     Route::any('view-file-list-progress/{id}', 'filemanagement@viewfilelisprogress')->name('view-file-list-progress');
     Route::any('bringup', "filemanagement@bringup")->name('bringup');
