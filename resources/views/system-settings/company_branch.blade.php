@@ -96,8 +96,8 @@
                             <div style="line-height:1.25rem; color:#1d1d50;">
                                     <p class="card-text mt-1 mb-1"> <b> City/Town:</b> {{ $branch->town }}</p>
                                     <p class="card-text mt-1 mb-1" > <b> Address:</b> {{ $branch->address }}</p>
-                                    <p class="card-text mt-1 mb-1" > <b> State/Province:</b> </p>
-                                    <p class="card-text mt-1 mb-1" > <b> Country:</b> </p>
+                                    <p class="card-text mt-1 mb-1" > <b> State/Province:</b>{{ $branch->State }} </p>
+                                    <p class="card-text mt-1 mb-1" > <b> Country:</b>{{ $branch->country }} </p>
                                     <p><b><i class="fa fa-envelope" style="color:#00699F" aria-hidden="true"></i></i></b>  {{ $branch->email }}</p>
                                     <p><b><i class="fa fa-phone-square" style="color:#00699F" aria-hidden="true"></i></b>  {{ $branch->telephone }}</p>
                             </div>
