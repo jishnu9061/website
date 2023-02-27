@@ -149,9 +149,9 @@
                                         enctype="multipart/form-data">
                                         @csrf
                                         <h4 class="text-centre"><b>Add New File:-</b></h4>
-                                        <div class="text-center">
+                                        {{-- <div class="text-center">
                                             <h4><b> Matter </b></h4>
-                                        </div>
+                                        </div> --}}
                                         <div class="row">
                                             <div class="" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>
@@ -262,7 +262,7 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="" style="width: 33%">
+                                            <div class="" style="width: 25%">
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for=""
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Practice
@@ -284,7 +284,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="" style="width: 33%">
+                                            <div class="" style="width: 25%">
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="open_date"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Opening
@@ -294,7 +294,7 @@
                                                         class="form-control" name="open_date" id="" value="" required>
                                                 </div>
                                             </div>
-                                            <div class="" style="width: 33%">
+                                            <div class="" style="width: 25%">
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="close_date"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Closing
@@ -304,10 +304,7 @@
                                                         class="form-control" name="open_date" id="" value="" required>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="" style="width: 33%">
+                                            <div class="" style="width: 24%">
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="status"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Status</label>
@@ -321,7 +318,10 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div style="width:50%">
+                                        </div>
+
+                                        <div class="row">
+                                            <div style="width:100%">
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="outer"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comments</label>
@@ -332,9 +332,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
                                         <hr>
-                                        <br>
                                         <div class="row">
                                             <div class="" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>
