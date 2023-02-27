@@ -3,7 +3,7 @@
         <h7 id="displayWatch" style="padding:4px;" id="task">00:00:00
         </h7>
         <i class="bi bi-caret-right play" onclick="watchstart()"></i>
-        <i class="bi bi-stop-circle pause" onclick="watchstop()" data-toggle="modal" data-target="#myModel"></i>
+        <i class="bi bi-stop-circle pause" onclick="watchstop()" data-toggle="modal" data-target="#myModel" style="display:none;"></i>
         <i class="bi bi-arrow-clockwise " onclick="watchReset()"></i>
     </div>
 </div>
@@ -40,14 +40,11 @@
                                         <div class="input-group" style=" width:100%;">
                                             <div class="input-group-prepend">
                                             </div>
-                                            <span id="" style="margin-left:-33px;font-size:20px"
+                                            <span id="" style="margin-left:-33px;font-size:27px"
                                                 class="bi bi-caret-right" onclick="del()"></span>
-
-                                            <span id="" style="margin-left:-33px;font-size:13px"
-                                                class="bi bi-stop-circle pause" onclick="del()"></span>
-
+                                               
                                             <input type="text" class="form-control" name="time" value="" id="myText"
-                                                style="margin-top:-33px;" placeholder="">
+                                                style="margin-top:-18px;" placeholder="">
 
                                             <div class="invalid-feedback" style="width: 100%;">
                                             </div>
@@ -197,7 +194,5 @@ function watchReset() {
 $('#date').val(new Date().toJSON().slice(0, 10));
 </script>
 <script>
-function del() {
-    alert("hi");
-}
+
 </script>
