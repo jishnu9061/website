@@ -400,13 +400,28 @@ class SystemSetup extends Controller
         $letter_category = $Request['lettercat'];
         $letter_type = $Request['lettertype'];
         $letter_type_name = $Request['lettertypname'];
+        $status = $Request['status'];
+
 
         DB::table('cra_letter_types')->insert([
             'letter_category' => $letter_category,
             'letter_type' => $letter_type,
             'letter_type_name' => $letter_type_name,
+            'status' => $status,
+
         ]);
         return redirect('/letter_types');
+    }
+    public function changestatus_lettertypes(Request $request)
+    {
+        $uniqueid = $request->id;
+        $status = DB::table('cra_letter_types')->where('id', $uniqueid)->select('status')->first();
+        if($status->status == 1){
+            DB::table('cra_letter_types')->where('id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_letter_types')->where('id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
     }
     public function editlettertype($id)
     {
@@ -450,6 +465,7 @@ class SystemSetup extends Controller
         $item_name = $Request['iname'];
         $item_comment = $Request['icomments'];
         $item_shortname = $Request['ishortname'];
+        $status = $Request['status'];
 
         DB::table('cra_payment_item')->insert([
             'item_code' => $item_code,
@@ -457,9 +473,21 @@ class SystemSetup extends Controller
             'item_name' => $item_name,
             'item_comment' => $item_comment,
             'item_shortname' => $item_shortname,
+            'status' => $status,
 
         ]);
         return redirect('/payment_items');
+    }
+    public function changestatus_paymentitems(Request $request)
+    {
+        $uniqueid = $request->id;
+        $status = DB::table('cra_payment_item')->where('id', $uniqueid)->select('status')->first();
+        if($status->status == 1){
+            DB::table('cra_payment_item')->where('id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_payment_item')->where('id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
     }
     public function editpaymentitem($id)
     {
@@ -501,14 +529,28 @@ class SystemSetup extends Controller
     {
         $Description_Selection_Name = $Request['desselname'];
         $Selection_Description = $Request['seldes'];
+        $status = $Request['status'];
+
 
         DB::table('cra_description_selection')->insert([
             'Description_Selection_Name' => $Description_Selection_Name,
             'Selection_Description' => $Selection_Description,
+            'status' => $status,
+
         ]);
         return redirect('/description_selectn');
     }
-
+    public function changestatus_descsel(Request $request)
+    {
+        $uniqueid = $request->id;
+        $status = DB::table('cra_description_selection')->where('id', $uniqueid)->select('status')->first();
+        if($status->status == 1){
+            DB::table('cra_description_selection')->where('id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_description_selection')->where('id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
+    }
     public function editdescsel($id)
     {
         $description_selection = DB::table('cra_description_selection')->where('id', $id)->first();
@@ -815,15 +857,29 @@ class SystemSetup extends Controller
     {
         $Template_Category = $Request['temcategory'];
         $Category_Type     = $Request['cattype'];
+        $status    = $Request['status'];
 
         DB::table('cra_template_category')->insert([
             'Template_Category' => $Template_Category,
             'Category_Type' => $Category_Type,
+            'status' => $status,
 
         ]);
         return redirect('/template_category');
         // return view('system-settings.add_template_category');
     }
+    public function changestatus_template(Request $request)
+    {
+        $uniqueid = $request->id;
+        $status = DB::table('cra_template_category')->where('id', $uniqueid)->select('status')->first();
+        if($status->status == 1){
+            DB::table('cra_template_category')->where('id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_template_category')->where('id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
+    }
+   
     public function edittemplatecategory($id)
     {
         $template_category = DB::table('cra_template_category')->where('id', $id)->first();
@@ -907,15 +963,29 @@ class SystemSetup extends Controller
         $short_name = $Request['sname'];
         $retainer_period = $Request['year'];
         $approvers = $Request['approver'];
+        $status = $Request['status'];
         DB::table('cra_file_types')->insert([
             'file_type' => $file_type,
             'short_name' => $short_name,
             'retainer_period' => $retainer_period,
             'approvers' => $approvers,
+            'status' => $status,
         ]);
 
         return redirect('/file_types');
     }
+    public function changestatus_filetypes(Request $request)
+    {
+        $uniqueid = $request->id;
+        $status = DB::table('cra_file_types')->where('id', $uniqueid)->select('status')->first();
+        if($status->status == 1){
+            DB::table('cra_file_types')->where('id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_file_types')->where('id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
+    }
+   
     public function editfiletypes($id)
     {
         $file_types = DB::table('cra_file_types')->where('id', $id)->first();
@@ -1078,16 +1148,29 @@ class SystemSetup extends Controller
         $zone_name = $Request['zone_name'];
         $zone_areas = $Request['zone_areas'];
         $cost = $Request['cost'];
-
+        $status = $Request['status'];
+        
         DB::table('cra_transport_zone')->insert([
             'zone_name' => $zone_name,
             'zone_areas' =>  $zone_areas,
             'cost' =>  $cost,
+            'status' =>  $status,
+
         ]);
 
         return redirect('/Transport_zones');
     }
-
+    public function changestatus_transportzones(Request $request)
+    {
+        $uniqueid = $request->id;
+        $status = DB::table('cra_transport_zone')->where('id', $uniqueid)->select('status')->first();
+        if($status->status == 1){
+            DB::table('cra_transport_zone')->where('id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_transport_zone')->where('id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
+    }
 
     public function edittransportzone($id)
     {
@@ -1129,15 +1212,30 @@ class SystemSetup extends Controller
         $type = $Request['type'];
         $activity_name = $Request['name'];
         $cost = $Request['cost'];
+        $status = $Request['status'];
 
         DB::table('cra_billable_activities')->insert([
             'type' => $type,
             'activity_name' =>  $activity_name,
             'cost' =>  $cost,
+            'status' =>  $status,
+
         ]);
 
         return redirect('/billable_activities');
     }
+    public function changestatus_billableactivities(Request $request)
+    {
+        $uniqueid = $request->id;
+        $status = DB::table('cra_billable_activities')->where('id', $uniqueid)->select('status')->first();
+        if($status->status == 1){
+            DB::table('cra_billable_activities')->where('id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_billable_activities')->where('id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
+    }
+
     public function editbillableactivities($id)
     {
         $billable_activities = DB::table('cra_billable_activities')->where('id', $id)->first();

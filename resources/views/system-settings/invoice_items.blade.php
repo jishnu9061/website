@@ -50,10 +50,10 @@ float:right;
 text-align:right;
 color: #999;
 }
-</style>    
+</style>
 </head>
 <div class="container">
-  {{-- heading --}} 
+  {{-- heading --}}
    {{-- <h4 id="hdtpa"><b>Invoice Items</b></h4> --}}
   <div class="row" style="height:50px;">
     <div class="col-sm-4" style="padding-top:5px;">
@@ -77,10 +77,10 @@ color: #999;
 </div>
   <br>
 
-           
+
 
           <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
+
 {{-- <a href="{{('add_invoice_item')}}"><button class="btn btn-primary">Add New Item</button></a> --}}
                 {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Item</button> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -88,10 +88,10 @@ color: #999;
             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add New Item</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                     
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
         <!-- <a href="{{('add_invoice_item')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New Item</button></a><br> -->
-       
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -106,15 +106,15 @@ color: #999;
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    
-           
-       
+
+
+
         <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Invoice Item List</h3>
     <!-- <div class="container"> -->
     <div class="table-responsive">
@@ -130,7 +130,7 @@ color: #999;
                         <!-- <th class="text-center">G/L Account</th>.....note: g/l account changed as income account-->
                          <th class="text-center">Income Account</th>
                         <th class="text-center">Action</th>
-                  
+
                     </tr>
     </thead>
     <tbody>
@@ -158,7 +158,7 @@ color: #999;
                                 {{-- href="{{url('edit_invoice_item',$invoice->id)}}">Edit Invoice Item</a> --}}
                                 <a class="dropdown-item" data-toggle="modal"
                                                     data-target="#edit_invoice_items" href="#">Edit Invoice Item
-                                                            
+
                                                             </a>
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_invoice_item',$invoice->id)}}">Delete Invoice Item</a> --}}
@@ -215,8 +215,8 @@ color: #999;
                                     <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('add_invoice_item') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->  
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 @csrf
        <div class="row">
                     <div class="col-md-4">
@@ -306,9 +306,9 @@ color: #999;
                                 <option>9500====Other Income - Client gets Account Payable - Cooperative Bank</option>
                                 </select>
                                 <div class="col-md-1">
-                     <a href="{{url('add_gl_account')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a> 
+                     <a href="{{url('add_gl_account')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a>
                 </div>
-                               
+
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -333,6 +333,11 @@ color: #999;
                     </div>
         </div>
 </form>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -444,8 +449,8 @@ color: #999;
                                         <option>9500====Other Income - Client gets Account Payable - Cooperative Bank</option>
                                         </select>
                                         <div class="col-md-1">
-                        
-                                       
+
+
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Required Field.
                                         </div>
@@ -477,16 +482,16 @@ color: #999;
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">
             <!---- Modal Header -->
-            <form method="post"  id="delete_invoice_items" action="{{url('delete_invoice_item',$invoice->id)}}" enctype="multipart/form-data"> 
+            <form method="post"  id="deleteInvoice" action="{{url('delete_invoice_item',$invoice->id)}}" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" id="id" value="id">
                 <div class="modal-header" style="padding:0rem 0rem;">
-                    <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_rate"></span></b></h4></div>
+                    <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="deleteInvoice"></span></b></h4></div>
                 </div>
                 <!-- Modal body -->
                 <div class="modal-body" >
                     <div class="container">
-                        <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
                         </div>
                             <div class="row">
                                 <div class="" style="width: 30%;">
@@ -508,7 +513,6 @@ color: #999;
     </div>
 </html>
   @endsection
-      
 
 
 
@@ -523,4 +527,4 @@ color: #999;
 
 
 
-   
+

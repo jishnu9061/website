@@ -234,18 +234,23 @@ use App\Http\Controllers\issued_summary;
     Route::any('/update_letter_type', 'SystemSetup@updatelettertype')->name('update_letter_type');
     Route::any('/delete_letter_type/{id}', 'SystemSetup@deletelettertype')->name('delete_letter_type');
     Route::any('document_letter_category', 'SystemSetup@documentlettercategory')->name('document_letter_category');
+    Route::post('/changestatus_lettertypes',"SystemSetup@changestatus_lettertypes")->name('changestatus_lettertypes');
+
         //payment items
     Route::any('payment_items', 'SystemSetup@paymentitem')->name('payment_items');
     Route::any('add_payment_item', 'SystemSetup@addpaymentitem')->name('add_payment_item');
     Route::any('edit_payment_item/{id}', 'SystemSetup@editpaymentitem')->name('edit_payment_item');
     Route::any('/update_payment_item', 'SystemSetup@updatepaymentitem')->name('update_payment_item');
     Route::any('/delete_payment_item/{id}', 'SystemSetup@deletepaymentitem')->name('delete_payment_item');
+    Route::post('/changestatus_paymentitems',"SystemSetup@changestatus_paymentitems")->name('changestatus_paymentitems');
         //description selection
     Route::any('description_selectn', 'SystemSetup@descriptionselection')->name('description_selectn');
     Route::any('add_desc_sel', 'SystemSetup@adddescsel')->name('add_desc_sel');
     Route::any('edit_desc_sel/{id}', 'SystemSetup@editdescsel')->name('edit_desc_sel');
     Route::any('/update_desc_sel', 'SystemSetup@updatedescsel')->name('update_desc_sel');
     Route::any('/delete_desc_sel/{id}', 'SystemSetup@deletedescsel')->name('delete_desc_sel');
+    Route::post('/changestatus_descsel',"SystemSetup@changestatus_descsel")->name('changestatus_descsel');
+
         //tax chart
     Route::any('tax_chart_main', '   @taxchartmain')->name('tax_chart_main');
     Route::any('tax_chart', 'SystemSetup@taxchart')->name('tax_chart');
@@ -286,6 +291,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('/update_template_category', 'SystemSetup@updatetemplatecategory')->name('update_template_category');
     Route::any('/delete_template_category/{id}', 'SystemSetup@deletetemplatecategory')->name('delete_template_category');
     Route::any('document_template_category', 'SystemSetup@documenttemplatecategory')->name('document_template_category');
+    Route::post('/changestatus_template',"SystemSetup@changestatus_template")->name('changestatus_template');
         //paired accounts
     Route::any('paired_account', 'SystemSetup@pairedaccount')->name('paired_account');
     Route::any('add_account_pairs', 'SystemSetup@addaccountpairs')->name('add_account_pairs');
@@ -298,6 +304,8 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit_file_types/{id}', 'SystemSetup@editfiletypes')->name('edit_file_types');
     Route::any('/update_file_types', 'SystemSetup@updatefiletypes')->name('update_file_types');
     Route::any('/delete_file_types/{id}', 'SystemSetup@deletefiletypes')->name('delete_file_types');
+    Route::post('/changestatus_filetypes',"SystemSetup@changestatus_filetypes")->name('changestatus_filetypes');
+
         //invoice_items
     Route::any('invoice_items', 'SystemSetup@invoiceitems')->name('invoice_items');
     Route::any('add_invoice_item', 'SystemSetup@addinvoiceitem')->name('add_invoice_item');
@@ -319,12 +327,14 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit_transport_zone/{id}', 'SystemSetup@edittransportzone')->name('edit_transport_zone');
     Route::any('/update_transport_zone', 'SystemSetup@updatetransportzone')->name('update_transport_zone');
     Route::any('/delete_transport_zone/{id}', 'SystemSetup@deletetransportzone')->name('delete_transport_zone');
+    Route::post('/changestatus_transportzones',"SystemSetup@changestatus_transportzones")->name('changestatus_transportzones');
         //billable activities
     Route::any('billable_activities', 'SystemSetup@billableactivities')->name('billable_activities');
     Route::any('add_billable_activities', 'SystemSetup@addbillableactivities')->name('add_billable_activities');
     Route::any('edit_billable_activities/{id}', 'SystemSetup@editbillableactivities')->name('edit_billable_activities');
     Route::any('/update_billable_activities', 'SystemSetup@updatebillableactivities')->name('update_billable_activities');
     Route::any('/delete_billable_activities/{id}', 'SystemSetup@deletebillableactivities')->name('delete_billable_activities');
+    Route::post('/changestatus_billableactivities',"SystemSetup@changestatus_billableactivities")->name('changestatus_billableactivities');
         //bank account details
     Route::any('bank_details', 'SystemSetup@bankdetails')->name('bank_details');
     Route::any('add_bank_account', 'SystemSetup@addbankaccount')->name('add_bank_account');
@@ -992,14 +1002,14 @@ use App\Http\Controllers\issued_summary;
         //crm panel
     Route::any('crm_panel', "CrmController@crm_panel")->name('crm_panel');
     //crm controller
-//etc controller  
+//etc controller
     Route::any('about', "etc@index")->name('about');
     Route::any('help', "etc@index_help")->name('help');
-    //etc controller  
-//calender 
+    //etc controller
+//calender
     Route::any('calendar_data', "calender@show")->name('calendar_data');
     Route::any('calendar/store', "calender@store")->name('calendar/store');
     Route::any('calendar/update/{id}', "calender@update");
     Route::any('calendar/delete/{id}', "calender@destroy");
     Route::any('update_calendar/{id}', "calender@updateall");
-    //calender 
+    //calender
