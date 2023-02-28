@@ -128,10 +128,10 @@ class ClientManagement extends Controller
         $client_name = $Request['name'];
         $industry = $Request['industry'];
         $pin_no = $Request['pin'];
-        $address = $Request['address'];
-        $postal_code = $Request['code'];
+        $address = $Request['postaladdress'];
+        $postal_code = $Request['postalcode'];
         $town = $Request['town'];
-        $physical_address = $Request['physical'];
+        $physical_address = $Request['physicaladdress'];
         $Notes = $Request['notes'];
 
 
