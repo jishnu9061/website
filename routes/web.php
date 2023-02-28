@@ -444,6 +444,9 @@ use App\Http\Controllers\issued_summary;
     Route::any('advocates_target_2025', 'UserManagement@advocatestarget2025')->name('advocates_target_2025');
     Route::any('advocates_target_2026', 'UserManagement@advocatestarget2026')->name('advocates_target_2026');
     //user management controller
+    //job position/titles
+    Route::any('view_job_perm_role/{id}', 'UserManagement@view_job_perm_role')->name('view_job_perm_depart');
+    //job position/titles
 //client management controller
         //Client-list
     Route::any('add-client', "ClientManagement@addNewClient")->name('add-client');
@@ -1002,11 +1005,11 @@ use App\Http\Controllers\issued_summary;
         //crm panel
     Route::any('crm_panel', "CrmController@crm_panel")->name('crm_panel');
     //crm controller
-//etc controller
+    //etc controller
     Route::any('about', "etc@index")->name('about');
     Route::any('help', "etc@index_help")->name('help');
     //etc controller
-//calender
+    //calender
     Route::any('calendar_data', "calender@show")->name('calendar_data');
     Route::any('calendar/store', "calender@store")->name('calendar/store');
     Route::any('calendar/update/{id}', "calender@update");
