@@ -775,7 +775,7 @@ class ClientManagement extends Controller
         $date = $Request['date'];
         $client_type = $Request['type'];
         $files = $Request['files'];
-        $customer_name = $Request['name'];
+        $customer_name = $Request['customername'];
         $staff_handling = $Request['Staff'];
         $complaint_about = $Request['Complaint'];
         $telephone_no = $Request['Telephone'];
