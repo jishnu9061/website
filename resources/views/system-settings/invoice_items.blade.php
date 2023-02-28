@@ -438,7 +438,7 @@ color: #999;
                                     </label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <select type="text" value="" id="" name="account"style="width:92%;">
+                                        <select type="text" value="" id="" name="account"style="width:100%;">
                                         <option>---select---</option>
                                         <option>1000====Income from Legal Fees</option>
                                         <option>1100====Other Income</option>

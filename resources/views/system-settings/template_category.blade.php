@@ -59,7 +59,7 @@ input[type='file'] {
 input[type='file'] {
     color: rgba(0, 0, 0, 0)
 }
-</style>  
+</style>
 <style>
     .switch {
         position: relative;
@@ -67,13 +67,13 @@ input[type='file'] {
         width: 50px;
         height: 20px;
     }
-    
+
     .switch input {
         opacity: 0;
         width: 0;
         height: 0;
     }
-    
+
     .slider {
         position: absolute;
         cursor: pointer;
@@ -85,7 +85,7 @@ input[type='file'] {
         -webkit-transition: .4s;
         transition: .4s;
     }
-    
+
     .slider:before {
         position: absolute;
         content: "";
@@ -97,15 +97,15 @@ input[type='file'] {
         -webkit-transition: .4s;
         transition: .4s;
     }
-    
+
     .check:checked+.slider {
         background-color: #0edb7c;
     }
-    
+
     .check:focus+.slider {
         box-shadow: 0 0 1px #0edb7c;
     }
-    
+
     .check:checked+.slider:before {
         -webkit-transform: translateX(26px);
         -ms-transform: translateX(26px);
@@ -115,11 +115,11 @@ input[type='file'] {
     .slider.round {
         border-radius: 34px;
     }
-    
+
     .slider.round:before {
         border-radius: 50%;
     }
-    
+
     .add_decduct {
         text-decoration: none;
         display: inline-block;
@@ -134,33 +134,33 @@ input[type='file'] {
         line-height: 0.9;
         cursor: pointer;
     }
-    
+
     .decduct_input {
         padding: 8px 10px;
         width: 20%;
         border-radius: 5px;
         border-color: #1d1d50;
     }
-    
+
     #e_passmessage {
         display: block;
         color: #1d1d50;
         position: relative;
     }
-    
+
     /* Add a green text color and a checkmark when the requirements are right */
     .passvalid {
         color: green;
         margin: 0px;
         font-size: 10px;
     }
-    
+
     .passvalid:before {
         position: relative;
         left: 0px;
         content: "✔";
     }
-    
+
     /* Add a red text color and an "x" when the requirements are wrong */
     .passinvalid {
         color: red;
@@ -168,7 +168,7 @@ input[type='file'] {
         font-size: 10px;
         padding-left: 10px;
     }
-    
+
     .passinvalid:before {
         position: relative;
         left: 0px;
@@ -201,7 +201,7 @@ input[type='file'] {
 </div>
 <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
+
 {{-- <a href="{{('add_template_category')}}"><button class="btn btn-primary">Add Template Category</button></a> --}}
                 {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Template Category</button> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -209,12 +209,12 @@ input[type='file'] {
             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Template Category</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                     
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
         <!-- <a href="{{('add_template_category')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Template Category</button></a><br><br> -->
 
     <!-- <div class="container"> -->
-    
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -229,7 +229,7 @@ input[type='file'] {
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
@@ -245,7 +245,7 @@ input[type='file'] {
                         <th class="text-center" >Category Type</th>
                         <th class="text-center" >Status</th>
                         <th class="text-center" >Action</th>
-                       
+
                     </tr>
      </thead>
      <tbody>
@@ -288,7 +288,7 @@ input[type='file'] {
                         @endforeach
                     </tr>
 </tbody>
-                   
+
  </table>
  <br>
  {{-- <!--		Start Pagination -->
@@ -302,7 +302,7 @@ input[type='file'] {
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
  <!-- 		End of Container --> --}}
-               
+
  <!--		Start Pagination -->
  <div class='pagination-container'>
      <nav>
@@ -321,7 +321,7 @@ input[type='file'] {
  <div class="rows_count"></div>
 </div>
  <!-- 		End of Container -->
-    
+
     <!-- <div class="class"style="text-align:right;">
                 <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
     <option>Activate Category</option>
@@ -332,8 +332,8 @@ input[type='file'] {
     </div>
     </div> -->
 
-    
-    
+
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -349,12 +349,12 @@ input[type='file'] {
                                     <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('add_template_category') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 @csrf
 
 <div class="row">
-       
+
 
         <div class="col-md-6">
             <div class="mb-1">
@@ -362,7 +362,7 @@ input[type='file'] {
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
                     <select type="text" value="" id="" name="temcategory"style="width:100%;">
-                  
+
                     <option>---Select---</option>
                     <option>Business Formation</option>
                     <option>Business Operations</option>
@@ -376,7 +376,7 @@ input[type='file'] {
                     <!-- <div class="col-md-1">
         <a href="{{url('document_template_category')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a>
     </div> -->
-                   
+
                     <div class="invalid-feedback" style="width: 100%;">
                         Required Field.
                     </div>
@@ -395,7 +395,7 @@ input[type='file'] {
                 </div>
             </div>
          </div>
-        
+
 </div>
 
 <div class="row">
@@ -432,7 +432,7 @@ input[type='file'] {
                     <div class="row">
                         <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
                             <div class="row">
-                                <div class="" style="width: 33%">
+                                <div class="" style="width: 50%">
                                     <div class=""><span style="color: red">*</span>
                                        <label for="template_category"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Template Category
@@ -440,7 +440,7 @@ input[type='file'] {
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
                                             <select type="text" value="" id="" name="temcategory"style="width:100%;">
-                                          
+
                                             <option>---Select---</option>
                                             <option>Business Formation</option>
                                             <option>Business Operations</option>
@@ -454,14 +454,14 @@ input[type='file'] {
                                             <!-- <div class="col-md-1">
                                 <a href="{{url('document_template_category')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a>
                             </div> -->
-                                           
+
                                             <div class="invalid-feedback" style="width: 100%;">
                                                 Required Field.
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="" style="width: 33%">
+                                <div class="" style="width: 50%">
                                     <div class=""><span style="color: red">*</span>
                                        <label for="username"
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Category Type
@@ -484,7 +484,7 @@ input[type='file'] {
                     <div class style="width: 20%">
                     </div>
                     <div class="col-sm">
-                     
+
                         <button type="submit" class="btn btn-primary float:right;"
                             style="margin-left: 61%;--clr: #1D1D50;width:19%;
                             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
@@ -501,7 +501,7 @@ input[type='file'] {
         <div class="modal-dialog modal-lg" style="width:30%;">
             <div class="modal-content">
                 <!---- Modal Header -->
-                <form method="post"  id="delete_template_category" action="{{url('delete_template_category',$category->id)}}" enctype="multipart/form-data"> 
+                <form method="post"  id="delete_template_category" action="{{url('delete_template_category',$category->id)}}" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" id="id" value="id">
                     <div class="modal-header" style="padding:0rem 0rem;">
@@ -510,7 +510,7 @@ input[type='file'] {
                     <!-- Modal body -->
                     <div class="modal-body" >
                         <div class="container">
-                            <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                            <div class="row"><h6><b><span>Are you sure?</span></b></h6>
                             </div>
                                 <div class="row">
                                     <div class="" style="width: 30%;">
@@ -553,10 +553,9 @@ input[type='file'] {
         });
     }
 
-    
+
 </script>
   @endsection
-      
 
 
 
@@ -571,4 +570,4 @@ input[type='file'] {
 
 
 
-   
+

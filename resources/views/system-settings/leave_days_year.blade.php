@@ -394,7 +394,7 @@ color: #999;
                                 <div class="" style="width: 33%">
                                     <div class=""><span style="color: red">*</span>
                                         <label for="username"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Saturday Working Days
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Saturday Working 
                                             </label>
                                          <div class="input-group">
                     <div class="input-group-prepend">
@@ -412,7 +412,7 @@ color: #999;
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="" style="width: 33%">
+                                <div class="" style="width: 50%">
                                     <div class=""><span style="color: red">*</span>
                                         <label for="username"
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Perfomance Duration
@@ -434,7 +434,7 @@ color: #999;
                 </div>
                                     </div>
                                 </div>
-                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                <div class="" style="width:50%;"><span style="color: red">*</span>
                                     <label for="username"
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Pay Personal Relief
                                             </label>

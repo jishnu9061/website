@@ -465,7 +465,7 @@ input[type='file'] {
                 <div class="row">
                     <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
                         <div class="row">
-                            <div class="" style="width: 33%">
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="file_type_name"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File Type Name
@@ -479,7 +479,7 @@ input[type='file'] {
                                         </div>
                                 </div>
                             </div>
-                            <div class="" style="width: 33%">
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="short_names"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Short Names
@@ -493,7 +493,9 @@ input[type='file'] {
                         </div>
                                 </div>
                             </div>
-                            <div class="" style="width: 33%">
+                </div>
+                <div class="row">
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="retainer_period"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Retainer Period(Years)
@@ -507,9 +509,9 @@ input[type='file'] {
                                         </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="" style="width: 33%">
+                     
+                        
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="approvers"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Approver(s)</label>
@@ -543,10 +545,11 @@ input[type='file'] {
                                         </div>
                                 </div>
                             </div>
+                </div>
                             <div class="row document_details " style="margin-bottom: 20px;">
                                 {{-- Add More Document details:- javascript --}}
                             </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class style="width: 20%">

@@ -307,7 +307,7 @@ color: #999;
                 <div class="row">
                     <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
                         <div class="row">
-                            <div class="" style="width: 33%">
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="currency_name"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency Name
@@ -321,7 +321,7 @@ color: #999;
                                         </div>
                                 </div>
                             </div>
-                            <div class="" style="width: 33%">
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="currency_symbol"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency Symbol
@@ -335,7 +335,9 @@ color: #999;
                                         </div>
                                 </div>
                             </div>
-                            <div class="" style="width: 33%">
+                        </div>
+                        <div class="row">
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="exchange_rate"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Exchange Rate
@@ -349,9 +351,9 @@ color: #999;
                                         </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="" style="width: 33%">
+                       
+                       
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="default_account"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Default Account</label>
@@ -372,11 +374,12 @@ color: #999;
                                         </div>
                                 </div>
                             </div>
+                        </div>
                             <div class="row document_details " style="margin-bottom: 20px;">
                                 {{-- Add More Document details:- javascript --}}
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
                 <div class style="width: 20%">
                 </div>
@@ -391,6 +394,7 @@ color: #999;
                 </div>
         </div>
         </form>
+    </div>
     </div>
 </div>
 {{-- End edit currency list --}}
