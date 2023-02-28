@@ -525,7 +525,11 @@ input[type='file'] {
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">
             <!---- Modal Header -->
-            <form method="post"  id="delete_billable" action="{{url('delete_billable_activities',$activity->id)}}" enctype="multipart/form-data">
+
+           
+
+            <form method="post"  id="delete_billable" action="" enctype="multipart/form-data"> 
+
                 @csrf
                 <input type="hidden" id="id" value="id">
                 <div class="modal-header" style="padding:0rem 0rem;">
