@@ -116,17 +116,17 @@ color: #999;
             <thead>
               <tr class="text-center">
                 <!-- <th>Sl No:</th> -->
-                <th>Date</th>
-                <th>Day</th>
-                <th>Action</th>
+                <th class="text-center">Date</th>
+                <th class="text-center">Day</th>
+                <th class="text-center">Action</th>
               </tr>
             </thead>
             <tbody>
             @foreach($holiday_details as $holiday)
-              <tr>
+              <tr class="text-center">
               <!-- <td>{{$holiday->id}}</td> -->
-    <td>{{$holiday->Date}}</td>
-    <td>{{$holiday->Day}}</td>
+    <td class="text-center">{{$holiday->Date}}</td>
+    <td class="text-center">{{$holiday->Day}}</td>
 
                 {{-- <td  scope="row" class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_holiday',$holiday->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>

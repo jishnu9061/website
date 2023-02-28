@@ -250,7 +250,7 @@ input[type='file'] {
       <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                   <thead>
-                        <tr>
+                        <tr class="text-center">
                         <th class="text-center" >No</th>
                         <th class="text-center">File Type Name</th>
                         <th class="text-center" >Short Name</th>
@@ -263,13 +263,13 @@ input[type='file'] {
     </thead>
     <tbody>
     @foreach($file_types as $file)
-<tr>
-   
-                        <td>{{$file->id}}</td>
-                        <td>{{$file->file_type}}</td>
-                        <td>{{$file->short_name}}</td>
-                        <td>{{$file->retainer_period}}</td>
-                        <td>{{$file->approvers}}</td>
+<tr class="text-center">
+
+                        <td class="text-center">{{$file->id}}</td>
+                        <td class="text-center">{{$file->file_type}}</td>
+                        <td class="text-center">{{$file->short_name}}</td>
+                        <td class="text-center">{{$file->retainer_period}}</td>
+                        <td class="text-center">{{$file->approvers}}</td>
                         <td class="text-center"><label class="switch">
                             <input type="checkbox" data-id="{{ $file->id }}"
                                 onclick="changestatus(this)" id="status" class="check"
@@ -277,7 +277,7 @@ input[type='file'] {
                             <span class="slider round"></span>
                         </label>
                     </td>
-                    
+
                         {{-- <td  scope="row"class="text-center">
                         <a href="{{url('edit_file_types',$file->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <span class="m-1"></span>
@@ -621,7 +621,7 @@ input[type='file'] {
         });
     }
 
-    
+
 </script>
   @endsection
 
