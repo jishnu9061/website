@@ -238,6 +238,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+
                     </div>
                     <!--		Start Pagination -->
                     <div class='pagination-container'>
@@ -258,7 +259,7 @@
                 </div>
             </div>    
             </div>
-        </div>
+        </div> </div>
         <!-- 		End of Container -->
         <!---------------------------------------------- MODAL ---------------------------------------------------------------------->  
         <div class="modal fade" id="createmyModal" style=""> <!-- create company -->

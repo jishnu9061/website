@@ -525,7 +525,7 @@ use App\Http\Controllers\issued_summary;
         //manage files
     Route::any('file-list', "filemanagement@views")->name('file-list');
     Route::any('/edit-file/{id}', "filemanagement@edit")->name('edit-file');
-    Route::any('/update', "filemanagement@update")->name('update');
+    Route::any('update/{id}', "filemanagement@update")->name('update');
     Route::any('view-list/{id}', 'filemanagement@viewlist')->name('view-list');
     Route::any('add-task', "filemanagement@addtask")->name('add-task');
     Route::any('/file_destroy/{id}', "filemanagement@file_destroy")->name('file_destroy');
@@ -542,7 +542,7 @@ use App\Http\Controllers\issued_summary;
         //file progress/bringup
     Route::any('add-file-progress', "filemanagement@addprogress")->name('add-file-progress');
     Route::any('/edit-file-progress/{id}', "filemanagement@editprogress")->name('edit-file-progress');
-    Route::any('/update_progress', "filemanagement@update_progress")->name('update_progress');
+    Route::any('update_progress/{id}', "filemanagement@update_progress")->name('update_progress');
     Route::any('/delete-file-progress/{id}', "filemanagement@delete_progress")->name('delete-file-progress');
     Route::any('progress-bringup', "filemanagement@progressbringup")->name('progress-bringup');
     Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringup');

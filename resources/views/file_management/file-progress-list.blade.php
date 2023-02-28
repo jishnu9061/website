@@ -192,11 +192,7 @@
                                     <!-- <td scope="row" class="text-center">{{$list->id}}</td>
                                     <td scope="row" class="text-center">{{$list->action_type}}</td> -->
                                     <td scope="row" class="text-center">{{$list->progress_date}}</td>
-
                                     <td scope="row" class="text-center">{{$list->client_name}}</td>
-
-
-
                                     <td scope="row" class="text-center">{{$list->file_name}}</td>
                                     <td scope="row" class="text-center">{{$list->action_description}}</td>
                                     <td scope="row" class="text-center">{{$list->time_taken_hours}}</td>
@@ -212,11 +208,11 @@
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="#">View File
                                                 </a>
-                                                <a class="dropdown-item" data-toggle="modal" data-target="#edit_file_progress"
-                                                    href="#">Edit File
+                                                <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_file_progress" data-id="{{$list->id}}" onclick="editprogresslist(this)" href="#">Edit File
                                                 </a>
-                                                <a onClick="return myFunction();" class="dropdown-item"
-                                                    href="{{url('delete-file-progress',$list->id)}}">Delete
+                                                <a onclick="deletefileprogress(this)" data-target="#deletefileprogress"  data-toggle="modal" data-name="{{$list->client_name}}" data-id="{{$list->id}}" class="dropdown-item"
+                                                    href="">Delete
                                                     File</a>
 
                                             </div>
@@ -252,7 +248,7 @@
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <!-- Modal Header -->
-                                
+
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
@@ -305,14 +301,14 @@
                                                             </div>
                                                         </div>
                                                         <div style="width:50%">
-                                                            <div class=""><span style="color: red">*</span>
+                                                            <div class=""><span style="color: red"></span>
                                                                 <label for="next_action"
                                                                     style="width: 113px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Next
                                                                     Action(WayForward)</label>
                                                                 <textarea class="outer" rows="4"
                                                                     style="width:205%;border-color: #1d1d50;border-radius: 7px;"
                                                                     cols="41" placeholder=""
-                                                                    name="next_action" form="addemployee"></textarea>
+                                                                    name="next_action"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -334,24 +330,23 @@
                                                     </div>
                                                 </div>
                                                 <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="reminder_period"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reminder
                                                             period(Days)</label>
                                                         <input type="text" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="reminder_period" id="" value=""
-                                                            required>
+                                                            class="form-control" name="reminder_period" id="" value="">
                                                     </div>
                                                 </div>
                                                 <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="action_type"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Action
                                                             Type</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="action_type" id="" required>
+                                                            name="action_type" id="">
                                                             <option>---select---</option>
                                                             <option>action_type 1</option>
                                                             <option>action_type 2</option>
@@ -363,38 +358,37 @@
                                             </div>
                                             <div class="row">
                                                 <div style="width:50%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="action_description"
                                                             style="width: 113px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Action
                                                             Description</label>
                                                         <textarea class="outer" rows="4"
                                                             style="width:205%;border-color: #1d1d50;border-radius: 7px;"
                                                             cols="41" placeholder="Physical Address"
-                                                            name="action_description" form="addemployee"></textarea>
+                                                            name="action_description"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="time_taken_hours"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
                                                             Taken(Hours)</label>
                                                         <input type="time" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="time_taken_hours" id="" value=""
-                                                            required>
+                                                            class="form-control" name="time_taken_hours" id="" value="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="time_taken_hours"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
                                                             Taken(Minutes)</label>
                                                         <input type="time" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                             class="form-control" name="time_taken_minutes" id=""
-                                                            value="" required>
+                                                            value="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -411,13 +405,13 @@
 
                                             <div class="row">
                                                 <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="item_type"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item
                                                             Type</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="item_type" id="" required>
+                                                            name="item_type" id="">
                                                             <option>---select---</option>
                                                             <option>item_type 1</option>
                                                             <option>item_type 2</option>
@@ -427,12 +421,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="currency"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="currency" id="" required>
+                                                            name="currency" id="">
                                                             <option>---select---</option>
                                                             <option>KES</option>
                                                             <option>USD</option>
@@ -449,12 +443,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="amount"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Amount</label>
                                                         <input type="text" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="amount" id="" value="" required>
+                                                            class="form-control" name="amount" id="" value="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -465,24 +459,23 @@
 
                                             <div class="row">
                                                 <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="start_time"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Start
                                                             Time</label>
                                                         <input type="time" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="start_time" id="" value=""
-                                                            required>
+                                                            class="form-control" name="start_time" id="" value="">
                                                     </div>
                                                 </div>
                                                 <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="activity_type"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Activity
                                                             Type</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="activity_type" id="" required>
+                                                            name="activity_type" id="">
                                                             <option>---select---</option>
                                                             <option>action_type 1</option>
                                                             <option>action_type 2</option>
@@ -492,13 +485,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="activity"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Activity</label>
                                                         <input type="text" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="activity" id="" value=""
-                                                            required>
+                                                            class="form-control" name="activity" id="" value="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -573,7 +565,7 @@
                     <div class="modal-content">
 
                         <!-- Modal Header -->
-                        
+
                         <!-- Modal body -->
                         <div class="modal-body">
                             <div class="container">
@@ -635,25 +627,25 @@
 
                                                 <div class="row">
                                                     <div class="col-md-6" style="width: 33%">
-                                                        <div class=""><span style="color: red">*</span>
+                                                        <div class=""><span style="color: red"></span>
                                                             <label for="time_taken_hours"
                                                                 style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
                                                                 Taken(Hours)</label>
                                                             <input type="time" placeholder=""
                                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                 class="form-control" name="time_taken_hours" id=""
-                                                                value="" required>
+                                                                value="">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6" style="width: 33%">
-                                                        <div class=""><span style="color: red">*</span>
+                                                        <div class=""><span style="color: red"></span>
                                                             <label for="action_type"
                                                                 style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Action
                                                                 Type</label>
                                                             <select class="form-select"
                                                                 aria-label="Default select example"
                                                                 style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                                name="action_type" id="" required>
+                                                                name="action_type" id="">
                                                                 <option>---select---</option>
                                                                 <option>action_type 1</option>
                                                                 <option>action_type 2</option>
@@ -665,14 +657,14 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-6" style="width: 33%">
-                                                        <div class=""><span style="color: red">*</span>
+                                                        <div class=""><span style="color: red"></span>
                                                             <label for="time_taken_minutes"
                                                                 style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
                                                                 Taken(Minutes)</label>
                                                             <input type="time" placeholder=""
                                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                 class="form-control" name="time_taken_minutes" id=""
-                                                                value="" required>
+                                                                value="">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6" style="width: 33%">
@@ -772,7 +764,7 @@
                 <div class="modal-content">
 
                     <!-- Modal Header -->
-                    
+
 
                     <!-- Modal body -->
                     <div class="modal-body">
@@ -828,13 +820,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="next_bringup_days"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Next
                                                             Bring Up Days</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="next_bringup_days" id="" required>
+                                                            name="next_bringup_days" id="">
                                                             <option>.....select.....</option>
                                                             <option>day 1</option>
                                                             <option>day 2</option>
@@ -845,14 +837,14 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="remind_period_days"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reminder
                                                             Period (Days)</label>
                                                         <input type="date" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                             class="form-control" name="remind_period_days" id=""
-                                                            value="" required>
+                                                            value="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6" style="width: 33%">
@@ -873,13 +865,12 @@
                                             </div>
                                             <div class="row">
                                                 <div style="width:50%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="outer"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reason</label>
                                                         <textarea class="outer" rows="4"
                                                             style="width:205%;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            cols="41" placeholder="" name="reason"
-                                                            form="addemployee"></textarea>
+                                                            cols="41" placeholder="" name="reason"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -953,7 +944,7 @@
             <div class="modal-content">
 
                 <!-- Modal Header -->
-                
+
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
@@ -1017,7 +1008,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="court_event_type"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Court
                                                         Event Type</label>
@@ -1044,33 +1035,33 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="start_time"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time</label>
                                                     <input type="time" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="start_time" id="" value="" required>
+                                                        class="form-control" name="start_time" id="" value="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="end_date"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">End
                                                         Date</label>
                                                     <input type="date" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="end_date" id="" value="" required>
+                                                        class="form-control" name="end_date" id="" value="">
                                                 </div>
                                             </div>
                                             <div class="col-md-6" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="end_time"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time</label>
                                                     <input type="time" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="end_time" id="" value="" required>
+                                                        class="form-control" name="end_time" id="" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -1091,13 +1082,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="send_notification"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Sent
                                                         Notification To</label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="send_notification" id="" required>
+                                                        name="send_notification" id="">
                                                         <option>.....select.....</option>
                                                         <option>notification 1</option>
                                                         <option>notification 2</option>
@@ -1106,13 +1097,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="set_reminder"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Set
                                                         Reminder</label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="set_reminder" id="" required>
+                                                        name="set_reminder" id="">
                                                         <option>.....select.....</option>
                                                         <option>reminder 1</option>
                                                         <option>reminder 2</option>
@@ -1123,13 +1114,12 @@
                                         </div>
                                         <div class="row">
                                             <div style="width:50%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="notes"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes</label>
                                                     <textarea class="outer" rows="4"
                                                         style="width:205%;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        cols="41" placeholder="" name="notes"
-                                                        form="addemployee"></textarea>
+                                                        cols="41" placeholder="" name="notes"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1198,7 +1188,7 @@
             <div class="modal-content">
 
                 <!-- Modal Header -->
-                
+
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
@@ -1258,13 +1248,13 @@
 
                                         <div class="row">
                                             <div class="col-md-3" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="other_file"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Other
                                                         File</label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="other_file" id="" required>
+                                                        name="other_file" id="">
                                                         <option>.....select.....</option>
                                                         <option>other file 1</option>
                                                         <option>other file 2</option>
@@ -1300,22 +1290,22 @@
                                                         No</label>
                                                     <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="case_no" id="" value="" required>
+                                                        class="form-control" name="case_no" id="" value="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="parties"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Parties</label>
                                                     <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="parties" id="" value="" required>
+                                                        class="form-control" name="parties" id="" value="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="acting_for"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Acting
                                                         For</label>
@@ -1325,36 +1315,35 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="instructions"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Instructions</label>
                                                     <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="instructions" id="" value=""
-                                                        required>
+                                                        class="form-control" name="instructions" id="" value="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div style="width:33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="transpired_in_court"
                                                         style="width: 111px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">What
                                                         Transpired In Court</label>
                                                     <textarea class="outer" rows="4"
                                                         style="border-color:#1d1d50;border-radius:7px;width:100%;"
                                                         cols="41" placeholder="Physical Address"
-                                                        name="transpired_in_court" form="addemployee"></textarea>
+                                                        name="transpired_in_court"></textarea>
                                                 </div>
                                             </div>
                                             <div style="width:33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="remarks"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Remarks</label>
                                                     <textarea class="outer" rows="4"
                                                         style="border-color:#1d1d50;border-radius:7px;width:100%;"
-                                                        cols="41" placeholder="Physical Address" name="remarks"
-                                                        form="addemployee"></textarea>
+                                                        cols="41" placeholder="Physical Address"
+                                                        name="remarks"></textarea>
                                                 </div>
                                             </div>
                                             <div style="width:33%">
@@ -1363,20 +1352,20 @@
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes</label>
                                                     <textarea class="outer" rows="4"
                                                         style="border-color: #1d1d50;border-radius:7px;width:100%;"
-                                                        cols="41" placeholder="Physical Address" name="notes"
-                                                        form="addemployee"></textarea>
+                                                        cols="41" placeholder="Physical Address"
+                                                        name="notes"></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="person_dealing"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Person
                                                         Dealing</label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="person_dealing" id="" required>
+                                                        name="person_dealing" id="">
                                                         <option>.....select.....</option>
                                                         <option>person 1</option>
                                                         <option>person 2</option>
@@ -1386,49 +1375,45 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="time_taken_hours"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
                                                         Taken(Hours)</label>
                                                     <input type="time" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="time_taken_hours" id="" value=""
-                                                        required>
+                                                        class="form-control" name="time_taken_hours" id="" value="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="time_taken_minutes"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
                                                         Taken(Minutes)</label>
                                                     <input type="time" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="time_taken_minutes" id="" value=""
-                                                        required>
+                                                        class="form-control" name="time_taken_minutes" id="" value="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="bring_up_date"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Bring
                                                         Up Date</label>
                                                     <input type="date" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="bring_up_date" id="" value=""
-                                                        required>
+                                                        class="form-control" name="bring_up_date" id="" value="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="remind_period_days"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reminder
                                                         Period Days</label>
                                                     <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="remind_period_days" id="" value=""
-                                                        required>
+                                                        class="form-control" name="remind_period_days" id="" value="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
@@ -1510,7 +1495,7 @@
             <div class="modal-content">
 
                 <!-- Modal Header -->
-             
+
 
                 <!-- Modal body -->
                 <div class="modal-body">
@@ -1602,18 +1587,18 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="start_time"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time</label>
                                                     <input type="time" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="start_time" id="" value="" required>
+                                                        class="form-control" name="start_time" id="" value="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="end_date"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">End
                                                         Date</label>
@@ -1623,12 +1608,12 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="end_time"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time</label>
                                                     <input type="time" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="end_time" id="" value="" required>
+                                                        class="form-control" name="end_time" id="" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -1666,13 +1651,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="set_reminder"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Set
                                                         Reminder</label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="set_reminder" id="" required>
+                                                        name="set_reminder" id="">
                                                         <option>.....select.....</option>
                                                         <option>reminder 1</option>
                                                         <option>reminder 2</option>
@@ -1684,13 +1669,13 @@
                                         </div>
                                         <div class="row">
                                             <div style="width:205%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="notes"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes</label>
                                                     <textarea class="outer" rows="4"
                                                         style="border-color:#1d1d50;border-radius:7px;width:100%;"
-                                                        cols="41" placeholder="Physical Address" name="notes"
-                                                        form="addemployee"></textarea>
+                                                        cols="41" placeholder="Physical Address"
+                                                        name="notes"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1762,7 +1747,7 @@
             <div class="modal-content">
 
                 <!-- Modal Header -->
-                
+
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
@@ -1831,14 +1816,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="seller_id_no"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">ID.No/Passport
                                                         No</label>
                                                     <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="seller_id_no" id="" value=""
-                                                        required>
+                                                        class="form-control" name="seller_id_no" id="" value="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
@@ -1872,60 +1856,57 @@
                                                         Address</label>
                                                     <input type="email" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="seller_email" id="" value=""
-                                                        required>
+                                                        class="form-control" name="seller_email" id="" value="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="land_ref_no"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Property
                                                         / Land Ref No</label>
                                                     <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="land_ref_no" id="" value="" required>
+                                                        class="form-control" name="land_ref_no" id="" value="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="title_deed_no"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Title
                                                         Deed No</label>
                                                     <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="title_deed_no" id="" value=""
-                                                        required>
+                                                        class="form-control" name="title_deed_no" id="" value="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="location"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Location</label>
                                                     <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="location" id="" value="" required>
+                                                        class="form-control" name="location" id="" value="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
+                                                <div class=""><span style="color: red"></span>
                                                     <label for="property_size"
                                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Property
                                                         / Land Description{size}</label>
                                                     <input type="text" placeholder=""
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="property_size" id="" value=""
-                                                        required>
+                                                        class="form-control" name="property_size" id="" value="">
                                                 </div>
                                             </div>
                                         </div>
 
                                 </div>
                             </div>
-                            
+
                             <hr class="mb-4">
                             <div class="row">
                                 <div class="col-md-4" style="width: 33%">
@@ -1982,7 +1963,7 @@
                             </div>
                             <div class="row">
                                 <div style="width:50%">
-                                    <div class=""><span style="color: red">*</span>
+                                    <div class=""><span style="color: red"></span>
                                         <label for="solving_process"
                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Dispute
                                             Solving Process</label>
@@ -1992,7 +1973,7 @@
                                     </div>
                                 </div>
                                 <div style="width:50%">
-                                    <div class=""><span style="color: red">*</span>
+                                    <div class=""><span style="color: red"></span>
                                         <label for="final_aggremnt"
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Final
                                             Aggrement</label>
@@ -2016,45 +1997,45 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4" style="width: 33%">
-                                    <div class=""><span style="color: red">*</span>
+                                    <div class=""><span style="color: red"></span>
                                         <label for="time_taken_hours"
                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
                                             Taken(Hours)</label>
                                         <input type="text" placeholder=""
                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                            class="form-control" name="time_taken_hours" id="" value="" required>
+                                            class="form-control" name="time_taken_hours" id="" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-4" style="width: 33%">
-                                    <div class=""><span style="color: red">*</span>
+                                    <div class=""><span style="color: red"></span>
                                         <label for="time_taken_hours"
                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
                                             Taken(Minutes)</label>
                                         <input type="text" placeholder=""
                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                            class="form-control" name="time_taken_minutes" id="" value="" required>
+                                            class="form-control" name="time_taken_minutes" id="" value="">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-4" style="width: 33%">
-                                    <div class=""><span style="color: red">*</span>
+                                    <div class=""><span style="color: red"></span>
                                         <label for="bringup_date"
                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Bring
                                             Up Date</label>
                                         <input type="text" placeholder=""
                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                            class="form-control" name="bringup_date" id="" value="" required>
+                                            class="form-control" name="bringup_date" id="" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-4" style="width: 33%">
-                                    <div class=""><span style="color: red">*</span>
+                                    <div class=""><span style="color: red"></span>
                                         <label for="remind_period_days"
                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reminder
                                             Period Days</label>
                                         <input type="text" placeholder=""
                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                            class="form-control" name="remind_period_days" id="" value="" required>
+                                            class="form-control" name="remind_period_days" id="" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-4" style="width: 33%">
@@ -2076,7 +2057,7 @@
                                                     Action</label>
                                                 <textarea class="outer" rows="4"
                                                     style="border-color:#1d1d50;border-radius:7px;width:100%;" cols="41"
-                                                    placeholder="" name="next_action" form="addemployee"></textarea>
+                                                    placeholder="" name="next_action"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -2140,315 +2121,388 @@
 
     <!---------------------------------------------------- START EDIT FILE PROGRESS --------------------------------------------------------->
     <div class="modal fade" id="edit_file_progress">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <!-- Modal Header -->
-                                
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <form method="post" action="{{ url('') }}"
-                                            enctype="multipart/form-data">
-                                            @csrf
-                                            <h4><b>Edit File Progress:-</b></h4>
-                                            <div class="row">
-                                                <div class="col-md-12 order-md-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
 
-                                                    <div class="row">
-                                                        <div class="" style="width: 33%">
-                                                            <div class=""><span style="color: red">*</span>
-                                                                <label for="client_name"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
-                                                                <select class="form-select"
-                                                                    aria-label="Default select example"
-                                                                    style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                                    name="client_name" id="" required>
-                                                                    @if(count($client_list))
-                                                                    @foreach($client_list as $list_category)
-                                                                    <option>{{$list_category->client_name}}</option>
-                                                                    @endforeach
-                                                                    @endif
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="" style="width: 33%">
-                                                            <div class=""><span style="color: red">*</span>
-                                                                <label for="date_progress"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date
-                                                                    of progress</label>
-                                                                <input type="date" placeholder="Enter Email "
-                                                                    style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                                    class="form-control" name="date_progress" id=""
-                                                                    value="" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="" style="width: 33%">
-                                                            <div class=""><span style="color: red">*</span>
-                                                                <label for="bringup_date"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">New
-                                                                    Bringup Date</label>
-                                                                <input type="date" placeholder="Enter Email "
-                                                                    style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                                    class="form-control" name="bringup_date" id=""
-                                                                    value="" required>
-                                                            </div>
-                                                        </div>
-                                                        <div style="width:50%">
-                                                            <div class=""><span style="color: red">*</span>
-                                                                <label for="next_action"
-                                                                    style="width: 113px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Next
-                                                                    Action(WayForward)</label>
-                                                                <textarea class="outer" rows="4"
-                                                                    style="width:205%;border-color: #1d1d50;border-radius: 7px;"
-                                                                    cols="41" placeholder="Physical Address"
-                                                                    name="next_action" form="addemployee"></textarea>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="file_name"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="file_name" id="" required>
-                                                            <option>---select---</option>
-                                                            <option>File 1</option>
-                                                            <option>File 2</option>
-                                                            <option>File 3</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="reminder_period"
-                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reminder
-                                                            period(Days)</label>
-                                                        <input type="text" placeholder=""
-                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="reminder_period" id="" value=""
-                                                            required>
-                                                    </div>
-                                                </div>
-                                                <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="action_type"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Action
-                                                            Type</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="action_type" id="" required>
-                                                            <option>---select---</option>
-                                                            <option>action_type 1</option>
-                                                            <option>action_type 2</option>
-                                                            <option>action_type 3</option>
-                                                            <option>action_type 4</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div style="width:50%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="action_description"
-                                                            style="width: 113px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Action
-                                                            Description</label>
-                                                        <textarea class="outer" rows="4"
-                                                            style="width:205%;border-color: #1d1d50;border-radius: 7px;"
-                                                            cols="41" placeholder="Physical Address"
-                                                            name="action_description" form="addemployee"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="time_taken_hours"
-                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
-                                                            Taken(Hours)</label>
-                                                        <input type="time" placeholder=""
-                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="time_taken_hours" id="" value=""
-                                                            required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="time_taken_hours"
-                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
-                                                            Taken(Minutes)</label>
-                                                        <input type="time" placeholder=""
-                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="time_taken_minutes" id=""
-                                                            value="" required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <br>
-                                            <div class="">
-                                                <h6>Send Reminder To:</h6>
-                                                <div>
-                                                    <p>Florence</p>
-                                                    <p>Princes</p>
-                                                </div>
-                                            </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <form method="post" action="#" id="edit_progress" enctype="multipart/form-data">
+                            @csrf
+                            {{method_field('PUT')}}
+                            <h4><b>Edit File Progress:-</b></h4>
+                            <div class="row">
+                                <div class="col-md-12 order-md-1">
 
-                                            <h4 style="text-align:center;">Send Billing</h4>
-
-                                            <div class="row">
-                                                <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="item_type"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item
-                                                            Type</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="item_type" id="" required>
-                                                            <option>---select---</option>
-                                                            <option>item_type 1</option>
-                                                            <option>item_type 2</option>
-                                                            <option>item_type 3</option>
-                                                            <option>item_type 4</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="currency"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="currency" id="" required>
-                                                            <option>---select---</option>
-                                                            <option>KES</option>
-                                                            <option>USD</option>
-                                                            <option>EUR</option>
-                                                            <option>GBP</option>
-                                                            <option>AUD</option>
-                                                            <option>CAD</option>
-                                                            <option>SEK</option>
-                                                            <option>DKK</option>
-                                                            <option>JPY</option>
-                                                            <option>CHF</option>
-                                                            <option>HKD</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="amount"
-                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Amount</label>
-                                                        <input type="text" placeholder=""
-                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="amount" id="" value="" required>
-                                                    </div>
-                                                </div>
+                                    <div class="row">
+                                        <div class="" style="width: 33%">
+                                            <div class=""><span style="color: red">*</span>
+                                                <label for="client_name"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                <select class="form-select" aria-label="Default select example"
+                                                    style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                    name="client_name" id="client_name" required>
+                                                    @if(count($client_list))
+                                                    @foreach($client_list as $list_category)
+                                                    <option>{{$list_category->client_name}}</option>
+                                                    @endforeach
+                                                    @endif
+                                                </select>
                                             </div>
-                                            <br>
-                                            <div id="test" style="height:20px;"></div>
-
-                                            <h4 style="text-align:center;">Send To Timesheet</h4>
-
-                                            <div class="row">
-                                                <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="start_time"
-                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Start
-                                                            Time</label>
-                                                        <input type="time" placeholder=""
-                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="start_time" id="" value=""
-                                                            required>
-                                                    </div>
-                                                </div>
-                                                <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="activity_type"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Activity
-                                                            Type</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="activity_type" id="" required>
-                                                            <option>---select---</option>
-                                                            <option>action_type 1</option>
-                                                            <option>action_type 2</option>
-                                                            <option>action_type 3</option>
-                                                            <option>action_type 4</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="activity"
-                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Activity</label>
-                                                        <input type="text" placeholder=""
-                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="activity" id="" value=""
-                                                            required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm">
-
-                                                </div>
-                                                <div class="col-sm">
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <br>
-                                                    <button type="submit" class="btn btn-primary float:right;"
-                                                        Style="width:45%;">Save</button>
-                                                    <button type="button" class="btn btn-primary float:left"
-                                                        Style="width:45%;" data-dismiss="modal">Cancel</button>
-                                                </div>
-                                            </div>
-                                    </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="modal" id="mymodal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <div class="modal-body">
-                                        <form action="">
-                                            <div>
-                                                <input type="text" name="type" class="form-control"
-                                                    placeholder="Client Type">
-                                                <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal" id="my1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <div class="modal-body">
-                                    <form action="">
-                                        <div>
-                                            <input type="text" name="type" class="form-control" placeholder="Country">
-                                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
                                         </div>
-                                    </form>
+                                        <div class="" style="width: 33%">
+                                            <div class=""><span style="color: red">*</span>
+                                                <label for="date_progress"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date
+                                                    of progress</label>
+                                                <input type="date" placeholder="Enter Email "
+                                                    style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                    class="form-control" name="progress_date" id="progress_date"
+                                                    value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="" style="width: 33%">
+                                            <div class=""><span style="color: red"></span>
+                                                <label for="bringup_date"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">New
+                                                    Bringup Date</label>
+                                                <input type="date" placeholder="Enter Email "
+                                                    style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                    class="form-control" name="bringup_date" id="bringup_date" value="">
+                                            </div>
+                                        </div>
+                                        <div style="width:50%">
+                                            <div class=""><span style="color: red"></span>
+                                                <label for="next_action"
+                                                    style="width: 113px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Next
+                                                    Action(WayForward)</label>
+                                                <textarea class="outer" rows="4"
+                                                    style="width:205%;border-color: #1d1d50;border-radius: 7px;"
+                                                    cols="41" placeholder="Physical Address" name="next_action"
+                                                    id="next_action"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="file_name"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                            name="file_name" id="file_name" required>
+                                            <option>---select---</option>
+                                            <option>File 1</option>
+                                            <option>File 2</option>
+                                            <option>File 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="reminder_period"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reminder
+                                            period(Days)</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="reminder_period" id="reminder_period" value=""
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red"></span>
+                                        <label for="action_type"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Action
+                                            Type</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                            name="action_type" id="action_type">
+                                            <option>---select---</option>
+                                            <option>action_type 1</option>
+                                            <option>action_type 2</option>
+                                            <option>action_type 3</option>
+                                            <option>action_type 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div style="width:50%">
+                                    <div class=""><span style="color: red"></span>
+                                        <label for="action_description"
+                                            style="width: 113px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Action
+                                            Description</label>
+                                        <textarea class="outer" rows="4"
+                                            style="width:205%;border-color: #1d1d50;border-radius: 7px;" cols="41"
+                                            placeholder="Physical Address" name="action_description"
+                                            id="action_description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="width: 33%">
+                                    <div class=""><span style="color: red"></span>
+                                        <label for="time_taken_hours"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
+                                            Taken(Hours)</label>
+                                        <input type="time" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="time_taken_hours" id="time_taken_hours" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6" style="width: 33%">
+                                    <div class=""><span style="color: red"></span>
+                                        <label for="time_taken_hours"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
+                                            Taken(Minutes)</label>
+                                        <input type="time" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="time_taken_minutes" id="time_taken_minutes" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="">
+                                <h6>Send Reminder To:</h6>
+                                <div>
+                                    <p>Florence</p>
+                                    <p>Princes</p>
+                                </div>
+                            </div>
+
+                            <h4 style="text-align:center;">Send Billing</h4>
+
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="item_type"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Item
+                                            Type</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                            name="item_type" id="item_type">
+                                            <option>---select---</option>
+                                            <option>item_type 1</option>
+                                            <option>item_type 2</option>
+                                            <option>item_type 3</option>
+                                            <option>item_type 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="currency"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                            name="currency" id="currency">
+                                            <option>---select---</option>
+                                            <option>KES</option>
+                                            <option>USD</option>
+                                            <option>EUR</option>
+                                            <option>GBP</option>
+                                            <option>AUD</option>
+                                            <option>CAD</option>
+                                            <option>SEK</option>
+                                            <option>DKK</option>
+                                            <option>JPY</option>
+                                            <option>CHF</option>
+                                            <option>HKD</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="amount"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Amount</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="amount" id="amount" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div id="test" style="height:20px;"></div>
+
+                            <h4 style="text-align:center;">Send To Timesheet</h4>
+
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red"></span>
+                                        <label for="start_time"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Start
+                                            Time</label>
+                                        <input type="time" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="start_time" id="start_time" value="">
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red"></span>
+                                        <label for="activity_type"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Activity
+                                            Type</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                            name="activity_type" id="activity_type">
+                                            <option>---select---</option>
+                                            <option>action_type 1</option>
+                                            <option>action_type 2</option>
+                                            <option>action_type 3</option>
+                                            <option>action_type 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red"></span>
+                                        <label for="activity"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Activity</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="activity" id="activity" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+
+                                </div>
+                                <div class="col-sm">
+
+                                </div>
+                                <div class="col-sm">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:45%;">Save</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                        data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal" id="mymodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body">
+                        <form action="">
+                            <div>
+                                <input type="text" name="type" class="form-control" placeholder="Client Type">
+                                <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-    <!---------------------------------------------------- END EIT FILE PROGRESS ------------------------------------------------------------>
+        </div>
+    </div>
+    </div>
+    <div class="modal" id="my1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body">
+                        <form action="">
+                            <div>
+                                <input type="text" name="type" class="form-control" placeholder="Country">
+                                <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!---------------------------------------------------- END EDIT FILE PROGRESS ------------------------------------------------------------>
 
+    <!---------------------------------------------------- START DELETE FILE PROGRESS ------------------------------------------------------------>
+    <div class="modal fade" id="deletefileprogress" style="">
+        <!-- delete company -->
+        <div class="modal-dialog modal-lg" style="width:30%;">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" id="delete_file" action="#" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" id="delid" value="">
+                    <div class="modal-header" style="padding:0rem 0rem;">
+                        <div style="padding:1rem 1rem;">
+                            <h4 class="text-centre"><b>Delete <span id="delfile"></span></b></h4>
+                        </div>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <h6><b><span>Are you sure?</span></b></h6>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                        data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!---------------------------------------------------- END DELETE FILE PROGRESS -------------------------------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+    <script>
+function editprogresslist(param) {
+    var id = $(param).data('id');
+    $.ajax({
+        type: "GET",
+        url: 'edit-file-progress/' + id,
+
+        success: function(response) {
+            $('#id').val(response.result.id);
+            $('#progress_date').val(response.result.progress_date);
+            $('#next_action').val(response.result.next_action);
+            $('#client_name').val(response.result.client_name);
+            $('#bringup_date').val(response.result.bringup_date);
+            $('#file_name').val(response.result.file_name);
+            $('#reminder_period').val(response.result.reminder_period);
+            $('#action_type').val(response.result.action_type);
+            $('#action_description').val(response.result.action_description);
+            $('#time_taken_hours').val(response.result.time_taken_hours);
+            $('#time_taken_minutes').val(response.result.time_taken_minutes);
+            $('#item_type').val(response.result.item_type);
+            $('#currency').val(response.result.currency);
+            $('#amount').val(response.result.amount);
+            $('#start_time').val(response.result.start_time);
+            $('#activity_type').val(response.result.activity_type);
+            $('#activity').val(response.result.activity);
+            $('#edit_progress').attr('action', "{{url('update_progress')}}" + "/" + id);
+        }
+    })
+}
+
+function deletefileprogress(param){
+    var id = $(param).data('id');
+    var delprog = $(param).data('name');
+    $('#delid').val(id);
+    $('#delfile').html(delprog);
+    $('#delete_file').attr('action',"{{ url('delete-file-progress')}}"+"/"+id);
+}
+    </script>
     @endsection

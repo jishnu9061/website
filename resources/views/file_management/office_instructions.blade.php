@@ -299,7 +299,7 @@
                                                         <textarea class="outer" rows="4"
                                                             style="border-color:#1d1d50;border-radius:7px;width:100%;"
                                                             cols="41" placeholder="Physical Address" name="detail"
-                                                            form="addemployee"></textarea>
+                                                            form=""></textarea>
                                                     </div>
                                                 </div>
                                             </div>
