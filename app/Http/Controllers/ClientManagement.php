@@ -1145,7 +1145,7 @@ class ClientManagement extends Controller
         $communicated_description = $Request['communication_description'];
         $action_plan = $Request['action_plan'];
         $person_handling = $Request['handling'];
-        $time = $Request['Timer'];
+        $time = $Request['time'];
         $others_handling = $Request['Other_handling'];
 
         DB::table('cra_conversations')->insert([

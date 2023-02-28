@@ -319,7 +319,7 @@
                                                                 </label>
                                                                 <input type="time" placeholder=""
                                                                     style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                                    class="form-control" name="timer" id=""
+                                                                    class="form-control" name="time" id=""
                                                                     value="">
                                                             </div>
                                                         </div>
@@ -459,7 +459,7 @@
                                                                     style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Communication
                                                                 </label>
                                                                 <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Communication Description"
-                                                                    name="communication_description" form="addemployee"></textarea>
+                                                                    name="communication_description"></textarea>
                                                             </div>
                                                         </div>
                                                         <div style="width:49%">
@@ -469,7 +469,7 @@
                                                                     Plan
                                                                 </label>
                                                                 <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Action Plan"
-                                                                    name="action_plan" form="addemployee"></textarea>
+                                                                    name="action_plan"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -515,8 +515,8 @@
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="mb-1">
-                                                                <button type="submit" class="btn btn-primary"
-                                                                    style="width:45%;">Save</button>
+                                                                <button type="submit" onclick="return Validate()" class="btn btn-primary float:right;"
+                                                                Style="width:45%;" value="submit">Save</button>
                                                                 <button type="button" class="btn btn-primary"
                                                                     data-dismiss="modal"
                                                                     style="width:45%;">Cancel</button>

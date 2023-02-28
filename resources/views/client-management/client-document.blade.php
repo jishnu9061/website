@@ -108,13 +108,20 @@
                                         href="{{url('view-document',$list->id)}}"><button type="button"
                                             class="btn btn-primary float:right;" >View
                                             Document</button></a>
-                                </td>
-                                <td scope="row" class="text-center">
-                                    <a href="{{url('edit-documents',$list->id)}}"><i style="color:black;"
-                                            class="fa fa-pencil" aria-hidden="true"></i>
-                                     <span class="m-2"></span>
-                                        <a onClick="return myFunction();" href="{{url('delete-document',$list->id)}}"
-                                            style="color:black;"><i class="fas fa-trash-alt"></i></a>
+                                </td> 
+                                <td scope="row"class="text-center">
+                                    <div class="btn-group">
+                                        <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" data-toggle="modal"
+                                                data-target="#edit_corporate_client_details"
+                                                href="#">Edit Document
+                                            </a>
+                                            <a href="{{url('edit-documents',$list->id)}}" class="dropdown-item" href=""data-toggle="modal"
+                                                 onClick="return myFunction();"data-target="#">Delete Document</a>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach
