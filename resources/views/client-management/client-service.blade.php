@@ -171,7 +171,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <form method="post" action="{{ url('add_newclient') }}">
+                                            <form method="post" action="{{ url('add-service') }}">
                                                 <h5><b>Create New Client Details:-</b></h5>
                                                 @csrf
                                                 <div class="row">
@@ -182,7 +182,7 @@
                                                                 No</label>
                                                             <input type="text" placeholder="Enter Client No "
                                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                                class="form-control" name="receipt" id=""
+                                                                class="form-control" name="receiptno" id=""
                                                                 value="" required>
                                                         </div>
                                                     </div>
@@ -194,7 +194,7 @@
                                                             <select class="form-select"
                                                                 aria-label="Default select example"
                                                                 style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                                name="type" id="" required>
+                                                                name="Name" id="" required>
                                                                 <option>Select Client Name</option>
                                                                 <option>Client 1</option>
                                                                 <option>Client 2</option>
@@ -208,7 +208,7 @@
                                                                 No</label>
                                                             <input type="text" placeholder="Enter mobile Number"
                                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                                class="form-control" name="receipt" id=""
+                                                                class="form-control" name="Mobile" id=""
                                                                 value="" required>
                                                         </div>
                                                     </div>
@@ -255,7 +255,7 @@
                                                             <select class="form-select"
                                                                 aria-label="Default select example"
                                                                 style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                                name="type" id="code" required>
+                                                                name="code" id="" required>
                                                                 <option>Select Code</option>
                                                                 <option>Code 1</option>
                                                                 <option>Code 2</option>
@@ -270,7 +270,7 @@
                                                             <select class="form-select"
                                                                 aria-label="Default select example"
                                                                 style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                                name="type" id="code" required>
+                                                                name="Method" id="" required>
                                                                 <option>Select Payment</option>
                                                                 <option>By Cash</option>
                                                                 <option>By cheque</option>

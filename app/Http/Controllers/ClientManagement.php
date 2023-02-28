@@ -951,10 +951,10 @@ class ClientManagement extends Controller
     public function addService(Request $Request)
     {
 
-        $receipt_no = $Request['Receipt'];
+        $receipt_no = $Request['receiptno'];
         $client_name = $Request['Name'];
         $mobile = $Request['Mobile'];
-        $amount_paid = $Request['amount'];
+        $amount_paid = $Request['amount_paid'];
         $date = $Request['date'];
         $email = $Request['email'];
         $code = $Request['code'];

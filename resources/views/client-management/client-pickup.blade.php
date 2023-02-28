@@ -134,7 +134,7 @@
                                                             aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                                         <div class="dropdown-menu" style="overflow: scroll;height:100px;">
                                                             <a href="" data-toggle="modal" data-target="#viewModal"
-                                                                class="dropdown-item">View Client
+                                                                class="dropdown-item">Edit Client
                                                                 Detail
                                                             </a>
                                                             <a onClick="return myFunction();"
