@@ -133,12 +133,30 @@
                                     <td class="text-center" id="medicine_name_1">{{ $list_service->receipt_no }}</td>
                                     <td class="text-center" id="medicine_name_1">{{ $list_service->payment_method }}</td>
                                     <td class="text-center" id="medicine_name_1">test4</td>
-                                    <td class="text-center" id="medicine_name_1">
+                                    {{-- <td class="text-center" id="medicine_name_1">
                                         <a href="{{ url('edit-service', $list_service->id) }}"><i style="color:black;"
                                                 class="fa fa-edit" aria-hidden="true"></i></a>
                                         <a onClick="return myFunction();"
                                             href="{{ url('delete-service', $list_service->id) }}" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a>
+                                    </td> --}}
+                                    <td scope="row"class="text-center">
+                                        <div class="btn-group">
+                                            <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" style="border-color:none;"> ⋮ </a>
+
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" data-toggle="modal"
+                                                    data-target=""
+                                                    href="{{ url('edit-service', $list_service->id) }}">Edit
+                                                    Service
+                                                </a>
+                                                <a href="{{ url('delete-service', $list_service->id) }}" class="dropdown-item" data-toggle=""
+                                                    data-id="" data-name=""
+                                                    data-target="#deletecompany">Delete Service
+                                                    </a>
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach
