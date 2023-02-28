@@ -7,131 +7,200 @@
     </nav>
     <br><br>
     <style>
-         th {width: 30%;}
-        .outer{border-color: #1d1d50;width=45%;border-radius: 7px;}
-        .add_doc{text-decoration: none;display: inline-block;*/width: 30px;height: 30px;background: #8bc34a;font-size: 2rem;
-            font-weight: bold;color: #1d1d50;align-items: center;line-height: 0.7;*/display: flex;justify-content: center;
-            align-items: center;cursor: pointer;}
-        .exdocdelete{text-decoration: none;display: inline-block;background: #f44336;color: #1d1d50;font-size: 1.5rem;
-            font-weight:bold;width: 30px;height: 30px;margin-left: auto;display: flex;justify-content: center;align-items: center;
-            cursor: pointer;}
-        .docflex{display: flex;gap:1.5rem;margin-bottom: 15px;}
-        .doc_warp{display: flex;justify-content: space-evenly;align-items: center;width: 100%;margin-bottom: 20px;
-            padding-bottom:15px;border-bottom:2px solid #e4e1e1;}
-        .doc_contanier{max-width: 1000px;background: white;border-radius: 5px;padding: 20px;*/box-shadow: 0 2px 2px 43px black;}
-        .doc_input{padding: 8px 10px;width: 50%;border-radius: 5px;border-color: #1d1d50;}
-        .doc_input:focus{
+        th {
+            width: 30%;
+        }
+
+        .outer {
+            border-color: #1d1d50;
+            width=45%;
+            border-radius: 7px;
+        }
+
+        .add_doc {
+            text-decoration: none;
+            display: inline-block;
+            */width: 30px;
+            height: 30px;
+            background: #8bc34a;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1d1d50;
+            align-items: center;
+            line-height: 0.7;
+            */display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .exdocdelete {
+            text-decoration: none;
+            display: inline-block;
+            background: #f44336;
+            color: #1d1d50;
+            font-size: 1.5rem;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .docflex {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .doc_warp {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e4e1e1;
+        }
+
+        .doc_contanier {
+            max-width: 1000px;
+            background: white;
+            border-radius: 5px;
+            padding: 20px;
+            */box-shadow: 0 2px 2px 43px black;
+        }
+
+        .doc_input {
+            padding: 8px 10px;
+            width: 50%;
+            border-radius: 5px;
+            border-color: #1d1d50;
+        }
+
+        .doc_input:focus {
             outline: 1px solid #efefef;
         }
+
         .pagination>li>span {
-                position: relative;
-                float: left;
-                padding: 6px 12px;
-                margin-left: -1px;
-                line-height: 1.42857143;
-                color: #337ab7;
-                text-decoration: none;
-                background-color: #fff;
-                border: 1px solid #ddd;
-                }
-            .pagination {
+            position: relative;
+            float: left;
+            padding: 6px 12px;
+            margin-left: -1px;
+            line-height: 1.42857143;
+            color: #337ab7;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        .pagination {
             margin: 0;
-            }
+        }
 
-            .pagination li:hover{
+        .pagination li:hover {
             cursor: pointer;
-            }
+        }
 
-            .header_wrap {
-            padding:30px 0;
-            }
-            .num_rows {
+        .header_wrap {
+            padding: 30px 0;
+        }
+
+        .num_rows {
             width: 20%;
-            float:left;
-            }
-            .tb_search{
+            float: left;
+        }
+
+        .tb_search {
             width: 20%;
-            float:right;
-            }
-            .pagination-container {
+            float: right;
+        }
+
+        .pagination-container {
             width: 70%;
-            float:left;
-            }
+            float: left;
+        }
 
-            .rows_count {
+        .rows_count {
             width: 20%;
-            float:right;
-            text-align:right;
+            float: right;
+            text-align: right;
             color: #999;
-            }
-            input[type='file'] {
-            opacity:0
-            }
-            input[type='file'] {
+        }
+
+        input[type='file'] {
+            opacity: 0
+        }
+
+        input[type='file'] {
             color: rgba(0, 0, 0, 0)
-            }
-        </style>
-        <style>
-            .switch {
-              position: relative;
-              display: inline-block;
-              width: 50px;
-              height: 20px;
-            }
+        }
+    </style>
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+        }
 
-            .switch input {
-              opacity: 0;
-              width: 0;
-              height: 0;
-            }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
 
-            .slider {
-              position: absolute;
-              cursor: pointer;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: #6c757d;
-              -webkit-transition: .4s;
-              transition: .4s;
-            }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #6c757d;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
 
-            .slider:before {
-              position: absolute;
-              content: "";
-              height: 15px;
-              width: 15px;
-              left: 4px;
-              bottom: 2.5px;
-              background-color: white;
-              -webkit-transition: .4s;
-              transition: .4s;
-            }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 4px;
+            bottom: 2.5px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
 
-            .check:checked + .slider {
-              background-color: #0edb7c;
-            }
+        .check:checked+.slider {
+            background-color: #0edb7c;
+        }
 
-            .check:focus + .slider {
-              box-shadow: 0 0 1px #0edb7c;
-            }
+        .check:focus+.slider {
+            box-shadow: 0 0 1px #0edb7c;
+        }
 
-            .check:checked + .slider:before {
-              -webkit-transform: translateX(26px);
-              -ms-transform: translateX(26px);
-              transform: translateX(26px);
-            }
+        .check:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
 
-            /* Rounded sliders */
-            .slider.round {
-              border-radius: 34px;
-            }
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
 
-            .slider.round:before {
-              border-radius: 50%;
-            }
-            .add_decduct{
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        .add_decduct {
             text-decoration: none;
             display: inline-block;
             */width: 30px;
@@ -145,43 +214,46 @@
             line-height: 0.9;
             cursor: pointer;
         }
-        .decduct_input{
+
+        .decduct_input {
             padding: 8px 10px;
             width: 20%;
             border-radius: 5px;
             border-color: #1d1d50;
         }
+
         #e_passmessage {
-            display:block;
+            display: block;
             color: #1d1d50;
             position: relative;
-            }
-            /* Add a green text color and a checkmark when the requirements are right */
-            .passvalid {
+        }
+
+        /* Add a green text color and a checkmark when the requirements are right */
+        .passvalid {
             color: green;
             margin: 0px;
             font-size: 10px;
-            }
+        }
 
-            .passvalid:before {
+        .passvalid:before {
             position: relative;
             left: 0px;
             content: "✔";
-            }
+        }
 
-            /* Add a red text color and an "x" when the requirements are wrong */
-            .passinvalid {
+        /* Add a red text color and an "x" when the requirements are wrong */
+        .passinvalid {
             color: red;
             margin: 0px;
             font-size: 10px;
             padding-left: 10px;
-            }
+        }
 
-            .passinvalid:before {
+        .passinvalid:before {
             position: relative;
             left: 0px;
             content: "✖";
-            }
+        }
     </style>
 
     <div class="container">
@@ -263,7 +335,7 @@
                                         </label>
                                     </td>
                                     <td scope="row"class="text-center">
-                                        <div class="btn-group" >
+                                        <div class="btn-group">
                                             <a class="btn" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                             <div class="dropdown-menu" style="overflow: scroll;height:250px;">
@@ -283,26 +355,26 @@
                                                     href="{{ url('corporate-document-details', $list->corporate_id) }}">View
                                                     Document Details</a>
                                                 <a class="dropdown-item" href="#">Engagement Letter</a>
+                                                <a class="dropdown-item" data-toggle="modal" data-target="#send_mail"
+                                                    href="#">Send Mail
+
+                                                </a>
                                                 <a class="dropdown-item" data-toggle="modal"
-                                                data-target="#send_mail" href="#">Send Mail
+                                                    data-target="#post_important_date" href="#">Post Important Date
 
-                                            </a>
+                                                </a>
                                                 <a class="dropdown-item" data-toggle="modal"
-                                                data-target="#post_important_date" href="#">Post Important Date
+                                                    data-target="#post_status_summary" href="#">Post Status Summary
 
-                                            </a>
-                                                <a class="dropdown-item" data-toggle="modal"
-                                                data-target="#post_status_summary" href="#">Post Status Summary
+                                                </a>
+                                                <a class="dropdown-item" data-toggle="modal" data-target="#send_message"
+                                                    href="#">Send Message
 
-                                            </a>
-                                                <a class="dropdown-item"  data-toggle="modal"
-                                                data-target="#send_message" href="#">Send Message
+                                                </a>
+                                                <a class="dropdown-item" data-toggle="modal" data-target="#post_comment"
+                                                    href="#">Post Comment
 
-                                            </a>
-                                                <a class="dropdown-item" data-toggle="modal"
-                                                data-target="#post_comment" href="#">Post Comment
-
-                                            </a>
+                                                </a>
                                             </div>
                                         </div>
                                     </td>
@@ -345,7 +417,7 @@
                 <div class="modal-body">
                     <div class="container">
 
-                        <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data" >
                             @csrf
                             <div class="container">
                                 <div class="row">
@@ -590,15 +662,16 @@
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Physcical
                                             Address</label>
                                         <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Physical Address"
-                                            name="physicaladdress" form="addemployee"></textarea>
+                                            name="physicaladdress"></textarea>
                                     </div>
                                     <div style="width:49%">
                                         <label for="postal_addr"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes New
                                         </label>
-                                        <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Notes" name="notes"
-                                            form="addemployee"></textarea>
+                                        <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Physical Address"
+                                        name="notesnew"></textarea>
                                     </div>
+                                    
                                 </diV>
                             </div>
                             <br>
@@ -628,25 +701,25 @@
                                     <a class="add_doc">&plus;</a>
                                 </div>
                                 <div class="row document_details " style="margin-bottom: 20px;">
-                                    {{-- Add More Document details:- javascript --}}
+                                    
                                 </div>
                             </div>
-                        </form>
                     </div>
                     <div class="row">
                         <div class="row">
-                            <div class=""  style="width: 50%;">
+                            <div class="" style="width: 50%;">
                             </div>
                             <div class="" style="width: 0%"></div>
                             <div class="col-sm" style="padding-right: 0px;width: 50%">
                                 <br>
                                 <button type="submit" onclick="return Validate()" class="btn btn-primary float:right;"
-                                    Style="width:45%;">Create</button>
+                                    Style="width:45%;" value="submit">Create</button>
                                 <button type="button" class="btn btn-primary float:left"
                                     Style="width:45%;"data-dismiss="modal">Cancel</button>
                             </div>
                         </div>
                     </div>
+                </form>
                 </div>
                 <br>
             </div>
@@ -931,10 +1004,13 @@
                                 </div>
                             </div>
                             <div class="doc_contanier"style="*/background-color:orange;">
+
                                 <div class="doc_warp">
                                     <h6>Add Contact Person details:-</h6>
                                     <a class="add_doc">&plus;</a>
+                                    
                                 </div>
+                                
                                 <div class="row document_details " style="margin-bottom: 20px;">
                                     {{-- Add More Document details:- javascript --}}
                                 </div>
@@ -950,7 +1026,7 @@
                             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
                         </button>
                         <button type="button" class="btn btn-primary float:left" Style="width:19%;"
-                            onclick="history.back()">Cancel</button>
+                            data-dismiss="modal">Cancel</button>
                     </div>
             </div>
         </div>
@@ -1156,315 +1232,336 @@
         src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
 
-    {{-- Start Send Mail Modal --}}
-    <div class="modal fade" id="send_mail" style="">
-        <!-- Send Mail -->
-        <div class="modal-dialog modal-lg">
+    <div class="modal fade" id="send_mail">
+        <div class="modal-dialog modal-lg" style="width: 50%">
             <div class="modal-content">
-                <!---- Modal Header -->
-                <form method="post" id="send_mail" action="{{ url('send_mail') }}" enctype="multipart/form-data">
-                    @csrf
-                    @method('PUT')
-                    <input type="hidden" id="send_mail" value="corporateid">
-                    <h5><b>Send Mail:-</b></h5>
-                    <div class="row">
-                        <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
-                            <div class="row">
-                                <div class="" style="width: 100%">
-                                    <div class=""><span style="color: red">*</span>
-                                        <label for="email_to"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email Address(To)</label>
-                                        <input type="email" placeholder=" "
-                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                            class="form-control" name="first_name" id="" value=""
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="" style="width: 100%">
-                                    <div class=""><span style="color: red">*</span>
-                                        <label for="email_from"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email Address(Cc)</label>
-                                            <input type="email" placeholder=" "
-                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                            class="form-control" name="first_name" id="" value=""
-                                            required>
+                <!-- Modal Header -->
+                <h4 class="text-centre"><b>Send Mail:-</b></h4>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
 
-                                    </div>
-                                </div>
-                                <div class="" style="width: 100%">
-                                    <div class=""><span style="color: red">*</span>
-                                        <label for="email_bcc"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email Address(Bcc)</label>
-                                            <input type="email" placeholder=""
-                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                            class="form-control" name="first_name" id="" value=""
-                                            required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="" style="width: 100%">
-                                    <div class=""><span style="color: red">*</span>
-                                        <label for="subject"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Subject</label>
-                                            <input type="text" placeholder=" "
-                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                            class="form-control" name="first_name" id="" value=""
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="" style="width:100%;"><span style="color: red">*</span>
-                                    <label for="message"
-                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Message</label>
-                                        <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Message"
-                                        name="message" form="addemployee"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class style="width: 20%">
-                        </div>
-                        <div class="col-sm">
-                        </div>
-                        <div class="col-sm">
-                        </div>
-                        <div class="col-sm">
-
-                            <button type="button" class="btn btn-primary float:left" Style="width:35%;"
-                                onclick="history.back()">Email</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:30%;"
-                                onclick="history.back()">Close</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:30%;"
-                                onclick="history.back()">View</button>
-                        </div>
-
-                </div>
-            </form>
-            </div>
-
-        </div>
-
-    </div>
-
-        {{-- Start post important date Modal --}}
-        <div class="modal fade" id="post_important_date" style="">
-            <!--post important date -->
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <!---- Modal Header -->
-                    <form method="post" action="" enctype="multipart/form-data" id="addemployee">
-                        @csrf
-                        @method('PUT')
-                        <input type="hidden" id="post_important_date" value="corporateid">
-                       <h5><b>post important date:-</b></h5>
-
-                        <div class="row">
-                            <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="container">
                                 <div class="row">
                                     <div class="" style="width: 100%">
                                         <div class=""><span style="color: red">*</span>
-                                            <label for="date"
-                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
-                                            <input type="date" placeholder=" "
+                                            <label for="email_to"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email
+                                                Address(To)</label>
+                                            <input type="email" placeholder=" "
                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                 class="form-control" name="first_name" id="" value=""
                                                 required>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="" style="width: 100%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="email_from"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email
+                                                Address(Cc)</label>
+                                            <input type="email" placeholder=" "
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="first_name" id="" value=""
+                                                required>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="" style="width: 100%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="email_bcc"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email
+                                                Address(Bcc)</label>
+                                            <input type="email" placeholder=""
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="first_name" id="" value=""
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="" style="width: 100%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="subject"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Subject</label>
+                                            <input type="text" placeholder=" "
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="first_name" id="" value=""
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="" style="width:100%;"><span style="color: red">*</span>
+                                        <label for="message"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Message</label>
+                                        <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Message"
+                                            name="message" form="addemployee"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="" style="width: 50%;">
+                            </div>
+                            <div class="" style="width: 0%"></div>
+                            <div class="col-sm" style="padding-right: 0px;width: 50%">
+                                <br>
+                                <button type="button" class="btn btn-primary float:left" Style="width:30%;float: right;"
+                                    onclick="history.back()">Send</button>
+                                <button type="button" class="btn btn-primary float:left" Style="width:30%;float: right;"
+                                    data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary float:left" Style="width:30%;float: right;"
+                                    onclick="history.back()">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    {{-- Start post important date Modal --}}
+    <div class="modal fade" id="post_important_date">
+        <div class="modal-dialog modal-lg" style="width: 50%">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <h5><b>post important date:-</b></h5>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+
+                        <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="container">
+                                <div class="row">
+                                    <div class="" style="width: 100%">
+                                        <div class="" style="width: 100%">
+                                            <div class=""><span style="color: red">*</span>
+                                                <label for="date"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
+                                                <input type="date" placeholder=" "
+                                                    style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                    class="form-control" name="first_name" id="" value=""
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="" style="width: 100%">
                                         <div class=""><span style="color: red">*</span>
                                             <label for="title"
                                                 style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Title</label>
-                                                <input type="text" placeholder=" "
+                                            <input type="text" placeholder=" "
                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                 class="form-control" name="first_name" id="" value=""
                                                 required>
 
                                         </div>
                                     </div>
-                                    <div class="row document_details " style="margin-bottom: 20px;">
-                                        {{-- Add More Document details:- javascript --}}
-                                    </div>
                                 </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="" style="width: 50%;">
+                            </div>
+                            <div class="" style="width: 0%"></div>
+                            <div class="col-sm" style="padding-right: 0px;width: 50%">
+                                <br>
+                                <button type="button" class="btn btn-primary" Style="width:30%;float: right;"
+                                    data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" Style="width:30%;float: right;"
+                                    onclick="history.back()">Post</button>
                             </div>
                         </div>
-                        <div class style="width:20%;">
-                        </div>
-                        <div class="col-sm">
-                        </div>
-                        <div class="col-sm">
-                        </div>
-                        <div class="col-sm">
-
-                            <button type="submit" class="btn btn-primary float:right;"
-                                style="margin-left: 84%;--clr: #1D1D50;width:19%;
-                                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Post
-                            </button>
-
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
-
-        </div>
-
-    {{-- Start Post Status Summary --}}
-    <div class="modal fade" id="post_status_summary" style="">
-        <!--Post Status Summary -->
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <!---- Modal Header -->
-                <form method="post" id="send_mail" action="" enctype="multipart/form-data">
-                    @csrf
-                    @method('PUT')
-                    <input type="hidden" id="send_mail" value="corporateid">
-                    <h5><b>Post Status Summary:-</b></h5>
-                    <div class="" style="width:100%;"><span style="color: red">*</span>
-                        <label for="summary"
-                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Summary</label>
-                            <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Message"
-                            name="message" form="addemployee"></textarea>
-                    </div>
-                    <div class="row document_details " style="margin-bottom: 20px;">
-                        {{-- Add More Document details:- javascript --}}
-                    </div>
-        <div class style="width: 20%">
-        </div>
-        <div class="col-sm">
-        </div>
-        <div class="col-sm">
-        </div>
-        <div class="col-sm">
-
-            <button type="submit" class="btn btn-primary float:right;"
-                style="margin-left: 83%;--clr: #1D1D50;width:19%;
-                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Post
-            </button>
-
-        </div>
-                </form>
+                <br>
             </div>
         </div>
     </div>
 
-    {{-- Start Send Message --}}
-    <div class="modal fade" id="send_message" style="">
-        <!-- Send Message -->
-        <div class="modal-dialog modal-lg">
+    <div class="modal fade" id="post_status_summary">
+        <div class="modal-dialog modal-lg" style="width: 50%">
             <div class="modal-content">
-                <!---- Modal Header -->
-                <form method="post" id="send_mail" action="" enctype="multipart/form-data">
-                    @csrf
-                    @method('PUT')
-                    <input type="hidden" id="send_mail" value="corporateid">
-                    <h5><b>Send Message:-</b></h5>
-                    <div class="row">
-                        <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
-                            <div class="row">
-                                <div class="" style="width: 100%">
-                                    <div class=""><span style="color: red">*</span>
-                                        <label for="to"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">To</label>
-                                        <input type="text" placeholder=" "
-                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                            class="form-control" name="first_name" id="" value=""
-                                            required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="" style="width: 100%">
-                                    <div class=""><span style="color: red">*</span>
-                                        <label for="message"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">SMS Message</label>
-                                            <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Type message here"
+                <!-- Modal Header -->
+                <h5><b>Post Status Summary:-</b></h5>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+
+                        <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="container">
+                                <div class="row">
+                                    <div class="" style="width:100%;"><span style="color: red">*</span>
+                                        <label for="summary"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Summary</label>
+                                        <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Message"
                                             name="message" form="addemployee"></textarea>
-
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="" style="width: 70%">
-                                    <div class=""><span style="color: red">*</span>
-                                        <label for="date"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date Scheduled</label>
-                                            <input type="date" placeholder=""
-                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                            class="form-control" name="first_name" id="" value=""
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="" style="width: 30%">
-                                    <div class=""><span style="color: red">*</span>
-                                        <label for="time"
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">time</label>
-                                            <input type="time" placeholder=" "
-                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                            class="form-control" name="first_name" id="" value=""
-                                            required>
-                                    </div>
-                                </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="" style="width: 50%;">
                             </div>
-                        </div>
-
-                        <div class style="width: 20%">
-                        </div>
-                        <div class="col-sm">
-                        </div>
-                        <div class="col-sm">
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="button" class="btn btn-primary float:left" Style="width:30%;"
-                                onclick="history.back()">Send</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:30%;"
-                                onclick="history.back()">Save</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:35%;"
-                                onclick="history.back()">Cancel</button>
+                            <div class="" style="width: 0%"></div>
+                            <div class="col-sm" style="padding-right: 0px;width: 50%">
+                                <br>
+                                <button type="button" class="btn btn-primary" Style="width:30%;float: right;"
+                                    data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" Style="width:30%;float: right;"
+                                    onclick="history.back()">Post</button>
+                            </div>
                         </div>
                     </div>
-
-            </form>
                 </div>
+                <br>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal fade" id="send_message">
+        <div class="modal-dialog modal-lg" style="width: 50%">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <h5><b>Send Message:-</b></h5>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+
+                        <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="container">
+                                <div class="row">
+                                    <div class="" style="width: 100%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="to"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">To</label>
+                                            <input type="text" placeholder=" "
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="first_name" id="" value=""
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="" style="width: 100%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="message"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">SMS
+                                                Message</label>
+                                            <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Type message here"
+                                                name="message" form="addemployee"></textarea>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="" style="width: 70%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="date"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date
+                                                Scheduled</label>
+                                            <input type="date" placeholder=""
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="first_name" id="" value=""
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 30%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="time"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">time</label>
+                                            <input type="time" placeholder=" "
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="first_name" id="" value=""
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="" style="width: 50%;">
+                            </div>
+                            <div class="" style="width: 0%"></div>
+                            <div class="col-sm" style="padding-right: 0px;width: 50%">
+                                <br>
+                                <button type="button" class="btn btn-primary" Style="width:30%;float: right;"
+                                    data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-primary" Style="width:30%;float: right;"
+                                    data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" Style="width:30%;float: right;"
+                                    onclick="history.back()">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
         </div>
     </div>
     {{-- Start Post Comment --}}
-    <div class="modal fade" id="post_comment" style="">
-        <!--Post Comment -->
-        <div class="modal-dialog modal-lg">
+    <div class="modal fade" id="post_comment">
+        <div class="modal-dialog modal-lg" style="width: 50%">
             <div class="modal-content">
-                <!---- Modal Header -->
-                <form method="post" id="send_mail" action="" enctype="multipart/form-data">
-                    @csrf
-                    @method('PUT')
-                    <input type="hidden" id="send_mail" value="corporateid">
-                    <h5><b>Post Comment:-</b></h5>
-                    <div class="" style="width:100%;"><span style="color: red">*</span>
-                        <label for="comment"
-                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Post Comment</label>
-                            <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Post a comment"
-                            name="message" form="addemployee"></textarea>
-                    </div>
-                    <div class="row document_details " style="margin-bottom: 20px;">
-                        {{-- Add More Document details:- javascript --}}
-                    </div>
-        <div class style="width: 20%">
-        </div>
-        <div class="col-sm">
-        </div>
-        <div class="col-sm">
-        </div>
-        <div class="col-sm">
+                <!-- Modal Header -->
+                <h5><b>Post Comment:-</b></h5>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
 
-            <button type="submit" class="btn btn-primary float:right;"
-                style="margin-left: 83%;--clr: #1D1D50;width:19%;
-                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Post
-            </button>
-
-        </div>
-                </form>
+                        <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="container">
+                                <div class="row">
+                                    <div class="" style="width:100%;"><span style="color: red">*</span>
+                                        <label for="comment"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Post
+                                            Comment</label>
+                                        <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Post a comment"
+                                            name="message" form="addemployee"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="" style="width: 50%;">
+                            </div>
+                            <div class="" style="width: 0%"></div>
+                            <div class="col-sm" style="padding-right: 0px;width: 50%">
+                                <br>
+                                <button type="button" class="btn btn-primary" Style="width:35%;float: right;"
+                                    data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary " Style="width:35%;float: right; "
+                                    onclick="history.back()">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
             </div>
         </div>
     </div>
-
 @endsection

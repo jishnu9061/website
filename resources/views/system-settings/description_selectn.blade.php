@@ -50,9 +50,130 @@ float:right;
 text-align:right;
 color: #999;
 }
+input[type='file'] {
+    opacity: 0
+}
+
+input[type='file'] {
+    color: rgba(0, 0, 0, 0)
+}
 </style>
 
-
+<style>
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 20px;
+    }
+    
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #6c757d;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        left: 4px;
+        bottom: 2.5px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .check:checked+.slider {
+        background-color: #0edb7c;
+    }
+    
+    .check:focus+.slider {
+        box-shadow: 0 0 1px #0edb7c;
+    }
+    
+    .check:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+    
+    .add_decduct {
+        text-decoration: none;
+        display: inline-block;
+        */width: 30px;
+        height: 30px;
+        background: #8bc34a;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #1d1d50;
+        justify-content: space-evenly;
+        align-items: center;
+        line-height: 0.9;
+        cursor: pointer;
+    }
+    
+    .decduct_input {
+        padding: 8px 10px;
+        width: 20%;
+        border-radius: 5px;
+        border-color: #1d1d50;
+    }
+    
+    #e_passmessage {
+        display: block;
+        color: #1d1d50;
+        position: relative;
+    }
+    
+    /* Add a green text color and a checkmark when the requirements are right */
+    .passvalid {
+        color: green;
+        margin: 0px;
+        font-size: 10px;
+    }
+    
+    .passvalid:before {
+        position: relative;
+        left: 0px;
+        content: "✔";
+    }
+    
+    /* Add a red text color and an "x" when the requirements are wrong */
+    .passinvalid {
+        color: red;
+        margin: 0px;
+        font-size: 10px;
+        padding-left: 10px;
+    }
+    
+    .passinvalid:before {
+        position: relative;
+        left: 0px;
+        content: "✖";
+    }
+        </style>
 {{-- heading --}}
 <div class="container">
 {{-- <h4 id="hdtpa"><b>Description Selections</b></h4> --}}
@@ -131,7 +252,13 @@ color: #999;
                         <!-- <td>{{$description->id}}</td> -->
                         <td>{{$description->Description_Selection_Name}}</td>
                         <td >{{$description->Selection_Description}}</td>
-                        <td class="text-center" ></td>
+                        <td class="text-center"><label class="switch">
+                            <input type="checkbox" data-id="{{$description->id }}"
+                                onclick="changestatus(this)" id="status" class="check"
+                                {{ $description->status == 1 ? 'checked' : '' }}>
+                            <span class="slider round"></span>
+                        </label>
+                    </td>
 
                         {{-- <td  scope="row"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_desc_sel',$description->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
@@ -366,6 +493,30 @@ color: #999;
     </div>
 </div>
 </div>
+<script>
+    function changestatus(param) { // change copany status
+        var status = $(param).prop('checked') == true ? 1 : 0;
+        var user_id = $(param).data('id');
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: "{{ route('changestatus_descsel') }}",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                'status': status,
+                'id': user_id
+            },
+            success: function(data) {
+                toastr.options.closeButton = true;
+                toastr.options.closeMethod = 'fadeOut';
+                toastr.options.closeDuration = 1;
+                toastr.success(data.success);
+            }
+        });
+    }
+
+    
+</script>
   @endsection
 
 

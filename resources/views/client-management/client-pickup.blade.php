@@ -1,277 +1,252 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:15px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
-    <a href="#" style="color: #1D1D50;">Client Management</a> /
-    <a href="{{url('communication-list')}}" style="color: #1D1D50;">Communication Details</a> /
-    <a href="#" style="color: #1D1D50;">Client Pickup</a>
-</nav>
-<br><br>
-<html>
+    <nav style="font-size:15px;">
+        <a href="{{ url('home') }}" style="color: #1D1D50;">Home</a> /
+        <a href="#" style="color: #1D1D50;">Client Management</a> /
+        <a href="{{ url('communication-list') }}" style="color: #1D1D50;">Communication Details</a> /
+        <a href="#" style="color: #1D1D50;">Client Pickup</a>
+    </nav>
+    <br><br>
+    <html>
 
-<head>
-    <style>
-    .pagination>li>span {
-        position: relative;
-        float: left;
-        padding: 6px 12px;
-        margin-left: -1px;
-        line-height: 1.42857143;
-        color: #337ab7;
-        text-decoration: none;
-        background-color: #fff;
-        border: 1px solid #ddd;
-    }
+    <head>
+        <style>
+            .pagination>li>span {
+                position: relative;
+                float: left;
+                padding: 6px 12px;
+                margin-left: -1px;
+                line-height: 1.42857143;
+                color: #337ab7;
+                text-decoration: none;
+                background-color: #fff;
+                border: 1px solid #ddd;
+            }
 
-    .pagination {
-        margin: 0;
-    }
+            .pagination {
+                margin: 0;
+            }
 
-    .pagination li:hover {
-        cursor: pointer;
-    }
+            .pagination li:hover {
+                cursor: pointer;
+            }
 
-    .header_wrap {
-        padding: 30px 0;
-    }
+            .header_wrap {
+                padding: 30px 0;
+            }
 
-    .num_rows {
-        width: 20%;
-        float: left;
-    }
+            .num_rows {
+                width: 20%;
+                float: left;
+            }
 
-    .tb_search {
-        width: 20%;
-        float: right;
-    }
+            .tb_search {
+                width: 20%;
+                float: right;
+            }
 
-    .pagination-container {
-        width: 70%;
-        float: left;
-    }
-    .rows_count {
-        width: 20%;
-        float: right;
-        text-align: right;
-        color: #999;
-    }
-    </style>
+            .pagination-container {
+                width: 70%;
+                float: left;
+            }
 
-</head>
+            .rows_count {
+                width: 20%;
+                float: right;
+                text-align: right;
+                color: #999;
+            }
+        </style>
 
-<body>
-    <div class="container">
-        <div>
-            <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client
-                    Pickup Reception</u></b> -->
-            {{-- heading --}}
-            <h4 id="hdtpa"><b>Client Reception Details</b></h4>
-            <br>
-        </div>
-        <div>
+    </head>
+
+    <body>
+        <div class="container">
+            <div>
+                <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client
+                            Pickup Reception</u></b> -->
+                {{-- heading --}}
+                <h4 id="hdtpa"><b>Client Reception Details</b></h4>
+                <br>
+            </div>
+            <div>
 
 
 
 
-            <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:20%">New
-                Client
-                Pickup</button>
+                <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:20%">New
+                    Client
+                    Pickup</button>
 
-            <div class="header_wrap">
-                <div class="num_rows">
-                    <div class="form-group">
-                        <!--		Show Numbers Of Rows 		-->
-                        <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+                <div class="header_wrap">
+                    <div class="num_rows">
+                        <div class="form-group">
+                            <!--		Show Numbers Of Rows 		-->
+                            <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
 
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                            <option value="70">70</option>
-                            <option value="100">100</option>
-                            <option value="5000">Show ALL Rows</option>
-                        </select>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                                <option value="70">70</option>
+                                <option value="100">100</option>
+                                <option value="5000">Show ALL Rows</option>
+                            </select>
 
+                        </div>
                     </div>
-                </div>
-                <div class="tb_search">
-                    <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
-                        class="form-control">
-                </div>
+                    <div class="tb_search">
+                        <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()"
+                            placeholder="Search.." class="form-control">
+                    </div>
 
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-class" id="table-id">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-class" id="table-id">
 
-                                <thead>
-                                    <tr>
-                                        <!-- <th class="text-center"> No</th> -->
-                                        <th class="text-center">Client</th>
-                                        <th class="text-center">File Name</th>
-                                        <th class="text-center">Visitor</th>
-                                        <th class="text-center">Mobile No.</th>
-                                        <th class="text-center">Time In</th>
-                                        <th class="text-center">Time Out</th>
-                                        <th class="text-center">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($client_pickup as $pickup)
-                                    <tr id="data">
-                                        <!-- <td scope="row" class="text-center">{{$pickup->id}}</td> -->
-                                        <td scope="row" class="text-center">{{$pickup->client}}</td>
-                                        <td scope="row" class="text-center">{{$pickup->file_name}}</td>
-                                        <td scope="row" class="text-center">{{$pickup->visitors}}</td>
-                                        <td scope="row" class="text-center">{{$pickup->mobile}}</td>
-                                        <td scope="row" class="text-center">{{$pickup->time_in}}</td>
-                                        <td scope="row" class="text-center">{{$pickup->time_out}}</td>
-                                        <td class="text-center"><a href="{{url('view-pickup',$pickup->id)}}"><i
-                                                    style="color:black;align:centre" class="fa fa-eye"
-                                                    aria-hidden="true"></i></a>
-                                            <a onClick="return myFunction();"
-                                                href="{{url('delete-pickup',$pickup->id)}}" style="color:black;"><i
-                                                    class="fas fa-trash-alt"></i></a>
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        <!--		Start Pagination -->
-                        <div class='pagination-container'>
-                            <nav>
-                                <ul class="pagination">
-                                    <!--	Here the JS Function Will Add the Rows -->
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="rows_count">Showing 11 to 20 of 100</div>
+                                    <thead>
+                                        <tr>
+                                            <!-- <th class="text-center"> No</th> -->
+                                            <th class="text-center">Client</th>
+                                            <th class="text-center">File Name</th>
+                                            <th class="text-center">Visitor</th>
+                                            <th class="text-center">Mobile No.</th>
+                                            <th class="text-center">Time In</th>
+                                            <th class="text-center">Time Out</th>
+                                            <th class="text-center">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($client_pickup as $pickup)
+                                            <tr id="data">
+                                                <!-- <td scope="row" class="text-center">{{ $pickup->id }}</td> -->
+                                                <td scope="row" class="text-center">{{ $pickup->client }}</td>
+                                                <td scope="row" class="text-center">{{ $pickup->file_name }}</td>
+                                                <td scope="row" class="text-center">{{ $pickup->visitors }}</td>
+                                                <td scope="row" class="text-center">{{ $pickup->mobile }}</td>
+                                                <td scope="row" class="text-center">{{ $pickup->time_in }}</td>
+                                                <td scope="row" class="text-center">{{ $pickup->time_out }}</td>
+                                                <td class="text-center">
+                                                    <div class="btn-group">
+                                                        <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                                                        <div class="dropdown-menu" style="overflow: scroll;height:100px;">
+                                                            <a href="" data-toggle="modal" data-target="#viewModal"
+                                                                class="dropdown-item">View Client
+                                                                Detail
+                                                            </a>
+                                                            <a onClick="return myFunction();"
+                                                                href="" data-toggle="modal" data-target="#deletecompany"
+                                                                class="dropdown-item" style="color:black;">Delete Client
+                                                                Details</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--		Start Pagination -->
+                            <div class='pagination-container'>
+                                <nav>
+                                    <ul class="pagination">
+                                        <!--	Here the JS Function Will Add the Rows -->
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="rows_count">Showing 11 to 20 of 100</div>
 
-                        <!-- 		End of Container -->
+                            <!-- 		End of Container -->
 
-                        <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
+                            <div class="modal fade" id="myModal">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
 
-                                    <!-- Modal Header -->
-                                    <div class="modal-header">
-                                        <h2 class="text-center"><b>Register Client</b></h2>
+                                        <!-- Modal Header -->
+                                        <h5><b>Register Client:-</b></h5>
 
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                        <div class="container">
-                                            <div class="row">
-                                                <form method="post" action="{{url('store-pickup')}}" id="form">
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <form method="post" action="{{ url('store-pickup') }}" id="form">
                                                     @csrf
                                                     <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Client Type</label>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Client
+                                                                    Type</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars">
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                         <option>--select--</option>
                                                                         <option>Corporate Client</option>
                                                                         <option>Individual Client</option>
 
                                                                     </select>
-                                                                    <!-- <input type="text" class="form-control" name="client"
-                                                                    id="username" value="" placeholder="" required> -->
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">File Name</label>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">File
+                                                                    Name</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars">
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color:#1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                         <option>--select--</option>
                                                                         <option>File 1</option>
                                                                         <option>File 2</option>
 
                                                                     </select>
-                                                                    <!-- <input type="text" class="form-control" name="file"
-                                                                        id="username" value="" placeholder="" required> -->
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Mobile No.</label>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Mobile
+                                                                    No.</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="text" class="form-control"
                                                                         name="mobile" id="username" value=""
-                                                                        placeholder="" required>
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <br>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Person Handling</label>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Person
+                                                                    Handling</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars">
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                         <option>--select--</option>
                                                                         <option>Advocate 1</option>
                                                                         <option>Advocate 2</option>
 
                                                                     </select>
-                                                                    <!-- <input type="text" class="form-control"
-                                                                        name="persion" id="username" value=""
-                                                                        placeholder="" required> -->
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-                                                                        Name is required.
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Email</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <input type="text" class="form-control" name="email"
-                                                                        id="username" value="" placeholder="" required>
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-                                                                        Name is required.
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Client Name</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars">
-                                                                        @if(count($get_items))
-                                                                        @foreach($get_items as $list_client)
-                                                                        <option>{{$list_client->client_name}}</option>
-                                                                       @endforeach
-                                                                       @endif
 
-                                                                    </select>
-                                                                    <!-- <input type="text" class="form-control" name="name"
-                                                                        id="username" value="" placeholder=" name"
-                                                                        required> -->
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
                                                                     </div>
@@ -279,45 +254,79 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <br>
                                                     <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Person Picking Handling</label>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Email</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="text" class="form-control"
+                                                                        name="email" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Client
+                                                                    Name</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                        @if (count($get_items))
+                                                                            @foreach ($get_items as $list_client)
+                                                                                <option>{{ $list_client->client_name }}
+                                                                                </option>
+                                                                            @endforeach
+                                                                        @endif
+
+                                                                    </select>
+                                                                    <!-- <input type="text" class="form-control" name="name"
+                                                                                id="username" value="" placeholder=" name"
+                                                                                required> -->
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Person
+                                                                    Picking Handling</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="text" class="form-control"
                                                                         name="handling" id="username" value=""
-                                                                        placeholder="" required>
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Visitors</label>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Visitors</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="text" class="form-control"
-                                                                    name="visitors" id="username" value=""
-                                                                    placeholder="" required>
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-                                                                        Name is required.
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Reason</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-                                                                    <!-- <input type="text" class="form-control"
-                                                                        name="reason" id="username" value=""
-                                                                        placeholder="" required> -->
+                                                                        name="visitors" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
                                                                     </div>
@@ -325,30 +334,52 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <br>
                                                     <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Time In</label>
+                                                        <div class="" style="width: 96%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Reason</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <input type="time" class="form-control"
-                                                                        name="time-in" id="username" value=""
-                                                                        placeholder="" required>
+                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:75px;"></textarea>
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Time Out</label>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="" style="width: 48%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time
+                                                                    In</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="time" class="form-control"
+                                                                        name="time-in" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 48%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time
+                                                                    Out</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="time" class="form-control"
                                                                         name="time-out" id="username" value=""
-                                                                        placeholder="Reason" required>
+                                                                        placeholder="Reason"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px; cellspacing=2px;"
+                                                                        required>
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
                                                                     </div>
@@ -364,12 +395,10 @@
                                                             <div class="col-sm">
                                                             </div>
                                                             <div class="col-sm">
-                                                                <button type="submit"
-                                                                    class="btn btn-primary float:right"
+                                                                <button type="submit" class="btn btn-primary float:right"
                                                                     style="width:45%">Save</button>
                                                                 <button type="button" class="btn btn-primary float:left"
-                                                                    Style="width:45%;"
-                                                                    data-dismiss="modal">Close</button>
+                                                                    Style="width:45%;" data-dismiss="modal">Close</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -380,223 +409,502 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- The Modal -->
-                        <div class="modal fade" id="editmed">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
+                            <div class="modal fade" id="viewModal">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
 
-                                    <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#435ebe">
-                                        <h4 class="text-white">Edit Medicine</h4>
+                                        <!-- Modal Header -->
+                                        <h5><b>Edit Client:-</b></h5>
 
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <form method="post" action="{{ url('store-pickup') }}" id="form">
+                                                    @csrf
+                                                    <div class="row">
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Client
+                                                                    Type</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                        <option>--select--</option>
+                                                                        <option>Corporate Client</option>
+                                                                        <option>Individual Client</option>
+
+                                                                    </select>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">File
+                                                                    Name</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color:#1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                        <option>--select--</option>
+                                                                        <option>File 1</option>
+                                                                        <option>File 2</option>
+
+                                                                    </select>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Mobile
+                                                                    No.</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="text" class="form-control"
+                                                                        name="mobile" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Person
+                                                                    Handling</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                        <option>--select--</option>
+                                                                        <option>Advocate 1</option>
+                                                                        <option>Advocate 2</option>
+
+                                                                    </select>
+
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Email</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="text" class="form-control"
+                                                                        name="email" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Client
+                                                                    Name</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <select name="industry" id="cars"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                        @if (count($get_items))
+                                                                            @foreach ($get_items as $list_client)
+                                                                                <option>{{ $list_client->client_name }}
+                                                                                </option>
+                                                                            @endforeach
+                                                                        @endif
+
+                                                                    </select>
+                                                                    <!-- <input type="text" class="form-control" name="name"
+                                                                                id="username" value="" placeholder=" name"
+                                                                                required> -->
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Person
+                                                                    Picking Handling</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="text" class="form-control"
+                                                                        name="handling" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 24%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Visitors</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="text" class="form-control"
+                                                                        name="visitors" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="" style="width: 96%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Reason</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:75px;"></textarea>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="" style="width: 48%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time
+                                                                    In</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="time" class="form-control"
+                                                                        name="time-in" id="username" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="width: 48%">
+                                                            <div class=""><span style="color: red">*</span>
+                                                                <label for="client_no"
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time
+                                                                    Out</label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"></div>
+                                                                    <input type="time" class="form-control"
+                                                                        name="time-out" id="username" value=""
+                                                                        placeholder="Reason"
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px; cellspacing=2px;"
+                                                                        required>
+                                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                                        Name is required.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                            </div>
+                                                            <div class="col-sm">
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <button type="submit" class="btn btn-primary float:right"
+                                                                    style="width:45%">Save</button>
+                                                                <button type="button" class="btn btn-primary float:left"
+                                                                    Style="width:45%;" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                        <div class="container">
-                                            <form method="post" action="{{url('update_medicine')}}"
-                                                enctype="multipart/form-data">
-                                                @csrf
-                                                <h4 class="text-center"><b>Medicine Details</b></h4><br>
-                                                <div class="row">
-                                                    <div class="col-sm">
-                                                        <label for="">Brand Name</label>
-
+                                </div>
+                            </div>
+                            <div class="modal fade" id="deletecompany" style="">
+                                <!-- delete company -->
+                                <div class="modal-dialog modal-lg" style="width:30%;">
+                                    <div class="modal-content">
+                                        <!---- Modal Header -->
+                                        <form method="post" id="delete_company" action="#" enctype="multipart/form-data">
+                                            @csrf
+                                            <input type="hidden" id="deleteuniqueid" value="uniqueid">
+                                            <div class="modal-header" style="padding:0rem 0rem;">
+                                                <div style="padding:1rem 1rem;">
+                                                    <h4 class="text-centre"><b>Delete <span id="deletcompany_name"></span></b></h4>
+                                                </div>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <h6><b><span>Are you sure?</span></b></h6>
                                                     </div>
-                                                    <div class="col-sm">
-                                                        <label for="">Medicine Name</label>
-                                                        <input type="text" id="edit_medicine_name" name="medicine_name"
-                                                            class="form-control" required><br>
+                                                    <div class="row">
+                                                        <div class="" style="width: 30%;">
+                                                        </div>
+                                                        <div lass="" style="width: 0%"></div>
+                                                        <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                                            <br>
+                                                            <button type="submit" class="btn btn-primary float:right;"
+                                                                Style="width:45%;background-color:#DD4132;">Yes</button>
+                                                            <button type="button" class="btn btn-primary float:left"
+                                                                Style="width:45%;"data-dismiss="modal">No</button>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-sm">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- The Modal -->
+                            <div class="modal fade" id="editmed">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header" style="background-color:#435ebe">
+                                            <h4 class="text-white">Edit Medicine</h4>
+
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <form method="post" action="{{ url('update_medicine') }}"
+                                                    enctype="multipart/form-data">
+                                                    @csrf
+                                                    <h4 class="text-center"><b>Medicine Details</b></h4><br>
+                                                    <div class="row">
                                                         <div class="col-sm">
-                                                            <label for="">Medicine Group</label>
+                                                            <label for="">Brand Name</label>
+
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <label for="">Medicine Name</label>
+                                                            <input type="text" id="edit_medicine_name"
+                                                                name="medicine_name" class="form-control" required><br>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <div class="col-sm">
+                                                                <label for="">Medicine Group</label>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <label for="">Medicine Category Name</label>
+
 
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-sm">
-                                                        <label for="">Medicine Category Name</label>
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <label for="">Generic name</label>
+
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <label>Manufacturer Name</label>
+
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <label>Supplier Name</label>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <label for="">Minimum Level</label>
+                                                            <input type="text" id="edit_minimum_level"
+                                                                name="minimum_level" class="form-control"><br>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <label>Reorder Level</label>
+                                                            <input type="text" name="reorder" id="edit_reorder"
+                                                                class="form-control" placeholder=""><br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <label class="text-color:white;">Unit/Packing</Label>
+                                                            <input type="text" name="unit_packing"
+                                                                id="edit_unit_packing" class="form-control"
+                                                                placeholder=""><br>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <label>Upload Medicine Image</label>
+                                                            <input type="file" name="editimage" id="edit_image"
+                                                                class="form-control" placeholder="Image"><br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <label>Medicine Composition</label>
+                                                            <textarea class="form-control" id="edit_medicine_details1" name="medicine_detailss" rows="3" placeholder=""></textarea><br>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <label>Notes</label>
+                                                            <textarea class="form-control" id="edit_medicine_note" name="medicine_note" rows="3" placeholder=""></textarea><br>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <input type="hidden" class="form-control" id="edit_id"
+                                                                name="method_id">
+
+                                                        </div>
+                                                    </div>
 
 
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-primary"
+                                                            style="background-color:#435ebe;width:15%;">Update</button>
+                                                        <button type="button" class="btn btn-primary float:left"
+                                                            Style="width:45%;" data-dismiss="modal">Close</button>
                                                     </div>
+                                            </div>
+                                            <div class="container">
 
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm">
-                                                        <label for="">Generic name</label>
-
-                                                    </div>
-                                                    <div class="col-sm">
-                                                        <label>Manufacturer Name</label>
-
-                                                    </div>
-                                                    <div class="col-sm">
-                                                        <label>Supplier Name</label>
-
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm">
-                                                        <label for="">Minimum Level</label>
-                                                        <input type="text" id="edit_minimum_level" name="minimum_level"
-                                                            class="form-control"><br>
-                                                    </div>
-                                                    <div class="col-sm">
-                                                        <label>Reorder Level</label>
-                                                        <input type="text" name="reorder" id="edit_reorder"
-                                                            class="form-control" placeholder=""><br>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm">
-                                                        <label class="text-color:white;">Unit/Packing</Label>
-                                                        <input type="text" name="unit_packing" id="edit_unit_packing"
-                                                            class="form-control" placeholder=""><br>
-                                                    </div>
-                                                    <div class="col-sm">
-                                                        <label>Upload Medicine Image</label>
-                                                        <input type="file" name="editimage" id="edit_image"
-                                                            class="form-control" placeholder="Image"><br>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm">
-                                                        <label>Medicine Composition</label>
-                                                        <textarea class="form-control" id="edit_medicine_details1"
-                                                            name="medicine_detailss" rows="3"
-                                                            placeholder=""></textarea><br>
-                                                    </div>
-                                                    <div class="col-sm">
-                                                        <label>Notes</label>
-                                                        <textarea class="form-control" id="edit_medicine_note"
-                                                            name="medicine_note" rows="3" placeholder=""></textarea><br>
-                                                    </div>
-                                                </div>
-                                                <br>
-
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="hidden" class="form-control" id="edit_id"
-                                                            name="method_id">
-
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="modal-footer">
-                                                    <button type="submit" class="btn btn-primary"
-                                                        style="background-color:#435ebe;width:15%;">Update</button>
-                                                    <button type="button" class="btn btn-primary float:left"
-                                                        Style="width:45%;" data-dismiss="modal">Close</button>
-                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="container">
 
-                                        </div>
+                                        </form>
+
                                     </div>
-
-                                    </form>
-
                                 </div>
                             </div>
+
                         </div>
 
+                        <br>
+                        <!-- Supplier modal Edit End -->
+
+                        <!-- Delete  confirmation Message -->
+
+                        <!-- End delete confirmation message -->
                     </div>
+                    <script>
+                        function myFunction() {
+                            if (!confirm("Are you sure to delete this"))
+                                event.preventDefault();
+                        }
+                    </script>
+                    <script>
+                        $(function() {
+                            $("#new-item").dataTable();
+                        })
+                    </script>
 
-                    <br>
-                    <!-- Supplier modal Edit End -->
-
+                    {{-- Search booking script --}}
+                    <script>
+                        $(document).ready(function() {
+                            $('.searchingBook').select2();
+                        });
+                    </script>
+                    {{-- search booking script end --}}
                     <!-- Delete  confirmation Message -->
-
+                    <script>
+                        function myFunction() {
+                            if (!confirm("Are you sure to delete this"))
+                                event.preventDefault();
+                        }
+                    </script>
                     <!-- End delete confirmation message -->
-                </div>
-                <script>
-                function myFunction() {
-                    if (!confirm("Are you sure to delete this"))
-                        event.preventDefault();
-                }
-                </script>
-                <script>
-                $(function() {
-                    $("#new-item").dataTable();
-                })
-                </script>
 
-                {{-- Search booking script --}}
-                <script>
-                $(document).ready(function() {
-                    $('.searchingBook').select2();
-                });
-                </script>
-                {{-- search booking script end --}}
-                <!-- Delete  confirmation Message -->
-                <script>
-                function myFunction() {
-                    if (!confirm("Are you sure to delete this"))
-                        event.preventDefault();
-                }
-                </script>
-                <!-- End delete confirmation message -->
+                    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+                    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+                    <script type="text/javascript" charset="utf8"
+                        src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
-                <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-                <script type="text/javascript" charset="utf8"
-                    src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
-                </script>
-                <script type="text/javascript" charset="utf8"
-                    src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js">
-                </script>
+                    {{-- Supplier Edit start --}}
 
-                {{-- Supplier Edit start --}}
+                    <script>
+                        $(document).on('click', '#edit_medicine_details', function() {
 
-                <script>
-                $(document).on('click', '#edit_medicine_details', function() {
-
-                    var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden')
-                        .val();
-                    var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
-                    var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name')
-                        .val();
-                    var medicine_group = $(this).closest('#data').find('#medicine_group').val();
-                    var medicicine_category_name = $(this).closest('#data').find(
-                        '#medicine_category_name1').val();
-                    var medicine_generic_name = $(this).closest('#data').find(
-                        '#medicine_generic_name').val();
-                    var medicine_manufactuure_name = $(this).closest('#data').find(
-                            '#medicine_manufactuure_name')
-                        .val();
-                    var medicine_supplier_name = $(this).closest('#data').find(
-                        '#medicine_supplier_name').val();
-                    var medicine_minimum_level = $(this).closest('#data').find(
-                        '#medicine_minimum_level').val();
-                    var medicine_reorder_level = $(this).closest('#data').find(
-                        '#medicine_reorder_level').val();
-                    var medicine_unit_packing = $(this).closest('#data').find(
-                        '#medicine_unit_packing').val();
-                    var medicine_composition = $(this).closest('#data').find(
-                        '#medicine_composition').val();
-                    var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
-                    var medicine_images = $(this).closest('#data').find('#medicine_images').val();
+                            var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden')
+                                .val();
+                            var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
+                            var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name')
+                                .val();
+                            var medicine_group = $(this).closest('#data').find('#medicine_group').val();
+                            var medicicine_category_name = $(this).closest('#data').find(
+                                '#medicine_category_name1').val();
+                            var medicine_generic_name = $(this).closest('#data').find(
+                                '#medicine_generic_name').val();
+                            var medicine_manufactuure_name = $(this).closest('#data').find(
+                                    '#medicine_manufactuure_name')
+                                .val();
+                            var medicine_supplier_name = $(this).closest('#data').find(
+                                '#medicine_supplier_name').val();
+                            var medicine_minimum_level = $(this).closest('#data').find(
+                                '#medicine_minimum_level').val();
+                            var medicine_reorder_level = $(this).closest('#data').find(
+                                '#medicine_reorder_level').val();
+                            var medicine_unit_packing = $(this).closest('#data').find(
+                                '#medicine_unit_packing').val();
+                            var medicine_composition = $(this).closest('#data').find(
+                                '#medicine_composition').val();
+                            var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
+                            var medicine_images = $(this).closest('#data').find('#medicine_images').val();
 
 
 
-                    $("#edit_id").val(medicine_id_hidden);
-                    $("#edit_medicine_name").val(medicine_name);
-                    $("#edit_brand_name").val(medicine_brand_name);
-                    $("#edit_medicine_group").val(medicine_group);
-                    $("#edit_category_name").val(medicine_category_name);
-                    $("#edit_generic_name").val(medicicine_genric_name);
-                    $("#edit_manufacture_name").val(medicine_manufactuure_name);
-                    $("#edit_supplier_name").val(medicine_supplier_name);
-                    $("#edit_minimum_level").val(medicine_minimum_level);
-                    $("#edit_reorder").val(medicine_reorder_level);
-                    $("#edit_minimum_level").val(medicine_minimum_level);
-                    $("#edit_unit_packing").val(medicine_unit_packing);
-                    $("#edit_medicine_details1").val(medicine_composition);
-                    $("#edit_medicine_note").val(medicine_notes);
-                    $("#edit_image").val(medicine_images);
-                });
-                </script>
-                {{-- Supplier Edit End --}}
+                            $("#edit_id").val(medicine_id_hidden);
+                            $("#edit_medicine_name").val(medicine_name);
+                            $("#edit_brand_name").val(medicine_brand_name);
+                            $("#edit_medicine_group").val(medicine_group);
+                            $("#edit_category_name").val(medicine_category_name);
+                            $("#edit_generic_name").val(medicicine_genric_name);
+                            $("#edit_manufacture_name").val(medicine_manufactuure_name);
+                            $("#edit_supplier_name").val(medicine_supplier_name);
+                            $("#edit_minimum_level").val(medicine_minimum_level);
+                            $("#edit_reorder").val(medicine_reorder_level);
+                            $("#edit_minimum_level").val(medicine_minimum_level);
+                            $("#edit_unit_packing").val(medicine_unit_packing);
+                            $("#edit_medicine_details1").val(medicine_composition);
+                            $("#edit_medicine_note").val(medicine_notes);
+                            $("#edit_image").val(medicine_images);
+                        });
+                    </script>
+                    {{-- Supplier Edit End --}}
                 @endsection

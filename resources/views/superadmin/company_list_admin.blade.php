@@ -229,10 +229,20 @@
                                           </label>
                                         </td>
                                         <td scope="row"class="text-center">
-                                            {{-- <a href="{{url('edit_company',$user->uniqueid)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i> --}}
-                                            <a href="#" data-toggle="modal" data-id="{{ $user->uniqueid }}" onclick="editcompany(this)" data-target="#editcompany"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                            {{-- <a href="{{url('#',$user->uniqueid)}}"> <i style="color:rgb(13, 1, 56);padding-left:15px"class="fas fa-trash-alt"></i> --}}
-                                            <a href="#" data-toggle="modal" data-id="{{ $user->uniqueid }}" data-name="{{ $user->company_name }}"onclick="deletecompany(this)" data-target="#deletecompany"> <i style="color:rgb(13, 1, 56);padding-left:25px"class="fas fa-trash-alt"></i>
+                                            <div class="btn-group">
+                                                <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                                                <div class="dropdown-menu" style="overflow: scroll;height:100px;">
+                                                    <a class="dropdown-item" data-toggle="modal"
+                                                        data-target="#editcompany" href="#">Edit Client
+                                                        Details
+                                                    </a>
+                                                    <a class="dropdown-item" href=""data-toggle="modal" data-id=""
+                                                        data-name=""onclick="deletecompany(this)"
+                                                        data-target="#deletecompany">Delete Client
+                                                        Details</a>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -439,7 +439,7 @@
                         <div class="modal-dialog modal-lg" style="width:30%;">
                             <div class="modal-content">
                                 <!---- Modal Header -->
-                                <form method="post" id="delete_hourly_rate" action="{{ url('delete_hourly_rates') }}"
+                                <form method="post" id="delete_hourly_rate" action="{{url('delete_hourly_rates',$rate->id)}}"
                                     enctype="multipart/form-data">
                                     @csrf
                                     <input type="hidden" id="id" value="id">

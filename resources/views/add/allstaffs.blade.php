@@ -61,7 +61,7 @@
             color: #999;
         }
     </style>
-    
+
     <div class='container'>
         <h4 id="hdtpa"><b>Employee Details</b></h4><br>
         <a type="button" class="btn btn-primary" href="{{ url('add_staff') }}">Add New Employee</a>
@@ -105,10 +105,27 @@
                             <td>{{ $alluser->username }}</td>
                             <td>{{ $alluser->email }}</td>
                             <td>
-                                <a href="{{ url('view_staff_details', $alluser->id) }}"> <i
-                                        style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
-                                    <a href="{{ url('edit_staff_details', $alluser->id) }}"> <i
-                                            style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span>
+                                {{-- <a href="{{ url('view_staff_details', $alluser->id) }}"> <i
+                                        style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span> --}}
+                                    {{-- <a href="{{ url('edit_staff_details', $alluser->id) }}"> <i
+                                            style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span> --}}
+                                            <div class="btn-group">
+                                                <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false" style="border-color:none;"> ⋮ </a>
+
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item"
+                                                        href="#">View Staff Details</a>
+
+                                                        <a class="dropdown-item" data-toggle="modal"
+                                                        data-target="#edit_staff_details" href="#">Edit Staff Details</a>
+                                                    <a class="dropdown-item"
+
+                                                         href="#"onclick=deletestaff(this) data-id="$alluser->id"data-toggle="modal"
+                                                            data-target="#delete_staff_details">Delete Staff</a>
+                                                            </div>
+                                                </div>
+                                            </td>
                         </tr>
                     @endforeach
                 <tbody>
@@ -694,6 +711,37 @@
                 </div>
             </div>
             </form>
+        </div>
+    </div>
+    <div class="modal fade" id="delete_staff_details" style=""> <!-- delete staff -->
+        <div class="modal-dialog modal-lg" style="width:30%;">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post"  id="delete_staff_details" action="" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" id="id" value="id">
+                    <div class="modal-header" style="padding:0rem 0rem;">
+                        <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_staff_details"></span></b></h4></div>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body" >
+                        <div class="container">
+                            <div class="row"><h6><b><span>Are you sure?</span></b></h6>
+                            </div>
+                                <div class="row">
+                                    <div class="" style="width: 30%;">
+                                    </div>
+                                    <div lass="" style="width: 0%"></div>
+                                    <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                        <br>
+                                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </div>
         </div>
     </div>
     <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
