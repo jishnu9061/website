@@ -41,8 +41,8 @@ class ClientManagement extends Controller
         $company_id = Auth::user()->company_id;
         $branch_id = Auth::user()->branch_id ?? null;
         $client_number = $Request['client_number'];
-        $client_type  = $Request['client_type '];
-        $client_name  = $Request['client_name '];
+        $client_type  = $Request['client_type'];
+        $client_name  = $Request['client_name'];
         $file_number  = $Request['file_number'];
         $lawyer_name = $Request['lawyer_name'];
         $court_name = $Request['court_name'];
@@ -57,7 +57,7 @@ class ClientManagement extends Controller
             'company_id' => $company_id,
             'branch_id' => $branch_id,
         ]);
-        return redirect('/asign_lawyer');
+        return redirect('/asign-lawyer');
     }
 
 
@@ -100,7 +100,7 @@ class ClientManagement extends Controller
     public function delete_lawyer($id)
     {
         DB::table('cra_asign_lawyer')->where('id', $id)->delete();
-        return redirect('/asign_lawyer');
+        return redirect('asign-lawyer');
     }
     /**
      * Show the form for creating a new resource.
@@ -128,10 +128,10 @@ class ClientManagement extends Controller
         $client_name = $Request['name'];
         $industry = $Request['industry'];
         $pin_no = $Request['pin'];
-        $address = $Request['address'];
-        $postal_code = $Request['code'];
+        $address = $Request['postaladdress'];
+        $postal_code = $Request['postalcode'];
         $town = $Request['town'];
-        $physical_address = $Request['physical'];
+        $physical_address = $Request['physicaladdress'];
         $Notes = $Request['notes'];
 
 
@@ -721,14 +721,14 @@ class ClientManagement extends Controller
         $client = $Request['client'];
         $file_name = $Request['file'];
         $mobile = $Request['mobile'];
-        $persion_handling = $Request['persion'];
+        $persion_handling = $Request['person'];
         $email = $Request['email'];
-        $client_name = $Request['name'];
+        $client_name = $Request['clientname'];
         $persion_picking_handling = $Request['handling'];
         $reason = $Request['reason'];
         $visitors = $Request['visitors'];
-        $time_in = $Request['time-in'];
-        $time_out = $Request['time-out'];
+        $time_in = $Request['timein'];
+        $time_out = $Request['timeout'];
 
         DB::table('cra_client_pickup_reception')->insert([
             'client' =>  $client,
@@ -775,7 +775,7 @@ class ClientManagement extends Controller
         $date = $Request['date'];
         $client_type = $Request['type'];
         $files = $Request['files'];
-        $customer_name = $Request['name'];
+        $customer_name = $Request['customername'];
         $staff_handling = $Request['Staff'];
         $complaint_about = $Request['Complaint'];
         $telephone_no = $Request['Telephone'];
@@ -951,10 +951,10 @@ class ClientManagement extends Controller
     public function addService(Request $Request)
     {
 
-        $receipt_no = $Request['Receipt'];
+        $receipt_no = $Request['receiptno'];
         $client_name = $Request['Name'];
         $mobile = $Request['Mobile'];
-        $amount_paid = $Request['amount'];
+        $amount_paid = $Request['amount_paid'];
         $date = $Request['date'];
         $email = $Request['email'];
         $code = $Request['code'];
@@ -1145,7 +1145,7 @@ class ClientManagement extends Controller
         $communicated_description = $Request['communication_description'];
         $action_plan = $Request['action_plan'];
         $person_handling = $Request['handling'];
-        $time = $Request['Timer'];
+        $time = $Request['time'];
         $others_handling = $Request['Other_handling'];
 
         DB::table('cra_conversations')->insert([
