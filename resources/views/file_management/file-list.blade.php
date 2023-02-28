@@ -402,7 +402,7 @@
                             <form method="post" action="#" id="update" enctype="multipart/form-data">
                                 @csrf
                                 {{method_field('PUT')}}
-                                <h4 class="text-centre"><b>Add New File:-</b></h4>
+                                <h4 class="text-centre"><b>Edit File:-</b></h4>
                                 <div class="text-center">
                                     <h4><b> Matter </b></h4>
                                 </div>

@@ -230,9 +230,7 @@ class filemanagement extends Controller
     public function editboxno($id)
     {
         $edit =DB::table('cra_add_box')->where('id',$id)->first();
-        return view('file_management.edit-box-no',compact('edit','id'));
-
-        // return view('file_management.edit-box-no');
+        return ('/file-archive');
     }
 
     public function deleteboxno($id)
@@ -249,7 +247,6 @@ class filemanagement extends Controller
         $id=$request['id'];
         $Box_type=$request['box_type'];
         $Box_number=$request['box_no'];
-
         DB::table('cra_add_box')->where('id',$id)->update([
             'type' =>  $Box_type,
             'number' =>  $Box_number,

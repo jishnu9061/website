@@ -545,7 +545,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('add-box-no', "filemanagement@addboxno")->name('add-box-no');
     Route::any('view-box-no', "filemanagement@viewboxno")->name('view-box-no');
     Route::any('/edit-box-no/{id}', "filemanagement@editboxno")->name('edit-box-no');
-    Route::any('/update-box', "filemanagement@updatebox")->name('update-box');
+    Route::any('update-box/{id}', "filemanagement@updatebox")->name('update-box');
         //document templates
     Route::any('template-category', "filemanagement@template")->name('template-category');
     Route::any('add-template', "filemanagement@addtemplate")->name('add-template');
