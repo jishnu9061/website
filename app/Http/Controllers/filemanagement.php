@@ -37,13 +37,17 @@ class filemanagement extends Controller
     public function edit($id)
     {
 
-        $edit =DB::table('cra_open_new_file_details')->where('id',$id)->first();
-        return view('file_management.edit-file',compact('edit','id'));
+        $edit_list =DB::table('cra_open_new_file_details')->where('id',$id)->first();
+        
+        return response()->json([
+            'status' => 200,
+            'result' => $edit_list,
+        ]);
     }
 
     public function file_destroy($id)
     {
-        $edit =DB::table('cra_open_new_file_details')->where('id',$id)->delete();
+        $delete =DB::table('cra_open_new_file_details')->where('id',$id)->delete();
 
         return redirect ('/file-list');
     }
@@ -69,14 +73,14 @@ class filemanagement extends Controller
         $comments=$request['comments'];
         $notifi_email=$request['notifi_email'];
         $con_phone=$request['con_phone'];
+        $practice_area = $request['practice_area'];
         $con_email=$request['con_email'];
         $amount=$request['amount'];
         $task=$request['task'];
         $status=$request['status'];
 
-
-
         DB::table('cra_open_new_file_details')->insert([
+            
             'assoc_handling' => $assoc_handling,
             'client' => $client,
             'email' => $email,
@@ -90,6 +94,7 @@ class filemanagement extends Controller
             'close_date' => $close_date,
             'comments' => $comments,
             'notifi_email' => $notifi_email,
+            'practice_area' => $practice_area,
             'con_phone' => $con_phone,
             'con_email' => $con_email,
             'amount' => $amount,
@@ -103,31 +108,27 @@ class filemanagement extends Controller
     }
     public function update(Request $request)
     {
-        $id =$request['id'];
-       $assoc_handling=$request['assoc_handling'];
-        $client=$request['client'];
-        $email=$request['email'];
-        $phone=$request['phone'];
-        $address=$request['address'];
-        $file_name=$request['file_name'];
-        $advocate=$request['advocate'];
-        $recent_progress=$request['recent_progress'];
-        $work_flow=$request['work_flow'];
-        $open_date=$request['open_date'];
-        $close_date=$request['close_date'];
-        $comments=$request['comments'];
-        $notifi_email=$request['notifi_email'];
-        $con_phone=$request['con_phone'];
-        $con_email=$request['con_email'];
-        $amount=$request['amount'];
-        $task=$request['task'];
-        $status=$request['status'];
+             $id =$request['id'];
+             $assoc_handling=$request['assoc_handling'];
+             $client=$request['client'];
+             $email=$request['email'];
+             $phone=$request['phone'];
+             $address=$request['address'];
+             $file_name=$request['file_name'];
+             $advocate=$request['advocate'];
+             $recent_progress=$request['recent_progress'];
+             $work_flow=$request['work_flow'];
+             $open_date=$request['open_date'];
+             $close_date=$request['close_date'];
+             $comments=$request['comments'];
+             $notifi_email=$request['notifi_email'];
+             $con_phone=$request['con_phone'];
+             $con_email=$request['con_email'];
+             $amount=$request['amount'];
+             $task=$request['task'];
+             $status=$request['status'];
 
         DB::table('cra_open_new_file_details')->where('id',$id)->update([
-
-
-
-
 
             'assoc_handling' => $assoc_handling,
             'client' => $client,
@@ -229,9 +230,7 @@ class filemanagement extends Controller
     public function editboxno($id)
     {
         $edit =DB::table('cra_add_box')->where('id',$id)->first();
-        return view('file_management.edit-box-no',compact('edit','id'));
-
-        // return view('file_management.edit-box-no');
+        return ('/file-archive');
     }
 
     public function deleteboxno($id)
@@ -248,7 +247,6 @@ class filemanagement extends Controller
         $id=$request['id'];
         $Box_type=$request['box_type'];
         $Box_number=$request['box_no'];
-
         DB::table('cra_add_box')->where('id',$id)->update([
             'type' =>  $Box_type,
             'number' =>  $Box_number,
@@ -339,15 +337,18 @@ class filemanagement extends Controller
 
     {
         $edit_progress =DB::table('cra_add_file_progress')->where('id',$id)->first();
-        return view('file_management.edit-file-progress',compact('edit_progress','id'));
-
+        
+        return response()->json([
+            'status' => 200,
+            'result' => $edit_progress,
+        ]);
     }
 
     public function update_progress(Request $request){
 
         $id =$request['id'];
         $client_name=$request['client_name'];
-        $progress_date=$request['date_progress'];
+        $progress_date=$request['progress_date'];
         $next_action=$request['next_action'];
         $bringup_date=$request['bringup_date'];
         $file_name=$request['file_name'];
@@ -1788,6 +1789,3 @@ public function Process_Request_list()
 
 
 }
-
-
-

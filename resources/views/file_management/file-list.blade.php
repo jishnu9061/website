@@ -123,18 +123,20 @@
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item" href="{{url('view-list',$list->id)}}">View File
                                                 List</a>
-                                            <a class="dropdown-item" data-toggle="modal" data-target="#editModal"
-                                                href="#">Edit File
+                                            <a class="dropdown-item" data-toggle="modal" data-id="{{$list->id}}"
+                                                onclick="editlist(this)" data-target="#editlist" href="#">Edit File
                                                 List</a>
-                                            <a class="dropdown-item" href="{{url('file_destroy',$list->id)}}">Delete
+                                            <a class="dropdown-item" onclick="deletefile(this)" data-name="{{$list->client}}" data-id="{{$list->id}}" href="#" data-toggle="modal"
+                                                data-target="#deletefile">Delete
                                                 File List</a>
 
                                         </div>
                                     </div>
                                 </td>
                             </tr>
-                            @endforeach
+
                         </tbody>
+                        @endforeach
                     </table>
                 </div>
                 <div class="modal fade" id="myModal">
@@ -149,9 +151,9 @@
                                         enctype="multipart/form-data">
                                         @csrf
                                         <h4 class="text-centre"><b>Add New File:-</b></h4>
-                                        {{-- <div class="text-center">
+                                        <div class="text-center">
                                             <h4><b> Matter </b></h4>
-                                        </div> --}}
+                                        </div>
                                         <div class="row">
                                             <div class="" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>
@@ -262,7 +264,7 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="" style="width: 25%">
+                                            <div class="" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for=""
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Practice
@@ -284,7 +286,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="" style="width: 25%">
+                                            <div class="" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="open_date"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Opening
@@ -294,7 +296,7 @@
                                                         class="form-control" name="open_date" id="" value="" required>
                                                 </div>
                                             </div>
-                                            <div class="" style="width: 25%">
+                                            <div class="" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="close_date"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Closing
@@ -304,7 +306,10 @@
                                                         class="form-control" name="close_date" id="" value="" required>
                                                 </div>
                                             </div>
-                                            <div class="" style="width: 24%">
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="status"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Status</label>
@@ -318,10 +323,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div style="width:100%">
+                                            <div style="width:50%">
                                                 <div class=""><span style="color: red">*</span>
                                                     <label for="outer"
                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comments</label>
@@ -332,7 +334,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <br>
                                         <hr>
+                                        <br>
                                         <div class="row">
                                             <div class="" style="width: 33%">
                                                 <div class=""><span style="color: red">*</span>
@@ -366,293 +370,373 @@
                                         <div class="row">
                                             <div class="col-sm">
 
-                                            </div>
-                                            <div class="col-sm">
+                                    </div>
+                                    <div class="col-sm">
 
-                                            </div>
-                                            <div class="col-sm">
-                                                <br>
-                                                <button type="submit" class="btn btn-primary float:right;"
-                                                    Style="width:45%;">Save</button>
-                                                <button type="button" class="btn btn-primary float:left"
-                                                    Style="width:45%;" data-dismiss="modal">Cancel</button>
-                                            </div>
-                                        </div>
-
-                                    </form>
+                                    </div>
+                                    <div class="col-sm">
+                                        <br>
+                                        <button type="submit" class="btn btn-primary float:right;"
+                                            Style="width:45%;">Save</button>
+                                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                            data-dismiss="modal">Cancel</button>
+                                    </div>
                                 </div>
-                            </div>
+
+                            </form>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
 
-                <!------------------------------------------------------------------- EDIT FILE START ---------------------------------------------------------->
-                <div class="modal fade" id="editModal">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class="container">
-                                    <form method="post" action="" enctype="multipart/form-data">
-
-                                        @csrf
-                                        <h4 class="text-centre"><b>Add New File:-</b></h4>
-                                        <div class="text-center">
-                                            <h4><b> Matter </b></h4>
+        <!------------------------------------------------------------------- EDIT FILE START ---------------------------------------------------------->
+        <div class="modal fade" id="editlist">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <form method="post" action="#" id="update" enctype="multipart/form-data">
+                                @csrf
+                                {{method_field('PUT')}}
+                                <h4 class="text-centre"><b>Edit File:-</b></h4>
+                                <div class="text-center">
+                                    <h4><b> Matter </b></h4>
+                                </div>
+                                <div class="row">
+                                    <input type="hidden" name="id" id="id">
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="assoc_handling"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Associative
+                                                Handling</label>
+                                            <input type="text" placeholder=""
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="assoc_handling" id="assoc_handling" value=""
+                                                required>
                                         </div>
-                                        <div class="row">
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="assoc_handling"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Associative
-                                                        Handling</label>
-                                                    <select class="form-select" aria-label="Default select example"
-                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="assoc_handling" id="" required>
-                                                        <option>Select</option>
-                                                        <option value="1">Residensial</option>
-                                                        <option value="2">Non Residensial</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="client"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
-                                                    <select class="form-select" aria-label="Default select example"
-                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="client" id="" required>
-                                                        @if(count($client_list))
-                                                        @foreach($client_list as $list_category)
-                                                        <option>{{$list_category->client_name}}</option>
-                                                        @endforeach
-                                                        @endif
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="email"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email</label>
-                                                    <input type="email" placeholder="Enter Email "
-                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="email" id="" value="" required>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="phone"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone</label>
-                                                    <input type="email" placeholder="Enter Email "
-                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="phone" id="" value="" required>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="address"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Address</label>
-                                                    <input type="text" placeholder="Enter Email "
-                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="address" id="" value="" required>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="file_name"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File
-                                                        No</label>
-                                                    <select class="form-select" aria-label="Default select example"
-                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="file_name" id="" required>
-                                                        <option>---select---</option>
-                                                        <option>file 1</option>
-                                                        <option>file 2</option>
-                                                        <option>file 3</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="advocate"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Responsible
-                                                        Advocate</label>
-                                                    <select class="form-select" aria-label="Default select example"
-                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="advocate" id="" required>
-                                                        <option>Select</option>
-                                                        <option>Advocate 1</option>
-                                                        <option>Advocate 2</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="recent_progress"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Most
-                                                        Recent Progress</label>
-                                                    <input type="text" placeholder="Enter Email "
-                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="recent_progress" id="" value=""
-                                                        required>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="work_flow"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Work
-                                                        Flow</label>
-                                                    <input type="text" placeholder="Enter Email "
-                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="work_flow" id="" value="" required>
-                                                </div>
-                                            </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="client"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                            <input type="text" placeholder=""
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="client" id="client" value="" required>
                                         </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="email"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email</label>
+                                            <input type="email" placeholder=""
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="email" id="email" value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="phone"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone</label>
+                                            <input type="number" placeholder=""
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="phone" id="phone" value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="address"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Address</label>
+                                            <input type="text" placeholder=""
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="address" id="address" value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="file_name"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File
+                                                No</label>
+                                            <select class="form-select" aria-label="Default select example"
+                                                style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                name="file_name" id="file_name" required>
+                                                <option>---select---</option>
+                                                <option>file 1</option>
+                                                <option>file 2</option>
+                                                <option>file 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="advocate"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Responsible
+                                                Advocate</label>
+                                            <select class="form-select" aria-label="Default select example"
+                                                style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                name="advocate" id="advocate" required>
+                                                <option>Select</option>
+                                                <option>Advocate 1</option>
+                                                <option>Advocate 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red"></span>
+                                            <label for="recent_progress"
+                                                style="width: 100px;margin-bottom:0px; margin-top:7px;margin-right: 2px;font-size:10px;">Most
+                                                Recent Progress</label>
+                                            <input type="text" placeholder=""
+                                                style="border-color: #1d1d50;width=45%; margin-top:2px;border-radius: 7px;height:35px;"
+                                                class="form-control" name="recent_progress" id="recent_progress"
+                                                value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red"></span>
+                                            <label for="work_flow"
+                                                style="width: 100px;margin-bottom: 0px; margin-top:7px;margin-right: 2px;font-size:10px;">Work
+                                                Flow</label>
+                                            <input type="text" placeholder=" "
+                                                style="border-color: #1d1d50;width=45%; margin-top:2px;border-radius: 7px;height:35px;"
+                                                class="form-control" name="work_flow" id="work_flow" value="" required>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                        <div class="row">
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for=""
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Practice
-                                                        Area</label>
-                                                    <select class="form-select" aria-label="Default select example"
-                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="" id="" required>
-                                                        <option value="select">---select---</option>
-                                                        <option value="Family Law">Family Law</option>
-                                                        <option value="Personal Injury">Personal Injury</option>
-                                                        <option value="General Practice">General Practice
-                                                        </option>
-                                                        <option value="Estate Planning">Estate Planning</option>
-                                                        <option value="Real Estate">Real Estate</option>
-                                                        <option value="Criminal Law">Criminal Law</option>
-                                                        <option value="Civil Litigation">Civil Litigation
-                                                        </option>
-                                                        <option value="Business Law">Business Law</option>
-                                                        <option value="Guardianship Law">Guardianship Law
-                                                        </option>
-                                                        <option value="Probate Law">Probate Law</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="open_date"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Opening
-                                                        Date</label>
-                                                    <input type="date" placeholder="Enter Email "
-                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="open_date" id="" value="" required>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="close_date"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Closing
-                                                        Date</label>
-                                                    <input type="date" placeholder="Enter Email "
-                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="close_date" id="" value="" required>
-                                                </div>
-                                            </div>
+                                <div class="row">
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red"></span>
+                                            <label for=""
+                                                style="width: 100px;margin-bottom: 0px; margin-top:7px;margin-right: 2px;font-size:10px;">Practice
+                                                Area</label>
+                                            <select class="form-select" aria-label="Default select example"
+                                                style="height:35px;border-color: #1d1d50; margin-top:2px;width=45%;border-radius: 7px;"
+                                                name="" id="" required>
+                                                <option value="select">---select---</option>
+                                                <option value="Family Law">Family Law</option>
+                                                <option value="Personal Injury">Personal Injury</option>
+                                                <option value="General Practice">General Practice
+                                                </option>
+                                                <option value="Estate Planning">Estate Planning</option>
+                                                <option value="Real Estate">Real Estate</option>
+                                                <option value="Criminal Law">Criminal Law</option>
+                                                <option value="Civil Litigation">Civil Litigation
+                                                </option>
+                                                <option value="Business Law">Business Law</option>
+                                                <option value="Guardianship Law">Guardianship Law
+                                                </option>
+                                                <option value="Probate Law">Probate Law</option>
+                                            </select>
                                         </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red"></span>
+                                            <label for="open_date"
+                                                style="width: 100px;margin-bottom: 0px; margin-top:7px;margin-right: 2px;font-size:10px;">Opening
+                                                Date</label>
+                                            <input type="date" placeholder=""
+                                                style="border-color: #1d1d50;width=45%; margin-top:2px;border-radius: 7px;height:35px;"
+                                                class="form-control" name="open_date" id="open_date" value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="close_date"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Closing
+                                                Date</label>
+                                            <input type="date" placeholder=""
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="close_date" id="close_date" value=""
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                        <div class="row">
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="status"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Status</label>
-                                                    <select class="form-select" aria-label="Default select example"
-                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="status" id="" required>
-                                                        <option value="select">---select---</option>
-                                                        <option value="Opened">Opened</option>
-                                                        <option value="Pending">Pending</option>
-                                                        <option value="Closed">Closed</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div style="width:50%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="outer"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comments</label>
-                                                    <textarea class="outer" rows="4"
-                                                        style="width:100%;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        cols="41" placeholder="Physical Address" name="comments"
-                                                        form="addemployee"></textarea>
-                                                </div>
-                                            </div>
+                                <div class="row">
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for="status"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Status</label>
+                                            <select class="form-select" aria-label="Default select example"
+                                                style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                name="status" id="status" required>
+                                                <option value="select">---select---</option>
+                                                <option value="Opened">Opened</option>
+                                                <option value="Pending">Pending</option>
+                                                <option value="Closed">Closed</option>
+                                            </select>
                                         </div>
+                                    </div>
+                                    <div style="width:50%">
+                                        <div class=""><span style="color: red"></span>
+                                            <label for="outer"
+                                                style="width: 100px;margin-bottom: 0px; margin-top:7px;margin-right: 2px;font-size:10px;">Comments</label>
+                                            <textarea class="outer" rows="4"
+                                                style="width:100%;border-color: #1d1d50;width=45%; margin-top:2px;border-radius: 7px;"
+                                                cols="41" placeholder="Physical Address" name="comments"
+                                                id="comments"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <hr>
+                                <br>
+                                <div class="row">
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red"></span>
+                                            <label for="close_date"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notification</label>
+                                            <input type="email" placeholder="Enter Email "
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="notifi_email" id="notifi_email" value=""
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red"></span>
+                                            <label for="phone"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone
+                                                No.</label>
+                                            <input type="text" placeholder="Enter Email "
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="con_phone" id="con_phone" value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="" style="width: 33%">
+                                        <div class=""><span style="color: red"></span>
+                                            <label for="amount"
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Billing</label>
+                                            <input type="text" placeholder="Enter Email "
+                                                style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                class="form-control" name="amount" id="amount" value="" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm">
                                         <br>
-                                        <hr>
-                                        <br>
-                                        <div class="row">
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="close_date"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notification</label>
-                                                    <input type="email" placeholder="Enter Email "
-                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="email" id="" value="" required>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="phone"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone
-                                                        No.</label>
-                                                    <input type="text" placeholder="Enter Email "
-                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="phone" id="" value="" required>
-                                                </div>
-                                            </div>
-                                            <div class="" style="width: 33%">
-                                                <div class=""><span style="color: red">*</span>
-                                                    <label for="amount"
-                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Billing</label>
-                                                    <input type="text" placeholder="Enter Email "
-                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="amount" id="" value="" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
+                                        <button type="submit" class="btn btn-primary float:right;"
+                                            Style="width:45%;">Save</button>
+                                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                            data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
 
-                                            </div>
-                                            <div class="col-sm">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------------------- END EDIT FILE ---------------------------------------------------------->
 
-                                            </div>
-                                            <div class="col-sm">
-                                                <br>
-                                                <button type="submit" class="btn btn-primary float:right;"
-                                                    Style="width:45%;">Save</button>
-                                                <button type="button" class="btn btn-primary float:left"
-                                                    Style="width:45%;" data-dismiss="modal">Cancel</button>
-                                            </div>
-                                        </div>
-
-                                    </form>
+    <!------------------------------------------------------------------- START DELETE FILE ---------------------------------------------------------->
+    <div class="modal fade" id="deletefile" style="">
+        <!-- delete company -->
+        <div class="modal-dialog modal-lg" style="width:30%;">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" id="file_destroy" action="#" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" id="delete_id" value="">
+                    <div class="modal-header" style="padding:0rem 0rem;">
+                        <div style="padding:1rem 1rem;">
+                            <h4 class="text-centre"><b>Delete <span id="delfile"></span></b></h4>
+                        </div>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <h6><b><span>Are you sure?</span></b></h6>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                        data-dismiss="modal">No</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!------------------------------------------------------------------- END EDIT FILE START ---------------------------------------------------------->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!------------------------------------------------------------------- END DELETE FILE ------------------------------------------------------------>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+function editlist(param) {
+    var id = $(param).data('id');
+    $.ajax({
+        type: "GET",
+        url: 'edit-file/' + id,
 
+        success: function(response) {
+            $('#id').val(response.result.id);
+            $('#assoc_handling').val(response.result.assoc_handling);
+            $('#assoc_handling').val(response.result.assoc_handling);
+            $('#client').val(response.result.client);
+            $('#email').val(response.result.email);
+            $('#phone').val(response.result.phone);
+            $('#address').val(response.result.address);
+            $('#file_name').val(response.result.file_name);
+            $('#advocate').val(response.result.advocate);
+            $('#recent_progress').val(response.result.recent_progress);
+            $('#work_flow').val(response.result.work_flow);
+            $('#practice_area').val(response.result.practice_area);
+            $('#open_date').val(response.result.open_date);
+            $('#close_date').val(response.result.close_date);
+            $('#comments').val(response.result.comments);
+            $('#notifi_email').val(response.result.notifi_email);
+            $('#con_phone').val(response.result.con_phone);
+            $('#con_email').val(response.result.con_email);
+            $('#amount').val(response.result.amount);
+            $('#task').val(response.result.task);
+            $('#status').val(response.result.status);
+            $('#update').attr('action', "{{url('update')}}" + "/" + id);
+        }
+    })
+}
 
+function deletefile(param) {
+    var id = $(param).data('id');
+    $("#delete_id").val(id);
+    var name_data = $(param).data('name');
+    $('#delfile').html(name_data);
+    $('#file_destroy').attr('action',"{{url('file_destroy')}}"+"/"+id);
+}
+</script>
 
-                    @endsection
+@endsection
 
-                    <script>
-                    function myFunction() {
-                        if (!confirm("Are you sure to delete this"))
-                            event.preventDefault();
-                    }
-                    </script>
-                    <!-- <script>
+<script>
+function myFunction() {
+    if (!confirm("Are you sure to delete this"))
+        event.preventDefault();
+}
+</script>
+<!-- <script>
                             $(function() {
                                 $("#new-item").dataTable();
                             })
@@ -664,79 +748,78 @@
                                 $('.searchingBook').select2();
                             });
                         </script> -->
-                    {{-- search booking script end --}}
-                    <!-- Delete  confirmation Message -->
-                    <script>
-                    function myFunction() {
-                        if (!confirm("Are you sure to delete this"))
-                            event.preventDefault();
-                    }
-                    </script>
-                    <!-- End delete confirmation message -->
+{{-- search booking script end --}}
+<!-- Delete  confirmation Message -->
+<script>
+function myFunction() {
+    if (!confirm("Are you sure to delete this"))
+        event.preventDefault();
+}
+</script>
+<!-- End delete confirmation message -->
 
-                    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-                    <script type="text/javascript" charset="utf8"
-                        src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
-                    </script>
-                    <!-- <script type="text/javascript" charset="utf8"
+<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
+</script>
+<!-- <script type="text/javascript" charset="utf8"
                             src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script> -->
 
-                    {{-- Supplier Edit start --}}
+{{-- Supplier Edit start --}}
 
-                    <script>
-                    $(document).on('click', '#edit_medicine_details', function() {
+<script>
+$(document).on('click', '#edit_medicine_details', function() {
 
-                        var medicine_id_hidden = $(this).closest('#data').find(
-                            '#medicine_id_hidden').val();
-                        var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
-                        var medicine_brand_name = $(this).closest('#data').find(
-                                '#medicine_brand_name')
-                            .val();
-                        var medicine_group = $(this).closest('#data').find('#medicine_group').val();
-                        var medicicine_category_name = $(this).closest('#data').find(
-                                '#medicine_category_name1')
-                            .val();
-                        var medicine_generic_name = $(this).closest('#data').find(
-                                '#medicine_generic_name')
-                            .val();
-                        var medicine_manufactuure_name = $(this).closest('#data').find(
-                            '#medicine_manufactuure_name').val();
-                        var medicine_supplier_name = $(this).closest('#data').find(
-                                '#medicine_supplier_name')
-                            .val();
-                        var medicine_minimum_level = $(this).closest('#data').find(
-                                '#medicine_minimum_level')
-                            .val();
-                        var medicine_reorder_level = $(this).closest('#data').find(
-                                '#medicine_reorder_level')
-                            .val();
-                        var medicine_unit_packing = $(this).closest('#data').find(
-                                '#medicine_unit_packing')
-                            .val();
-                        var medicine_composition = $(this).closest('#data').find(
-                                '#medicine_composition')
-                            .val();
-                        var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
-                        var medicine_images = $(this).closest('#data').find('#medicine_images')
-                            .val();
+    var medicine_id_hidden = $(this).closest('#data').find(
+        '#medicine_id_hidden').val();
+    var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
+    var medicine_brand_name = $(this).closest('#data').find(
+            '#medicine_brand_name')
+        .val();
+    var medicine_group = $(this).closest('#data').find('#medicine_group').val();
+    var medicicine_category_name = $(this).closest('#data').find(
+            '#medicine_category_name1')
+        .val();
+    var medicine_generic_name = $(this).closest('#data').find(
+            '#medicine_generic_name')
+        .val();
+    var medicine_manufactuure_name = $(this).closest('#data').find(
+        '#medicine_manufactuure_name').val();
+    var medicine_supplier_name = $(this).closest('#data').find(
+            '#medicine_supplier_name')
+        .val();
+    var medicine_minimum_level = $(this).closest('#data').find(
+            '#medicine_minimum_level')
+        .val();
+    var medicine_reorder_level = $(this).closest('#data').find(
+            '#medicine_reorder_level')
+        .val();
+    var medicine_unit_packing = $(this).closest('#data').find(
+            '#medicine_unit_packing')
+        .val();
+    var medicine_composition = $(this).closest('#data').find(
+            '#medicine_composition')
+        .val();
+    var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
+    var medicine_images = $(this).closest('#data').find('#medicine_images')
+        .val();
 
 
 
-                        $("#edit_id").val(medicine_id_hidden);
-                        $("#edit_medicine_name").val(medicine_name);
-                        $("#edit_brand_name").val(medicine_brand_name);
-                        $("#edit_medicine_group").val(medicine_group);
-                        $("#edit_category_name").val(medicine_category_name);
-                        $("#edit_generic_name").val(medicicine_genric_name);
-                        $("#edit_manufacture_name").val(medicine_manufactuure_name);
-                        $("#edit_supplier_name").val(medicine_supplier_name);
-                        $("#edit_minimum_level").val(medicine_minimum_level);
-                        $("#edit_reorder").val(medicine_reorder_level);
-                        $("#edit_minimum_level").val(medicine_minimum_level);
-                        $("#edit_unit_packing").val(medicine_unit_packing);
-                        $("#edit_medicine_details1").val(medicine_composition);
-                        $("#edit_medicine_note").val(medicine_notes);
-                        $("#edit_image").val(medicine_images);
-                    });
-                    </script>
-                    {{-- Supplier Edit End --}}
+    $("#edit_id").val(medicine_id_hidden);
+    $("#edit_medicine_name").val(medicine_name);
+    $("#edit_brand_name").val(medicine_brand_name);
+    $("#edit_medicine_group").val(medicine_group);
+    $("#edit_category_name").val(medicine_category_name);
+    $("#edit_generic_name").val(medicicine_genric_name);
+    $("#edit_manufacture_name").val(medicine_manufactuure_name);
+    $("#edit_supplier_name").val(medicine_supplier_name);
+    $("#edit_minimum_level").val(medicine_minimum_level);
+    $("#edit_reorder").val(medicine_reorder_level);
+    $("#edit_minimum_level").val(medicine_minimum_level);
+    $("#edit_unit_packing").val(medicine_unit_packing);
+    $("#edit_medicine_details1").val(medicine_composition);
+    $("#edit_medicine_note").val(medicine_notes);
+    $("#edit_image").val(medicine_images);
+});
+</script>
+{{-- Supplier Edit End --}}
