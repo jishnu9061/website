@@ -721,14 +721,14 @@ class ClientManagement extends Controller
         $client = $Request['client'];
         $file_name = $Request['file'];
         $mobile = $Request['mobile'];
-        $persion_handling = $Request['persion'];
+        $persion_handling = $Request['person'];
         $email = $Request['email'];
-        $client_name = $Request['name'];
+        $client_name = $Request['clientname'];
         $persion_picking_handling = $Request['handling'];
         $reason = $Request['reason'];
         $visitors = $Request['visitors'];
-        $time_in = $Request['time-in'];
-        $time_out = $Request['time-out'];
+        $time_in = $Request['timein'];
+        $time_out = $Request['timeout'];
 
         DB::table('cra_client_pickup_reception')->insert([
             'client' =>  $client,
