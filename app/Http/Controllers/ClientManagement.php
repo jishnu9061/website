@@ -41,8 +41,8 @@ class ClientManagement extends Controller
         $company_id = Auth::user()->company_id;
         $branch_id = Auth::user()->branch_id ?? null;
         $client_number = $Request['client_number'];
-        $client_type  = $Request['client_type '];
-        $client_name  = $Request['client_name '];
+        $client_type  = $Request['client_type'];
+        $client_name  = $Request['client_name'];
         $file_number  = $Request['file_number'];
         $lawyer_name = $Request['lawyer_name'];
         $court_name = $Request['court_name'];
@@ -57,7 +57,7 @@ class ClientManagement extends Controller
             'company_id' => $company_id,
             'branch_id' => $branch_id,
         ]);
-        return redirect('/asign_lawyer');
+        return redirect('/asign-lawyer');
     }
 
 
@@ -100,7 +100,7 @@ class ClientManagement extends Controller
     public function delete_lawyer($id)
     {
         DB::table('cra_asign_lawyer')->where('id', $id)->delete();
-        return redirect('/asign_lawyer');
+        return redirect('asign-lawyer');
     }
     /**
      * Show the form for creating a new resource.
