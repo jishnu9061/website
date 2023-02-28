@@ -212,7 +212,7 @@ class employeecontroller extends Controller
             'photo_path'=>$photoname,
             'created_at'=>date('Y-m-d H:i:s'),
         ]);
-        return redirect('employee_list/'.$company_id);
+        return redirect('employee_list');
     }
 
     /**
