@@ -1986,7 +1986,7 @@
                 @else
                 <ul class="submenu" style="display: none;">
                     @endif
-                    @if(request()->path()== "company_details"){{-- 1st  submenu start --}}
+                    {{-- @if(request()->path()== "company_details")
                     <li class="submenu-item ">
                         <a href="{{url('company_details')}}" class='sidebar-link'
                             style="background-color:#1D1D50 ; color:white;">
@@ -1998,7 +1998,7 @@
                             <span>Company</span>
                             @endif
                         </a>
-                    </li>{{-- 1st submenu end --}}
+                    </li> --}}
                     @if(request()->path()== "weekend_holiday"){{-- 2nd  submenu start --}}
                     <li class="submenu-item ">
                         <a href="{{url('weekend_holiday')}}" class='sidebar-link'

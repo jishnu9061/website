@@ -120,7 +120,7 @@ color: #999;
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                   <thead>
-                        <tr>
+                        <tr class="text-center">
                         <!-- <th class="text-center" >No</th> -->
                         <th class="text-center">Item Code</th>
                         <th class="text-center" >Item Category</th>
@@ -135,14 +135,14 @@ color: #999;
     </thead>
     <tbody>
     @foreach($invoice_item as $invoice)
- <tr>
+ <tr class="text-center">
     <!-- <td  class="text-center" >{{ $invoice->id }}</td> -->
-                        <td >{{ $invoice->item_code }}</td>
-                        <td>{{ $invoice->item_category }}</td>
-                        <td >{{ $invoice->item_name }}</td>
-                        <td >{{ $invoice->description }}</td>
-                        <td >{{ $invoice->sales_tax_code }}</td>
-                        <td  >{{ $invoice->income_account }}</td>
+                        <td class="text-center">{{ $invoice->item_code }}</td>
+                        <td class="text-center">{{ $invoice->item_category }}</td>
+                        <td class="text-center">{{ $invoice->item_name }}</td>
+                        <td class="text-center">{{ $invoice->description }}</td>
+                        <td class="text-center">{{ $invoice->sales_tax_code }}</td>
+                        <td class="text-center">{{ $invoice->income_account }}</td>
                         {{-- <td  scope="row"class="text-center">
                         <a href="{{url('edit_invoice_item',$invoice->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <span class="m-2"></span>
@@ -438,7 +438,7 @@ color: #999;
                                     </label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <select type="text" value="" id="" name="account"style="width:92%;">
+                                        <select type="text" value="" id="" name="account"style="width:100%;">
                                         <option>---select---</option>
                                         <option>1000====Income from Legal Fees</option>
                                         <option>1100====Other Income</option>
