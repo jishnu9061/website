@@ -91,7 +91,7 @@
                                                 <a class="dropdown-item" href="{{url('view_project')}}">View Projects</a>
                                                 <a class="dropdown-item" href="{{url('edit_project')}}">Edit Projects</a>
                                                 {{-- <a class="dropdown-item" href="#">Delete Client Projects</a> --}}
-                                                <a  href="#"onclick=deleteproject(this) data-id="{{ }}"data-toggle="modal"
+                                                <a  href="#"onclick=deleteproject(this) data-id=""data-toggle="modal"
                                                 data-target="#deleteProject">Delete Project</a>
                                             </div>
                                         </div>
