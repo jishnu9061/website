@@ -444,6 +444,9 @@ use App\Http\Controllers\issued_summary;
     Route::any('advocates_target_2025', 'UserManagement@advocatestarget2025')->name('advocates_target_2025');
     Route::any('advocates_target_2026', 'UserManagement@advocatestarget2026')->name('advocates_target_2026');
     //user management controller
+    //job position/titles
+    Route::any('view_job_perm_role/{id}', 'UserManagement@view_job_perm_role')->name('view_job_perm_depart');
+    //job position/titles
 //client management controller
         //Client-list
     Route::any('add-client', "ClientManagement@addNewClient")->name('add-client');
@@ -535,7 +538,7 @@ use App\Http\Controllers\issued_summary;
         //manage files
     Route::any('file-list', "filemanagement@views")->name('file-list');
     Route::any('/edit-file/{id}', "filemanagement@edit")->name('edit-file');
-    Route::any('/update', "filemanagement@update")->name('update');
+    Route::any('update/{id}', "filemanagement@update")->name('update');
     Route::any('view-list/{id}', 'filemanagement@viewlist')->name('view-list');
     Route::any('add-task', "filemanagement@addtask")->name('add-task');
     Route::any('/file_destroy/{id}', "filemanagement@file_destroy")->name('file_destroy');
@@ -545,14 +548,14 @@ use App\Http\Controllers\issued_summary;
     Route::any('add-box-no', "filemanagement@addboxno")->name('add-box-no');
     Route::any('view-box-no', "filemanagement@viewboxno")->name('view-box-no');
     Route::any('/edit-box-no/{id}', "filemanagement@editboxno")->name('edit-box-no');
-    Route::any('/update-box', "filemanagement@updatebox")->name('update-box');
+    Route::any('update-box/{id}', "filemanagement@updatebox")->name('update-box');
         //document templates
     Route::any('template-category', "filemanagement@template")->name('template-category');
     Route::any('add-template', "filemanagement@addtemplate")->name('add-template');
         //file progress/bringup
     Route::any('add-file-progress', "filemanagement@addprogress")->name('add-file-progress');
     Route::any('/edit-file-progress/{id}', "filemanagement@editprogress")->name('edit-file-progress');
-    Route::any('/update_progress', "filemanagement@update_progress")->name('update_progress');
+    Route::any('update_progress/{id}', "filemanagement@update_progress")->name('update_progress');
     Route::any('/delete-file-progress/{id}', "filemanagement@delete_progress")->name('delete-file-progress');
     Route::any('progress-bringup', "filemanagement@progressbringup")->name('progress-bringup');
     Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringup');
@@ -1002,11 +1005,11 @@ use App\Http\Controllers\issued_summary;
         //crm panel
     Route::any('crm_panel', "CrmController@crm_panel")->name('crm_panel');
     //crm controller
-//etc controller
+    //etc controller
     Route::any('about', "etc@index")->name('about');
     Route::any('help', "etc@index_help")->name('help');
     //etc controller
-//calender
+    //calender
     Route::any('calendar_data', "calender@show")->name('calendar_data');
     Route::any('calendar/store', "calender@store")->name('calendar/store');
     Route::any('calendar/update/{id}', "calender@update");

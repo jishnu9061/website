@@ -378,7 +378,7 @@
                                                                 <select class="form-select"
                                                                     aria-label="Default select example"
                                                                     style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                                    name="cityzen" id="" required>
+                                                                    name="citizen" id="" required>
                                                                     <option>Select Cityzen</option>
                                                                     <option value="1">Residental</option>
                                                                     <option value="2">Non Residential</option>
@@ -435,7 +435,7 @@
                                                                     </label>
                                                                     <input type="email" placeholder="Email"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                                        class="form-control" name="faxno"
+                                                                        class="form-control" name="email"
                                                                         id="" value="" required>
                                                                 </div>
                                                             </div>
@@ -551,7 +551,7 @@
                                                                         Postal Address</label>
                                                                     <input type="text" placeholder="Postal Address"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                                        class="form-control" name="narration"
+                                                                        class="form-control" name="postaladdress"
                                                                         id="" value="" required>
                                                                 </div>
                                                             </div>
@@ -561,7 +561,7 @@
                                                                     Postal Code</label>
                                                                 <input type="text" placeholder="Postal Code"
                                                                     style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                                    class="form-control" name="narration" id=""
+                                                                    class="form-control" name="postalcode" id=""
                                                                     value="" required>
                                                             </div>
                                                         </div>
@@ -573,7 +573,7 @@
                                                                         Pin No</label>
                                                                     <input type="text" placeholder="Pin No"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                                        class="form-control" name="narration"
+                                                                        class="form-control" name="pin"
                                                                         id="" value="" required>
                                                                 </div>
                                                             </div>
@@ -584,7 +584,7 @@
                                                                         Town</label>
                                                                     <input type="text" placeholder="Town"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                                        class="form-control" name="narration"
+                                                                        class="form-control" name="town"
                                                                         id="" value="" required>
                                                                 </div>
                                                             </div>
@@ -596,7 +596,7 @@
                                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Physical
                                                                         Address</label>
                                                                     <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Physical Address"
-                                                                        name="postal_addr" form="addemployee"></textarea>
+                                                                        name="physicaladdress"></textarea>
                                                                 </div>
                                                             </div>
                                                             <div style="width:49%">
@@ -604,8 +604,8 @@
                                                                     <label for="postal_addr"
                                                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes
                                                                     </label>
-                                                                    <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Notes" name="postal_addr"
-                                                                        form="addemployee"></textarea>
+                                                                    <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Notes" name="notes"
+                                                                    ></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -921,7 +921,7 @@
                             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
                                                 </button>
                                                 <button type="button" class="btn btn-primary float:left"
-                                                    Style="width:19%;" onclick="history.back()">Cancel</button>
+                                                    Style="width:19%;" data-dismiss="modal">Cancel</button>
                                             </div>
                                         </div>
                                 </form>

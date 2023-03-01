@@ -8,7 +8,7 @@
 </nav>
 <br><br>
 <html>
-  
+
    <head>
    <style>
   .pagination>li>span {
@@ -52,10 +52,10 @@ float:right;
 text-align:right;
 color: #999;
 }
-</style>  
+</style>
    </head>
    <body>
- 
+
  {{-- heading --}}
  <div class="container">
     {{-- <h4 id="hdtpa"><b>Currency List</b></h4> --}}
@@ -80,10 +80,10 @@ color: #999;
         </div>
     </div>
     <br>
-             
- 
+
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
+
 {{-- <a href="{{('add_currency')}}"><button class="btn btn-primary">Add Currency</button></a> --}}
                 {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Currency</button> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -91,7 +91,7 @@ color: #999;
             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Currency</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
     <div class="header_wrap">
@@ -108,19 +108,19 @@ color: #999;
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    
+
   <!-- <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Currency List</h3> -->
 
   <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                   <thead>
-                        <tr>
+                        <tr class="text-center">
                         <!-- <th class="text-center" >No</th> -->
                         <th class="text-center">Currency Name</th>
                         <th class="text-center" >Currency Symbol</th>
@@ -131,12 +131,12 @@ color: #999;
     </thead>
     <tbody>
     @foreach($currency_list as $currency)
-       <tr>
+       <tr class="text-center">
                         <!-- <td>{{$currency->id}}</td> -->
-                        <td>{{$currency->currency_name}}</td>
-                        <td>{{$currency->currency_symbol}}</td>
-                        <td>{{$currency->exchange_rate}}</td>
-                        <td>{{$currency->default_action}}</td>
+                        <td class="text-center">{{$currency->currency_name}}</td>
+                        <td class="text-center">{{$currency->currency_symbol}}</td>
+                        <td class="text-center">{{$currency->exchange_rate}}</td>
+                        <td class="text-center">{{$currency->default_action}}</td>
                         {{-- <td  scope="row"class="text-center">
                         <a href="{{url('edit_currency',$currency->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <span class="m-2"></span>
@@ -152,7 +152,7 @@ color: #999;
                                 {{-- href="{{url('edit_currency',$currency->id)}}">Edit Currency</a> --}}
                                 <a class="dropdown-item" data-toggle="modal"
                                                     data-target="#edit_currency_list" href="#">Edit Currency
-                                                            
+
                                                             </a>
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_currency',$currency->id)}}">Delete Currency</a> --}}
@@ -209,8 +209,8 @@ color: #999;
                                     <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('add_currency') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->  
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 @csrf
        <div class="row">
                     <div class="col-md-6">
@@ -307,7 +307,7 @@ color: #999;
                 <div class="row">
                     <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
                         <div class="row">
-                            <div class="" style="width: 33%">
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="currency_name"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency Name
@@ -321,7 +321,7 @@ color: #999;
                                         </div>
                                 </div>
                             </div>
-                            <div class="" style="width: 33%">
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="currency_symbol"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency Symbol
@@ -335,7 +335,9 @@ color: #999;
                                         </div>
                                 </div>
                             </div>
-                            <div class="" style="width: 33%">
+                        </div>
+                        <div class="row">
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="exchange_rate"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Exchange Rate
@@ -349,9 +351,9 @@ color: #999;
                                         </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="" style="width: 33%">
+                       
+                       
+                            <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="default_account"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Default Account</label>
@@ -372,11 +374,12 @@ color: #999;
                                         </div>
                                 </div>
                             </div>
+                        </div>
                             <div class="row document_details " style="margin-bottom: 20px;">
                                 {{-- Add More Document details:- javascript --}}
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
                 <div class style="width: 20%">
                 </div>
@@ -391,6 +394,7 @@ color: #999;
                 </div>
         </div>
         </form>
+    </div>
     </div>
 </div>
 {{-- End edit currency list --}}
@@ -407,7 +411,7 @@ color: #999;
                 <!-- Modal body -->
                 <div class="modal-body" >
                     <div class="container">
-                        <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
                         </div>
                             <div class="row">
                                 <div class="" style="width: 30%;">
@@ -429,7 +433,6 @@ color: #999;
       </div>
 </html>
   @endsection
-      
 
 
 
@@ -444,4 +447,4 @@ color: #999;
 
 
 
-   
+

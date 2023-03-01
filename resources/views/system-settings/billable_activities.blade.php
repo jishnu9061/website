@@ -59,7 +59,7 @@ input[type='file'] {
 input[type='file'] {
     color: rgba(0, 0, 0, 0)
 }
-</style>  
+</style>
 <style>
     .switch {
         position: relative;
@@ -67,13 +67,13 @@ input[type='file'] {
         width: 50px;
         height: 20px;
     }
-    
+
     .switch input {
         opacity: 0;
         width: 0;
         height: 0;
     }
-    
+
     .slider {
         position: absolute;
         cursor: pointer;
@@ -85,7 +85,7 @@ input[type='file'] {
         -webkit-transition: .4s;
         transition: .4s;
     }
-    
+
     .slider:before {
         position: absolute;
         content: "";
@@ -97,15 +97,15 @@ input[type='file'] {
         -webkit-transition: .4s;
         transition: .4s;
     }
-    
+
     .check:checked+.slider {
         background-color: #0edb7c;
     }
-    
+
     .check:focus+.slider {
         box-shadow: 0 0 1px #0edb7c;
     }
-    
+
     .check:checked+.slider:before {
         -webkit-transform: translateX(26px);
         -ms-transform: translateX(26px);
@@ -115,11 +115,11 @@ input[type='file'] {
     .slider.round {
         border-radius: 34px;
     }
-    
+
     .slider.round:before {
         border-radius: 50%;
     }
-    
+
     .add_decduct {
         text-decoration: none;
         display: inline-block;
@@ -134,33 +134,33 @@ input[type='file'] {
         line-height: 0.9;
         cursor: pointer;
     }
-    
+
     .decduct_input {
         padding: 8px 10px;
         width: 20%;
         border-radius: 5px;
         border-color: #1d1d50;
     }
-    
+
     #e_passmessage {
         display: block;
         color: #1d1d50;
         position: relative;
     }
-    
+
     /* Add a green text color and a checkmark when the requirements are right */
     .passvalid {
         color: green;
         margin: 0px;
         font-size: 10px;
     }
-    
+
     .passvalid:before {
         position: relative;
         left: 0px;
         content: "✔";
     }
-    
+
     /* Add a red text color and an "x" when the requirements are wrong */
     .passinvalid {
         color: red;
@@ -168,7 +168,7 @@ input[type='file'] {
         font-size: 10px;
         padding-left: 10px;
     }
-    
+
     .passinvalid:before {
         position: relative;
         left: 0px;
@@ -179,11 +179,11 @@ input[type='file'] {
 
 <body>
 
-    
 
 
-    
-    
+
+
+
         <!-- <h3 class="text-center" style="color: #070344;"><b>File List</b></h3> -->
         <div>
         {{-- heading --}}
@@ -210,11 +210,11 @@ input[type='file'] {
         </div>
     </div>
     <br>
-           
 
-            
+
+
        <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
+
 {{-- <a href="{{('add_billable_activities')}}"><button class="btn btn-primary">Add Activity</button></a> --}}
                 {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Activity</button> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -222,7 +222,7 @@ input[type='file'] {
             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Activity</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
 
@@ -240,7 +240,7 @@ input[type='file'] {
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
@@ -252,7 +252,7 @@ input[type='file'] {
             <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                     <thead>
-                        <tr>
+                        <tr class="text-center">
                             <!-- <th class="text-center">No</th> -->
                             <th class="text-center">Type</th>
                             <!-- <th class="text-center">Code</th> -->
@@ -266,9 +266,9 @@ input[type='file'] {
                     @foreach($billable_activities as $activity)
                         <tr id="data">
                             <!-- <td>{{$activity->id}}</td> -->
-                            <td>{{$activity->type}}</td>
-                            <td>{{$activity->activity_name}}</td>
-                            <td>{{$activity->cost}}</td>
+                            <td class="text-center">{{$activity->type}}</td>
+                            <td class="text-center">{{$activity->activity_name}}</td>
+                            <td class="text-center">{{$activity->cost}}</td>
                             <td class="text-center"><label class="switch">
                                 <input type="checkbox" data-id="{{$activity->id }}"
                                     onclick="changestatus(this)" id="status" class="check"
@@ -291,7 +291,7 @@ input[type='file'] {
                                 {{-- href="{{url('edit_billable_activities',$activity->id)}}">Edit Billable Activities</a> --}}
                                 <a class="dropdown-item" data-toggle="modal"
                                                     data-target="#edit_billable_activities" href="#">Edit Billable Activities
-                                                            
+
                                                             </a>
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_billable_activities',$activity->id)}}">Delete Billable Activities</a> --}}
@@ -349,8 +349,8 @@ input[type='file'] {
                                     <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('add_billable_activities') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->   
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 @csrf
                 <div class="row">
                     <div class="col-md-4">
@@ -365,10 +365,10 @@ input[type='file'] {
                                 <option>--Select---</option>
                                 <option>Billable Activity</option>
                                 <option>Non-Billable Activity</option>
-                                
+
                             </select>
                                 <div class="invalid-feedback" style="width: 100%;">
-                               
+
                                 </div>
                             </div>
                         </div>
@@ -384,12 +384,12 @@ input[type='file'] {
                                 </div>
                                 <input type="text" class="form-control" name="name" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
-                            
+
                                 </div>
                             </div>
                         </div>
                     </div>
-               
+
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Cost(Kshs)</label>
@@ -445,16 +445,16 @@ input[type='file'] {
                                     </label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-        
+
                                         </div>
                                         <select type="text" value="" id="" name="type"style="width:100%;">
                                         <option>--Select---</option>
                                         <option>Billable Activity</option>
                                         <option>Non-Billable Activity</option>
-                                        
+
                                     </select>
                                         <div class="invalid-feedback" style="width: 100%;">
-                                       
+
                                         </div>
                                     </div>
                                 </div>
@@ -466,11 +466,11 @@ input[type='file'] {
                                         </label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-            
+
                                             </div>
                                             <input type="text" class="form-control" name="name" id="age">
                                             <div class="invalid-feedback" style="width: 100%;">
-                                        
+
                                             </div>
                                         </div>
                                 </div>
@@ -483,7 +483,7 @@ input[type='file'] {
 
                                          <div class="input-group">
                                             <div class="input-group-prepend">
-            
+
                                             </div>
                                             <input type="text" class="form-control" name="cost" id="age">
                                         </div>
@@ -493,12 +493,12 @@ input[type='file'] {
                         <div class="row">
                             <div class="col-sm-4">
                             </div>
-                        
+
                             <div class="col-sm-4">
                             </div>
                         </div>
                         <div class="doc_contanier"style="*/background-color:orange;">
-                          
+
                             <div class="row document_details " style="margin-bottom: 20px;">
                                 {{-- Add More Document details:- javascript --}}
                             </div>
@@ -508,7 +508,7 @@ input[type='file'] {
                 <div class style="width: 20%">
                 </div>
                 <div class="col-sm">
-                 
+
                     <button type="submit" class="btn btn-primary float:right;"
                         style="margin-left: 61%;--clr: #1D1D50;width:19%;
                         --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
@@ -525,7 +525,11 @@ input[type='file'] {
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">
             <!---- Modal Header -->
+
+           
+
             <form method="post"  id="delete_billable" action="" enctype="multipart/form-data"> 
+
                 @csrf
                 <input type="hidden" id="id" value="id">
                 <div class="modal-header" style="padding:0rem 0rem;">
@@ -534,7 +538,7 @@ input[type='file'] {
                 <!-- Modal body -->
                 <div class="modal-body" >
                     <div class="container">
-                        <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
                         </div>
                             <div class="row">
                                 <div class="" style="width: 30%;">
@@ -577,9 +581,8 @@ input[type='file'] {
         });
     }
 
-    
+
 </script>
   @endsection
 
-   
- 
+

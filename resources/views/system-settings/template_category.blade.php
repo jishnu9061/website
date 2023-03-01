@@ -284,8 +284,8 @@
                                                 <div class="dropdown-menu">
                                                     <a class="dropdown-item" {{-- href="{{url('edit_template_category',$category->id)}}">Edit Template Category</a> --}} <a class="dropdown-item"
                                                         data-toggle="modal" data-target="#edit_template_category"
-                                                        href="#">Edit Hourly
-                                                        Rate
+                                                        href="#">Edit Template Category
+                            
                                                     </a>
                                                     <a class="dropdown-item" {{-- href="{{url('delete_template_category',$category->id)}}">Delete Template Category</a> --}} <a
                                                         href="#"onclick=deletetemplate(this)

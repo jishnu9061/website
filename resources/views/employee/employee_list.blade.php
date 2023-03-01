@@ -394,9 +394,7 @@ input[type='file'] {
         </div>
         <div class="rows_count"></div>
     </div>
-</div>
-</div>
-</div>
+
 <!-- 		End of Container -->
 
 <!----------------------------------------------------------- START EMPLOYEE DETAILS -------------------------------------------------------->
@@ -622,7 +620,7 @@ input[type='file'] {
                         <br>
                         <button type="submit" class="btn btn-primary float:right;"
                             style="margin-left: 61%;--clr: #1D1D50;width:19%;
-                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Employee</button>
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update</button>
                         <button type="button" class="btn btn-primary float:left" Style="width:19%;"
                             onclick="history.back()">Cancel</button>
                     </div>
@@ -874,7 +872,7 @@ input[type='file'] {
                         <br>
                         <button type="submit" class="btn btn-primary float:right;"
                             style="margin-left:61%;--clr: #1D1D50;width:19%;
-                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Employee</button>
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update</button>
                         <button type="button" class="btn btn-primary float:left" Style="width:19%;"
                             onclick="history.back()">Cancel</button>
                     </div>
@@ -1035,7 +1033,7 @@ input[type='file'] {
 <!-------------------------------------------------------------- END CHANGE DESTINATION ------------------------------------------------------>
 
 <!-------------------------------------------------------------- START CHANGE STATUS --------------------------------------------------------->
-<div class="modal fade" id="change_status" style="">
+<div class="modal fade" id="change_status" style="margin-top:10%;">
     <!-- create company -->
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -1068,7 +1066,7 @@ input[type='file'] {
                         <br>
                         <button type="submit" class="btn btn-primary float:right;"
                             style="margin-left: 61%;--clr: #1D1D50;width:19%;
-                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Employee</button>
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Change Status</button>
                         <button type="button" class="btn btn-primary float:left" Style="width:19%;"
                             onclick="history.back()">Cancel</button>
                     </div>

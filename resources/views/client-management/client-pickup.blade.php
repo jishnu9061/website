@@ -134,7 +134,7 @@
                                                             aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                                         <div class="dropdown-menu" style="overflow: scroll;height:100px;">
                                                             <a href="" data-toggle="modal" data-target="#viewModal"
-                                                                class="dropdown-item">View Client
+                                                                class="dropdown-item">Edit Client
                                                                 Detail
                                                             </a>
                                                             <a onClick="return myFunction();"
@@ -181,7 +181,7 @@
                                                                     Type</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars"
+                                                                    <select name="client" id="cars"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                         <option>--select--</option>
                                                                         <option>Corporate Client</option>
@@ -201,7 +201,7 @@
                                                                     Name</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars"
+                                                                    <select name="file" id="cars"
                                                                         style="border-color:#1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                         <option>--select--</option>
                                                                         <option>File 1</option>
@@ -239,7 +239,7 @@
                                                                     Handling</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars"
+                                                                    <select name="person" id="cars"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                         <option>--select--</option>
                                                                         <option>Advocate 1</option>
@@ -279,7 +279,7 @@
                                                                     Name</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars"
+                                                                    <select name="clientname" id="cars"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                         @if (count($get_items))
                                                                             @foreach ($get_items as $list_client)
@@ -341,7 +341,7 @@
                                                                     style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Reason</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                                                    <textarea name="reason" class="form-control" id="exampleFormControlTextarea1" rows="2"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:75px;"></textarea>
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
@@ -354,12 +354,11 @@
                                                         <div class="" style="width: 48%">
                                                             <div class=""><span style="color: red">*</span>
                                                                 <label for="client_no"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time
-                                                                    In</label>
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time-In </label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <input type="time" class="form-control"
-                                                                        name="time-in" id="username" value=""
+                                                                    <input type="time" name="timein" class="form-control"
+                                                                         id="" value=""
                                                                         placeholder=""
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"required>
                                                                     <div class="invalid-feedback" style="width: 100%;">
@@ -376,7 +375,7 @@
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="time" class="form-control"
-                                                                        name="time-out" id="username" value=""
+                                                                        name="timeout" id="" value=""
                                                                         placeholder="Reason"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px; cellspacing=2px;"
                                                                         required>

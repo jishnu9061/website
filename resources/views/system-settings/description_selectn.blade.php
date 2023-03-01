@@ -66,13 +66,13 @@ input[type='file'] {
         width: 50px;
         height: 20px;
     }
-    
+
     .switch input {
         opacity: 0;
         width: 0;
         height: 0;
     }
-    
+
     .slider {
         position: absolute;
         cursor: pointer;
@@ -84,7 +84,7 @@ input[type='file'] {
         -webkit-transition: .4s;
         transition: .4s;
     }
-    
+
     .slider:before {
         position: absolute;
         content: "";
@@ -96,15 +96,15 @@ input[type='file'] {
         -webkit-transition: .4s;
         transition: .4s;
     }
-    
+
     .check:checked+.slider {
         background-color: #0edb7c;
     }
-    
+
     .check:focus+.slider {
         box-shadow: 0 0 1px #0edb7c;
     }
-    
+
     .check:checked+.slider:before {
         -webkit-transform: translateX(26px);
         -ms-transform: translateX(26px);
@@ -114,11 +114,11 @@ input[type='file'] {
     .slider.round {
         border-radius: 34px;
     }
-    
+
     .slider.round:before {
         border-radius: 50%;
     }
-    
+
     .add_decduct {
         text-decoration: none;
         display: inline-block;
@@ -133,33 +133,33 @@ input[type='file'] {
         line-height: 0.9;
         cursor: pointer;
     }
-    
+
     .decduct_input {
         padding: 8px 10px;
         width: 20%;
         border-radius: 5px;
         border-color: #1d1d50;
     }
-    
+
     #e_passmessage {
         display: block;
         color: #1d1d50;
         position: relative;
     }
-    
+
     /* Add a green text color and a checkmark when the requirements are right */
     .passvalid {
         color: green;
         margin: 0px;
         font-size: 10px;
     }
-    
+
     .passvalid:before {
         position: relative;
         left: 0px;
         content: "✔";
     }
-    
+
     /* Add a red text color and an "x" when the requirements are wrong */
     .passinvalid {
         color: red;
@@ -167,7 +167,7 @@ input[type='file'] {
         font-size: 10px;
         padding-left: 10px;
     }
-    
+
     .passinvalid:before {
         position: relative;
         left: 0px;
@@ -411,7 +411,7 @@ input[type='file'] {
                         <div class="row">
                             <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
                                 <div class="row">
-                                    <div class="" style="width: 33%">
+                                    <div class="" style="width: 50%">
                                         <div class=""><span style="color: red">*</span>
                                            <label for="description_selection_name"
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;"> Name
@@ -425,7 +425,7 @@ input[type='file'] {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="" style="width: 33%">
+                                    <div class="" style="width: 50%">
                                         <div class=""><span style="color: red">*</span>
                                            <label for="selection_description"
                                                 style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Selection Description
@@ -515,7 +515,7 @@ input[type='file'] {
         });
     }
 
-    
+
 </script>
   @endsection
 
