@@ -175,6 +175,7 @@
                     <div class="container">
                         <form method="post" action="{{ url('add-box-no') }}" enctype="multipart/form-data">
                             @csrf
+                            {{method_field('PUT')}} 
                             <h4 class=""><b>Add Box No:-</b></h4>
                             <div class="row">
                                 <div class="col-md-6" style="width: 33%">
@@ -303,7 +304,7 @@
                 <!---- Modal Header -->
                 <form method="post" id="box_destroy" action="#" enctype="multipart/form-data">
                     @csrf
-                    <input type="text" id="delid" value="">
+                    <input type="hidden" id="delid" value="">
                     <div class="modal-header" style="padding:0rem 0rem;">
                         <div style="padding:1rem 1rem;">
                             <h4 class="text-centre"><b>Delete <span id="delbox"></span></b></h4>

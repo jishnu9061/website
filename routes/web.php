@@ -579,9 +579,9 @@ use App\Http\Controllers\issued_summary;
         //diary management
     Route::any('diary-management', "filemanagement@diarymanagement")->name('diary-management');
     Route::any('add-event', "filemanagement@addevent")->name('add-event');
-    Route::any('/event_delete/{id}', "filemanagement@eventdelete")->name('eventdelete');
+    Route::any('/event_delete/{id}', "filemanagement@eventdelete")->name('event_delete');
     Route::any('/edit_event/{id}', "filemanagement@editevent")->name('editevent');
-    Route::any('/update_event', "filemanagement@updateevent")->name('update_event');
+    Route::any('update_event/{id}', "filemanagement@updateevent")->name('update_event');
         //workflow
     Route::any('work-flow', "filemanagement@workflow")->name('work-flow');
     Route::any('new-workflow', "filemanagement@newworkflow")->name('new-workflow');
@@ -613,7 +613,7 @@ use App\Http\Controllers\issued_summary;
         Route::any('/staff-monthly-status-report', "filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
     Route::any('/office_instructions', "filemanagement@new_instructions")->name('new_instruction');
     Route::any('/new_office_instructions', "filemanagement@add_new_instructions")->name('add_new_instructions');
-    Route::any('/update_office_instruction', "filemanagement@updateofficeinstructions")->name('update_office_instruction');
+    Route::any('update_office_instruction/{id}', "filemanagement@updateofficeinstructions")->name('update_office_instruction');
     Route::any('/delete_office/{id}', "filemanagement@destroyofficeinstruction")->name('delete_office');
     Route::any('/instructions_report', "filemanagement@view_new_instructions")->name('view_new_instructions');
     Route::any('/file_instruction', "filemanagement@new_file_instructions")->name('new_file_instructions');
