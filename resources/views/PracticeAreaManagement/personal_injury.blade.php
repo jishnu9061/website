@@ -154,377 +154,221 @@
                 </div>
                     <!-- 		End of Container -->
 
-     <!-- <-------------------------------------PERSONAL INJURY START------------------------------------------------------------->
-     <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content" >
-
-                                    <!-- Modal Header -->
-                                    <div class="modal-header">
-                                        <h2 class="text-center"><b>Matter Details</b></h2>
-
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                        <div class="container">
-                                            <form method="post" action="{{ url('add_injury') }}"
-                                                enctype="multipart/form-data">
-                                                @csrf
-
-                                                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="username">Matter Info</label>
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="matter_info" id="age">
-                                <!-- <select name="box_type" id="cars">
-                                <option>select</option>
-                                                            <option>Box Type 1</option>
-                                                            <option>Box Type 2</option>
-                                                            <option>Box Type 3</option>
-                                                            <option>Box Type 4</option>
-
-                                </select> -->
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="username">Matter Type</label>
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="matter_type" id="age">
-                                <datalist id="cityname" style="width:100%;" >
-                                                                <option value="Book">
-                                                                <option value="Pen">
-                                                                <option value="Ink">
-                                                            </datalist>
-                                <!-- <select name="box_type" id="cars">
-                                <option>select</option>
-                                                            <option>Box Type 1</option>
-                                                            <option>Box Type 2</option>
-                                                            <option>Box Type 3</option>
-                                                            <option>Box Type 4</option>
-
-                                </select> -->
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h4>Plaintiff</h4>
-                <br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="username">Incident Details</label>
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="incident" id="age">
-                                <!-- <select name="box_type" id="cars">
-                                <option>select</option>
-                                                            <option>Box Type 1</option>
-                                                            <option>Box Type 2</option>
-                                                            <option>Box Type 3</option>
-                                                            <option>Box Type 4</option>
-
-                                </select> -->
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="username">Damage Details</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="damage" id="age">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="username">Health Insurer</label>
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="insurer" id="age">
-                                <!-- <select name="box_type" id="cars">
-                                <option>select</option>
-                                                            <option>Box Type 1</option>
-                                                            <option>Box Type 2</option>
-                                                            <option>Box Type 3</option>
-                                                            <option>Box Type 4</option>
-
-                                </select> -->
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="username">Insurence Policy Details</label>
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="policy_detail" id="age">
-                                <!-- <select name="box_type" id="cars">
-                                <option>select</option>
-                                                            <option>Box Type 1</option>
-                                                            <option>Box Type 2</option>
-                                                            <option>Box Type 3</option>
-                                                            <option>Box Type 4</option>
-
-                                </select> -->
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="username">Defendant</label>
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="defendent" id="age">
-                                <!-- <select name="box_type" id="cars">
-                                <option>select</option>
-                                                            <option>Box Type 1</option>
-                                                            <option>Box Type 2</option>
-                                                            <option>Box Type 3</option>
-                                                            <option>Box Type 4</option>
-
-                                </select> -->
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <br>
-
-                <div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-</div>
-<div class="modal" id="mymodal">
-    <div class="modal-dialog">
+                    {{-- <!-- The Modal --> Create New matter --}}
+   <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Client Type">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
+            <!-- Modal Header -->
+            <div class="modal-header" style="padding:0rem 0rem;">
+                <div style="padding:1rem 1rem;">
+                    <h4 class="text-centre"><b>Matter Details</b></h4>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="modal" id="my">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Country">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
 
-
-            <br>
-     <!-- <-------------------------------------PERSONAL INJURY END---------------------------------------------------------------->
-
-
-                <!-- The Modal -->
-                <div class="modal fade" id="editmed">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-
-                            <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#435ebe">
-                                <h4 class="text-white">Edit Medicine</h4>
-
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class="container">
-                                    <form method="post" action="{{url('update_medicine')}}"
-                                        enctype="multipart/form-data">
-                                        @csrf
-                                        <h4 class="text-center"><b>Medicine Details</b></h4><br>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Brand Name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Name</label>
-                                                <input type="text" id="edit_medicine_name" name="medicine_name"
-                                                    class="form-control" required><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <div class="col-sm">
-                                                    <label for="">Medicine Group</label>
+                    <form method="post" action="{{ url('add_injury') }}" enctype="multipart/form-data" >
+                        @csrf
+                        <div class="container">
+                            <div class="row">
+                                <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="matter_info"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Matter Info:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
 
                                                 </div>
+                                                <input type="text" class="form-control" name="matter_info" id="age">
+                                                <!-- <select name="box_type" id="cars">
+                                                <option>select</option>
+                                                                            <option>Box Type 1</option>
+                                                                            <option>Box Type 2</option>
+                                                                            <option>Box Type 3</option>
+                                                                            <option>Box Type 4</option>
+
+                                                </select> -->
 
                                             </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Category Name</label>
-
-
-                                            </div>
-
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            File No is required.
                                         </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Generic name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Manufacturer Name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Supplier Name</label>
-
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Minimum Level</label>
-                                                <input type="text" id="edit_minimum_level" name="minimum_level"
-                                                    class="form-control"><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Reorder Level</label>
-                                                <input type="text" name="reorder" id="edit_reorder" class="form-control"
-                                                    placeholder=""><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label class="text-color:white;">Unit/Packing</Label>
-                                                <input type="text" name="unit_packing" id="edit_unit_packing"
-                                                    class="form-control" placeholder=""><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Upload Medicine Image</label>
-                                                <input type="file" name="editimage" id="edit_image" class="form-control"
-                                                    placeholder="Image"><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label>Medicine Composition</label>
-                                                <textarea class="form-control" id="edit_medicine_details1"
-                                                    name="medicine_detailss" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Notes</label>
-                                                <textarea class="form-control" id="edit_medicine_note"
-                                                    name="medicine_note" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                        </div>
-                                        <br>
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="hidden" class="form-control" id="edit_id" name="method_id">
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary text-white"
-                                                style="width:15%;background-color:#435ebe"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary"
-                                                style="background-color:#435ebe;width:15%;">Update</button>
-                                        </div>
+                                    </div>
                                 </div>
-                                <div class="container">
+                                <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                    <label for="matter_type"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Matter Type:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
 
+                                            </div>
+                                            <input type="text" class="form-control" name="matter_type" id="age">
+                                            <datalist id="cityname" style="width:100%;" >
+                                                                            <option value="Book"></option>
+                                                                            <option value="Pen"></option>
+                                                                            <option value="Ink"></option>
+                                                                        </datalist>
+                                            <!-- <select name="box_type" id="cars">
+                                            <option>select</option>
+                                                                        <option>Box Type 1</option>
+                                                                        <option>Box Type 2</option>
+                                                                        <option>Box Type 3</option>
+                                                                        <option>Box Type 4</option>
+
+                                            </select> -->
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Incorporation is required
+                                            </div>
+                                        </div>
+                                        </div>
                                 </div>
                             </div>
+                                <h4 class="text-centre"><b>Plaintiff</b></h4>
+                            <div class="row">
+                                <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                    <label for="incident_details"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Incident Details:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
 
-                            </form>
+                                            </div>
+                                            <input type="text" class="form-control" name="incident" id="age">
+                                            <!-- <select name="box_type" id="cars">
+                                                                        <option>select</option>
+                                                                        <option>Box Type 1</option>
+                                                                        <option>Box Type 2</option>
+                                                                        <option>Box Type 3</option>
+                                                                        <option>Box Type 4</option>
 
+                                            </select> -->
+
+                                        </div>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Client No is required.
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="" style="width: 50%">
+                                     <div class=""><span style="color: red">*</span>
+                                        <label for="damage_details"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Damage Details:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <input type="text" class="form-control" name="damage" id="age">
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                    <label for="health_insurer"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Health Insurer:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <input type="text" class="form-control" name="insurer" id="age">
+                                            <!-- <select name="box_type" id="cars">
+                                            <option>select</option>
+                                                                        <option>Box Type 1</option>
+                                                                        <option>Box Type 2</option>
+                                                                        <option>Box Type 3</option>
+                                                                        <option>Box Type 4</option>
+
+                                            </select> -->
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Incorporation is required
+                                            </div>
+                                        </div>
+
+                                </div>
+                                </div>
+
+                                <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                    <label for="policy_details"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Insurance Policy:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <input type="text" class="form-control" name="policy_detail" id="age">
+                                            <!-- <select name="box_type" id="cars">
+                                            <option>select</option>
+                                                                        <option>Box Type 1</option>
+                                                                        <option>Box Type 2</option>
+                                                                        <option>Box Type 3</option>
+                                                                        <option>Box Type 4</option>
+
+                                            </select> -->
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Incorporation is required
+                                            </div>
+                                        </div>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 100%">
+                                    <div class="marriage_details">
+                                        <label for="defendant"
+                                            style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Defendant:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <input type="text" class="form-control" name="defendent" id="age">
+                                                <!-- <select name="box_type" id="cars">
+                                                <option>select</option>
+                                                                            <option>Box Type 1</option>
+                                                                            <option>Box Type 2</option>
+                                                                            <option>Box Type 3</option>
+                                                                            <option>Box Type 4</option>
+
+                                                </select> -->
+                                                <div class="invalid-feedback" style="width: 100%;">
+                                                    Incorporation is required
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                </div>
+                <div class="row">
+                    <div class="row">
+                        <div class="" style="width: 50%;">
+                        </div>
+                        <div class="" style="width: 0%"></div>
+                        <div class="col-sm" style="padding-right: 0px;width: 50%">
+                            <br>
+                            <button type="submit" onclick="return Validate()" class="btn btn-primary float:right;"
+                                Style="width:45%;" value="submit">Save</button>
+                            <button type="button" class="btn btn-primary float:left"
+                                Style="width:45%;"data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
-
+                    </form>
             </div>
-
             <br>
-            <!-- Supplier modal Edit End -->
+        </div>
+    </div>
+</div>
+
+
+
+
 
             <!-- Delete  confirmation Message -->
 

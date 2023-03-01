@@ -131,142 +131,160 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
 <!-- 		End of Container -->
 
 
-
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+{{-- <!-- The Modal --> Create New matter --}}
 <div class="modal fade" id="myModal">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
-
             <!-- Modal Header -->
-            <div class="modal-header">
-                <h2 class="text-centre"><b>Add Matter</b></h2>
-
+            <div class="modal-header" style="padding:0rem 0rem;">
+                <div style="padding:1rem 1rem;">
+                    <h4 class="text-centre"><b>Add Matter</b></h4>
+                </div>
             </div>
-
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form method="post" action="{{url('add_real_estate')}}" enctype="multipart/form-data">
+
+                    <form method="post" action="{{url('add_real_estate')}}" enctype="multipart/form-data" >
                         @csrf
                         <div class="container">
-
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">File No</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
+                                <div class="" style="width: 32%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="file_no"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File No:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
 
+                                                </div>
+                                                <input type="text" class="form-control" name="file_no" placeholder="">
                                             </div>
-                                            <input type="text" class="form-control" name="file_no" placeholder="">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            File No is required.
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Client Name</label>
+                                <div class="" style="width: 32%">
+                                    <div class=""><span style="color: red">*</span>
+                                    <label for="client_name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Name:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
                                             <input type="text" class="form-control" name="client_name" placeholder="">
                                         </div>
-                                    </div>
+                                        </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                                <div class="" style="width: 32%">
+                                    <div class=""><span style="color: red">*</span>
+                                    <label for="matter_type"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Matter Type:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
                                             <input type="text" class="form-control" name="matter_type" placeholder="">
                                         </div>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Client No is required.
                                     </div>
+                                    {{-- </div> --}}
                                 </div>
                             </div>
-                            <br>
+
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-1">
+                                <div class="" style="width: 50%">
+                                     {{-- <div class=""><span style="color: red">*</span> --}}
+                                        <label for="buyer"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Buyer:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
 
-                                        <label for="exampleFormControlInput1" class="form-label">Buyer</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
+                                                </div>
+                                                <input type="text" class="form-control" name="buyer" placeholder="">
                                             </div>
-                                            <input type="text" class="form-control" name="buyer" placeholder="">
-                                        </div>
-                                    </div>
+                                    {{-- </div> --}}
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+                                <div class="" style="width: 49%">
+                                    {{-- <div class=""><span style="color: red">*</span> --}}
+                                    <label for="attorney"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Attorney:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
                                             <input type="text" class="form-control" name="attroney" placeholder="">
                                         </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Property
-                                            Details</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <textarea class="form-control" rows="2" name="property"></textarea>
-                                        </div>
-                                    </div>
+                                {{-- </div> --}}
                                 </div>
                             </div>
-                            <br>
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-
-                                        <label for="exampleFormControlInput1" class="form-label">Closing
-                                            Statement</label>
+                                <div class="" style="width: 99%">
+                                    {{-- <div class=""><span style="color: red">*</span> --}}
+                                    <label for="property_details"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Property Details:</label>
                                         <div class="input-group">
-                                            <div class="input-group-prepend">
+                                            <div class="input-group-prepend"></div>
+                                            <textarea class="form-control" rows="2" name="case_details"
+                                                id="username" required></textarea>
 
-                                            </div>
-                                            <textarea class="form-control" rows="2" name="close_statement"></textarea>
                                         </div>
+                                    <div class="invalid-feedback" style="width: 100%;">
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Listing Realtor</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <textarea class="form-control" rows="2" name="listing_realtor"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Selling Realtor</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <textarea class="form-control" rows="2" name="selling_realtor"></textarea>
-                                        </div>
-                                    </div>
+                                {{-- </div> --}}
                                 </div>
                             </div>
-                            <br>
+
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Company Title</label>
+                                <div class="" style="width: 33%">
+                                    <div class="marriage_details">
+                                        <label for="closing_statement"
+                                            style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Closing Statement:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <textarea class="form-control" rows="2" name="close_statement"></textarea>
+                                            </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="listing_realtor"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Listing Realtor:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <textarea class="form-control" rows="2" name="listing_realtor"></textarea>
+                                            </div>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Email is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class="">
+                                        <label for="selling_realtor"
+                                            style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Selling Realtor:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <textarea class="form-control" rows="2" name="selling_realtor"></textarea>
+                                            </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                            <div class="row">
+                                <div class="" style="width: 50%">
+                                    {{-- <div class=""><span style="color: red">*</span> --}}
+                                    <label for="company_title"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Company Title:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
@@ -274,11 +292,12 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                             <input type="text" class="form-control" placeholder="" name="company_title">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Supporting
-                                            Details</label>
+                                        {{-- </div> --}}
+
+                                <div class="" style="width: 49%">
+                                    {{-- <div class=""><span style="color: red">*</span> --}}
+                                    <label for="supporting_details"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Supporting Details:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
@@ -289,23 +308,30 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                     </div>
                                 </div>
                             </div>
-                            <br>
-                            <br>
+
+                    </div>
 
 
-                            <div class="container text-center">
-                                <button type="submit" class="btn btn-primary" style="width:15%">Save</button>
-                                <button type="button" class="btn btn-primary" style="width:15%"
-                                    data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-
-                    </form>
                 </div>
+                <div class="row">
+                    <div class="row">
+                        <div class="" style="width: 50%;">
+                        </div>
+                        <div class="" style="width: 0%"></div>
+                        <div class="col-sm" style="padding-right: 0px;width: 50%">
+                            <br>
+                            <button type="submit" onclick="return Validate()" class="btn btn-primary float:right;"
+                                Style="width:45%;" value="submit">Save</button>
+                            <button type="button" class="btn btn-primary float:left"
+                                Style="width:45%;"data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+                    </form>
 
-
-
-
-
-
-                @endsection
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+@endsection
