@@ -109,10 +109,14 @@
                                                    <div class="dropdown-menu">
                                                     <a class="dropdown-item"
                                                         href="{{url('view_injury',$list->id)}}">View Injury</a>
+                                                    {{-- <a class="dropdown-item"
+                                                        href="{{url('edit_injury',$list->id)}}">Edit Injury</a> --}}
+                                                    <a class="dropdown-item" data-toggle="modal"
+                                                        data-target="#edit_injury" href="#">Edit Injury</a>
                                                     <a class="dropdown-item"
-                                                        href="{{url('edit_injury',$list->id)}}">Edit Injury</a>
-                                                    <a class="dropdown-item"
-                                                        href="{{url('delete_injury',$list->id)}}">Delete Injury</a>
+                                                     href="#"onclick=deleteinjury(this) data-id="{{ $list->id }}"data-toggle="modal"
+                                                        data-target="#delete_injury">Delete Injury</>
+                                                        {{-- href="{{url('delete_injury',$list->id)}}">Delete Injury</a> --}}
                                                 </div>
                                                     </td>
                                 </tr>
@@ -365,13 +369,243 @@
         </div>
     </div>
 </div>
+{{-- Start Edit Injury --}}
+<div class="modal fade" id="edit_injury" style="">
+    <!-- edit Injury-->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Injury:-</b></h5>
 
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="bank"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Matter Info</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <input type="text" class="form-control" name="matter_info" id="age" value="">
+                                            <!-- <select name="box_type" id="cars">
+                                            <option>select</option>
+                                                                        <option>Box Type 1</option>
+                                                                        <option>Box Type 2</option>
+                                                                        <option>Box Type 3</option>
+                                                                        <option>Box Type 4</option>
+
+                                            </select> -->
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Incorporation is required
+                                            </div>
+                                        </div>
+
+
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="branch"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Name</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" value="">
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="account_name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Matter Type</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <input type="text" class="form-control" name="matter_type" id="age" value="">
+                                            <!-- <select name="box_type" id="cars">
+                                            <option>select</option>
+                                                                        <option>Box Type 1</option>
+                                                                        <option>Box Type 2</option>
+                                                                        <option>Box Type 3</option>
+                                                                        <option>Box Type 4</option>
+
+                                            </select> -->
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Incorporation is required
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div><br>
+
+                        <h5><b>Plaintiff:-</b></h5>
+
+                        <div class="row">
+                            <div class="" style="width: 100%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="account_no"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Incident Details</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <input type="text" class="form-control" name="incident" id="age" value="">
+                                            <!-- <select name="box_type" id="cars">
+                                            <option>select</option>
+                                                                        <option>Box Type 1</option>
+                                                                        <option>Box Type 2</option>
+                                                                        <option>Box Type 3</option>
+                                                                        <option>Box Type 4</option>
+
+                                            </select> -->
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Incorporation is required
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width:50%;"><span style="color: red">*</span>
+                                <label for="bank_code"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Damage Details</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+
+                                        </div>
+                                        <input type="text" class="form-control" name="damage" id="age" value="">
+                                    </div>
+                            </div>
+                            <div class="" style="width:50%;"><span style="color: red">*</span>
+                                <label for="branch_code"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Health Insurer</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+
+                                        </div>
+                                        <input type="text" class="form-control" name="insurer" id="age" value="">
+                                        <!-- <select name="box_type" id="cars">
+                                        <option>select</option>
+                                                                    <option>Box Type 1</option>
+                                                                    <option>Box Type 2</option>
+                                                                    <option>Box Type 3</option>
+                                                                    <option>Box Type 4</option>
+
+                                        </select> -->
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Incorporation is required
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 0px;">
+                            <div class="" style="width: 50%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="swift_code"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Insurance Policy</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <input type="text" class="form-control" name="policy_detail" id="age" value="">
+                                            <!-- <select name="box_type" id="cars">
+                                            <option>select</option>
+                                                                        <option>Box Type 1</option>
+                                                                        <option>Box Type 2</option>
+                                                                        <option>Box Type 3</option>
+                                                                        <option>Box Type 4</option>
+
+                                            </select> -->
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Incorporation is required
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:50%;"><span style="color: red">*</span>
+                                <label for="mpesa_no"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Defendant</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+
+                                        </div>
+                                        <input type="text" class="form-control" name="defendent" id="age" value="">
+                                        <!-- <select name="box_type" id="cars">
+                                        <option>select</option>
+                                                                    <option>Box Type 1</option>
+                                                                    <option>Box Type 2</option>
+                                                                    <option>Box Type 3</option>
+                                                                    <option>Box Type 4</option>
+
+                                        </select> -->
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Incorporation is required
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
+
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit corporate client --}}
 
 
 
 
             <!-- Delete  confirmation Message -->
-
+            <div class="modal fade" id="delete_injury" style=""> <!-- delete injury -->
+                <div class="modal-dialog modal-lg" style="width:30%;">
+                    <div class="modal-content">
+                        <!---- Modal Header -->
+                        <form method="post"  id="delete_injury" action="{{url('delete_injury',$list->id)}}" enctype="multipart/form-data">
+                            @csrf
+                            <input type="hidden" id="id" value="id">
+                            <div class="modal-header" style="padding:0rem 0rem;">
+                                <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_injury"></span></b></h4></div>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body" >
+                                <div class="container">
+                                    <div class="row"><h6><b><span>Are you sure?</span></b></h6>
+                                    </div>
+                                        <div class="row">
+                                            <div class="" style="width: 30%;">
+                                            </div>
+                                            <div lass="" style="width: 0%"></div>
+                                            <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                                <br>
+                                                <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                                <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <!-- End delete confirmation message -->
         </div>
 

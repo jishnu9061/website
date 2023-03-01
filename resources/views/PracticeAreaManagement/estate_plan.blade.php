@@ -8,7 +8,8 @@
 <br><br>
 {{-- heading --}}
 
-<h4 id="hdtpa"><b>Estate Planning</b></h4>
+<div class="container">
+    <h4 id="hdtpa"><b>Estate Planning</b></h4>
 <br>
 
 {{-- <input class="btn btn-primary" type="button" value="Add New Matter" data-toggle="modal" data-target="#myModal"> --}}
@@ -80,10 +81,14 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                        <div class="dropdown-menu">
                                         <a class="dropdown-item"
                                             href="{{ url('view_estate_plan',$list->id) }}">View Estate Plan</a>
+                                        {{-- <a class="dropdown-item"
+                                            href="{{ url('edit_estate_plan',$list->id) }}">Edit Estate Plan</a> --}}
+                                        <a class="dropdown-item" data-toggle="modal"
+                                            data-target="#edit_estate_plan" href="#">Edit Estate Plan</a>
                                         <a class="dropdown-item"
-                                            href="{{ url('edit_estate_plan',$list->id) }}">Edit Estate Plan</a>
-                                        <a class="dropdown-item"
-                                            href="{{ url('delete_estate_plan',$list->id) }}">Delete Estate Plan</a>
+                                            {{-- href="{{ url('delete_estate_plan',$list->id) }}">Delete Estate Plan</a> --}}
+                                            <a href="#"onclick=deleteestateplan(this) data-id="{{ $list->id }}"data-toggle="modal"
+                                                data-target="#delete_estate_plan">Delete Estate Plan</a>
                                     </div>
                                         </td>
             </tr>
@@ -263,7 +268,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                         </div>
 
 
-                    </div>
+                </div>
                     <div class="row">
                         <div class="row">
                             <div class="" style="width: 50%;">
@@ -279,146 +284,175 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                         </div>
                     </div>
                         </form>
-                </div>
-                <br>
             </div>
+                <br>
         </div>
     </div>
-
-
-
-{{-- <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-<div class="modal fade" id="myModal">
+</div>
+{{-- Start Edit Estate Plan --}}
+<div class="modal fade" id="edit_estate_plan" style="">
+    <!-- edit Estate Plan  -->
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Estate Plan:-</b></h5>
 
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h2 class="text-centre"><b>Add Matter</b></h2>
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="bank"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File No</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" placeholder="" value=""
+                                                name="file_no">
+                                        </div>
 
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-                <div class="container">
-                    <form method="post" action="{{url('add_estate_plan')}}" enctype="multipart/form-data">
-                        @csrf
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">File No</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="file_no">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Client Name</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="client_name">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="matter_type">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <textarea class="form-control" rows="2" placeholder=""
-                                                name="estate_details"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Trust</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <textarea class="form-control" rows="2" placeholder=""
-                                                name="trust"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Property
-                                            Details</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <textarea class="form-control" rows="2" name="property_details"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Accountant</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="accoundant">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Financial
-                                            Advisor</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="financier">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
 
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col">
-
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="branch"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Name</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" placeholder="" value=""
+                                                name="client_name">
+                                        </div>
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
-                                <span class="m-2"></span>
-                                <input type="file" class="form-control" name="support">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="account_name"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Matter Type</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" placeholder="" value=""
+                                                name="matter_type">
+                                        </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="" style="width: 100%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="account_no"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Estate Details</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <textarea class="form-control" rows="2" placeholder="" value=""
+                                                name="estate_details"></textarea>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width:50%;"><span style="color: red">*</span>
+                                <label for="bank_code"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Trust</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <textarea class="form-control" rows="2" placeholder="" value=""
+                                            name="trust"></textarea>
+                                    </div>
+                            </div>
+                            <div class="" style="width:50%;"><span style="color: red">*</span>
+                                <label for="branch_code"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Property Details</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <textarea class="form-control" rows="2" placeholder="" value=""
+                                            name="property_details"></textarea>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 0px;">
+                            <div class="" style="width: 50%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for="swift_code"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Accountant</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <textarea class="form-control" rows="2" placeholder="" value=""
+                                                name="accoundant"></textarea>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width:50%;"><span style="color: red">*</span>
+                                <label for="mpesa_no"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Financial Advisor</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <textarea class="form-control" rows="2" placeholder="" value=""
+                                            name="financier"></textarea>
+                                    </div>
+                            </div>
+                            <div class="" style="width:50%;"><span style="color: red">*</span>
+                                <label for="mpesa_no"
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Supprting Details</label>
+                                    <span class="m-2"></span>
+                                    <input type="file" class="form-control" >
+                            </div>
+
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <br>
-                <br>
-
-
-                <div class="container text-center">
-                    <button type="submit" class="btn btn-primary" style="width:15%">Save</button>
-                    <button type="button" class="btn btn-primary" style="width:15%" data-dismiss="modal">Close</button>
+                <div class style="width: 20%">
                 </div>
-            </div>
+                <div class="col-sm">
 
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+{{-- End edit corporate client --}}
+
+<div class="modal fade" id="delete_estate_plan" style=""> <!-- delete estate plan-->
+    <div class="modal-dialog modal-lg" style="width:30%;">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post"  id="delete_estate_plan" action="{{ url('delete_estate_plan',$list->id) }}" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" id="id" value="id">
+                <div class="modal-header" style="padding:0rem 0rem;">
+                    <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_estate_plan"></span></b></h4></div>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body" >
+                    <div class="container">
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
+                        </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </form>
         </div>
-
- --}}
-
+    </div>
+</div>
 
 
 
