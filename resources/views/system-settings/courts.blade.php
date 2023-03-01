@@ -157,9 +157,9 @@ color: #999;
                                                     data-target="#edit_court" href="#">Edit Court
                                                             
                                                             </a>
-                            <a class="dropdown-item"
+                            <a class="dropdown-item">
                                 {{-- href="{{url('delete_court',$court_details->id)}}">Delete Court</a> --}}
-                                <a href="#"onclick=deletecourt(this) data-id="{{ $court_details->id }}"data-toggle="modal"
+                                <a href="#"onclick=deletecourt(this) data-id=""data-toggle="modal"
                                     data-target="#deleteCourt">Delete Court</a>
                         </div>
                             </td>
@@ -470,7 +470,7 @@ color: #999;
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">
             <!---- Modal Header -->
-            <form method="post"  id="delete_court" action="{{url('delete_court',$court_details->id)}}" enctype="multipart/form-data"> 
+            <form method="post"  id="delete_court" action="" enctype="multipart/form-data"> 
                 @csrf
                 <input type="hidden" id="id" value="id">
                 <div class="modal-header" style="padding:0rem 0rem;">
