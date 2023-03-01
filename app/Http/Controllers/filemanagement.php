@@ -164,7 +164,7 @@ class filemanagement extends Controller
         $template_list=DB::table('cra_add_template')->get();
         return view('file_management.template-category',compact('template_list'));
 
-        return view('file_management.template-category');
+       
     }
 
     public function addtemplate(Request $request)
@@ -172,6 +172,14 @@ class filemanagement extends Controller
         $doc_type=$request['doc_type'];
         $title=$request['title'];
         $to_upload=$request['to_upload'];
+
+        if(request()->hasfile('to_upload')){
+            $uploadedImage = $request->file('to_upload');
+            $imageName     = time() .'.'. $to_upload->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $to_upload->file    = $destinationPath.$imageName;
+        }
 
         DB::table('cra_add_template')->insert([
             'doc_type' =>  $doc_type,
@@ -181,7 +189,48 @@ class filemanagement extends Controller
         ]);
 
         return redirect('/template-category');
-        // return view('file_management.add-template');
+    }
+
+    public function edittemplate($id){
+
+        $edit_temblate = DB::table('cra_add_template')->where('id',$id)->first();
+
+        return response()->json([
+            'status' => 200,
+            'result' => $edit_temblate,
+        ]);
+    }
+
+    public function updatetemplate(Request $request){
+
+        $id = $request['id'];
+        $doc_type = $request['doc_type'];
+        $title = $request['title'];
+        $to_upload = $request['to_upload'];
+
+        if(request()->hasfile('to_upload')){
+            $uploadedImage = $request->file('to_upload');
+            $imageName     = time() .'.'. $to_upload->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $to_upload->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_add_template')->where('id',$id)->update([
+
+            'doc_type' => $doc_type,
+            'title' => $title,
+            'to_upload' => $to_upload,
+        ]);
+
+        return redirect('/template-category');
+    }
+
+    public function deletetemplate($id)
+    {
+        $delete =DB::table('cra_add_template')->where('id',$id)->delete();
+
+        return redirect ('/template-category');
     }
 
 
@@ -215,6 +264,7 @@ class filemanagement extends Controller
         return redirect('/file-archive');
     }
 
+
     public function viewboxno($id)
     {
         $list = DB::table('cra_add_box')->where('cra_add_box.id',$id)->first();
@@ -229,8 +279,12 @@ class filemanagement extends Controller
 
     public function editboxno($id)
     {
-        $edit =DB::table('cra_add_box')->where('id',$id)->first();
-        return ('/file-archive');
+        $edit_box =DB::table('cra_add_box')->where('id',$id)->first();
+
+        return response()->json([
+            'status' => 200,
+            'result' => $edit_box,
+        ]);
     }
 
     public function deleteboxno($id)
@@ -1497,8 +1551,11 @@ public function edit_file_instruction_list($id)
 
 
     $edit_file_instruction =DB::table('cra_add_new_instructions')->where('id',$id)->first();
-    return view('file_management.edit_file_instruction',compact('edit_file_instruction','id'));
-
+   
+    return response()->json([
+        'status' => 200,
+        'result' => $edit_file_instruction,
+    ]);
 
 }
 

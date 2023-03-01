@@ -549,9 +549,13 @@ use App\Http\Controllers\issued_summary;
     Route::any('view-box-no', "filemanagement@viewboxno")->name('view-box-no');
     Route::any('/edit-box-no/{id}', "filemanagement@editboxno")->name('edit-box-no');
     Route::any('update-box/{id}', "filemanagement@updatebox")->name('update-box');
+    Route::any('delete-box/{id}', "filemanagement@deleteboxno")->name('delete-box');
         //document templates
     Route::any('template-category', "filemanagement@template")->name('template-category');
     Route::any('add-template', "filemanagement@addtemplate")->name('add-template');
+    Route::any('edit_template/{id}', "filemanagement@edittemplate")->name('edit_template');
+    Route::any('update_template/{id}', "filemanagement@updatetemplate")->name('update_template');
+    Route::any('delete_template/{id}', "filemanagement@deletetemplate")->name('delete_template');
         //file progress/bringup
     Route::any('add-file-progress', "filemanagement@addprogress")->name('add-file-progress');
     Route::any('/edit-file-progress/{id}', "filemanagement@editprogress")->name('edit-file-progress');
@@ -625,9 +629,9 @@ use App\Http\Controllers\issued_summary;
     Route::any('/Process_Request', "filemanagement@Process_Request_list")->name('Process_Request_list');
         //file instructions
     Route::any('/edit_file_instruction/{id}', "filemanagement@edit_file_instruction_list")->name('edit_file_instruction');
-    Route::any('/update_file_instruction', "filemanagement@updatefileinstruction")->name('update_file_instruction');
+    Route::any('update_file_instruction/{id}', "filemanagement@updatefileinstruction")->name('update_file_instruction');
     Route::any('/edit_office_instruction/{id}', "filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
-    Route::any('/delete_file/{id}', "filemanagement@destroyfileinstruction")->name('delete_file');
+    Route::any('/delete_instruction/{id}', "filemanagement@destroyfileinstruction")->name('delete_instruction');
     //file management controller
 // hr index controller
         //index
