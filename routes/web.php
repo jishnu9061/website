@@ -602,15 +602,18 @@ use App\Http\Controllers\issued_summary;
         //add ons
     Route::any('outgoing-letters', "filemanagement@outgoingletter")->name('outgoing-letters');
     Route::any('add-outgoing-letters', "filemanagement@addoutgoingletters")->name('add-outgoing-letters');
+    Route::any('edit-outgoing-letters/{id}', "filemanagement@editoutgoingletter")->name('add-outgoing-letters');
+    Route::any('/update_outgoing_letters/{id}', "filemanagement@updateoutgoingletters")->name('update_outgoing_letters');
+    Route::any('/delete_outgoing_letter/{id}', "filemanagement@deleteoutgoingletter")->name('delete_outgoing_letter');
     Route::any('incomming-letters', "filemanagement@incommingletters")->name('incomming-letters');
     Route::any('add-incomming-letters', "filemanagement@addincommingletters")->name('add-incomming-letters');
     Route::any('safe-item-request', "filemanagement@safeitemrequest")->name('safe-item-request');
     Route::any('safe-register-report', "filemanagement@saferegisterreport")->name('safe-register-report');
     Route::any('/u_details', "filemanagement@u_details")->name('u_details');
         //office instructions
-        Route::any('/file-list-progress-report', "filemanagement@filelistprogressreport")->name('file-list-progress-report');
-        Route::any('/client-monthly-file-status', "filemanagement@clientmonthlystatus")->name('client-monthly-file-status');
-        Route::any('/staff-monthly-status-report', "filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
+    Route::any('/file-list-progress-report', "filemanagement@filelistprogressreport")->name('file-list-progress-report');
+    Route::any('/client-monthly-file-status', "filemanagement@clientmonthlystatus")->name('client-monthly-file-status');
+    Route::any('/staff-monthly-status-report', "filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
     Route::any('/office_instructions', "filemanagement@new_instructions")->name('new_instruction');
     Route::any('/new_office_instructions', "filemanagement@add_new_instructions")->name('add_new_instructions');
     Route::any('update_office_instruction/{id}', "filemanagement@updateofficeinstructions")->name('update_office_instruction');
@@ -622,9 +625,12 @@ use App\Http\Controllers\issued_summary;
     Route::any('/Safe_management', "filemanagement@safe_management_list")->name('safe_management_list');
     Route::any('/new_Safe_management', "filemanagement@new_safe_management_list")->name('new_safe_management_list');
     Route::any('/edit_Safe_management/{id}', "filemanagement@editsafemanagement_list")->name('edit_Safe_management');
-    Route::any('/update_Safe_management', "filemanagement@updatesafemanagement_list")->name('update_Safe_management');
+    Route::any('/update_Safe_management/{id}', "filemanagement@updatesafemanagement_list")->name('update_Safe_management');
     Route::any('/delete_Safe_management/{id}', "filemanagement@deletesafemanagement")->name('edit_Safe_management');
     Route::any('/Request_staff_item', "filemanagement@Request_staff_item_list")->name('Request_staff_item_list');
+    Route::any('/edit_safe_item/{id}', "filemanagement@edit_safe_item")->name('edit_safe_item');
+    Route::any('/update_safe_item/{id}', "filemanagement@update_Request_staff_item")->name('update_safe_item');
+    Route::any('/delete_safe_item/{id}', "filemanagement@delete_safe_item")->name('delete_safe_item');
     Route::any('/new_Request_staff_item', "filemanagement@add_Request_staff_item_list")->name('add_Request_staff_item_list');
     Route::any('/Process_Request', "filemanagement@Process_Request_list")->name('Process_Request_list');
         //file instructions
