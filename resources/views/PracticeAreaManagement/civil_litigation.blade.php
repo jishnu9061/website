@@ -130,219 +130,232 @@
 <!-- 		End of Container -->
 
 
-
-
-
-
-
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+{{-- <!-- The Modal --> Create New matter --}}
 <div class="modal fade" id="myModal">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
-
             <!-- Modal Header -->
-            <div class="modal-header">
-                <h2 class="text-centre"><b>Add Matter</b></h2>
-
+            <div class="modal-header" style="padding:0rem 0rem;">
+                <div style="padding:1rem 1rem;">
+                    <h4 class="text-centre"><b>Add Matter</b></h4>
+                </div>
             </div>
-
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form method="post" action="{{url('add_civil_litigation')}}" enctype="multipart/form-data">
+
+                    <form method="post" action="{{url('add_civil_litigation')}}" enctype="multipart/form-data" >
                         @csrf
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
+                                <div class="" style="width: 32%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="matter_info"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Matter Info:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
 
+                                                </div>
+                                                <input type="text" class="form-control" value="" name="matter_info" required>
                                             </div>
-                                            <input type="text" class="form-control" value="" name="matter_info" required>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            File No is required.
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Plaintiff</label>
+                                <div class="" style="width: 32%">
+                                    <div class=""><span style="color: red">*</span>
+                                    <label for="plaintiff"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Plaintiff:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
                                             <input type="text" class="form-control" value="" name="plaintiff" required>
                                         </div>
-                                    </div>
+                                        </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                                <div class="" style="width: 32%">
+                                    <div class=""><span style="color: red">*</span>
+                                    <label for="matter_type"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Matter Type:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
                                             <input type="text" class="form-control" value="" name="matter_type" required>
                                         </div>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Client No is required.
                                     </div>
+                                    {{-- </div> --}}
                                 </div>
                             </div>
-                            </br>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Defendent</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
 
+                            <div class="row">
+                                <div class="" style="width: 99%">
+                                     {{-- <div class=""><span style="color: red">*</span> --}}
+                                        <label for="defendant"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Defendant:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <input type="text" class="form-control" value="" name="defendent" required>
                                             </div>
-                                            <input type="text" class="form-control" value="" name="defendent" required>
-                                        </div>
-                                    </div>
+                                    {{-- </div> --}}
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Attroney</label>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 50%">
+                                    {{-- <div class=""><span style="color: red">*</span> --}}
+                                    <label for="attorney"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Attorney:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
                                             <textarea class="form-control" rows="2" name="attroney" required></textarea>
                                         </div>
-                                    </div>
+
+                                {{-- </div> --}}
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+
+
+                                <div class="" style="width: 49%">
+                                    {{-- <div class=""><span style="color: red">*</span> --}}
+                                    <label for="case_details"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Case Details:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
                                             <textarea class="form-control" rows="2" name="case_detail" required></textarea>
                                         </div>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    </div>
+                                {{-- </div> --}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class="plaintiff's_insurer">
+                                        <label for="username"
+                                            style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Plaintiff Insurer:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <textarea class="form-control" rows="2" name="insurer" required></textarea>
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="plaintiff's_witness"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Plaintiff Witness:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <textarea class="form-control" rows="2" name="witness" required></textarea>
+                                            </div>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Email is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class="">
+                                        <label for="plaintiff's_expert"
+                                            style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Plaintiff Expert:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <textarea class="form-control" rows="2" name="expert" required></textarea>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
-                            </br>
+
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Plaintiff's
-                                            Insurer</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <textarea class="form-control" rows="2" name="insurer" required></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Plaintiff's
-                                            Witness</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <textarea class="form-control" rows="2" name="witness" required></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Plaintiff's
-                                            Expert</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <textarea class="form-control" rows="2" name="expert" required></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </br>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Defendant's
-                                            Insurer</label>
+                                <div class="" style="width: 33%">
+                                    {{-- <div class=""><span style="color: red">*</span> --}}
+                                    <label for="Defendant's Insurer"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Defendant Insurer:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
                                             <textarea class="form-control" rows="2" name="def_insurer" required></textarea>
                                         </div>
-                                    </div>
+
+
+                                 {{-- </div> --}}
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Defendant's
-                                            Witness</label>
+                                <div class="" style="width: 33%">
+                                    {{-- <div class=""><span style="color: red">*</span> --}}
+                                    <label for="Defendant's Witness"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Defendant Witness:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
                                             <textarea class="form-control" rows="2" name="def_witness" required></textarea>
                                         </div>
-                                    </div>
+                                    {{-- </div> --}}
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Defendant's
-                                            Expert</label>
+                                <div class="" style="width: 33%">
+                                    {{-- <div class=""><span style="color: red">*</span> --}}
+                                    <label for="Defendant's Expert"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Defendant Expert:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
                                             <textarea class="form-control" rows="2" name="def_expert" required></textarea>
                                         </div>
-                                    </div>
+                                    {{-- </div> --}}
                                 </div>
                             </div>
-
                             <div class="row">
-                                <div class="col-md-8">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Supporting
-                                            Details</label>
+                                <div class="" style="width: 99%">
+                                    {{-- <div class=""><span style="color: red">*</span> --}}
+                                    <label for="supporting_details"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Supporting Details:</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
                                             <input type="file" class="form-control" name="support_detail" required>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                    </div>
+                                    {{-- </div> --}}
                                 </div>
                             </div>
-                        </div>
-                        <br>
-                        <br>
+                    </div>
 
 
-                        <div class="container text-center">
-                            <button type="submit" class="btn btn-primary" style="width:15%">Save</button>
-                            <button type="button" class="btn btn-primary" style="width:15%"
-                                data-dismiss="modal">Close</button>
-                        </div>
-
-
-                    </form>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-                @endsection
+                <div class="row">
+                    <div class="row">
+                        <div class="" style="width: 50%;">
+                        </div>
+                        <div class="" style="width: 0%"></div>
+                        <div class="col-sm" style="padding-right: 0px;width: 50%">
+                            <br>
+                            <button type="submit" onclick="return Validate()" class="btn btn-primary float:right;"
+                                Style="width:45%;" value="submit">Save</button>
+                            <button type="button" class="btn btn-primary float:left"
+                                Style="width:45%;"data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+                    </form>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+@endsection

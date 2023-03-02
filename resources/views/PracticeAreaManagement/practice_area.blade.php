@@ -116,9 +116,60 @@
 
 </div>
 
+ {{-- <!-- The Modal --> Create New matter --}}
+ <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header" style="padding:0rem 0rem;">
+                <div style="padding:1rem 1rem;">
+                    <h4 class="text-centre"><b>Add New Practice Area</b></h4>
+                </div>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+
+                    <form method="post" action="{{url('store_practice_area')}}" enctype="multipart/form-data" >
+                        @csrf
+                        <div class="container">
+                            <div class="row">
+                                <div class="" style="width: 100%">
+                                    {{-- <div class=""><span style="color: red">*</span> --}}
+                                        <input class="form-control form-control-lg" type="text" placeholder="" name="area"
+                                        aria-label=".form-control-lg example">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            File No is required.
+                                        </div>
+                                    {{-- </div> --}}
+                                </div>
+                            </div>
+                        </div>
 
 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="" style="width: 50%;">
+                            </div>
+                            <div class="" style="width: 0%"></div>
+                            <div class="col-sm" style="padding-right: 0px;width: 50%">
+                                <br>
+                                <button type="submit" onclick="return Validate()" class="btn btn-primary float:right;"
+                                    Style="width:45%;" value="submit">Save</button>
+                                <button type="button" class="btn btn-primary float:left"
+                                    Style="width:45%;"data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                        </form>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+{{-- <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -148,7 +199,7 @@
 
                 </form>
             </div>
-
+ --}}
 
 
 

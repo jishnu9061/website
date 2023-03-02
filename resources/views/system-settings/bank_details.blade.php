@@ -161,9 +161,7 @@ color: #999;
                             <a class="dropdown-item"
                                 {{-- href="{{url('edit_bank_account',$detail->id)}}">Edit Bank Account</a> --}}
                             <a class="dropdown-item" data-toggle="modal"
-                                                    data-target="#edit_bank_details" href="#">Edit Bank Account
-                                                            
-                                                            </a>
+                                                    data-target="#edit_bank_details" href="#">Edit Bank Account</a>
                             <a class="dropdown-item"
                                 {{-- href="{{url('delete_bank_account',$detail->id)}}">Delete Bank Account</a> --}}
                                 <a href="#"onclick=deletebank(this) data-id="{{ $detail->id }}"data-toggle="modal"
@@ -577,11 +575,11 @@ color: #999;
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Bank Code</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-            
+
                                             </div>
                                             <input type="text" class="form-control" name="bank_code" id="age">
                                             <div class="invalid-feedback" style="width: 100%;">
-            
+
                                             </div>
                                         </div>
                                 </div>
@@ -591,11 +589,11 @@ color: #999;
                                         </label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-            
+
                                             </div>
                                             <input type="text" class="form-control" name="branch_code" id="confirm_password" required>
                                             <div class="invalid-feedback" style="width: 100%;">
-            
+
                                             </div>
                                         </div>
                                 </div>
@@ -608,7 +606,7 @@ color: #999;
                                             </label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                            
+
                                                 </div>
                                                 <input type="text" class="form-control" name="swift_code" id="confirm_password" required>
                                             </div>
@@ -619,11 +617,11 @@ color: #999;
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Mpesa No</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                        
+
                                             </div>
                                             <input type="text" class="form-control" name="mpesa_no" id="confirm_password" required>
                                             <div class="invalid-feedback" style="width: 100%;">
-                        
+
                                             </div>
                                         </div>
                                 </div>
@@ -632,7 +630,7 @@ color: #999;
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Bank G/L Account</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                        
+
                                             </div>
                                             <select type="text" value="" name="bank_gl_ac"style="width:100%;">
                                                     <option>---Select---</option>
@@ -647,7 +645,7 @@ color: #999;
                                                     <option>8002==>Office Account - DIRECT MPESA</option>
                                                     <option>8010==>Office Account - Stima Sacco Society Ltd</option>
                                                     <option>8005==>Office Account - Sidian Bank</option>
-                        
+
                                                 </select>
                                         </div>
                                 </div>
