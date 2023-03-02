@@ -233,11 +233,11 @@
                                                 <a class="btn" data-toggle="dropdown" aria-haspopup="true"
                                                     aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                                 <div class="dropdown-menu" style="overflow: scroll;height:100px;">
-                                                    <a class="dropdown-item" data-toggle="modal"
+                                                    <a class="dropdown-item" data-toggle="modal" data-name="{{ $user->company_name }}" data-id="{{ $user->uniqueid }}"
                                                         data-target="#editcompany" href="#">Edit Client
                                                         Details
                                                     </a>
-                                                    <a class="dropdown-item" href=""data-toggle="modal" data-id=""
+                                                    <a class="dropdown-item" href=""data-toggle="modal" data-name="{{ $user->company_name }}" data-id="{{ $user->uniqueid }}"
                                                         data-name=""onclick="deletecompany(this)"
                                                         data-target="#deletecompany">Delete Client
                                                         Details</a>
