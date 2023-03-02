@@ -7,6 +7,7 @@
     </nav>
     <br><br>
     <style>
+        
         th {
             width: 30%;
         }
@@ -84,6 +85,74 @@
         .doc_input:focus {
             outline: 1px solid #efefef;
         }
+        .add_document {
+            text-decoration: none;
+            display: inline-block;
+            */width: 30px;
+            height: 30px;
+            background: #8bc34a;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1d1d50;
+            align-items: center;
+            line-height: 0.7;
+            */display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .exdocumentdelete {
+            text-decoration: none;
+            display: inline-block;
+            background: #f44336;
+            color: #1d1d50;
+            font-size: 1.5rem;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .documentflex {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .document_warp {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e4e1e1;
+        }
+
+        .document_contanier {
+            max-width: 1000px;
+            background: white;
+            border-radius: 5px;
+            padding: 20px;
+            */box-shadow: 0 2px 2px 43px black;
+        }
+
+        .document_input {
+            padding: 8px 10px;
+            width: 50%;
+            border-radius: 5px;
+            border-color: #1d1d50;
+        }
+
+        .document_input:focus {
+            outline: 1px solid #efefef;
+        }
+
 
         .pagination>li>span {
             position: relative;
@@ -255,7 +324,6 @@
             content: "✖";
         }
     </style>
-
     <div class="container">
         <div class="row" style="height:50px;">
             <div class="col-sm-4" style="padding-top:5px;">
@@ -349,7 +417,7 @@
                                                     Details</a>
 
                                                 <a class="dropdown-item"
-                                                    href="{{ url('corporate-document', $list->corporate_id) }}">Add
+                                                    href="{{ url('corporate-document', $list->corporate_id) }}" data-toggle="modal" data-target="#corporate-document">Add
                                                     Documents</a>
                                                 <a class="dropdown-item"
                                                     href="{{ url('corporate-document-details', $list->corporate_id) }}">View
@@ -1003,15 +1071,15 @@
                                 <div class="col-sm-4">
                                 </div>
                             </div>
-                            <div class="doc_contanier"style="*/background-color:orange;">
+                            <div class="document_contanier"style="*/background-color:orange;">
 
-                                <div class="doc_warp">
+                                <div class="document_warp">
                                     <h6>Add Contact Person details:-</h6>
-                                    <a class="add_doc">&plus;</a>
+                                    <a onclick="exdocumentaddinput()" class="add_document">&plus;</a>
                                     
                                 </div>
                                 
-                                <div class="row document_details " style="margin-bottom: 20px;">
+                                <div class="row document_add " style="margin-bottom: 20px;">
                                     {{-- Add More Document details:- javascript --}}
                                 </div>
                             </div>
@@ -1124,6 +1192,59 @@
             </div>
         </div>
     </div>
+      </div>
+<script>
+    function exdocumentremoveinput() { // Add More Document details author@udayan --start
+            this.parentElement.remove();
+        }
+        const adddocument = document.querySelector(" .add_doc ");
+        const exdocumentinput = document.querySelector(" .document_add ");
+        let b = 0;
+
+        function exdocumentaddinput() {
+            const exdocumentname = document.createElement("input");
+            exdocumentname.type = "text";
+            exdocumentname.className = "document_input";
+            exdocumentname.placeholder = "Enter Persion Name";
+            exdocumentname.name = "exdoc[" + m + "][0]";
+
+            const documentidnumber = document.createElement("input");
+            documentidnumber.type = "text";
+            documentidnumber.className = "document_input";
+            documentidnumber.placeholder = "Enter Designation";
+            documentidnumber.name = "exdoc[" + m + "][1]";
+
+            const documentidmobile = document.createElement("input");
+            documentidmobile.type = "text";
+            documentidmobile.className = "document_input";
+            documentidmobile.placeholder = "Enter Mobile No";
+            documentidmobile.name = "exdoc[" + m + "][2]";
+
+            const documentidemail = document.createElement("input");
+            documentidemail.type = "text";
+            documentidemail.className = "document_input";
+            documentidemail.placeholder = "Enter Email";
+            documentidemail.name = "exdoc[" + m + "][3]";
+
+            const btndelete = document.createElement("a");
+            btndelete.className = "exdocdelete";
+            btndelete.innerHTML = "&times;"
+
+            const exdocumentflex = document.createElement("div");
+            exdocumentflex.className = "docflex";
+
+            btndelete.addEventListener("click", exdocumentremoveinput);
+
+            exdocumentinput.appendChild(exdocumentflex);
+            exdocumentflex.appendChild(exdocumentname);
+            exdocumentflex.appendChild(documentidnumber);
+            exdocumentflex.appendChild(documentidmobile);
+            exdocumentflex.appendChild(documentidemail);
+            exdocumentflex.appendChild(btndelete);
+            ++b;
+        }
+        adddocument.addEventListener("click", exdocumentaddinput);
+        </script>
     <script>
         function exdocremoveinput() { // Add More Document details author@udayan --start
             this.parentElement.remove();
