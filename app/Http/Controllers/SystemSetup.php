@@ -611,6 +611,17 @@ class SystemSetup extends Controller
         ]);
         return redirect('/tax_chart');
     }
+    public function changestatus_taxchart(Request $request)
+    {
+        $uniqueid = $request->id;
+        $status = DB::table('cra_tax_chart')->where('id', $uniqueid)->select('status')->first();
+        if($status->status == 1){
+            DB::table('cra_tax_chart')->where('id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_tax_chart')->where('id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
+    }
     public function edittaxchart($id)
     {
         $tax_chart = DB::table('cra_tax_chart')->where('id', $id)->first();
@@ -666,7 +677,18 @@ class SystemSetup extends Controller
         ]);
         return redirect('/tax_excise');
     }
-
+    public function changestatus_taxexcise(Request $request)
+    {
+        $uniqueid = $request->id;
+        $status = DB::table('cra_tax_excise')->where('id', $uniqueid)->select('status')->first();
+   dd($status);
+        if($status->status == 1){
+            DB::table('cra_tax_excise')->where('id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_tax_excise')->where('id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
+    }
     public function edittaxexcise($id)
     {
         $tax_excise = DB::table('cra_tax_excise')->where('id', $id)->first();
@@ -714,6 +736,18 @@ class SystemSetup extends Controller
 
         ]);
         return redirect('/tax_vat');
+    }
+    public function changestatus_taxvat(Request $request)
+    {
+        $uniqueid = $request->id;
+        $status = DB::table('cra_tax_vat')->where('id', $uniqueid)->select('status')->first();
+   dd($status);
+        if($status->status == 1){
+            DB::table('cra_tax_vat')->where('id', $uniqueid)->update(['status'=>0]);
+        }else{
+            DB::table('cra_tax_vat')->where('id', $uniqueid)->update(['status'=>1]);
+        }
+        return response()->json(['success'=>'Status change successfully.']);
     }
     public function edittaxvat($id)
     {
