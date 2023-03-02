@@ -252,7 +252,7 @@ use App\Http\Controllers\issued_summary;
     Route::post('/changestatus_descsel',"SystemSetup@changestatus_descsel")->name('changestatus_descsel');
 
         //tax chart
-    Route::any('tax_chart_main', '   @taxchartmain')->name('tax_chart_main');
+    Route::any('tax_chart_main', 'SystemSetup@taxchartmain')->name('tax_chart_main');
     Route::any('tax_chart', 'SystemSetup@taxchart')->name('tax_chart');
     Route::any('add_tax_chart', 'SystemSetup@addtaxchart')->name('add_tax_chart');
     Route::any('edit_tax_chart/{id}', 'SystemSetup@edittaxchart')->name('edit_tax_chart');
@@ -996,7 +996,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('update_manage_task', "CrmController@update_manage_task")->name('update_manage_task');
     Route::any('drop_manage_task/{id}', "CrmController@drop_manage_task")->name('drop_manage_task');
         //project
-    Route::any('projects', "CrmController@projects")->name('projects');
+    Route::any('projects',"CrmController@projects")->name('projects');
     Route::any('view_project', "CrmController@view_project")->name('view_project');
     Route::any('edit_project', "CrmController@edit_project")->name('edit_project');
         //expense
