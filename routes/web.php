@@ -33,7 +33,7 @@ use App\Http\Controllers\issued_summary;
     //superadmin
 //mange employee route start
     Route::any('employee_list',"employeecontroller@employee_list")->name('employee_list');
-    Route::any('create_employee/getrole/{id}', "addcontroller@get_role")->name('getrole');
+    Route::any('create_employee/getrole/{id}', "addcontroller@get_role");
     //mange employee route end
 //home controller
     Route::get('/', 'homecontroller@index')->name('home');
@@ -660,7 +660,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('reviewed_details', 'hrindex@reviewed_details')->name('reviewed_details');
         //employee
     Route::any('addemployee', "employeecontroller@store")->name('addemployee');
-    Route::any('create_employee/{id}',"employeecontroller@create")->name('create_employee');
+    Route::any('create_employee',"employeecontroller@create")->name('create_employee');
         //Manage Staffs
     Route::any('/edit_staff_details/{id}', 'hrindex@edit_staff_details')->name('edit_staff_details');
     Route::any('/view_staff_details/{id}', 'hrindex@view_staff_details')->name('view_staff_details');
