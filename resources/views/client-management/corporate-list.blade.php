@@ -1206,32 +1206,32 @@
             exdocumentname.type = "text";
             exdocumentname.className = "document_input";
             exdocumentname.placeholder = "Enter Persion Name";
-            exdocumentname.name = "exdoc[" + m + "][0]";
+            exdocumentname.name = "exdocument[" + b + "][0]";
 
             const documentidnumber = document.createElement("input");
             documentidnumber.type = "text";
             documentidnumber.className = "document_input";
             documentidnumber.placeholder = "Enter Designation";
-            documentidnumber.name = "exdoc[" + m + "][1]";
+            documentidnumber.name = "exdocument[" + b + "][1]";
 
             const documentidmobile = document.createElement("input");
             documentidmobile.type = "text";
             documentidmobile.className = "document_input";
             documentidmobile.placeholder = "Enter Mobile No";
-            documentidmobile.name = "exdoc[" + m + "][2]";
+            documentidmobile.name = "exdocument[" + b + "][2]";
 
             const documentidemail = document.createElement("input");
             documentidemail.type = "text";
             documentidemail.className = "document_input";
             documentidemail.placeholder = "Enter Email";
-            documentidemail.name = "exdoc[" + m + "][3]";
+            documentidemail.name = "exdocument[" + b + "][3]";
 
             const btndelete = document.createElement("a");
-            btndelete.className = "exdocdelete";
+            btndelete.className = "exdocumentdelete";
             btndelete.innerHTML = "&times;"
 
             const exdocumentflex = document.createElement("div");
-            exdocumentflex.className = "docflex";
+            exdocumentflex.className = "documentflex";
 
             btndelete.addEventListener("click", exdocumentremoveinput);
 
