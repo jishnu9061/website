@@ -128,10 +128,10 @@
                                                     data-target="#viewmyModal"
                                                     href="{{url('view-list',$list->id)}}">View File
                                                 </a>
-                                                <a class="dropdown-item" data-toggle="modal" data-id="{{$list->uniqueid}}" onclick="editbox(this)"
+                                                <a class="dropdown-item" data-toggle="modal" data-id="{{$list->id}}" onclick="editbox(this)"
                                                     data-target="#edit_box_no" href="#">Edit File
                                                 </a>
-                                                <a class="dropdown-item" data-target="#deletebox" data-toggle="modal" data-id="{{$list->uniqueid}}" data-name="{{ $list->number }}" onclick="(deleteboxno(this))"
+                                                <a class="dropdown-item" data-target="#deletebox" data-toggle="modal" data-id="{{$list->id}}" data-name="{{ $list->number }}" onclick="deleteboxno(this)"
                                                     href="">Delete Box No </a>
 
                                             </div>
@@ -242,7 +242,7 @@
                         <form method="post" action="#" id="update_box" enctype="multipart/form-data">
                             @csrf
                             {{method_field('PUT')}}
-                            <input type="hidden" name="id" id="id">
+                            <input type="text" name="id" id="editid">
                             <h4 class=""><b>Edit Box No:-</b></h4>
                             <div class="row">
                                 <div class="col-md-6" style="width: 33%">
@@ -353,7 +353,7 @@
                     <div class="container">
                         <form method="post" action="{{ url('view-box-no') }}" enctype="multipart/form-data">
                             @csrf
-
+                            {{method_field('PUT')}} 
                             <input type="hidden" id="" value="id">
                             <div class="row">
                                 <div class="col-md-6">
@@ -462,9 +462,9 @@
         var id = $(param).data('id');
         $.ajax({
             type: "GET",
-            url: 'edit-box-no/' + id,
+            url: 'edit-box-no/' + uniqueid,
             success: function(response) {
-                $('#id').val(response.result.id);
+                $('#editid').val(response.result.id);
                 $('#box_type').val(response.result.type);
                 $('#box_no').val(response.result.number);
                 $('#update_box').attr('action', "{{url('update-box')}}" + "/" + id);
@@ -473,12 +473,12 @@
     }
 
     function deleteboxno(param){
-            var uniqueid = $(param).data('id');
-            $('#delid').val(uniqueid);
+            var id = $(param).data('id');
+            $('#delid').val(id);
             var delname = $(param).data('name');
             $('#delbox').html(delname);
 
-            $('#box_destroy').attr('action',"{{url('delete-box')}}"+"/"+uniqueid);
+            $('#box_destroy').attr('action',"{{url('delete-box')}}"+"/"+id);
         }
 
     function viewbox(param) { // view archive details

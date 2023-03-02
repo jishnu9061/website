@@ -200,7 +200,6 @@ class filemanagement extends Controller
             'result' => $edit_temblate,
         ]);
     }
-
     public function updatetemplate(Request $request){
 
         $id = $request['id'];
@@ -1761,7 +1760,10 @@ public function new_safe_management_list(Request $request)
 public function editsafemanagement_list($id)
 {
     $edit_management =DB::table('cra_new_safe_management')->where('id',$id)->first();
-    return view('file_management.edit_Safe_management',compact('edit_management','id'));
+    return response()->json([
+        'status' =>200,
+        'result'=>$edit_management,
+    ]);
 }
 
 public function updatesafemanagement_list(Request $request)
