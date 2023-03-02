@@ -93,8 +93,8 @@
                                                 aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="#">View Letter Details</a>
-                                                <a class="dropdown-item" data-toggle="modal" data-target="#edit_letter" href="#">Edit Letter Details</a>
-                                                <a class="dropdown-item" href="#">Delete Letter Details</a>
+                                                <a class="dropdown-item" data-toggle="modal" data-target="#edit_letter" data-id="{{$letter->id}}" onclick="editogletter(this)" href="#">Edit Letter Details</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_letter" data-id="{{$letter->id}}" data-name="{{$letter->client}}" onclick="deleteogletter(this)">Delete Letter Details</a>
 
                                             </div>
                                         </div>
@@ -184,12 +184,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="Document_category"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Document Category</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="Document_category" id="" required>
+                                                            name="Document_category" id="" >
                                                             <option>-----select-----</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -197,13 +197,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="letter_name"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Letter Name</label>
                                                         <input type="text" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                             class="form-control" name="letter_name" id="" value=""
-                                                            required>
+                                                            >
                                                     </div>
                                                 </div>
                                             </div>
@@ -222,12 +222,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="viewers"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Viewer(s)</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="viewers" id="" required>
+                                                            name="viewers" id="" >
                                                             <option>-----select-----</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -314,11 +314,12 @@
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
-                                        <form method="post" action="{{ url('') }}"
-                                            enctype="multipart/form-data">
+                                        <form method="post" action="#" id="update_og_letter" enctype="multipart/form-data">
                                             @csrf
+                                            {{method_field('PUT')}}
                                             <h4 class=""><b>Edit Outgoing Letter:-</b></h4>
                                             <div class="row">
+                                                <input type="text" name="id" id="edit_id">
                                                 <div class="col-md-4" style="width: 33%">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="letter_date"
@@ -326,7 +327,7 @@
                                                             Date</label>
                                                         <input type="date" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="letter_date" id="" value=""
+                                                            class="form-control" name="letter_date" id="letter_date" value=""
                                                             required>
                                                     </div>
                                                 </div>
@@ -336,7 +337,7 @@
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="client" id="" required>
+                                                            name="client" id="client" required>
                                                             <option>-----select-----</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -349,7 +350,7 @@
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="file" id="" required>
+                                                            name="file" id="file" required>
                                                             <option>-----select-----</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -364,17 +365,17 @@
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Delivered To</label>
                                                         <input type="text" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="delivered_to" id="" value=""
+                                                            class="form-control" name="delivered_to" id="delivered_to" value=""
                                                             required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="Document_category"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Document Category</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="Document_category" id="" required>
+                                                            name="Document_category" id="Document_category" >
                                                             <option>-----select-----</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -382,13 +383,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="letter_name"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Letter Name</label>
                                                         <input type="text" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="letter_name" id="" value=""
-                                                            required>
+                                                            class="form-control" name="letter_name" id="letter_name" value=""
+                                                            >
                                                     </div>
                                                 </div>
                                             </div>
@@ -399,7 +400,7 @@
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Originator</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="originator" id="" required>
+                                                            name="originator" id="originator" required>
                                                             <option>-----select-----</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -407,12 +408,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="viewers"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Viewer(s)</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="viewers" id="" required>
+                                                            name="viewers" id="viewers" >
                                                             <option>-----select-----</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -425,7 +426,7 @@
                                                                 style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Upload a Copy</label>
                                                             <input type="file" placeholder=""
                                                                 style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                                class="form-control" name="upload_copy" id="" value=""
+                                                                class="form-control" name="upload_copy" id="upload_copy" value=""
                                                                 required>
                                                         </div>
                                                     </div>
@@ -488,12 +489,77 @@
                 </div>
             </div>
         </div>
-        <!---------------------------------------------------------- START EDIT OUTGOING LETERS ------------------------------------------------->
+        <!---------------------------------------------------------- END EDIT OUTGOING LETERS ------------------------------------------------->
+        <!---------------------------------------------------------- START DELETE OUTGOING LETERS ------------------------------------------------->
+        <div class="modal fade" id="delete_letter" style="">
+                    <!-- delete company -->
+                    <div class="modal-dialog modal-lg" style="width:30%;">
+                        <div class="modal-content">
+                            <!---- Modal Header -->
+                            <form method="post" id="og_letter__destroy" action="#" enctype="multipart/form-data">
+                                @csrf
+                                <input type="hidden" id="del_id" value="">
+                                <div class="modal-header" style="padding:0rem 0rem;">
+                                    <div style="padding:1rem 1rem;">
+                                        <h4 class="text-centre"><b>Delete <span id="delog"></span></b></h4>
+                                    </div>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <h6><b><span>Are you sure?</span></b></h6>
+                                        </div>
+                                        <div class="row">
+                                            <div class="" style="width: 30%;">
+                                            </div>
+                                            <div lass="" style="width: 0%"></div>
+                                            <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                                <br>
+                                                <button type="submit" class="btn btn-primary float:right;"
+                                                    Style="width:45%;background-color:#DD4132;">Yes</button>
+                                                <button type="button" class="btn btn-primary float:left"
+                                                    Style="width:45%;" data-dismiss="modal">No</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!---------------------------------------------------------- END DELETE OUTGOING LETERS ------------------------------------------------->
         <script>
-        function myFunction() {
-            if (!confirm("Are you sure to delete this"))
-                event.preventDefault();
-        }
+         function editogletter(param) {
+                var id = $(param).data('id');
+                $.ajax({
+                    type: 'GET',
+                    url: 'edit-outgoing-letters/' + id,
+
+                    success: function(response) {
+                        $('#edit_id').val(response.result.id);
+                        $('#letter_date').val(response.result.letter_date);
+                        $('#client').val(response.result.client);
+                        $('#file').val(response.result.file);
+                        $('#delivered_to').val(response.result.delivered_to);
+                        $('#Document_category').val(response.result.Document_category);
+                        $('#letter_name').val(response.result.letter_name);
+                        $('#originator').val(response.result.originator);
+                        $('#viewers').val(response.result.viewers);
+                        $('#upload_copy').val(response.result.upload_copy);
+                        $('#update_og_letter').attr('action',"{{url('update_outgoing_letters')}}" + "/" + id);
+
+                    }
+                });
+            }
+            function deleteogletter(param) {
+                var id = $(param).data('id');
+                $("#del_id").val(id);
+                var name_data = $(param).data('name');
+                $('#delog').html(name_data);
+                $('#og_letter__destroy').attr('action', "{{url('delete_outgoing_letter')}}" + "/" + id);
+            }
         </script>
         <script>
         $(function() {

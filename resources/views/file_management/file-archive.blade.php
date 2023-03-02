@@ -462,7 +462,7 @@
         var id = $(param).data('id');
         $.ajax({
             type: "GET",
-            url: 'edit-box-no/' + uniqueid,
+            url: 'edit-box-no/' + id,
             success: function(response) {
                 $('#editid').val(response.result.id);
                 $('#box_type').val(response.result.type);
@@ -471,7 +471,6 @@
             }
         });
     }
-
     function deleteboxno(param){
             var id = $(param).data('id');
             $('#delid').val(id);
