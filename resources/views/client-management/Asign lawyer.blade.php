@@ -116,7 +116,7 @@
                                             <div class="row">
                                                 <div class="" style="width: 46%">
                                                     <div class=""><span style="color: red">*</span>
-                                                        <label>Client Number</label>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Number</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
                                                             <input type="text" class="form-control"
@@ -129,7 +129,7 @@
                                                 </div>
                                                 <div class="" style="width: 46%">
                                                     <div class=""><span style="color: red">*</span>
-                                                        <label>Client Type</label>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Type</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend">
 
@@ -145,7 +145,7 @@
                                             <div class="row">
                                                 <div class="" style="width: 46%">
                                                     <div class=""><span style="color: red">*</span>
-                                                        <label>Client Name</label>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Name</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend">
 
@@ -164,7 +164,7 @@
 
                                                 <div class="" style="width: 46%">
                                                     <div class=""><span style="color: red">*</span>
-                                                        <label>File Number</label>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File Number</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
                                                             <input type="text" class="form-control"
@@ -180,7 +180,7 @@
                                             <div class="row">
                                                 <div class="" style="width: 46%">
                                                     <div class=""><span style="color: red">*</span>
-                                                        <label>Lawyer Name</label>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Lawyer Name</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
                                                             <select name="lawyer_name" id="" style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
@@ -192,7 +192,7 @@
                                                 </div>
                                                 <div class="" style="width: 46%">
                                                     <div class=""><span style="color: red">*</span>
-                                                        <label>Court Name</label>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Court Name</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
                                                             <input type="text" class="form-control"
