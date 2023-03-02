@@ -106,13 +106,13 @@
                                                 <div class="dropdown-menu">
                                                     <a class="dropdown-item" href="#">View File
                                                         Instruction</a>
-                                                    <a class="dropdown-item" data-toggle="modal" data-target="#edit_instruction"
-                                                        href="{{url('edit_office_instruction',$instruction->id)}}">Edit
+                                                    <a class="dropdown-item" data-toggle="modal" data-target="#edit_instruction" data-id="{{$instruction->id}}"
+                                                       onclick="editofcinstruction(this)" href="#">Edit
                                                         Office
                                                         Instruction</a>
-                                                    <a class="dropdown-item"
-                                                        href="{{url('delete_office',$instruction->id)}}">Delete
-                                                        File Instruction</a>
+                                                    <a class="dropdown-item" data-toggle="modal" data-target="#deleteifc"  data-id="{{$instruction->id}}"  data-name="{{$instruction->id}}"
+                                                        onclick="deleteoffice(this)" href="#">Delete
+                                                        Office Instruction</a>
 
                                                 </div>
                                             </div>
@@ -179,13 +179,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="instruction_category"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Instruction
                                                             Category</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="instruction_category" id="" required>
+                                                            name="instruction_category" id="" >
                                                             <option>-----select-----</option>
                                                             <option>Demo 1</option>
                                                             <option>Demo 2</option>
@@ -207,12 +207,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="currency"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="currency" id="" required>
+                                                            name="currency" id="" >
                                                             <option>-----select-----</option>
                                                             <option>Demo 1</option>
                                                             <option>Demo 2</option>
@@ -222,26 +222,26 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="exchange_rate"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Exchange
                                                             Rate</label>
                                                         <input type="text" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                             class="form-control" name="exchange_rate" id="" value=""
-                                                            required>
+                                                            >
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="expence_category"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Expense
                                                             Category</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="expence_category" id="" required>
+                                                            name="expence_category" id="" >
                                                             <option>-----select-----</option>
                                                             <option>Demo 1</option>
                                                             <option>Demo 2</option>
@@ -251,13 +251,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="turn_around"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Turn-Around
                                                             Time(TAT)</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="turn_around" id="" required>
+                                                            name="turn_around" id="" >
                                                             <option>-----select-----</option>
                                                             <option>Demo 1</option>
                                                             <option>Demo 2</option>
@@ -267,12 +267,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="priority"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Priority</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="priority" id="" required>
+                                                            name="priority" id="" >
                                                             <option>-----select-----</option>
                                                             <option>Demo 1</option>
                                                             <option>Demo 2</option>
@@ -284,16 +284,16 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="amount"
                                                             style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Amount</label>
                                                         <input type="text" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="amount" id="" value="" required>
+                                                            class="form-control" name="amount" id="" value="" >
                                                     </div>
                                                 </div>
                                                 <div style="width:50%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="detail"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Details</label>
                                                         <textarea class="outer" rows="4"
@@ -393,17 +393,19 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form method="post" action="{{ url('') }}" enctype="multipart/form-data">
+                    <form method="post" action="#" id="update_ofc_instruction" enctype="multipart/form-data">
                         @csrf
+                        {{method_field('PUT')}}
                         <h4 class=""><b>Edit Instruction:-</b></h4>
                         <div class="row">
+                        <input type="text" name="id" id="id">
                             <div class="col-md-4" style="width: 33%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="date"
                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
                                     <input type="date" placeholder=""
                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                        class="form-control" name="date" id="" value="" required>
+                                        class="form-control" name="date" id="date" value="" required>
                                 </div>
                             </div>
                             <div class="col-md-4" style="width: 33%">
@@ -413,7 +415,7 @@
                                         Type</label>
                                     <select class="form-select" aria-label="Default select example"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        name="instruction_type" id="" required>
+                                        name="instruction_type" id="instruction_type" required>
                                         <option>-----select-----</option>
                                         <option>Demo 1</option>
                                         <option>Demo 2</option>
@@ -423,13 +425,13 @@
                                 </div>
                             </div>
                             <div class="col-md-4" style="width: 33%">
-                                <div class=""><span style="color: red">*</span>
+                                <div class=""><span style="color: red"></span>
                                     <label for="instruction_category"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Instruction
                                         Category</label>
                                     <select class="form-select" aria-label="Default select example"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        name="instruction_category" id="" required>
+                                        name="instruction_category" id="instruction_category" >
                                         <option>-----select-----</option>
                                         <option>Demo 1</option>
                                         <option>Demo 2</option>
@@ -444,18 +446,18 @@
                                 <div class=""><span style="color: red">*</span>
                                     <label for="receiver"
                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Receiver</label>
-                                    <input type="date" placeholder=""
+                                    <input type="text" placeholder=""
                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                        class="form-control" name="receiver" id="" value="" required>
+                                        class="form-control" name="receiver" id="receiver" value="" required>
                                 </div>
                             </div>
                             <div class="col-md-4" style="width: 33%">
-                                <div class=""><span style="color: red">*</span>
+                                <div class=""><span style="color: red"></span>
                                     <label for="currency"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Currency</label>
                                     <select class="form-select" aria-label="Default select example"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        name="currency" id="" required>
+                                        name="currency" id="currency" >
                                         <option>-----select-----</option>
                                         <option>Demo 1</option>
                                         <option>Demo 2</option>
@@ -465,25 +467,25 @@
                                 </div>
                             </div>
                             <div class="col-md-4" style="width: 33%">
-                                <div class=""><span style="color: red">*</span>
+                                <div class=""><span style="color: red"></span>
                                     <label for="exchange_rate"
                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Exchange
                                         Rate</label>
                                     <input type="text" placeholder=""
                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                        class="form-control" name="exchange_rate" id="" value="" required>
+                                        class="form-control" name="exchange_rate" id="exchange_rate" value="" >
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4" style="width: 33%">
-                                <div class=""><span style="color: red">*</span>
+                                <div class=""><span style="color: red"></span>
                                     <label for="expence_category"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Expense
                                         Category</label>
                                     <select class="form-select" aria-label="Default select example"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        name="expence_category" id="" required>
+                                        name="expence_category" id="expence_category" >
                                         <option>-----select-----</option>
                                         <option>Demo 1</option>
                                         <option>Demo 2</option>
@@ -493,13 +495,13 @@
                                 </div>
                             </div>
                             <div class="col-md-4" style="width: 33%">
-                                <div class=""><span style="color: red">*</span>
+                                <div class=""><span style="color: red"></span>
                                     <label for="turn_around"
-                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Turn-Around
+                                        style="width: 100px;margin-bottom: 0px;width:111px;margin-right: 2px;font-size:10px;">Turn-Around
                                         Time(TAT)</label>
                                     <select class="form-select" aria-label="Default select example"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        name="turn_around" id="" required>
+                                        name="turn_around" id="turn_around" >
                                         <option>-----select-----</option>
                                         <option>Demo 1</option>
                                         <option>Demo 2</option>
@@ -509,12 +511,12 @@
                                 </div>
                             </div>
                             <div class="col-md-4" style="width: 33%">
-                                <div class=""><span style="color: red">*</span>
+                                <div class=""><span style="color: red"></span>
                                     <label for="priority"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Priority</label>
                                     <select class="form-select" aria-label="Default select example"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        name="priority" id="" required>
+                                        name="priority" id="priority" >
                                         <option>-----select-----</option>
                                         <option>Demo 1</option>
                                         <option>Demo 2</option>
@@ -526,21 +528,21 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6" style="width: 33%">
-                                <div class=""><span style="color: red">*</span>
+                                <div class=""><span style="color: red"></span>
                                     <label for="amount"
                                         style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Amount</label>
                                     <input type="text" placeholder=""
                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                        class="form-control" name="amount" id="" value="" required>
+                                        class="form-control" name="amount" id="amount" value="" >
                                 </div>
                             </div>
                             <div style="width:50%">
-                                <div class=""><span style="color: red">*</span>
+                                <div class=""><span style="color: red"></span>
                                     <label for="detail"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Details</label>
                                     <textarea class="outer" rows="4"
                                         style="border-color:#1d1d50;border-radius:7px;width:100%;" cols="41"
-                                        placeholder="Physical Address" name="detail" form="addemployee"></textarea>
+                                        placeholder="Physical Address" name="detail" id="detail" ></textarea>
                                 </div>
                             </div>
                         </div>
@@ -553,7 +555,7 @@
                                         Notification To</label>
                                     <select class="form-select" aria-label="Default select example"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                        name="send_notification" id="" required>
+                                        name="send_notification" id="send_notification" required>
                                         <option>-----select-----</option>
                                         <option>Demo 1</option>
                                         <option>Demo 2</option>
@@ -574,7 +576,7 @@
                 </div>
                 <div class="col-sm">
                     <br>
-                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Send</button>
+                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
                     <button type="button" class="btn btn-primary float:left" Style="width:45%;"
                         data-dismiss="modal">Close</button>
                 </div>
@@ -624,11 +626,84 @@
 </div>
 
 <!---------------------------------------------------------- END EDIT INSTRUCTION --------------------------------------------------------------->
+<!---------------------------------------------------------- START DELETE INSTRUCTION --------------------------------------------------------------->
+<div class="modal fade" id="deleteifc" style="">
+        <!-- delete company -->
+        <div class="modal-dialog modal-lg" style="width:30%;">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" id="office_destroy" action="#" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" id="delid" value="">
+                    <div class="modal-header" style="padding:0rem 0rem;">
+                        <div style="padding:1rem 1rem;">
+                            <h4 class="text-centre"><b>Delete <span id="deloffice"></span></b></h4>
+                        </div>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <h6><b><span>Are you sure?</span></b></h6>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                        data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------------------------------- END DELETE INSTRUCTION ----------------------------------------------------------------->
+
+
 <script>
-function myFunction() {
-    if (!confirm("Are you sure to delete this"))
-        event.preventDefault();
+function editofcinstruction(param){
+    var id = $(param).data('id');
+
+    $.ajax({
+
+        type:'GET',
+        url:'edit_office_instruction/' +id,
+
+       success:function(response){
+        $('#id').val(response.result.id);
+        $('#date').val(response.result.date);
+        $('#instruction_type').val(response.result.instruction_type);
+        $('#instruction_category').val(response.result.instruction_category);
+        $('#receiver').val(response.result.receiver);
+        $('#currency').val(response.result.currency);
+        $('#exchange_rate').val(response.result.exchange_rate);
+        $('#expence_category').val(response.result.expence_category);
+        $('#turn_around').val(response.result.turn_around);
+        $('#priority').val(response.result.priority);
+        $('#amount').val(response.result.amount);
+        $('#detail').val(response.result.detail);
+        $('#send_notification').val(response.result.send_notification);
+        $('#update_ofc_instruction').attr('action',"{{url('update_office_instruction')}}"+"/"+id);
+       }
+    });
 }
+
+function deleteoffice(param){
+            var uniqueid = $(param).data('id');
+            $('#delid').val(uniqueid);
+            var delname = $(param).data('name');
+            $('#deloffice').html(delname);
+
+            $('#office_destroy').attr('action',"{{url('delete_office')}}"+"/"+uniqueid);
+        }
 </script>
 <script>
 $(function() {

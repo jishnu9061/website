@@ -98,11 +98,12 @@
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="#">View File
                                                 </a>
-                                                <a class="dropdown-item"  data-toggle="modal" data-target="#edit_management" 
-                                                    href="">Edit File
+                                                <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_management" data-id="{{$management->id}}"
+                                                    onclick="editmanagement(this)" href="">Edit File
                                                 </a>
-                                                <a class="dropdown-item"
-                                                    href="{{url('delete_Safe_management',$management->id)}}">Delete
+                                                <a class="dropdown-item" data-toggle="modal" data-target="#delete_management" data-name="{{$management->client}}" data-id="{{$management->id}}" onclick="deletemanagement(this)"
+                                                    href="#">Delete
                                                     File </a>
                                             </div>
                                         </div>
@@ -132,7 +133,7 @@
                             <div class="modal-content">
 
                                 <!-- Modal Header -->
-                            
+
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
@@ -178,38 +179,40 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                            <div class="col-md-4" style="width: 33%">
+                                                <div class="col-md-4" style="width: 33%">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="safe_name"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Safe Name</label>
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Safe
+                                                            Name</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
                                                             name="safe_name" id="" required>
                                                             <option>-----select-----</option>
                                                             <option>Safe 1</option>
-                                                                <option>Safe 2</option>
+                                                            <option>Safe 2</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="ref_no"
-                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Ref No.In Safe</label>
+                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Ref
+                                                            No.In Safe</label>
                                                         <input type="text" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                             class="form-control" name="ref_no" id="" value="" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
+                                                    <div class=""><span style="color: red"></span>
                                                         <label for="approver"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Approver</label>
                                                         <select class="form-select" aria-label="Default select example"
                                                             style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="approver" id="" required>
+                                                            name="approver" id="">
                                                             <option>-----select-----</option>
                                                             <option>Person 1</option>
-                                                                <option>Person 2</option>
+                                                            <option>Person 2</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -296,7 +299,8 @@
                                                         <br>
                                                         <button type="submit" class="btn btn-primary float:right;"
                                                             Style="width:45%;">Save</button>
-                                                        <button type="button" Style="width:45%;" class="btn btn-primary float:right;"
+                                                        <button type="button" Style="width:45%;"
+                                                            class="btn btn-primary float:right;"
                                                             data-dismiss="modal">Cancel</button>
                                                     </div>
                                                 </div>
@@ -348,152 +352,154 @@
 
             <!--------------------------------------------------START EDIT SAFE MANAGEMENT ------------------------------------------------------>
             <div class="modal fade" id="edit_management">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
 
-                                <!-- Modal Header -->
-                               
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <form method="post" action="{{ url('') }}"
-                                            enctype="multipart/form-data">
-                                            @csrf
-                                            <h4 class=""><b>Edit Documents:-</b></h4>
-                                            <div class="row">
-                                                <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="date"
-                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
-                                                        <input type="date" placeholder=""
-                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="date" id="" value="" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="client"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="client" id="" required>
-                                                            <option>-----select-----</option>
-                                                            <option>Client 1</option>
-                                                            <option>Client 2</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="file"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="file" id="" required>
-                                                            <option>-----select-----</option>
-                                                            <option>File 1</option>
-                                                            <option>File 2</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
+                        <!-- Modal Header -->
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="container">
+                                <form method="post" action="#" id="updatesafe_management" enctype="multipart/form-data">
+                                    @csrf
+                                    {{method_field('PUT')}} 
+                                    <h4 class=""><b>Edit Documents:-</b></h4>
+                                    <div class="row">
+                                        <input type="hidden" name="id" id="id">
+                                        <div class="col-md-4" style="width: 33%">
+                                            <div class=""><span style="color: red">*</span>
+                                                <label for="date"
+                                                    style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
+                                                <input type="date" placeholder=""
+                                                    style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                    class="form-control" name="date" id="date" value="" required>
                                             </div>
-                                            <div class="row">
-                                            <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="safe_name"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Safe Name</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="safe_name" id="" required>
-                                                            <option>-----select-----</option>
-                                                            <option>Safe 1</option>
-                                                                <option>Safe 2</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="ref_no"
-                                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Ref No.In Safe</label>
-                                                        <input type="text" placeholder=""
-                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="ref_no" id="" value="" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4" style="width: 33%">
-                                                    <div class=""><span style="color: red">*</span>
-                                                        <label for="approver"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Approver</label>
-                                                        <select class="form-select" aria-label="Default select example"
-                                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                            name="approver" id="" required>
-                                                            <option>-----select-----</option>
-                                                            <option>Person 1</option>
-                                                                <option>Person 2</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
+                                        </div>
+                                        <div class="col-md-4" style="width: 33%">
+                                            <div class=""><span style="color: red">*</span>
+                                                <label for="client"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                <select class="form-select" aria-label="Default select example"
+                                                    style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                    name="client" id="client" required>
+                                                    <option>-----select-----</option>
+                                                    <option>Client 1</option>
+                                                    <option>Client 2</option>
+                                                </select>
                                             </div>
-                                            <div id="test" style="height:20px;"></div>
-                                            <div class="modal-header">
-                                                <h2 class="text-center"><b>Documents</b></h2>
-
+                                        </div>
+                                        <div class="col-md-4" style="width: 33%">
+                                            <div class=""><span style="color: red">*</span>
+                                                <label for="file"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                                <select class="form-select" aria-label="Default select example"
+                                                    style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                    name="file" id="file" required>
+                                                    <option>-----select-----</option>
+                                                    <option>File 1</option>
+                                                    <option>File 2</option>
+                                                </select>
                                             </div>
-                                            <div class="tab-content" id="myTabContent">
-                                                <div class="table-responsive">
-                                                    <div class="tab-pane fade show active" id="home" role="tabpanel"
-                                                        aria-labelledby="home-tab">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4" style="width: 33%">
+                                            <div class=""><span style="color: red">*</span>
+                                                <label for="safe_name"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Safe
+                                                    Name</label>
+                                                <select class="form-select" aria-label="Default select example"
+                                                    style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                    name="safe_name" id="safe_name" required>
+                                                    <option>-----select-----</option>
+                                                    <option>Safe 1</option>
+                                                    <option>Safe 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4" style="width: 33%">
+                                            <div class=""><span style="color: red">*</span>
+                                                <label for="ref_no"
+                                                    style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Ref
+                                                    No.In Safe</label>
+                                                <input type="text" placeholder=""
+                                                    style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                    class="form-control" name="ref_no" id="ref_no" value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4" style="width: 33%">
+                                            <div class=""><span style="color: red"></span>
+                                                <label for="approver"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Approver</label>
+                                                <select class="form-select" aria-label="Default select example"
+                                                    style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                    name="approver" id="approver">
+                                                    <option>-----select-----</option>
+                                                    <option>Person 1</option>
+                                                    <option>Person 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="test" style="height:20px;"></div>
+                                    <div class="modal-header">
+                                        <h2 class="text-center"><b>Documents</b></h2>
 
-                                                        <table class="table table-bordered" id="new-item">
-                                                            <thead style="font-size:15px; width:100%;">
-                                                                <tr>
-                                                                    <th class="text-center">Doc No</th>
-                                                                    <th class="text-center">Catrgory</th>
-                                                                    <th class="text-center">Document</th>
-                                                                    <th class="text-center">Action</th>
+                                    </div>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="table-responsive">
+                                            <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                                aria-labelledby="home-tab">
+
+                                                <table class="table table-bordered" id="new-item">
+                                                    <thead style="font-size:15px; width:100%;">
+                                                        <tr>
+                                                            <th class="text-center">Doc No</th>
+                                                            <th class="text-center">Catrgory</th>
+                                                            <th class="text-center">Document</th>
+                                                            <th class="text-center">Action</th>
 
 
-                                                                    </th>
+                                                            </th>
 
 
-                                                                </tr>
-                                                            </thead>
+                                                        </tr>
+                                                    </thead>
 
-                                                            <tbody>
+                                                    <tbody>
 
-                                                                <tr id="data">
+                                                        <tr id="data">
 
-                                                                    <td scope="row" class="text-center"
-                                                                        style="width:100px;"><input type="text"
-                                                                            name="doc_no" id="age"></td>
+                                                            <td scope="row" class="text-center" style="width:100px;">
+                                                                <input type="text" name="doc_no" id="doc_no"></td>
 
-                                                                    <td scope="row">
-                                                                        <select style="width:100%;" name="category">
-                                                                            <option>select</option>
-                                                                        </select>
-                                                                    </td>
-
-
-                                                                    <td scope="row" class="text-center"
-                                                                        style="width:40%;">
-                                                                        <input type="text" name="document"
-                                                                            style="width:100%;">
-                                                                    </td>
-                                                                    <td scope="row" class="text-center"><a href=""><i
-                                                                                style="color:black;" class="fa fa-edit"
-                                                                                aria-hidden="true"></td>
-
-                                                                </tr>
+                                                            <td scope="row">
+                                                                <select style="width:100%;" name="category"
+                                                                    id="category">
+                                                                    <option>select</option>
+                                                                </select>
+                                                            </td>
 
 
+                                                            <td scope="row" class="text-center" style="width:40%;">
+                                                                <input type="text" name="document" id="document"
+                                                                    style="width:100%;">
+                                                            </td>
+                                                            <td scope="row" class="text-center"><a href=""><i
+                                                                        style="color:black;" class="fa fa-edit"
+                                                                        aria-hidden="true"></td>
 
-                                                            </tbody>
-
-                                                        </table>
-                                                        <br>
+                                                        </tr>
 
 
-                                                        {{-- <div class="row">
+
+                                                    </tbody>
+
+                                                </table>
+                                                <br>
+
+
+                                                {{-- <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="mb-1">
                                                         <button type="" class="btn btn-primary submit_btn"
@@ -501,146 +507,211 @@
                                                     </div>
                                                 </div>
                                             </div> --}}
-                                                    </div>
-
-
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm">
-
-                                                    </div>
-                                                    <div class="col-sm">
-
-                                                    </div>
-                                                    <div class="col-sm">
-                                                        <br>
-                                                        <button type="submit" class="btn btn-primary float:right;"
-                                                            Style="width:45%;">Save</button>
-                                                        <button type="button" Style="width:45%;" class="btn btn-primary float:right;"
-                                                            data-dismiss="modal">Cancel</button>
-                                                    </div>
-                                                </div>
                                             </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="modal" id="mymodal">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <div class="modal-body">
-                                            <form action="">
-                                                <div>
-                                                    <input type="text" name="type" class="form-control"
-                                                        placeholder="Client Type">
-                                                    <button class="btn btn-primary sub_btnn"
-                                                        type="submit">submit</button>
-                                                </div>
-                                            </form>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+
+                                            </div>
+                                            <div class="col-sm">
+
+                                            </div>
+                                            <div class="col-sm">
+                                                <br>
+                                                <button type="submit" class="btn btn-primary float:right;"
+                                                    Style="width:45%;">Update</button>
+                                                <button type="button" Style="width:45%;"
+                                                    class="btn btn-primary float:right;"
+                                                    data-dismiss="modal">Cancel</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <div class="modal" id="my">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <div class="modal-body">
-                                        <form action="">
-                                            <div>
-                                                <input type="text" name="type" class="form-control"
-                                                    placeholder="Country">
-                                                <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
+
+                </div>
+                <div class="modal" id="mymodal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="modal-body">
+                                    <form action="">
+                                        <div>
+                                            <input type="text" name="type" class="form-control"
+                                                placeholder="Client Type">
+                                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="modal" id="my">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-body">
+                                <form action="">
+                                    <div>
+                                        <input type="text" name="type" class="form-control" placeholder="Country">
+                                        <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            <!--------------------------------------------------END EDIT SAFE MANAGEMENT -------------------------------------------------------->
-            <script>
-            function myFunction() {
-                if (!confirm("Are you sure to delete this"))
-                    event.preventDefault();
+    <!--------------------------------------------------END EDIT SAFE MANAGEMENT -------------------------------------------------------->
+    <!--------------------------------------------------START DELETE SAFE MANAGEMENT -------------------------------------------------------->
+    <div class="modal fade" id="delete_management" style="">
+        <!-- delete company -->
+        <div class="modal-dialog modal-lg" style="width:30%;">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" id="del_management" action="#" enctype="multipart/form-data">
+                    @csrf
+                    <input type="text" id="delid" value="">
+                    <div class="modal-header" style="padding:0rem 0rem;">
+                        <div style="padding:1rem 1rem;">
+                            <h4 class="text-centre"><b>Delete <span id="delsafe"></span></b></h4>
+                        </div>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <h6><b><span>Are you sure?</span></b></h6>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                        data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--------------------------------------------------END DELETE SAFE MANAGEMENT -------------------------------------------------------->
+    <script>
+    function editmanagement(param) {
+        var id = $(param).data('id');
+        $.ajax({
+            type: "GET",
+            url: 'edit_Safe_management/' + id,
+            success: function(response) {
+                $('#id').val(response.result.id);
+                $('#date').val(response.result.date);
+                $('#client').val(response.result.client);
+                $('#file').val(response.result.file);
+                $('#safe_name').val(response.result.safe_name);
+                $('#ref_no').val(response.result.ref_no);
+                $('#approver').val(response.result.approver);
+                $('#doc_no').val(response.result.doc_no);
+                $('#category').val(response.result.category);
+                $('#document').val(response.result.document);
+                $('#updatesafe_management').attr('action',"{{url('update_Safe_management')}}"+"/"+id);
+
             }
-            </script>
-            <script>
-            $(function() {
-                $("#new-item").dataTable();
-            })
-            </script>
+        });
+    }
 
-            {{-- Search booking script --}}
-            <script>
-            $(document).ready(function() {
-                $('.searchingBook').select2();
-            });
-            </script>
-            {{-- search booking script end --}}
-            <!-- Delete  confirmation Message -->
-            <script>
-            function myFunction() {
-                if (!confirm("Are you sure to delete this"))
-                    event.preventDefault();
-            }
-            </script>
-            <!-- End delete confirmation message -->
+    function deletemanagement(param){
+        var id = $(param).data('id');
+        $('#delid').val(id);
+        var del_name = $(param).data('name');
+        $('#delsafe').html(del_name);
 
-            <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-            <script type="text/javascript" charset="utf8"
-                src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
-            </script>
-            <script type="text/javascript" charset="utf8"
-                src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+        $('#del_management').attr('action',"{{url('delete_Safe_management')}}"+"/"+id);
+    }
 
-            {{-- Supplier Edit start --}}
+    </script>
+    <script>
+    $(function() {
+        $("#new-item").dataTable();
+    })
+    </script>
 
-            <script>
-            $(document).on('click', '#edit_medicine_details', function() {
+    {{-- Search booking script --}}
+    <script>
+    $(document).ready(function() {
+        $('.searchingBook').select2();
+    });
+    </script>
+    {{-- search booking script end --}}
+    <!-- Delete  confirmation Message -->
+    <script>
+    function myFunction() {
+        if (!confirm("Are you sure to delete this"))
+            event.preventDefault();
+    }
+    </script>
+    <!-- End delete confirmation message -->
 
-                var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden').val();
-                var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
-                var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name').val();
-                var medicine_group = $(this).closest('#data').find('#medicine_group').val();
-                var medicicine_category_name = $(this).closest('#data').find('#medicine_category_name1').val();
-                var medicine_generic_name = $(this).closest('#data').find('#medicine_generic_name').val();
-                var medicine_manufactuure_name = $(this).closest('#data').find('#medicine_manufactuure_name')
-                    .val();
-                var medicine_supplier_name = $(this).closest('#data').find('#medicine_supplier_name').val();
-                var medicine_minimum_level = $(this).closest('#data').find('#medicine_minimum_level').val();
-                var medicine_reorder_level = $(this).closest('#data').find('#medicine_reorder_level').val();
-                var medicine_unit_packing = $(this).closest('#data').find('#medicine_unit_packing').val();
-                var medicine_composition = $(this).closest('#data').find('#medicine_composition').val();
-                var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
-                var medicine_images = $(this).closest('#data').find('#medicine_images').val();
+    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
+    </script>
+    <script type="text/javascript" charset="utf8"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+    {{-- Supplier Edit start --}}
+
+    <script>
+    $(document).on('click', '#edit_medicine_details', function() {
+
+        var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden').val();
+        var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
+        var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name').val();
+        var medicine_group = $(this).closest('#data').find('#medicine_group').val();
+        var medicicine_category_name = $(this).closest('#data').find('#medicine_category_name1').val();
+        var medicine_generic_name = $(this).closest('#data').find('#medicine_generic_name').val();
+        var medicine_manufactuure_name = $(this).closest('#data').find('#medicine_manufactuure_name')
+            .val();
+        var medicine_supplier_name = $(this).closest('#data').find('#medicine_supplier_name').val();
+        var medicine_minimum_level = $(this).closest('#data').find('#medicine_minimum_level').val();
+        var medicine_reorder_level = $(this).closest('#data').find('#medicine_reorder_level').val();
+        var medicine_unit_packing = $(this).closest('#data').find('#medicine_unit_packing').val();
+        var medicine_composition = $(this).closest('#data').find('#medicine_composition').val();
+        var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
+        var medicine_images = $(this).closest('#data').find('#medicine_images').val();
 
 
 
-                $("#edit_id").val(medicine_id_hidden);
-                $("#edit_medicine_name").val(medicine_name);
-                $("#edit_brand_name").val(medicine_brand_name);
-                $("#edit_medicine_group").val(medicine_group);
-                $("#edit_category_name").val(medicine_category_name);
-                $("#edit_generic_name").val(medicicine_genric_name);
-                $("#edit_manufacture_name").val(medicine_manufactuure_name);
-                $("#edit_supplier_name").val(medicine_supplier_name);
-                $("#edit_minimum_level").val(medicine_minimum_level);
-                $("#edit_reorder").val(medicine_reorder_level);
-                $("#edit_minimum_level").val(medicine_minimum_level);
-                $("#edit_unit_packing").val(medicine_unit_packing);
-                $("#edit_medicine_details1").val(medicine_composition);
-                $("#edit_medicine_note").val(medicine_notes);
-                $("#edit_image").val(medicine_images);
-            });
-            </script>
-            {{-- Supplier Edit End --}}
-            @endsection
+        $("#edit_id").val(medicine_id_hidden);
+        $("#edit_medicine_name").val(medicine_name);
+        $("#edit_brand_name").val(medicine_brand_name);
+        $("#edit_medicine_group").val(medicine_group);
+        $("#edit_category_name").val(medicine_category_name);
+        $("#edit_generic_name").val(medicicine_genric_name);
+        $("#edit_manufacture_name").val(medicine_manufactuure_name);
+        $("#edit_supplier_name").val(medicine_supplier_name);
+        $("#edit_minimum_level").val(medicine_minimum_level);
+        $("#edit_reorder").val(medicine_reorder_level);
+        $("#edit_minimum_level").val(medicine_minimum_level);
+        $("#edit_unit_packing").val(medicine_unit_packing);
+        $("#edit_medicine_details1").val(medicine_composition);
+        $("#edit_medicine_note").val(medicine_notes);
+        $("#edit_image").val(medicine_images);
+    });
+    </script>
+    {{-- Supplier Edit End --}}
+    @endsection

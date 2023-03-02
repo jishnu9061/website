@@ -114,7 +114,7 @@
                                     <!-- <td scope="row" class="text-center">{{ $list->id }}</td> -->
                                     <td scope="row" class="text-center">Box No :<b>{{ $list->number }}</b></td>
                                     <td scope="row" class="text-center"></td>
-                                    <td scope="row" class="text-center">{{ $list->client }}</td>
+                                    <td scope="row" class="text-center">{{ $list->client}}</td>
                                     <td scope="row" class="text-center">{{ $list->file_name }}</td>
                                     <td scope="row" class="text-center"></td>
                                     <td scope="row" class="text-center">{{ $list->close_date }}</td>
@@ -128,12 +128,11 @@
                                                     data-target="#viewmyModal"
                                                     href="{{url('view-list',$list->id)}}">View File
                                                 </a>
-                                                <a class="dropdown-item" data-toggle="modal" data-id="{{ $list->uniqueid }}" onclick="editbox(this)"
+                                                <a class="dropdown-item" data-toggle="modal" data-id="{{$list->id}}" onclick="editbox(this)"
                                                     data-target="#edit_box_no" href="#">Edit File
                                                 </a>
-                                                <a class="dropdown-item"
-                                                    href="">Delete
-                                                    File </a>
+                                                <a class="dropdown-item" data-target="#deletebox" data-toggle="modal" data-id="{{$list->id}}" data-name="{{ $list->number }}" onclick="deleteboxno(this)"
+                                                    href="">Delete Box No </a>
 
                                             </div>
                                         </div>
@@ -176,6 +175,7 @@
                     <div class="container">
                         <form method="post" action="{{ url('add-box-no') }}" enctype="multipart/form-data">
                             @csrf
+                            {{method_field('PUT')}} 
                             <h4 class=""><b>Add Box No:-</b></h4>
                             <div class="row">
                                 <div class="col-md-6" style="width: 33%">
@@ -242,7 +242,7 @@
                         <form method="post" action="#" id="update_box" enctype="multipart/form-data">
                             @csrf
                             {{method_field('PUT')}}
-                            <input type="text" name="id" id="uniqueid">
+                            <input type="text" name="id" id="editid">
                             <h4 class=""><b>Edit Box No:-</b></h4>
                             <div class="row">
                                 <div class="col-md-6" style="width: 33%">
@@ -296,6 +296,46 @@
 
     </div>
     <!-------------------------------------------------------- END EDIT BOX NO ---------------------------------------------------------------------->
+    <!-------------------------------------------------------- START DELETE BOX NO ---------------------------------------------------------------------->
+    <div class="modal fade" id="deletebox" style="">
+        <!-- delete company -->
+        <div class="modal-dialog modal-lg" style="width:30%;">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" id="box_destroy" action="#" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" id="delid" value="">
+                    <div class="modal-header" style="padding:0rem 0rem;">
+                        <div style="padding:1rem 1rem;">
+                            <h4 class="text-centre"><b>Delete <span id="delbox"></span></b></h4>
+                        </div>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <h6><b><span>Are you sure?</span></b></h6>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                        data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-------------------------------------------------------- END DELETE BOX NO ------------------------------------------------------------------------>
     <!------------Modal-View---------------->
 
     <div class="modal fade" id="viewmyModal">
@@ -313,7 +353,7 @@
                     <div class="container">
                         <form method="post" action="{{ url('view-box-no') }}" enctype="multipart/form-data">
                             @csrf
-
+                            {{method_field('PUT')}} 
                             <input type="hidden" id="" value="id">
                             <div class="row">
                                 <div class="col-md-6">
@@ -419,18 +459,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
     function editbox(param) {
-        var uniqueid = $(param).data('id');
+        var id = $(param).data('id');
         $.ajax({
             type: "GET",
             url: 'edit-box-no/' + uniqueid,
             success: function(response) {
-                $('#id').val(response.result.id);
-                $('#box_type').val(response.result.box_type);
-                $('#box_no').val(response.result.box_no);
-                $('#update_box').attr('action', "{{url('update-box')}}" + "/" + uniqueid);
+                $('#editid').val(response.result.id);
+                $('#box_type').val(response.result.type);
+                $('#box_no').val(response.result.number);
+                $('#update_box').attr('action', "{{url('update-box')}}" + "/" + id);
             }
         });
     }
+
+    function deleteboxno(param){
+            var id = $(param).data('id');
+            $('#delid').val(id);
+            var delname = $(param).data('name');
+            $('#delbox').html(delname);
+
+            $('#box_destroy').attr('action',"{{url('delete-box')}}"+"/"+id);
+        }
 
     function viewbox(param) { // view archive details
         var uniqueid = $(param).data('id');
