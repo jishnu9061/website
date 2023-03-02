@@ -70,10 +70,14 @@
                                 aria-expanded="false" style="border-color:none;"> ⋮ </a>
 
                        <div class="dropdown-menu">
+                        {{-- <a class="dropdown-item"
+                            href="{{url('edit_practice_area',$list->id)}}">Edit Practice Area</a> --}}
+                        <a class="dropdown-item" data-toggle="modal"
+                            data-target="#edit_practice_area" href="#">Edit Practice Area</a>
                         <a class="dropdown-item"
-                            href="{{url('edit_practice_area',$list->id)}}">Edit Practice Area</a>
-                        <a class="dropdown-item"
-                            href="{{url('delete_practice_area',$list->id)}}">Delete Practice Area</a>
+                            {{-- href="{{url('delete_practice_area',$list->id)}}">Delete Practice Area</a> --}}
+                            <a href="#"onclick=deletepracticeare(this) data-id="{{ $list->id }}"data-toggle="modal"
+                                data-target="#delete_practice_area">Delete Practice Area</a>
                     </div>
                         </td>
                 </tr>
@@ -168,41 +172,85 @@
             </div>
         </div>
     </div>
-
-{{-- <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-<div class="modal fade" id="myModal">
+{{-- Start Edit  Practice Area--}}
+<div class="modal fade" id="edit_practice_area" style="">
+    <!-- edit   -->
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Practice Area:-</b></h5>
 
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h2 class="text-centre"><b>Add New Practice Area</b></h2>
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 100%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for=""
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Practice Area</label>
+                                        <input type="text" class="form-control" id="w3review" value="" name="area"
+                                        id="username">
 
-            </div>
 
-            <!-- Modal body -->
-            <div class="modal-body">
-                <div class="container">
-                    <form action="{{url('store_practice_area')}}" method="post">
-                        @csrf
-                        <div class="mb-3">
-                            <input class="form-control form-control-lg" type="text" placeholder="" name="area"
-                                aria-label=".form-control-lg example">
+                                </div>
+                            </div>
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+
                         </div>
+                    </div>
+                </div>
+                </div>
+                <div class style="width: 20%">
+                </div>
+                <div class="col-sm">
 
-                        <div>
-                            <br>
-                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                        </div>
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
                 </div>
 
-                </form>
-            </div>
- --}}
+        </form>
+        </div>
+    </div>
+</div>
+{{-- End edit corporate client --}}
 
-
-
+<div class="modal fade" id="delete_practice_area" style=""> <!-- delete  -->
+    <div class="modal-dialog modal-lg" style="width:30%;">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post"  id="delete_practice_area" action="{{url('delete_practice_area',$list->id)}}" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" id="id" value="id">
+                <div class="modal-header" style="padding:0rem 0rem;">
+                    <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_practice_area"></span></b></h4></div>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body" >
+                    <div class="container">
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
+                        </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 

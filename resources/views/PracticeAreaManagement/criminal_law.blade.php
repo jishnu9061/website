@@ -7,7 +7,7 @@
 </nav>
 <br><br>
 {{-- heading --}}
-
+<div class="container">
 <h4 id="hdtpa"><b>Criminal Law</b></h4>
 <br>
 
@@ -198,7 +198,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="" style="width: 100%">
+                                <div class="" style="width: 50%">
                                      {{-- <div class=""><span style="color: red">*</span> --}}
                                         <label for="prosecutor"
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Prosecutor:</label>
@@ -210,25 +210,6 @@
                                             </div>
                                     {{-- </div> --}}
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="" style="width: 100%">
-                                    {{-- <div class=""><span style="color: red">*</span> --}}
-                                    <label for="case_details"
-                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Case Details:</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="attorney"
-                                                id="username" required>
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Postal Code is required.
-                                            </div>
-                                        </div>
-
-                                {{-- </div> --}}
-                                </div>
-                            </div>
-                            <div class="row">
                                 <div class="" style="width: 50%">
                                     {{-- <div class=""><span style="color: red">*</span> --}}
                                     <label for="case_details"
@@ -243,8 +224,8 @@
                                     </div>
                                 {{-- </div> --}}
                                 </div>
-
-
+                            </div>
+                            <div class="row">
                                 <div class="" style="width: 50%">
                                     <div class="investigator_details">
                                         <label for="username"
@@ -257,9 +238,9 @@
                                             </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="" style="width: 100%">
+
+
+                                <div class="" style="width: 50%">
                                     <div class=""><span style="color: red">*</span>
                                         <label for="victim_details"
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Victim Details:</label>
