@@ -164,7 +164,7 @@ class filemanagement extends Controller
         $template_list=DB::table('cra_add_template')->get();
         return view('file_management.template-category',compact('template_list'));
 
-        return view('file_management.template-category');
+       
     }
 
     public function addtemplate(Request $request)
@@ -172,6 +172,14 @@ class filemanagement extends Controller
         $doc_type=$request['doc_type'];
         $title=$request['title'];
         $to_upload=$request['to_upload'];
+
+        if(request()->hasfile('to_upload')){
+            $uploadedImage = $request->file('to_upload');
+            $imageName     = time() .'.'. $to_upload->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $to_upload->file    = $destinationPath.$imageName;
+        }
 
         DB::table('cra_add_template')->insert([
             'doc_type' =>  $doc_type,
@@ -181,7 +189,47 @@ class filemanagement extends Controller
         ]);
 
         return redirect('/template-category');
-        // return view('file_management.add-template');
+    }
+
+    public function edittemplate($id){
+
+        $edit_temblate = DB::table('cra_add_template')->where('id',$id)->first();
+
+        return response()->json([
+            'status' => 200,
+            'result' => $edit_temblate,
+        ]);
+    }
+    public function updatetemplate(Request $request){
+
+        $id = $request['id'];
+        $doc_type = $request['doc_type'];
+        $title = $request['title'];
+        $to_upload = $request['to_upload'];
+
+        if(request()->hasfile('to_upload')){
+            $uploadedImage = $request->file('to_upload');
+            $imageName     = time() .'.'. $to_upload->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $to_upload->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_add_template')->where('id',$id)->update([
+
+            'doc_type' => $doc_type,
+            'title' => $title,
+            'to_upload' => $to_upload,
+        ]);
+
+        return redirect('/template-category');
+    }
+
+    public function deletetemplate($id)
+    {
+        $delete =DB::table('cra_add_template')->where('id',$id)->delete();
+
+        return redirect ('/template-category');
     }
 
 
@@ -215,6 +263,7 @@ class filemanagement extends Controller
         return redirect('/file-archive');
     }
 
+
     public function viewboxno($id)
     {
         $list = DB::table('cra_add_box')->where('cra_add_box.id',$id)->first();
@@ -229,8 +278,12 @@ class filemanagement extends Controller
 
     public function editboxno($id)
     {
-        $edit =DB::table('cra_add_box')->where('id',$id)->first();
-        return ('/file-archive');
+        $edit_box =DB::table('cra_add_box')->where('id',$id)->first();
+
+        return response()->json([
+            'status' => 200,
+            'result' => $edit_box,
+        ]);
     }
 
     public function deleteboxno($id)
@@ -894,7 +947,12 @@ class filemanagement extends Controller
 
      {
          $edit_event =DB::table('cra_add_event')->where('id',$id)->first();
-         return view('file_management.edit_event',compact('edit_event','id'));
+
+         return response()->json([
+
+            'status' => 200,
+            'result' => $edit_event,
+         ]);
 
      }
 
@@ -972,23 +1030,23 @@ class filemanagement extends Controller
         DB::table('cra_add_event')->insert([
 
 
-            'Event_Type' =>  $Event_type,
-            'Title' =>  $Title,
-            'Meeting_Room' =>  $Meeting_room,
-            'Location' =>   $Location,
-            'Start_Date' =>   $Start_sate,
-            'Time' =>  $Time,
-            'End_Date' =>  $End_date,
-            'Time_End' =>  $Time_1,
-            'Event_Booked_For' =>  $Event,
-            'User_Invited' =>  $User,
-            'Other_Invites' =>  $Others,
-            'Client' =>  $Client,
-            'File' =>   $File,
-            'Notes' =>   $Notes,
-            'Set_Repetition' =>   $Repetition,
-            'Repetition_End' =>   $Repetition_end,
-            'Set_Reminder' =>  $Reminder,
+            'event_Type' =>  $Event_type,
+            'title' =>  $Title,
+            'meeting_Room' =>  $Meeting_room,
+            'location' =>   $Location,
+            'start_Date' =>   $Start_sate,
+            'time' =>  $Time,
+            'end_Date' =>  $End_date,
+            'time_End' =>  $Time_1,
+            'event_Booked_For' =>  $Event,
+            'user_Invited' =>  $User,
+            'other_Invites' =>  $Others,
+            'client' =>  $Client,
+            'file' =>   $File,
+            'notes' =>   $Notes,
+            'set_Repetition' =>   $Repetition,
+            'repetition_End' =>   $Repetition_end,
+            'set_Reminder' =>  $Reminder,
 
         ]);
         return redirect('/diary-management');
@@ -1497,8 +1555,11 @@ public function edit_file_instruction_list($id)
 
 
     $edit_file_instruction =DB::table('cra_add_new_instructions')->where('id',$id)->first();
-    return view('file_management.edit_file_instruction',compact('edit_file_instruction','id'));
-
+   
+    return response()->json([
+        'status' => 200,
+        'result' => $edit_file_instruction,
+    ]);
 
 }
 
@@ -1600,7 +1661,11 @@ public function add_new_instructions(Request $request)
 public function edit_office_instruction_list($id)
 {
     $edit_office_instruction =DB::table('cra_add_office_instructions')->where('id',$id)->first();
-    return view('file_management.edit_office_instruction',compact('edit_office_instruction','id'));
+    return response()->json([
+
+        'status'=>200,
+        'result'=>$edit_office_instruction,
+    ]);
 }
 
 public function updateofficeinstructions(Request $request)
@@ -1695,7 +1760,10 @@ public function new_safe_management_list(Request $request)
 public function editsafemanagement_list($id)
 {
     $edit_management =DB::table('cra_new_safe_management')->where('id',$id)->first();
-    return view('file_management.edit_Safe_management',compact('edit_management','id'));
+    return response()->json([
+        'status' =>200,
+        'result'=>$edit_management,
+    ]);
 }
 
 public function updatesafemanagement_list(Request $request)
