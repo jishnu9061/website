@@ -7,7 +7,7 @@
 </nav>
 <br><br>
 {{-- heading --}}
-
+<div class="container">
 <h4 id="hdtpa"><b>Real Estate</b></h4>
 <br>
 
@@ -110,9 +110,11 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
         </ul>
     </nav>
 </div>
-<div class="rows_count">Showing 11 to 20 of 100</div>
+<div class="rows_count">Showing 11 to 20 of 100</div> --}}
 
-<!-- End of Container --> --}}
+
+</div>
+<!-- End of Container -->
 
 
 <!--		Start Pagination -->
@@ -129,6 +131,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
             </li>
         </ul>
     </nav>
+
 </div>
 <div class="rows_count"></div>
 </div>
@@ -224,7 +227,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="" style="width: 99%">
+                                <div class="" style="width: 50%">
                                     {{-- <div class=""><span style="color: red">*</span> --}}
                                     <label for="property_details"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Property Details:</label>
@@ -238,10 +241,10 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                     </div>
                                 {{-- </div> --}}
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="" style="width: 33%">
+
+
+                                <div class="" style="width: 50%">
                                     <div class="marriage_details">
                                         <label for="closing_statement"
                                             style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Closing Statement:</label>
@@ -253,9 +256,9 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                             </div>
                                     </div>
                                 </div>
-
-
-                                <div class="" style="width: 33%">
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 50%">
                                     <div class=""><span style="color: red">*</span>
                                         <label for="listing_realtor"
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Listing Realtor:</label>
@@ -270,7 +273,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                         </div>
                                     </div>
                                 </div>
-                                <div class="" style="width: 33%">
+                                <div class="" style="width: 50%">
                                     <div class="">
                                         <label for="selling_realtor"
                                             style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Selling Realtor:</label>
@@ -282,7 +285,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                             </div>
                                     </div>
                                 </div>
-                                </div>
+                            </div>
 
                             <div class="row">
                                 <div class="" style="width: 50%">
