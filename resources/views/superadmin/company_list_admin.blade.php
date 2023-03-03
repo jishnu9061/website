@@ -462,7 +462,7 @@
                         @method('PUT')
                         <input type="hidden" id="uniqueid" value="uniqueid">
                         <div class="modal-header" style="padding:0rem 0rem;">
-                            <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Edit details</b></h4></div>
+                            <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Edit Company Details</b></h4></div>
                             <div style="align-self:left;padding:0rem 2.5rem;">
                                 <img id="e_blah" src="#" alt=""  style="width:50px;height:60px;" />
                                 <label for="e_imgInp" style="margin-left: 9px;text-align:center;width:80px;height:30px;
