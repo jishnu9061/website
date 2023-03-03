@@ -140,8 +140,8 @@ color: #999;
                                                 data-target=""
                                                 href="{{url('view-Complaint',$list->id)}}">View Document
                                             </a>
-                                            <a href="{{url('edit_complaint',$list->id )}}" class="dropdown-item" href=""data-toggle="modal"
-                                                 onClick="return myFunction();"data-target="#editModal">Edit complaint</a>
+                                             <a href="#" class="dropdown-item" href="" data-toggle="modal"
+                                                data-target="#editModal" data-id="{{$list->id }}" onclick="editcomplaint(this)">Edit complaint</a>
   <a class="dropdown-item" data-toggle="modal"
                                                 data-target="#deletecompany"
                                                 href="">Delete complaint
@@ -394,11 +394,12 @@ color: #999;
                             <h5><b>Add New Complaint:-</b></h5>
                             <!-- Modal Header -->
                             <!-- Modal body -->
+                            <input type="hidden" name="id" id="id">
                             <div class="modal-body">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <form method="post" action="{{url('add-Complaint')}}" id="form">
+                                            <form method="post" action="{{url('update-Complaint')}}" id="update_complaint">
                                                 @csrf
                                                 
                                                     <div class="row">
@@ -407,7 +408,7 @@ color: #999;
                                                             <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
-                                                                <input type="date" class="form-control" name="date"
+                                                                <input type="date" class="form-control" name="dateid" id="dateid"
                                                                     id="username" value=""  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Name is required.
@@ -421,7 +422,7 @@ color: #999;
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend">
                                                                 </div>
-                                                                <select name="type" id="cars"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                <select id="client" name="client"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                     <option>Select</option>
                                                                     <option>Corporate</option>
                                                                     <option>Individual</option>
@@ -436,7 +437,7 @@ color: #999;
                                                                 <div class="input-group-prepend">
 
                                                                 </div>
-                                                                <select name="files" id="cars"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                <select name="files" id="files"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                     <option>Select</option>
                                                                     <option>File 1</option>
                                                                     <option>File 2</option>
@@ -446,26 +447,7 @@ color: #999;
                                                     </div>
                                                     </div>
                                                     <div class="row">
-                                                    <div class="" style="width: 33%">
-                                                        <div class=""><span style="color: red">*</span>
-                                                            <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Name</label>
-                                                            <div class="input-group">
-                                                                <div class="input-group-prepend"></div>
-                                                                <!-- <input type="text" class="form-control" name="name"
-                                                                    id="age" value="" min="0" max="99"> -->
-                                                                    <select name="Staff" id="cars"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
-                                                                    <option>Select</option>
-                                                                    <option>client 1</option>
-                                                                    <option>client 2</option>
-                                                                    <option>client 3</option>
-                                                                    <option>client 4</option>
-                                                                </select>
-                                                                <div class="invalid-feedback" style="width: 100%;">
-                                                                    Age is required.
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                   
                                                     <div class="" style="width: 33%">
                                                         <div class=""><span style="color: red">*</span>
                                                             <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Staff Handling</label>
@@ -473,7 +455,7 @@ color: #999;
                                                                 <div class="input-group-prepend">
 
                                                                 </div>
-                                                                <select name="Staff" id="cars"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                <select name="staff" id="staff"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                     <option>Select</option>
                                                                     <option>Staff 1</option>
                                                                     <option>Staff 2</option>
@@ -495,12 +477,10 @@ color: #999;
                                                                     <option>File 1</option>
                                                                     <option>File 2</option>
                                                                 </select> --}}
-                                                                <input type="text" name="customername" style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                <input type="text" name="customername" id="customername" style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    </div>
-                                                <div class="row">
                                                     <div class="" style="width: 33%">
                                                         <div class=""><span style="color: red">*</span>
                                                             <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Complaint About</label>
@@ -508,7 +488,7 @@ color: #999;
                                                                 <div class="input-group-prepend">
 
                                                                 </div>
-                                                                <select name="Complaint" id="cars"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                <select name="complaint" id="complaint"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                     <option>Select</option>
                                                                     <option>Person</option>
                                                                     <option>Company</option>
@@ -516,13 +496,15 @@ color: #999;
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    </div>
+                                                <div class="row">
                                                     <div class="" style="width: 33%">
                                                         <div class=""><span style="color: red">*</span>
                                                             <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone No</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
-                                                                <input type="text" class="form-control" name="Telephone"
-                                                                    id="age" value="" min="0" max="99"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                <input type="text" class="form-control" name="telephone"
+                                                                    id="telephone" value="" min="0" max="99"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Age is required.
                                                                 </div>
@@ -534,8 +516,21 @@ color: #999;
                                                             <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email Address</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
-                                                                <input type="email" class="form-control" name="email"
-                                                                    value="" id="password"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                <input type="email" class="form-control" name="emailid"
+                                                                    value="" id="emailid"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Password is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="" style="width: 33%">
+                                                        <div class=""><span style="color: red">*</span>
+                                                            <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Others</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend"></div>
+                                                                <input type="text" class="form-control" name="othersid"
+                                                                    value="" id="othersid"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Password is required.
                                                                 </div>
@@ -544,24 +539,12 @@ color: #999;
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="" style="width: 33%">
-                                                        <div class=""><span style="color: red">*</span>
-                                                            <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Others</label>
-                                                            <div class="input-group">
-                                                                <div class="input-group-prepend"></div>
-                                                                <input type="text" class="form-control" name="Others"
-                                                                    value="" id="confirm_password"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
-                                                                <div class="invalid-feedback" style="width: 100%;">
-                                                                    Password is required.
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="" style="width: 33%">
+                                                    
+                                                    <div class="" style="width: 50%">
                                                         <div class=""><span style="color: red">*</span>
                                                             <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Action Plan</label>
                                                             <div class="input-group">
-                                                                <textarea class="form-control" id="form7Example7"
+                                                                <textarea class="form-control" id="plan"
                                                                     rows="3" name="plan"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"></textarea>
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Action Plan is required.
@@ -569,12 +552,12 @@ color: #999;
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="" style="width: 33%">
+                                                    <div class="" style="width: 49%">
                                                         <div class=""><span style="color: red">*</span>
                                                             <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Complaint Description</label>
                                                             <div class="input-group">
-                                                                <textarea class="form-control" id="form7Example7"
-                                                                    rows="3" name="Description"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"></textarea>
+                                                                <textarea class="form-control" id="description"
+                                                                    rows="3" name="description"  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"></textarea>
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Complaint Description is required.
                                                                 </div>
@@ -649,11 +632,31 @@ color: #999;
                     </div>
                 </div>
 
-                <!-- The Modal -->
+                  <script>
+                     function editcomplaint(param) {
+            var id = $(param).data('id');
+            $.ajax({
+                type: 'GET',
+                url: 'edit_complaint/' + id,
 
-
-                <!-- Modal body -->
-
+                success: function(response) {
+                    $('#id').val(response.result.id);
+                    $('#dateid').val(response.result.date);
+                    $('#client').val(response.result.client_type);
+                    $('#files').val(response.result.files);
+                    $('#customername').val(response.result.customer_name);
+                    $('#staff').val(response.result.staff_handling);
+                    $('#complaint').val(response.result.complaint_about);
+                    $('#telephone').val(response.result.telephone_no);
+                    $('#emailid').val(response.result.email);
+                    $('#othersid').val(response.result.others);
+                    $('#plan').val(response.result.action_plan);
+                    $('#description').val(response.result.complaint_description);
+                    $('#update_complaint').attr('action', "{{url('update-Complaint')}}" + "/" + id);
+                }
+            });
+        }
+        </script>
 
 
                 <script>

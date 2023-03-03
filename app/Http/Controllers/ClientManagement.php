@@ -804,24 +804,29 @@ class ClientManagement extends Controller
 
     public function editComplaint($id)
     {
-        $edit_complaint = DB::table('cra_complaint_register')->where('id', $id)->first();
-        return view('client-management.edit-complaint', compact('edit_complaint', 'id'));
+        $edit_complaint =DB::table('cra_complaint_register')->where('id',$id)->first();
+
+        return response()->json([
+
+           'status' => 200,
+           'result' => $edit_complaint,
+        ]);
     }
 
     public function updateComplaint(Request $Request)
     {
         $id   = $Request['id'];
-        $date = $Request['date'];
-        $client_type = $Request['type'];
+        $date = $Request['dateid'];
+        $client_type = $Request['client'];
         $files = $Request['files'];
-        $customer_name = $Request['name'];
-        $staff_handling = $Request['Staff'];
-        $complaint_about = $Request['Complaint'];
-        $telephone_no = $Request['Telephone'];
-        $email = $Request['email'];
-        $others = $Request['Others'];
+        $customer_name = $Request['customername'];
+        $staff_handling = $Request['staff'];
+        $complaint_about = $Request['complaint'];
+        $telephone_no = $Request['telephone'];
+        $email = $Request['emailid'];
+        $others = $Request['othersid'];
         $action_plan = $Request['plan'];
-        $complaint_description = $Request['Description'];
+        $complaint_description = $Request['description'];
 
         DB::table('cra_complaint_register')->where('id', $id)->update([
             'date' =>  $date,
@@ -837,7 +842,7 @@ class ClientManagement extends Controller
             'complaint_description' => $complaint_description,
         ]);
 
-        return redirect('/complaint-list');
+        return redirect('complaint-list');
     }
 
     public function viewComplaint($id)
