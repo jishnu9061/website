@@ -480,7 +480,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('asign-lawyer','ClientManagement@asignlawyer')->name('asign-lawyer');
     Route::any('add_lawyer','ClientManagement@add_lawyer')->name('add_lawyer');
     Route::any('edit_lawyer/{id}','ClientManagement@edit_lawyer')->name('edit_lawyer');
-    Route::any('update_lawyer',"ClientManagement@update_lawyer")->name('update_lawyer');
+    Route::any('update_lawyer/{id}',"ClientManagement@update_lawyer")->name('update_lawyer');
     Route::any('view_lawyer/{id}','ClientManagement@view_lawyer')->name('view_lawyer');
     Route::any('/delete_lawyer/{id}','ClientManagement@delete_lawyer')->name('delete_lawyer');
         //Client-Documents
@@ -503,7 +503,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('create-Complaint', 'ClientManagement@createComplaint')->name('create-Complaint');
     Route::any('add-Complaint', 'ClientManagement@addComplaint')->name('add-Complaint');
     Route::any('edit_complaint/{id}', 'ClientManagement@editComplaint')->name('edit-Complaint');
-    Route::any('update-Complaint', 'ClientManagement@updateComplaint')->name('update-Complaint');
+    Route::any('update-Complaint/{id}', 'ClientManagement@updateComplaint')->name('update-Complaint');
     Route::any('view-Complaint/{id}', 'ClientManagement@viewComplaint')->name('view-Complaint');
     Route::any('delete-Complaint/{id}', 'ClientManagement@deleteComplaint')->name('delete-Complaint');
         //Follow Up
