@@ -274,8 +274,6 @@ class filemanagement extends Controller
     ]);
         // return view('file_management.view-box-no');
     }
-
-
     public function editboxno($id)
     {
         $edit_box =DB::table('cra_add_box')->where('id',$id)->first();
@@ -1322,6 +1320,67 @@ class filemanagement extends Controller
            ]);
              return view('file_management.outgoing-letters');
         }
+       
+        public function editoutgoingletter($id)
+        {
+            $edit_letter=DB::table('cra_add_outgoing_letter')->where('id',$id)->first();
+
+            return response()->json([
+                'status' => 200,
+                'result' => $edit_letter,
+            ]);
+        }
+
+        public function updateoutgoingletters(Request $request)
+        {
+           $id = $request['id'];
+           $letter_date =$request['letter_date'];
+           $client =$request['client'];
+           $file =$request['file'];
+           $delivered_to =$request['delivered_to'];
+           $Document_category =$request['Document_category'];
+           $letter_name =$request['letter_name'];
+           $originator =$request['originator'];
+           $viewers =$request['viewers'];
+           $upload_copy =$request['upload_copy'];
+
+           if(!empty($request->file('upload_copy'))){
+
+            $this->validate($request,[
+                'upload_copy' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('upload_copy')){
+            $uploadedImage = $request->file('upload_copy');
+            $imageName     = time() .'.'. $upload_copy->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $upload_copy->file    = $destinationPath.$imageName;
+        }
+
+           DB::table('cra_add_outgoing_letter')->where('id',$id)->update([
+
+
+               'letter_date' => $letter_date,
+               'client' =>  $client,
+               'file' => $file,
+               'delivered_to' => $delivered_to,
+               'Document_category' => $Document_category,
+               'letter_name' => $letter_name,
+               'originator' => $originator,
+               'viewers' =>  $viewers,
+               'upload_copy' => $upload_copy,
+
+           ]);
+           return redirect('/outgoing-letters');
+        }
+
+        public function deleteoutgoingletter($id)
+        {
+            $del_letter=DB::table('cra_add_outgoing_letter')->where('id',$id)->delete();
+
+            return redirect('/outgoing-letters');
+        }
 
 
         public function incommingletters()
@@ -1552,15 +1611,12 @@ public function add_new_file_instructions(Request $request)
 
 public function edit_file_instruction_list($id)
 {
-
-
     $edit_file_instruction =DB::table('cra_add_new_instructions')->where('id',$id)->first();
    
     return response()->json([
         'status' => 200,
         'result' => $edit_file_instruction,
     ]);
-
 }
 
 public function updatefileinstruction(Request $request)
@@ -1819,9 +1875,6 @@ public function Request_staff_item_list()
 
 public function add_Request_staff_item_list(Request $request)
 {
-
-
-
     $date =$request['date'];
     $client =$request['client'];
     $file =$request['file'];
@@ -1841,19 +1894,54 @@ public function add_Request_staff_item_list(Request $request)
  ]);
 
  return redirect('/Request_staff_item');
-    // return view('file_management.new_Request_staff_item');
+   
+}
+
+public function edit_safe_item($id)
+{
+    
+    $edit_safe_item = DB::table('cra_request_safe_item')->where('id',$id)->first();
+
+    return response()->json([
+        'status'=>200,
+        'result' => $edit_safe_item,
+    ]);
+
+}
+public function update_Request_staff_item(Request $request)
+{
+    $id= $request['id'];
+    $date =$request['date'];
+    $client =$request['client'];
+    $file =$request['file'];
+    $send_instruction =$request['send_instruction'];
+    $approver =$request['approver'];
+
+
+    DB::table('cra_request_safe_item')->where('id',$id)->update([
+     'date' => $date,
+     'client' => $client,
+     'file' => $file,
+     'send_instruction' => $send_instruction,
+     'approver' =>  $approver,
+
+ ]);
+ return redirect('/Request_staff_item');
+
+}
+
+public function delete_safe_item($id)
+{
+    
+    $edit_safe_item = DB::table('cra_request_safe_item')->where('id',$id)->delete();
+
+    return redirect('/Request_staff_item');
+
 }
 
 public function Process_Request_list()
 {
     return view('file_management.Process_Request');
 }
-
-
-
-
-
-
-
 
 }

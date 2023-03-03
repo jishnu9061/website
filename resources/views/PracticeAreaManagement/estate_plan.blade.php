@@ -183,12 +183,12 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Client No is required.
                                     </div>
-                                    {{-- </div> --}}
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="" style="width: 50%">
+                                <div class="" style="width: 33%">
                                      {{-- <div class=""><span style="color: red">*</span> --}}
                                         <label for="estate_details"
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Estate Details:</label>
@@ -199,7 +199,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                             </div>
                                     {{-- </div> --}}
                                 </div>
-                                <div class="" style="width: 50%">
+                                <div class="" style="width: 33%">
                                     {{-- <div class=""><span style="color: red">*</span> --}}
                                     <label for="trust"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Trust:</label>
@@ -211,9 +211,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
 
                                 {{-- </div> --}}
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="" style="width: 100%">
+                                <div class="" style="width: 33%">
                                     <div class=""><span style="color: red">*</span>
                                     <label for="property_details"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Property Details:</label>
@@ -223,9 +221,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                                 id="username" required></textarea>
 
                                         </div>
-                                    <div class="invalid-feedback" style="width: 100%;">
                                     </div>
-                                </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -339,7 +335,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                             </div>
                         </div>
                         <div class="row">
-                            <div class="" style="width: 100%">
+                            <div class="" style="width: 33%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="account_no"
                                         style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Estate Details</label>
@@ -350,9 +346,9 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                         </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="" style="width:50%;"><span style="color: red">*</span>
+
+
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
                                 <label for="bank_code"
                                     style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Trust</label>
                                     <div class="input-group">
@@ -361,7 +357,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                             name="trust"></textarea>
                                     </div>
                             </div>
-                            <div class="" style="width:50%;"><span style="color: red">*</span>
+                            <div class="" style="width:33%;"><span style="color: red">*</span>
                                 <label for="branch_code"
                                     style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Property Details</label>
                                     <div class="input-group">
@@ -371,7 +367,8 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                     </div>
                             </div>
                         </div>
-                        <div class="row" style="margin-top: 0px;">
+                        <div class="row">
+
                             <div class="" style="width: 50%">
                                 <div class=""><span style="color: red">*</span>
                                     <label for="swift_code"
@@ -392,7 +389,9 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                             name="financier"></textarea>
                                     </div>
                             </div>
-                            <div class="" style="width:50%;"><span style="color: red">*</span>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width:100%;"><span style="color: red">*</span>
                                 <label for="mpesa_no"
                                     style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Supprting Details</label>
                                     <span class="m-2"></span>

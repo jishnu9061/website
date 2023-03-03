@@ -271,7 +271,7 @@
                         </div>
                     </div>
                     </form>
-                </div>
+            </div>
                 <br>
             </div>
         </div>
@@ -392,9 +392,9 @@
                     <button type="button" class="btn btn-primary float:left" Style="width:19%;"
                         onclick="history.back()">Cancel</button>
                 </div>
-            </div>
-        </form>
 
+        </form>
+        </div>
     </div>
 </div>
 {{-- End edit corporate client --}}

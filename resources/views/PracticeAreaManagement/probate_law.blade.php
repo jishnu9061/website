@@ -7,16 +7,16 @@
 </nav>
 <br><br>
 {{-- heading --}}
+<div class="container">
+    <h4 id="hdtpa"><b>Probate Law</b></h4>
+    <br>
 
-<h4 id="hdtpa"><b>Probate Law</b></h4>
-<br>
 
-
-{{-- <input class="btn btn-primary" type="button" value="Add New Matter" data-toggle="modal" data-target="#myModal"> --}}
-<button type="button" class="btn btn-primary" data-toggle="modal"
-data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
---outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add New Matter</button>
-<br>
+    {{-- <input class="btn btn-primary" type="button" value="Add New Matter" data-toggle="modal" data-target="#myModal"> --}}
+    <button type="button" class="btn btn-primary" data-toggle="modal"
+        data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
+        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add New Matter</button>
+    <br>
 
 
 <div class="header_wrap">
@@ -80,10 +80,14 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                        <div class="dropdown-menu">
                                         <a class="dropdown-item"
                                             href="{{ url('view_probate_law',$list->id) }}">View Probate Law</a>
+                                        {{-- <a class="dropdown-item"
+                                            href="{{ url('edit_probate_law',$list->id) }}">Edit Probate Law</a> --}}
+                                        <a class="dropdown-item" data-toggle="modal"
+                                            data-target="#edit_probate_law" href="#">Edit Probate Law</a>
                                         <a class="dropdown-item"
-                                            href="{{ url('edit_probate_law',$list->id) }}">Edit Probate Law</a>
-                                        <a class="dropdown-item"
-                                            href="{{ url('delete_probate_law',$list->id) }}">Delete Probate Law</a>
+                                            {{-- href="{{ url('delete_probate_law',$list->id) }}">Delete Probate Law</a> --}}
+                                            <a href="#"onclick=deleteprobate(this) data-id="{{ $list->id }}"data-toggle="modal"
+                                                data-target="#delete_probate_law">Delete Probate Law</a>
                                     </div>
                                         </td>
             </tr>
@@ -122,6 +126,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
     </nav>
 </div>
 <div class="rows_count"></div>
+</div>
 </div>
 <!-- 		End of Container -->
 
@@ -181,7 +186,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Client No is required.
                                     </div>
-                                    {{-- </div> --}}
+                                    </div>
                                 </div>
                             </div>
 
@@ -196,6 +201,8 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                             </div>
                                     {{-- </div> --}}
                                 </div>
+
+
                                 <div class="" style="width: 50%">
                                     {{-- <div class=""><span style="color: red">*</span> --}}
                                     <label for="Case Details"
@@ -213,21 +220,7 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="" style="width: 50%">
-                                    {{-- <div class=""><span style="color: red">*</span> --}}
-                                    <label for="case_details"
-                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Case Details:</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <textarea class="form-control" rows="2" name="case_details" required></textarea>
-                                        </div>
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                    </div>
-                                {{-- </div> --}}
-                                </div>
-
-
-                                <div class="" style="width: 50%">
+                                <div class="" style="width: 100%">
                                     <div class="marriage_details">
                                         <label for="
                                         Estate Details"
@@ -274,117 +267,153 @@ data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
         </div>
     </div>
 
-
-
-{{-- <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-<div class="modal fade" id="myModal">
+{{-- Start Edit Probate Law --}}
+<div class="modal fade" id="edit_probate_law" style="">
+    <!-- edit  -->
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post" action="" enctype="multipart/form-data" id="addemployee">
+                @csrf
+                <h5><b>Edit Probate Law:-</b></h5>
 
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h2 class="text-centre"><b>Add Matter</b></h2>
+                <div class="row">
+                    <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                        <div class="row">
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for=""
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Matter Info</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" placeholder=""
+                                                value="" name="matter_info">
+                                        </div>
 
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-                <div class="container">
-                    <form method="post" action="{{url('add_probate_law')}}" enctype="multipart/form-data">
-                        @csrf
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" value="" name="matter_info" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Executor /
-                                            Administator</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" value="" name="executor" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" value="" name="matter_type" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Deceased</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" value="" name="deceased" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Case Details</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <textarea class="form-control" rows="2" name="case_details" required></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"></div>
-                                            <textarea class="form-control" rows="2" name="estate_details" required></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
 
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
-                                <span class="m-2"></span>
-                                <input type="file" class="form-control" name="supporting_details" required>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for=""
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Executor/Administrator</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" placeholder="" value=""
+                                                name="executor">
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="" style="width: 33%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for=""
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Matter Type</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" placeholder=""
+                                                value="" name="matter_type">
+                                        </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="" style="width: 100%">
+                                <div class=""><span style="color: red">*</span>
+                                    <label for=""
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Deceased</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" placeholder="" value=""
+                                                name="deceased">
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="" style="width:50%;"><span style="color: red">*</span>
+                                <label for=""
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Case Details</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <textarea class="form-control" rows="2"
+                                            name="case_details"></textarea>
+                                    </div>
+                            </div>
+
+
+                            <div class="" style="width:50%;"><span style="color: red">*</span>
+                                <label for=""
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Estate Details</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <textarea class="form-control" rows="2"
+                                            name="estate_details"></textarea>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="" style="width:100%;"><span style="color: red">*</span>
+                                <label for=""
+                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Supporting Details</label>
+                                    <span class="m-2"></span>
+                                    <input type="file" class="form-control" name="supporting_details"
+                                        value="">
+                            </div>
+                        </div>
+                            <div class="row document_details " style="margin-bottom: 20px;">
+                                {{-- Add More Document details:- javascript --}}
+
+                        </div>
+                    </div>
                 </div>
-                <br>
-                <br>
-
-
-                <div class="container text-center">
-                    <button type="submit" class="btn btn-primary" style="width:15%">Save</button>
-                    <button type="button" class="btn btn-primary" style="width:15%" data-dismiss="modal">Close</button>
+                <div class style="width: 20%">
                 </div>
-            </div>
+                <div class="col-sm">
 
+                    <button type="submit" class="btn btn-primary float:right;"
+                        style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                    </button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+
+        </form>
+        </div>
+    </div>
+</div>
+</div>
+{{-- End edit corporate client --}}
+<div class="modal fade" id="delete_probate_law" style=""> <!-- delete  -->
+    <div class="modal-dialog modal-lg" style="width:30%;">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post"  id="delete_probate_law" action="{{ url('delete_probate_law',$list->id) }}" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" id="id" value="id">
+                <div class="modal-header" style="padding:0rem 0rem;">
+                    <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_probate_law"></span></b></h4></div>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body" >
+                    <div class="container">
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6>
+                        </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </form>
         </div>
-
- --}}
-
-
-
-
-
-
-
-
-        @endsection
+    </div>
+</div>
+@endsection

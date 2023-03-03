@@ -77,7 +77,6 @@
                             <tbody>
 
                                 @foreach($purchase_order as $list)
-
                                 <tr class="text-center">
                                     <td>{{$list->purchase_order_number}}</td>
                                     <td>{{$list->purchase_date}}</td>
@@ -98,10 +97,9 @@
 
                                        <div class="dropdown-menu">
                                         <a class="dropdown-item"
-                                            href="{{url('view_purchase_order',$list->id
-                                            )}}">View Purchase Order</a>
+                                            href="{{url('view_purchase_order',$list->purchase_id)}}">View Purchase Order</a>
                                         <a class="dropdown-item"
-                                            href="{{url('purchase_print',$list->id)}}">Print Purchase Order</a>
+                                            href="{{url('purchase_print',$list->purchase_id)}}">Print Purchase Order</a>
                                     </div>
                                         </td>
                                 </tr>

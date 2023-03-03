@@ -101,7 +101,7 @@ class PurchaseManagement extends Controller
 
         $view_order = DB::table('cra_add_new_purchase')
         ->leftjoin('cra_add_supplier','cra_add_supplier.id','=','cra_add_new_purchase.supplier_name')
-        ->where('cra_add_new_purchase.id',$id)
+        ->where('cra_add_new_purchase.purchase_id',$id)
         ->get();
 
         $view_purchase_order = DB::table('cra_purchase_items')->where('id',$id)->get();
