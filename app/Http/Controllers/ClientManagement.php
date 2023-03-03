@@ -1191,29 +1191,38 @@ class ClientManagement extends Controller
 
     public function editCommunication($id)
     {
-        $edit = DB::table('cra_conversations')->where('id', $id)->first();
-        return view('client-management.edit-communication', compact('edit', 'id'));
+        // $edit = DB::table('cra_conversations')->where('id', $id)->first();
+        // return view('client-management.edit-communication', compact('edit', 'id'));
+        
+ $edit =DB::table('cra_conversations')->where('id',$id)->first();
+
+ return response()->json([
+
+    'status' => 200,
+    'result' => $edit,
+ ]);
     }
 
     public function updateCommunication(Request $Request)
     {
 
-        $id                 = $Request['id'];
-        $communication_date = $Request['date'];
-        $client = $Request['Client'];
-        $file = $Request['File'];
-        $customer = $Request['Customer'];
+        $id= $Request['id'];
+        $communication_date = $Request['dateid'];
+        $client = $Request['client'];
+        $file = $Request['file'];
+        $customer = $Request['customer'];
         $telephone_no = $Request['telephone'];
-        $email = $Request['Email'];
-        $communication_source = $Request['Sources'];
-        $mode_of_communication = $Request['Communication'];
-        $communicated = $Request['Communicated'];
-        $duration = $Request['Duration'];
-        $person_handling = $Request['Handling'];
-        $time = $Request['Timer'];
-        $others = $Request['Others'];
-        $communicated_description = $Request['Description'];
-        $action_plan = $Request['Action'];
+        $email = $Request['email'];
+        $communication_source = $Request['source'];
+        $mode_of_communication = $Request['communication'];
+        $communicated = $Request['communicated'];
+        $duration = $Request['duration'];
+        $person_handling = $Request['handling'];
+        $time = $Request['time'];
+        $other_communication = $Request['other_communication'];
+        $others_handling = $Request['other_handling'];
+        $communicated_description = $Request['communication_description'];
+        $action_plan = $Request['action_plan'];
 
 
         DB::table('cra_conversations')->where('id', $id)->update([
@@ -1229,7 +1238,8 @@ class ClientManagement extends Controller
             'duration' => $duration,
             'person_handling' =>  $person_handling,
             'time' =>  $time,
-            'others' => $others,
+            'other_communication' => $other_communication,
+            'others_handling' => $others_handling,
             'communicated_description' =>  $communicated_description,
             'action_plan' =>  $action_plan,
         ]);
@@ -1240,7 +1250,7 @@ class ClientManagement extends Controller
     public function deleteCommunication($id)
     {
         $del_communication = DB::table('cra_conversations')->where('id', $id)->delete();
-        return redirect('/communication-list');
+        return redirect('communication-list');
     }
 
 

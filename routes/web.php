@@ -528,7 +528,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('communication-list', 'ClientManagement@ListCommunication')->name('communication-list');
     Route::any('add-communication', 'ClientManagement@addCommunication')->name('add-communication');
     Route::any('edit-communication/{id}', 'ClientManagement@editCommunication')->name('edit-communication');
-    Route::any('/update-communication', 'ClientManagement@updateCommunication')->name('update-communication');
+    Route::any('/update-communication/{id}', 'ClientManagement@updateCommunication')->name('update-communication');
     Route::any('/delete-communication/{id}', 'ClientManagement@deleteCommunication')->name('delete-communication');
     Route::any('new_communication', 'ClientManagement@add_communication')->name('add_communication');
         //search list

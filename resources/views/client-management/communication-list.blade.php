@@ -255,7 +255,7 @@
                                                         Communication Details
                                                     </a>
                                                     <a class="dropdown-item" data-toggle="modal"
-                                                        data-target="#edit_communication_details" href="#">Edit
+                                                        data-target="#edit_communication_details" data-id="{{ $communication->id }}" onclick="edit_communication(this)" href="#">Edit
                                                         Client
                                                         Details
                                                     </a>
@@ -576,23 +576,25 @@
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <!---- Modal Header -->
-                                <form method="post" action="{{ url('') }}" enctype="multipart/form-data"
+                                <form method="post" action="" id="update_communication"  enctype="multipart/form-data"
                                     id="addemployee">
                                     @csrf
                                     <h5><b>Edit Communication Details:-</b></h5>
-
+                                      <input type="hidden" id="id" name="id">
                                     <div class="row">
                                         <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
                                             <div class="row">
                                                 <div class="" style="width: 33%">
                                                     <div class=""><span style="color: red">*</span>
-                                                        <label for="client_no"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Communication
-                                                            Date</label>
-                                                        <input type="date" placeholder=""
-                                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="date" id=""
-                                                            value="">
+                                                        <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+                                                            <input type="date" class="form-control" name="dateid" id="dateid"
+                                                                id="username" value=""  style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Name is required.
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="" style="width: 20%">
@@ -602,7 +604,7 @@
                                                         </label>
                                                         <input type="time" placeholder=""
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="timer" id=""
+                                                            class="form-control" name="time" id="time"
                                                             value="">
                                                     </div>
                                                 </div>
@@ -612,7 +614,7 @@
                                                     </label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="Client" id="" required>
+                                                        name="client" id="client" required>
                                                         <option>Select a Client</option>
                                                         <option>Client 1</option>
                                                         <option>Client 2</option>
@@ -626,7 +628,7 @@
                                                     </label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="File" id="" required>
+                                                        name="file" id="file" required>
                                                         <option>Choose a File</option>
                                                         <option>File 1</option>
                                                         <option>File 2</option>
@@ -638,7 +640,7 @@
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Customer</label>
                                                         <input type="text" placeholder="Customer"
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="customer" id=""
+                                                            class="form-control" name="customer" id="customer"
                                                             value="">
                                                     </div>
                                                 </div>
@@ -649,7 +651,7 @@
                                                             No</label>
                                                         <input type="text" placeholder="Telephone No"
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="telephone" id=""
+                                                            class="form-control" name="telephone" id="telephone"
                                                             value="">
                                                     </div>
                                                 </div>
@@ -662,7 +664,7 @@
                                                     </label>
                                                     <input type="text" placeholder="Email Address"
                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                        class="form-control" name="Email" id=""
+                                                        class="form-control" name="email" id="email"
                                                         value="">
                                                 </div>
                                                 <div class="" style="width: 33%">
@@ -671,7 +673,7 @@
                                                     </label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="Sources" id="" required>
+                                                        name="source" id="source" required>
                                                         <option>Source</option>
                                                         <option>Reception</option>
                                                         <option>Scretary</option>
@@ -684,7 +686,7 @@
                                                     </label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="Communication" id="" required>
+                                                        name="communication" id="communication" required>
                                                         <option>Communication Mode</option>
                                                         <option>Telephone</option>
                                                         <option>Email</option>
@@ -700,7 +702,7 @@
                                                     </label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="Communicated" id="" required>
+                                                        name="communicated" id="communicated" required>
                                                         <option>Source</option>
                                                         <option>Person 1</option>
                                                         <option>Person 2</option>
@@ -710,12 +712,12 @@
                                                 <div class="" style="width: 33%">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="client_no"
-                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Other
+                                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Other Communication
                                                         </label>
-                                                        <input type="text" placeholder="Other"
+                                                        <input type="text" placeholder="Duration"
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="other_communication"
-                                                            id="" value="">
+                                                            class="form-control" name="other_communication" id="other_communication"
+                                                            value="">
                                                     </div>
                                                 </div>
                                                 <div class="" style="width: 33%">
@@ -725,7 +727,7 @@
                                                         </label>
                                                         <input type="text" placeholder="Duration"
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="duration" id=""
+                                                            class="form-control" name="duration" id="duration"
                                                             value="">
                                                     </div>
                                                 </div>
@@ -737,7 +739,7 @@
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Communication
                                                         </label>
                                                         <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Communication Description"
-                                                            name="communication_description" form="addemployee"></textarea>
+                                                            name="communication_description" id="communication_description"></textarea>
                                                     </div>
                                                 </div>
                                                 <div style="width:49%">
@@ -747,7 +749,7 @@
                                                             Plan
                                                         </label>
                                                         <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Action Plan"
-                                                            name="action_plan" form="addemployee"></textarea>
+                                                            name="action_plan" id="action_plan"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -759,7 +761,7 @@
                                                     </label>
                                                     <select class="form-select" aria-label="Default select example"
                                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
-                                                        name="handling" id="" required>
+                                                        name="handling" id="handling" required>
                                                         <option>Source</option>
                                                         <option>Person 1</option>
                                                         <option>Person 2</option>
@@ -770,10 +772,10 @@
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="client_no"
                                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">
-                                                            Other</label>
+                                                            Other handling</label>
                                                         <input type="text" placeholder="Other"
                                                             style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
-                                                            class="form-control" name="Other_handling" id=""
+                                                            class="form-control" name="other_handling" id="other_handling"
                                                             value="">
                                                     </div>
                                                 </div>
@@ -787,7 +789,7 @@
                             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
                                                 </button>
                                                 <button type="button" class="btn btn-primary float:left"
-                                                    Style="width:19%;" onclick="history.back()">Cancel</button>
+                                                    Style="width:19%;" data-dismiss="modal">Cancel</button>
                                             </div>
                                         </div>
                                 </form>
@@ -795,6 +797,36 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                      function edit_communication(param) {
+            var id = $(param).data('id');
+            $.ajax({
+                type: 'GET',
+                url: 'edit-communication/' + id,
+
+                success: function(response) {
+                    $('#id').val(response.result.id);
+                    $('#dateid').val(response.result.communication_date);
+                    $('#client').val(response.result.client);
+                    $('#file').val(response.result.file);
+                    $('#customer').val(response.result.customer);
+                    $('#telephone').val(response.result.telephone_no);
+                    $('#email').val(response.result.email);
+                    $('#source').val(response.result.communication_source);
+                    $('#communication').val(response.result.mode_of_communication);
+                    $('#communicated').val(response.result.communicated);
+                    $('#duration').val(response.result.duration);
+                    $('#handling').val(response.result.person_handling);
+                    $('#time').val(response.result.time);
+                    $('#other_handling').val(response.result.others_handling);
+                    $('#other_communication').val(response.result.other_communication);
+                    $('#communication_description').val(response.result.communicated_description);
+                    $('#action_plan').val(response.result.action_plan);
+                    $('#update_communication').attr('action', "{{url('update-communication')}}" + "/" + id);
+                }
+            });
+        }
+                    </script>
                 <script>
                     function deletecompany(param) { //Delete clent confirmation message 
                         var deleteuniqueid = $(param).data('id');
