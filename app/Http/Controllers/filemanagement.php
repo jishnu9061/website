@@ -1440,6 +1440,70 @@ class filemanagement extends Controller
             //  return view('file_management.add-incomming-letters');
         }
 
+        public function editincommingletters($id)
+        {
+            $edit_letter=DB::table('cra_add_incomming_letters')->where('id',$id)->first();
+           
+            return response()->json([
+                'status' => 200,
+                'result' => $edit_letter,
+            ]);
+
+        }
+
+        public function updateincommingletters(Request $request)
+        {
+            $id =$request['id'];
+            $letter_date =$request['letter_date'];
+            $client =$request['client'];
+            $file =$request['file'];
+            $received_form =$request['received_form'];
+            $category =$request['category'];
+            $letter_name =$request['letter_name'];
+            $delivered_by =$request['delivered_by'];
+            $other =$request['other'];
+            $delivered_to =$request['delivered_to'];
+            $viewer =$request['viewer'];
+            $upload_copy =$request['upload_copy'];
+            if(!empty($request->file('upload_copy'))){
+                $this->validate($request,[
+                    'upload_copy' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+                ]);
+            }
+            if(request()->hasfile('upload_copy')){
+                $uploadedImage = $request->file('upload_copy');
+                $imageName     = time() .'.'. $upload_copy->getClientOriginalExtension();
+                $destinationPath = public_path('image');
+                $uploadedImage->move($destinationPath,$imageName);
+                $upload_copy->file    = $destinationPath.$imageName;
+            }
+
+
+            DB::table('cra_add_incomming_letters')->where('id',$id)->update([
+
+                'letter_date' => $letter_date,
+                'client' =>  $client,
+                'file' => $file,
+                'received_form' => $received_form,
+                'category' => $category,
+                'letter_name' => $letter_name,
+                'delivered_by' => $delivered_by,
+                'other' =>  $other,
+                'delivered_to' => $delivered_to,
+                'viewer' =>  $viewer,
+                'upload_copy' => $upload_copy,
+
+            ]);
+              return redirect('/incomming-letters');
+            //  return view('file_management.add-incomming-letters');
+        }
+
+        public function deleteincommingletter($id)
+        {
+            $destroy_letter =DB::table('cra_add_incomming_letters')->where('id',$id)->delete();
+            return redirect ('/incomming-letters');
+        }
+
         public function safeitemrequest(Request $request)
         {
             $id =$request['id'];
