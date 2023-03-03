@@ -84,8 +84,8 @@
                 data-target=""
                 href="{{url('view_lawyer',$lawyer->id)}}">View Lawyer
             </a>
-            <a href="{{url('edit_lawyer',$lawyer->id)}}" class="dropdown-item" href=""data-toggle=""
-                 onClick="return myFunction();"data-target="">Edit Lawyer</a>
+            <a href="" class="dropdown-item" href="#" data-id="{{$lawyer->id}}" data-toggle="modal" data-target="#editmodal"
+                 onclick="editindividualclient(this)">Edit Lawyer</a>
 <a class="dropdown-item" data-toggle=""
                 data-target=""
                 href="{{url('delete_lawyer',$lawyer->id)}}">Delete Layer
@@ -100,6 +100,140 @@
                 </table>
             </div>
 
+            <div class="modal fade" id="editmodal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content" style="width: 110%">
+                       
+                        <!-- Modal Header -->
+                        <h5><b>Add Individual Client:-</b></h5>
+                        <!------------------------ Modal body ------------------------>
+                        <input type="hidden" name="id" id="id">
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form method="post" action="{{url('update_lawyer')}}" id="assign_lawyer">
+                                             @csrf
+                                            <div class="row">
+                                                <div class="" style="width: 46%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Number</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+                                                            <input type="text" class="form-control"
+                                                                name="client_number" id="client_number" value="" style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Name is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="" style="width: 46%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Type</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+
+                                                            </div>
+                                                            <select name="client_type" id="client_type" style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                <option value="Individual">Individual</option>
+                                                                <option value="Corporate">Corporate</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="" style="width: 46%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Type</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+
+                                                            </div>
+                                                            <select name="client_name" id="client_name" style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                <option value="resedential">resedential</option>
+                                                                <option value="non resedential">non resedential</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="" style="width: 46%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File Number</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+                                                            <input type="text" class="form-control"
+                                                                name="file_number" id="file_number" value="" min="0"
+                                                                max="99" style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                            <div class="invalid-feedback" style="width: 100%;">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="" style="width: 46%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Lawyer Name</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+                                                            <select name="lawyer_name" id="lawyer_name" style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                                <option>Kenya</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="" style="width: 46%">
+                                                    <div class=""><span style="color: red">*</span>
+                                                        <label style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Court Name</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+                                                            <input type="text" class="form-control"
+                                                                name="court_name" value="" id="court_name" style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
+                                                            <div class="invalid-feedback" style="width: 100%;">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="mb-1">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="mb-1">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="mb-1">
+                                                        <br>
+                                                        <button type="submit" class="btn btn-primary"
+                                                            style="width:45%;">Save</button>
+                                                        <button type="button" class="btn btn-primary"
+                                                            data-dismiss="modal" style="width:45%;">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="modal fade" id="myModal">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content" style="width: 110%">
@@ -235,8 +369,30 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
 
+<script>
+    function editindividualclient(param) {
+var id = $(param).data('id');
+$.ajax({
+type: 'GET',
+url: 'edit_lawyer/' + id,
 
+success: function(response) {
+   $('#id').val(response.result.id);
+   $('#client_number').val(response.result.client_number);
+   $('#client_type').val(response.result.client_type);
+   $('#client_name').val(response.result.client_name);
+   $('#file_number').val(response.result.file_number);
+   $('#lawyer_name').val(response.result.lawyer_name);
+   $('#court_name').val(response.result.court_name);
+   $('#assign_lawyer').attr('action', "{{url('update_lawyer')}}" + "/" + id);
+}
+});
+}
+</script>
 
 
 

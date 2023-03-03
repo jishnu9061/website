@@ -63,15 +63,22 @@ class ClientManagement extends Controller
 
     public function edit_lawyer($id)
     {
-        $asign_lawyer = DB::table('cra_asign_lawyer')->where('id', $id)->first();
-        return view('client-management.edit_lawyer', compact('asign_lawyer', 'id'));
+        // $asign_lawyer = DB::table('cra_asign_lawyer')->where('id', $id)->first();
+        // return view('client-management.edit_lawyer', compact('asign_lawyer', 'id'));
+        $asign_lawyer =DB::table('cra_asign_lawyer')->where('id',$id)->first();
+
+        return response()->json([
+
+           'status' => 200,
+           'result' => $asign_lawyer,
+        ]);
     }
     public function update_lawyer(Request $Request)
     {
         $id = $Request['id'];
         $client_number = $Request['client_number'];
-        $client_type = $Request['client_type '];
-        $client_name = $Request['client_name '];
+        $client_type = $Request['client_type'];
+        $client_name = $Request['client_name'];
         $file_number = $Request['file_number'];
         $lawyer_name = $Request['lawyer_name'];
         $court_name = $Request['court_name'];
@@ -88,7 +95,7 @@ class ClientManagement extends Controller
         );
         DB::table('cra_asign_lawyer')->where('id', $id)->update($update_lawyer);
 
-        return redirect('/asign_lawyer');
+        return redirect('asign-lawyer');
     }
 
     public function view_lawyer($id)
