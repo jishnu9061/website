@@ -53,7 +53,7 @@ class AdminController extends Controller
     }
     public function show_product()
     {
-        $data=product::all();
+        $data=product::paginate(1);
         return view('admin.show_product',compact('data'));
     }
     public function delete_product($id)
@@ -65,7 +65,25 @@ class AdminController extends Controller
     public function update_product($id)
     {
         $data=product::find($id);
-       
+        $category=category::all();
+        return view('admin.update',compact('data','category'));
+    }
+    public function update_product_confirm(Request $request,$id)
+    {
+        $product=product::find($id);
+        $product->title=$request->title;
+        $product->description=$request->description;
+        $product->price=$request->price;
+        $product->quantity=$request->quantity;
+        $product->discount_price=$request->discount;
+        $product->category=$request->category;
+        $image=$request->image;
+        $imagename=time().'.'.$image->getClientOriginalExtension();
+        $request->image->move('/product',$imagename);
+        $product->image=$imagename;
+        $product->save();
+        return redirect()->back()->with('message','successfully updated product data');
+
         return view('admin.update',compact('data'));
     }
 }

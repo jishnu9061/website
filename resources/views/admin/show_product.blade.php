@@ -73,6 +73,9 @@
     @endforeach
 </table>
             </div>
+            {{ $data->links() }}
+          </div>
+            </div>
         </div>
         <!-- main-panel ends -->
       </div>

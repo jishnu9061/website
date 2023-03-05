@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <base href="{{ url('/public') }}">
     @include('admin.css')
 </head>
 <style>
@@ -48,48 +49,53 @@
                     </div>
                       @endif
                     <div class="div_center">
-                        <h1 class="font_size">Add Product</h1>
-                        <form action="{{ url('/add_product') }}" method="POST" enctype="multipart/form-data">
+                        <h1 class="font_size">Edit Product</h1>
+                        <form action="{{ url('/update_product_confirm',$data->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                         <div class="div_design">
                             <label>Product Title:</label>
-                            <input class="text_color" type="text" name="title" placeholder="Write A Title" required>
+                            <input class="text_color" type="text" name="title" placeholder="Write A Title" required value="{{ $data->title }}">
                         </div>
                         <div class="div_design">
                             <label>Product Description:</label>
                             <input class="text_color" type="text" name="description"
-                                placeholder="Write A Description" required>
+                                placeholder="Write A Description" required value="{{ $data->description }}">
                         </div>
                         <div class="div_design">
                             <label>Product Price:</label>
-                            <input class="text_color" type="number" name="price" placeholder="Write A Price" required>
+                            <input class="text_color" type="number" name="price" placeholder="Write A Price" required value="{{ $data->price }}">
                         </div>
                         <div class="div_design">
                             <label>Discount Price:</label>
-                            <input class="text_color" type="number" name="discount" placeholder="Write A Title" required>
+                            <input class="text_color" type="number" name="discount" placeholder="Write A Title" required value="{{ $data->discount_price }}">
                         </div>
                         <div class="div_design">
                             <label>Product Quantity:</label>
                             <input class="text_color" type="number" name="quantity" min="0"
-                                placeholder="Write A Product Quantity" required>
+                                placeholder="Write A Product Quantity" required value="{{ $data->quantity }}">
                         </div>
                         <div class="div_design">
                             <label>Product Category:</label>
                            
                             <select class="text_color" name="category" required>
-                                {{-- @foreach($data as $product)
-                                <option value="{{ $product->category_name }}">{{ $product->category_name }}</option>
-                                @endforeach --}}
+                                <option value="{{ $data->category }}" selected>{{ $data->category }}</option>
+                                @foreach($category as $cat)
+                                <option value="{{ $cat->category_name }}">{{ $cat->category_name }}</option>
+                                @endforeach
                             </select>
                            
                         </div>
                         <div class="div_design">
-                            <label>Product Image Here :</label>
-                            <input class="text_color" type="file" name="image" min="0"
-                                placeholder="Write A Product Quantity" required>
+                            <label>Product Current Image Here :</label>
+                            <img style="margin:auto" height="100px" width="100px" src="/product/{{ $data->image }}">
                         </div>
                         <div class="div_design">
-                            <input type="submit" value="Add Product" class="btn btn-primary">
+                            <label>Product Image Here :</label>
+                            <input class="text_color" type="file" name="image" min="0"
+                                placeholder="Write A Product Quantity" required value="{{ $data->image }}">
+                        </div>
+                        <div class="div_design">
+                            <input type="submit" value="Update Product" class="btn btn-primary">
                         </div>
                     </form>
                     </div>
