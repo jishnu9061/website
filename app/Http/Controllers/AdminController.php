@@ -49,24 +49,10 @@ class AdminController extends Controller
         $request->image->move('product',$imagename);
         $product->image=$imagename;
         $product->save();
-        return redirect()->back()->with('message','product added succesfully');       
-    }
-    public function show_product()
-    {
-        $data=product::all();
-        return view('admin.show_product',compact('data'));
-    }
-    public function delete_product($id)
-    {
-        $data=product::find($id);
-        $data->delete();
-        return redirect()->back()->with('message','product deleted successfully');
-    }
-    public function update_product($id)
-    {
-        $data=product::find($id);
+        return redirect()->back()->with('message','product added succesfully');
+        
+
        
-        return view('admin.update',compact('data'));
     }
 }
 ?>
