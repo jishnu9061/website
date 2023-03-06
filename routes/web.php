@@ -498,6 +498,8 @@ use App\Http\Controllers\issued_summary;
     Route::any('store-pickup', 'ClientManagement@storePickup')->name('store-pickup');
     Route::any('/view-pickup/{id}', 'ClientManagement@viewPickups')->name('view-pickup');
     Route::any('/delete-pickup/{id}', 'ClientManagement@deletePickup')->name('delete-pickup');
+    Route::any('edit-pickup/{id}', 'ClientManagement@editpickup')->name('delete-pickup');
+    Route::any('update-pickup/{id}', 'ClientManagement@updatepickup')->name('update-pickup');
         //complaint
     Route::any('complaint-list', 'ClientManagement@complaintList')->name('complaint-list');
     Route::any('create-Complaint', 'ClientManagement@createComplaint')->name('create-Complaint');

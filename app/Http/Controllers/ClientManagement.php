@@ -720,6 +720,46 @@ class ClientManagement extends Controller
     {
         return view('client-management.add-pickup');
     }
+    public function editpickup($id)
+    {
+        $edit =DB::table('cra_client_pickup_reception')->where('id',$id)->first();
+
+        return response()->json([
+       
+           'status' => 200,
+           'result' => $edit,
+        ]);
+    }
+    public function updatepickup(Request $Request,$id)
+    {
+        $client = $Request['client'];
+        $file_name = $Request['file'];
+        $mobile = $Request['mobile'];
+        $persion_handling = $Request['person'];
+        $email = $Request['email'];
+        $client_name = $Request['clientname'];
+        $persion_picking_handling = $Request['handling'];
+        $reason = $Request['reason'];
+        $visitors = $Request['visitors'];
+        $time_in = $Request['timein'];
+        $time_out = $Request['timeout'];
+
+        DB::table('cra_client_pickup_reception')->where('id', $id)->update([
+            'client' =>  $client,
+            'file_name' =>   $file_name,
+            'mobile' => $mobile,
+            'persion_handling' => $persion_handling,
+            'email' =>  $email,
+            'client_name' =>  $client_name,
+            'persion_picking_handling' =>  $persion_picking_handling,
+            'reason' =>  $reason,
+            'visitors' =>  $visitors,
+            'time_in' => $time_in,
+            'time_out' =>  $time_out,
+        ]);
+        return redirect()->back();
+    }
+
 
 
     public function storePickup(Request $Request)
@@ -1085,7 +1125,7 @@ class ClientManagement extends Controller
     public function updateQuotation(Request $Request)
     {
 
-        $id            = $Request['id'];
+        $id= $Request['id'];
         $document_type = $Request['document'];
         $issue_date = $Request['issue'];
         $customer = $Request['client'];
@@ -1235,10 +1275,10 @@ class ClientManagement extends Controller
             'communication_source' =>  $communication_source,
             'mode_of_communication' =>  $mode_of_communication,
             'communicated' => $communicated,
+            'other_communication' => $other_communication,
             'duration' => $duration,
             'person_handling' =>  $person_handling,
             'time' =>  $time,
-            'other_communication' => $other_communication,
             'others_handling' => $others_handling,
             'communicated_description' =>  $communicated_description,
             'action_plan' =>  $action_plan,

@@ -64,7 +64,7 @@
         <div class="container">
             <div>
                 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client
-                            Pickup Reception</u></b> -->
+                                Pickup Reception</u></b> -->
                 {{-- heading --}}
                 <h4 id="hdtpa"><b>Client Reception Details</b></h4>
                 <br>
@@ -134,11 +134,11 @@
                                                             aria-expanded="false" style="border-color:none;"> ⋮ </a>
                                                         <div class="dropdown-menu" style="overflow: scroll;height:100px;">
                                                             <a href="" data-toggle="modal" data-target="#viewModal"
-                                                                class="dropdown-item">Edit Client
+                                                                class="dropdown-item" data-id="{{ $pickup->id }}" onclick="edit_reception_detail(this)">Edit Client
                                                                 Detail
                                                             </a>
-                                                            <a onClick="return myFunction();"
-                                                                href="" data-toggle="modal" data-target="#deletecompany"
+                                                            <a onClick="return myFunction();" href=""
+                                                                data-toggle="modal" data-target="#deletecompany"
                                                                 class="dropdown-item" style="color:black;">Delete Client
                                                                 Details</a>
                                                         </div>
@@ -290,8 +290,8 @@
 
                                                                     </select>
                                                                     <!-- <input type="text" class="form-control" name="name"
-                                                                                id="username" value="" placeholder=" name"
-                                                                                required> -->
+                                                                                    id="username" value="" placeholder=" name"
+                                                                                    required> -->
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
                                                                     </div>
@@ -354,12 +354,13 @@
                                                         <div class="" style="width: 48%">
                                                             <div class=""><span style="color: red">*</span>
                                                                 <label for="client_no"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time-In </label>
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time-In
+                                                                </label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <input type="time" name="timein" class="form-control"
-                                                                         id="" value=""
-                                                                        placeholder=""
+                                                                    <input type="time" name="timein"
+                                                                        class="form-control" id=""
+                                                                        value="" placeholder=""
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"required>
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
@@ -414,11 +415,12 @@
 
                                         <!-- Modal Header -->
                                         <h5><b>Edit Client:-</b></h5>
+                                        <input type="text" name="id" id="id">
 
                                         <!-- Modal body -->
                                         <div class="modal-body">
                                             <div class="container">
-                                                <form method="post" action="{{ url('store-pickup') }}" id="form">
+                                                <form method="post" action="{{ url('update-pickup') }}" id="update_pickup">
                                                     @csrf
                                                     <div class="row">
                                                         <div class="" style="width: 24%">
@@ -428,7 +430,7 @@
                                                                     Type</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars"
+                                                                    <select name="client" id="client"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                         <option>--select--</option>
                                                                         <option>Corporate Client</option>
@@ -448,7 +450,7 @@
                                                                     Name</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars"
+                                                                    <select name="file" id="file"
                                                                         style="border-color:#1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                         <option>--select--</option>
                                                                         <option>File 1</option>
@@ -469,7 +471,7 @@
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="text" class="form-control"
-                                                                        name="mobile" id="username" value=""
+                                                                        name="mobile" id="mobile" value=""
                                                                         placeholder=""
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                         required>
@@ -486,7 +488,7 @@
                                                                     Handling</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars"
+                                                                    <select name="person" id="person"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                         <option>--select--</option>
                                                                         <option>Advocate 1</option>
@@ -509,7 +511,7 @@
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="text" class="form-control"
-                                                                        name="email" id="username" value=""
+                                                                        name="email" id="email" value=""
                                                                         placeholder=""
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                         required>
@@ -526,7 +528,7 @@
                                                                     Name</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="industry" id="cars"
+                                                                    <select name="clientname" id="clientname"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;">
                                                                         @if (count($get_items))
                                                                             @foreach ($get_items as $list_client)
@@ -537,8 +539,8 @@
 
                                                                     </select>
                                                                     <!-- <input type="text" class="form-control" name="name"
-                                                                                id="username" value="" placeholder=" name"
-                                                                                required> -->
+                                                                                    id="username" value="" placeholder=" name"
+                                                                                    required> -->
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
                                                                     </div>
@@ -553,7 +555,7 @@
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="text" class="form-control"
-                                                                        name="handling" id="username" value=""
+                                                                        name="handling" id="handling" value=""
                                                                         placeholder=""
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                         required>
@@ -570,7 +572,7 @@
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="text" class="form-control"
-                                                                        name="visitors" id="username" value=""
+                                                                        name="visitors" id="visitors" value=""
                                                                         placeholder=""
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                         required>
@@ -588,7 +590,7 @@
                                                                     style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Reason</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                                                    <textarea class="form-control" id="reason" name="reason" rows="2"
                                                                         style="border-color: #1d1d50;width=45%;border-radius: 7px;height:75px;"></textarea>
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
@@ -601,14 +603,14 @@
                                                         <div class="" style="width: 48%">
                                                             <div class=""><span style="color: red">*</span>
                                                                 <label for="client_no"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time
-                                                                    In</label>
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time In</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="time" class="form-control"
-                                                                        name="time-in" id="username" value=""
+                                                                        name="timein" id="timein" value=""
                                                                         placeholder=""
-                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"required>
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                                        required>
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
                                                                     </div>
@@ -618,14 +620,13 @@
                                                         <div class="" style="width: 48%">
                                                             <div class=""><span style="color: red">*</span>
                                                                 <label for="client_no"
-                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time
-                                                                    Out</label>
+                                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:9px;">Time Out</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="time" class="form-control"
-                                                                        name="time-out" id="username" value=""
-                                                                        placeholder="Reason"
-                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px; cellspacing=2px;"
+                                                                        name="timeout" id="timeout" value=""
+                                                                        placeholder=""
+                                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                                         required>
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Name is required.
@@ -661,12 +662,14 @@
                                 <div class="modal-dialog modal-lg" style="width:30%;">
                                     <div class="modal-content">
                                         <!---- Modal Header -->
-                                        <form method="post" id="delete_company" action="#" enctype="multipart/form-data">
+                                        <form method="post" id="delete_company" action="#"
+                                            enctype="multipart/form-data">
                                             @csrf
                                             <input type="hidden" id="deleteuniqueid" value="uniqueid">
                                             <div class="modal-header" style="padding:0rem 0rem;">
                                                 <div style="padding:1rem 1rem;">
-                                                    <h4 class="text-centre"><b>Delete <span id="deletcompany_name"></span></b></h4>
+                                                    <h4 class="text-centre"><b>Delete <span
+                                                                id="deletcompany_name"></span></b></h4>
                                                 </div>
                                             </div>
                                             <!-- Modal body -->
@@ -822,6 +825,31 @@
 
                         <!-- End delete confirmation message -->
                     </div>
+                    <script>
+                         function edit_reception_detail(param) {
+            var id = $(param).data('id');
+            $.ajax({
+                type: 'GET',
+                url: 'edit-pickup/' + id,
+
+                success: function(response) {
+                    $('#id').val(response.result.id);
+                    $('#client').val(response.result.client);
+                    $('#file').val(response.result.file_name);
+                    $('#mobile').val(response.result.mobile);
+                    $('#person').val(response.result.persion_handling);
+                    $('#email').val(response.result.email);
+                    $('#handling').val(response.result.persion_picking_handling);
+                    $('#clientname').val(response.result.client_name);
+                    $('#visitors').val(response.result.visitors);
+                    $('#reason').val(response.result.reason);
+                    $('#timein').val(response.result.time_in);
+                    $('#timeout').val(response.result.time_out);
+                    $('#update_pickup').attr('action', "{{url('update-pickup')}}" + "/" + id);
+                }
+            });
+        }
+                        </script>
                     <script>
                         function myFunction() {
                             if (!confirm("Are you sure to delete this"))
