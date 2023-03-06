@@ -415,7 +415,7 @@
 
                                         <!-- Modal Header -->
                                         <h5><b>Edit Client:-</b></h5>
-                                        <input type="text" name="id" id="id">
+                                        <input type="hidden" name="id" id="id">
 
                                         <!-- Modal body -->
                                         <div class="modal-body">
