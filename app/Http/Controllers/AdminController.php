@@ -34,7 +34,7 @@ class AdminController extends Controller
         $data->delete();
         return redirect()->back()->with('message','Successfully Deleted Category');
     }
-    
+
     public function add_product(Request $request)
     {
         $product=new product;
@@ -49,7 +49,7 @@ class AdminController extends Controller
         $request->image->move('product',$imagename);
         $product->image=$imagename;
         $product->save();
-        return redirect()->back()->with('message','product added succesfully');       
+        return redirect()->back()->with('message','product added succesfully');
     }
     public function show_product()
     {
@@ -85,6 +85,11 @@ class AdminController extends Controller
         return redirect()->back()->with('message','successfully updated product data');
 
         return view('admin.update',compact('data'));
+    }
+    public function product_add()
+    {
+        $data=category::all();
+        return view('admin.product',compact('data'));
     }
 }
 ?>

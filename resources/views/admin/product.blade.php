@@ -75,13 +75,13 @@
                         </div>
                         <div class="div_design">
                             <label>Product Category:</label>
-                           
+
                             <select class="text_color" name="category" required>
                                 @foreach($data as $product)
                                 <option value="{{ $product->category_name }}">{{ $product->category_name }}</option>
                                 @endforeach
                             </select>
-                           
+
                         </div>
                         <div class="div_design">
                             <label>Product Image Here :</label>
