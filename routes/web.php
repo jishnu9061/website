@@ -51,4 +51,6 @@ Route::post("/update_product_confirm/{id}",[AdminController::class,'update_produ
 
 Route::get('product-add',[AdminController::class,'product_add']);
 
+Route::get('product-list',[AdminController::class,'product_list']);
+
 

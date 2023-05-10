@@ -91,5 +91,9 @@ class AdminController extends Controller
         $data=category::all();
         return view('admin.product',compact('data'));
     }
+    public function product_list()
+    {
+        return view('admin.product-list');
+    }
 }
 ?>

@@ -18,7 +18,7 @@
                            </ul>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="product.html">Products</a>
+                           <a class="nav-link" href="{{ url('product-list') }}">Products</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="blog_list.html">Blog</a>
@@ -35,7 +35,7 @@
                         @auth
                         <li class="nav-item">
                         <x-app-layout>
-    
+
                         </x-app-layout>
                         </li>
                         @else

@@ -10,16 +10,16 @@
       <meta name="keywords" content="" />
       <meta name="description" content="" />
       <meta name="author" content="" />
-      <link rel="shortcut icon" href="images/favicon.png" type="">
+      <link rel="shortcut icon" href="home/images/favicon.png" type="">
       <title>Famms - Fashion HTML Template</title>
       <!-- bootstrap core css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      <link rel="stylesheet" type="text/css" href="home/css/bootstrap.css" />
       <!-- font awesome style -->
-      <link href="css/font-awesome.min.css" rel="stylesheet" />
+      <link href="home/css/font-awesome.min.css" rel="stylesheet" />
       <!-- Custom styles for this template -->
-      <link href="css/style.css" rel="stylesheet" />
+      <link href="home/css/style.css" rel="stylesheet" />
       <!-- responsive style -->
-      <link href="css/responsive.css" rel="stylesheet" />
+      <link href="home/css/responsive.css" rel="stylesheet" />
    </head>
    <body class="sub_page">
       <div class="hero_area">
@@ -27,7 +27,7 @@
          <header class="header_section">
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="index.html"><img width="250" src="images/logo.png" alt="#" /></a>
+                  <a class="navbar-brand" href="index.html"><img width="250" src="home/images/logo.png" alt="#" /></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
